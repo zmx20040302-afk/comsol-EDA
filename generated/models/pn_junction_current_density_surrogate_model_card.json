@@ -1,0 +1,47 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-26T12:41:51.866429+00:00",
+  "name": "一维 P-N 结截面电流密度代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_current_density_training.csv",
+    "rows": 6,
+    "inputs": [
+      "bias_V"
+    ],
+    "outputs": [
+      "current_density_at_x_2_5um_A_m2"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_current_density_holdout.csv",
+    "rows": 5
+  },
+  "physical_scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定；仅改变正向偏压 0.05-0.5 V，输出 x=2.5 um 截面的 x 向总电流密度 semi.JX。",
+  "validated_input_ranges": {
+    "bias_V": {
+      "min": 0.05,
+      "max": 0.5
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "pn_junction_current_density_independent_comsol_validation",
+    "created_at": "2026-08-26T12:41:51.860146+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_current_density_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_current_density_holdout.csv",
+    "training_rows": 6,
+    "holdout_rows": 5,
+    "selected_model": "polynomial_degree_3_regression_on_log10_abs_current_density",
+    "selection_reason": "Forward-bias current density spans orders of magnitude, so log10 of its magnitude is fitted while the negative COMSOL sign is restored after prediction.",
+    "max_relative_error_percent": 3.039838475712522,
+    "mean_relative_error_percent": 1.351320180072394,
+    "threshold_relative_error_percent": 5.0,
+    "passed": true,
+    "scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定；仅改变正向偏压 0.05-0.5 V，输出 x=2.5 um 截面的 x 向总电流密度 semi.JX。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

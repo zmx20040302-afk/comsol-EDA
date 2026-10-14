@@ -1,0 +1,54 @@
+{
+  "schema": "dac-problem1-publication-evidence-protocol",
+  "schemaVersion": "1.0.0",
+  "frozen_on": "2026-10-12",
+  "method_under_test": "problem1-v1.1.0",
+  "external_regeneration": {
+    "task_count": 6,
+    "temperature": 0,
+    "complete_artifact_required": true,
+    "local_patch_response_forbidden": true,
+    "required_metadata": [
+      "model_provider",
+      "model_id",
+      "model_version",
+      "run_id",
+      "operator_id",
+      "started_at",
+      "completed_at"
+    ],
+    "primary_metrics": [
+      "static_audit_passed",
+      "contract_markers_passed",
+      "full_regeneration_success_rate"
+    ]
+  },
+  "blind_tasks": {
+    "minimum_task_count": 24,
+    "minimum_family_count": 8,
+    "author_must_be_external": true,
+    "adjudicator_must_differ_from_author": true,
+    "project_authored_rows_allowed": false
+  },
+  "end_to_end_subset": {
+    "task_count": 6,
+    "required_stages": [
+      "requirement_compilation",
+      "contract_match",
+      "comsol_java_build",
+      "comsol_solve",
+      "mph_artifact",
+      "physical_validation"
+    ]
+  },
+  "frozen_artifacts": [
+    "benchmarks/dac_problem1_publication/external_regeneration_tasks.jsonl",
+    "benchmarks/dac_problem1_publication/end_to_end_contracts.jsonl",
+    "benchmarks/dac_problem1_publication/blind_task_submission_template.jsonl",
+    "src/comsol_small_model/problem1_publication_evidence.py",
+    "scripts/build_dac_problem1_end_to_end_report.py",
+    "scripts/evaluate_dac_problem1_external_regeneration.py",
+    "scripts/validate_dac_problem1_blind_tasks.py"
+  ],
+  "policy": "Prepared templates do not count as observations. A gate passes only from complete measured records or real COMSOL execution artifacts whose hashes are recorded."
+}

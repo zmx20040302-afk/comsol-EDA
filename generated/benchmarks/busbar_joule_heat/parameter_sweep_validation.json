@@ -1,0 +1,24 @@
+{
+  "kind": "comsol_parameter_sweep_validation",
+  "model": "busbar_joule_heat_baseline",
+  "source_csv": "builders/busbar_operating_conditions.csv",
+  "status": "passed",
+  "completed_rows": 9,
+  "expected_rows": 9,
+  "inputs": {
+    "Vtot_mV": [10, 20, 30],
+    "htc_W_m2K": [2, 5, 10]
+  },
+  "outputs": ["Tmax_K", "Tmax_C", "terminal_current_A", "joule_power_W", "convection_power_W", "energy_imbalance_percent"],
+  "observed": {
+    "minimum_Tmax_C": 25.6256881018733,
+    "maximum_Tmax_C": 203.812194207563,
+    "maximum_energy_imbalance_percent": 0.0473100252271744
+  },
+  "theory_checks": [
+    "At fixed heat-transfer coefficient, increasing voltage increases current, Joule power, and maximum temperature.",
+    "At fixed voltage, increasing the convective heat-transfer coefficient decreases the maximum temperature.",
+    "All cases satisfy the energy-balance acceptance limit of 0.1%."
+  ],
+  "training_readiness": "CSV is suitable for pipeline testing and response-trend learning. It has only 9 rows and should not yet be treated as a production surrogate-training dataset."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "dac2027-p0-protocol",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-13T00:00:00+08:00",
+  "submission_track": "AI1.5 AI-based chip design flow automation",
+  "deadlines": {
+    "abstract": "2026-11-11T17:00:00-08:00",
+    "manuscript": "2026-11-18T17:00:00-08:00"
+  },
+  "blind_task_policy": {
+    "task_count": 24,
+    "family_count": 8,
+    "status_counts": {"complete": 8, "missing": 8, "conflict": 8},
+    "require_external_author": true,
+    "require_separate_adjudicator": true,
+    "independence_attestation": true
+  },
+  "methods": [
+    "direct_llm",
+    "retrieval_llm",
+    "existing_selector",
+    "contract_dependency_v11"
+  ],
+  "comparison_scope": "requirement-to-physics intent compilation only: interfaces, couplings, study type, and blocked decision",
+  "run_controls": {
+    "same_task_text": true,
+    "same_json_output_schema": true,
+    "one_fresh_session_per_task": true,
+    "temperature": 0,
+    "external_model_must_be_frozen_before_unsealing": true,
+    "retrieval_corpus": [
+      "template_catalog.json",
+      "configs/modeling_contract.schema.json"
+    ]
+  },
+  "full_method": "contract_dependency_v11",
+  "primary_metrics": [
+    "physics_and_coupling_exact_accuracy",
+    "study_exact_accuracy",
+    "gate_accuracy",
+    "false_safe_rate"
+  ],
+  "efficiency_metrics": ["completion_seconds", "interactions", "human_edits"],
+  "statistics": {
+    "proportion_interval": "Wilson 95%",
+    "paired_binary_test": "two-sided exact McNemar",
+    "paired_efficiency_interval": "paired bootstrap 95%",
+    "bootstrap_seed": 20271013,
+    "bootstrap_resamples": 10000
+  },
+  "evidence_policy": {
+    "internal_or_project_authored_tasks_count_as_main_result": false,
+    "template_rows_count_as_observations": false,
+    "synthetic_provider_results_count_as_observations": false,
+    "missing_method_rows_may_be_imputed": false
+  }
+}

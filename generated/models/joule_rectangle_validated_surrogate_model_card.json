@@ -1,0 +1,127 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-15T07:41:46.188914+00:00",
+  "name": "二维铜矩形焦耳热温度代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\staged_workflows\\final_code\\joule_rectangle_auto_solve_results.csv",
+    "rows": 37,
+    "inputs": [
+      "Vtot_V"
+    ],
+    "outputs": [
+      "Tmax_K",
+      "Tavg_K"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\staged_workflows\\final_code\\joule_rectangle_holdout.csv",
+    "rows": 36
+  },
+  "physical_scope": "2D copper rectangle Joule-heating model, 100 mm by 50 mm, fixed material and convection assumptions, Vtot 0.1-1 mV only.",
+  "validated_input_ranges": {
+    "Vtot_V": {
+      "min": 0.0001,
+      "max": 0.001
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "joule_rectangle_independent_comsol_validation",
+    "created_at": "2026-08-15T07:41:46.186704+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\staged_workflows\\final_code\\joule_rectangle_auto_solve_results.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\staged_workflows\\final_code\\joule_rectangle_holdout.csv",
+    "training_rows": 37,
+    "holdout_rows": 36,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "holdout_rmse": 21.20604152049905,
+        "holdout_mae": 18.321722354684347,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 21.23236087712345,
+            "mae": 18.344476055962087,
+            "r2": -0.00016958401667599432
+          },
+          "Tavg_K": {
+            "rmse": 21.179689457635032,
+            "mae": 18.298968653406607,
+            "r2": -0.00016958401667621636
+          }
+        }
+      },
+      {
+        "name": "ridge_scaled",
+        "holdout_rmse": 4.418828316120183,
+        "holdout_mae": 3.8365994130608065,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 4.424312636152346,
+            "mae": 3.8413640762991386,
+            "r2": 0.9565721144099327
+          },
+          "Tavg_K": {
+            "rmse": 4.413337180895397,
+            "mae": 3.831834749822475,
+            "r2": 0.9565721144099323
+          }
+        }
+      },
+      {
+        "name": "random_forest",
+        "holdout_rmse": 0.6077756777157671,
+        "holdout_mae": 0.5131589000637338,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 0.608530003542919,
+            "mae": 0.5137961908214095,
+            "r2": 0.9991784366428513
+          },
+          "Tavg_K": {
+            "rmse": 0.607020414511551,
+            "mae": 0.5125216093060582,
+            "r2": 0.9991784366428516
+          }
+        }
+      },
+      {
+        "name": "mlp_scaled",
+        "holdout_rmse": 1.8829234662296488,
+        "holdout_mae": 1.3099829939170715,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 1.774504423317638,
+            "mae": 1.2340036611595353,
+            "r2": 0.9930139572087184
+          },
+          "Tavg_K": {
+            "rmse": 1.9854308376225773,
+            "mae": 1.3859623266746075,
+            "r2": 0.9912109083520562
+          }
+        }
+      }
+    ],
+    "selected_model": "random_forest",
+    "max_absolute_error": {
+      "Tmax_K": {
+        "rmse": 0.608530003542919,
+        "mae": 0.5137961908214095,
+        "r2": 0.9991784366428513
+      },
+      "Tavg_K": {
+        "rmse": 0.607020414511551,
+        "mae": 0.5125216093060582,
+        "r2": 0.9991784366428516
+      }
+    },
+    "rmse_threshold_k": 3.0,
+    "passed": true,
+    "scope": "2D copper rectangle Joule-heating model, 100 mm by 50 mm, fixed material and convection assumptions, Vtot 0.1-1 mV only.",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

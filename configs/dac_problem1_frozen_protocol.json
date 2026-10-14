@@ -1,0 +1,42 @@
+{
+  "schema": "dac-problem1-frozen-protocol",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.0.0",
+  "frozen_at": "2026-10-12T00:00:00+08:00",
+  "freeze_scope": "H1-H4 requirement-to-physics selection, abstention gates, and bounded code repair",
+  "method_files_sha256": {
+    "src/comsol_small_model/physics_dependency_graph.py": "c5167f97e625271ba55383de00810eef215f5063e377e49e9308fbe8ddcc4d21",
+    "src/comsol_small_model/physics_selection.py": "42622764e070781b1b6af2665de1b4be99a3821a9ffdb04239a3dfff599dc241",
+    "src/comsol_small_model/requirement_conflicts.py": "118dec9f60c17bdaaea2988a3b600e29f309700d5d9251c5fe6087633886a453",
+    "src/comsol_small_model/requirement_parser.py": "b68fd397102af5100d9db66b123874645d24a232329fb082ea144bb9a0daee5b",
+    "src/comsol_small_model/staged_modeling.py": "433cfa0f9e9b771f94a1a7f6517a00eb0579cd0a2bdd5653b85b3a75a63f6b2c",
+    "src/comsol_small_model/repair_policy.py": "86ebcaa1f0a553ad75f7e252b0e84ea63136a12189a6bed86ed19189a7256242",
+    "src/comsol_small_model/static_model_audit.py": "476c377896d1ff93665a48cd68e709821588c723327818616a3612d765d04f11",
+    "src/comsol_small_model/bounded_repair.py": "e8b114e8193080eb3e6d3779ebc808953142f530886ee6cf41744caf8cca2afc"
+  },
+  "datasets_sha256": {
+    "benchmarks/dac_problem1/development_tasks.jsonl": "c1d9726b8f3bbbea4eeffba8871998ee0e223bb5c88cfd5e99bdd02fe7d4a26d",
+    "benchmarks/dac_problem1/validation_tasks.jsonl": "aea02652c8a28b94d8f217a3a388d27bd8a5fdef82781ef776d391a7c7e83af5",
+    "benchmarks/dac_problem1/final_tasks.jsonl": "4b21a9f945b4e8d2394acd1a6b61f753bcf1d7d008450cb210068c0bda557a8a"
+  },
+  "split_policy": {
+    "development_families": ["busbar", "copper_conductor", "silicon_thermal_actuator", "thermal_plate", "water_cooling_channel", "resistor", "cantilever", "acoustic_pipe", "diffusion_bar"],
+    "validation_families": ["chip_package", "electromagnetic_relay", "ultrasonic_transducer", "lab_on_chip"],
+    "final_families": ["power_mosfet_module", "led_luminaire", "bga_solder_array", "rf_microstrip_filter", "mems_microphone", "pcb_via_array", "microfluidic_biosensor", "quartz_resonator"],
+    "family_overlap_allowed": false,
+    "final_execution_policy": "execute once; do not change method or labels after observing final results"
+  },
+  "primary_metrics": [
+    "physics_and_coupling_exact_accuracy",
+    "study_exact_accuracy",
+    "blocked_task_false_safe_rate",
+    "complete_task_false_block_rate",
+    "bounded_repair_success_rate",
+    "contract_preservation_rate"
+  ],
+  "evidence_limits": [
+    "The post-freeze final set is prospectively constructed and family-disjoint by declared device family, but not independently authored or blinded.",
+    "The repair comparison measures bounded edit scope against a whole-artifact replacement scope proxy; it is not an external LLM regeneration experiment.",
+    "No task is counted as an end-to-end COMSOL solve unless COMSOL build, solve, artifact, and physical checks all pass."
+  ]
+}

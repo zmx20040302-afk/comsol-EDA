@@ -1,0 +1,60 @@
+D:\桌面\codex\案例下载\电气\包含显式金属和介电域的 MOSFET 模型\mosfet_with_explicit_metal_and_dielectric.mph
+D:\桌面\codex\案例下载\电气\超晶格带隙工具\superlattice_band_gap_tool.mph
+D:\桌面\codex\案例下载\电气\大地电磁法\magnetotellurics.mph
+D:\桌面\codex\案例下载\电气\带电容负载的运算放大器\opamp_capacitive_load.mph
+D:\桌面\codex\案例下载\电气\地电正演问题\geoelectrics.mph
+D:\桌面\codex\案例下载\电气\低介电常数薄间隙比较\thin_low_permittivity_gap_comparison.mph
+D:\桌面\codex\案例下载\电气\电屏蔽\electric_shielding.mph
+D:\桌面\codex\案例下载\电气\电容耦合等离子体基准模型\ccp_benchmark.mph
+D:\桌面\codex\案例下载\电气\定义材料的映射介电分布（波动光学）\mapped_dielectric_distribution.mph
+D:\桌面\codex\案例下载\电气\法布里-珀罗腔\fabry_perot.mph
+D:\桌面\codex\案例下载\电气\菲涅尔棱体\fresnel_rhomb.mph
+D:\桌面\codex\案例下载\电气\浮栅 EEPROM 器件的编程过程\eeprom_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\浮栅 EEPROM 器件的编程过程\eeprom.mph
+D:\桌面\codex\案例下载\电气\感应电机二维模型\induction_motor_2d.mph
+D:\桌面\codex\案例下载\电气\高斯光束的二次谐波产生 (RF)\second_harmonic_generation.mph
+D:\桌面\codex\案例下载\电气\光子晶体光纤博客模型\photonic_crystal_fiber.mph
+D:\桌面\codex\案例下载\电气\含双层介质透镜的天线罩\radome_antenna.mph
+D:\桌面\codex\案例下载\电气\基板对远场辐射的影响\General_FF_Helper.mph
+D:\桌面\codex\案例下载\电气\基板对远场辐射的影响\General_FF_MultInhomLayers.mph
+D:\桌面\codex\案例下载\电气\基板对远场辐射的影响\General_FF_Walkthrough.mph
+D:\桌面\codex\案例下载\电气\基板对远场辐射的影响\General_FF.mph
+D:\桌面\codex\案例下载\电气\基板对远场辐射的影响\Simplified_FF_Comparison.mph
+D:\桌面\codex\案例下载\电气\基片集成波导\substrate_integrated_waveguide.mph
+D:\桌面\codex\案例下载\电气\基于基本单元模型计算 SAW 速度\saw_velocity_calculation.mph
+D:\桌面\codex\案例下载\电气\加速度计中的压膜气体阻尼\squeeze_film_accelerometer.mph
+D:\桌面\codex\案例下载\电气\绝缘体上硅 (SOI) 光栅耦合器\grating_coupler.mph
+D:\桌面\codex\案例下载\电气\迈克尔逊干涉仪\michelson_interferometer.mph
+D:\桌面\codex\案例下载\电气\脉冲 CCP 放电\pulsed_ccp_discharge.mph
+D:\桌面\codex\案例下载\电气\偏压谐振器的吸合和释放分析 - 二维\biased_resonator_2d_pull_in_pull_out.mph
+D:\桌面\codex\案例下载\电气\全局模型与两项玻尔兹曼方程耦合\boltzmann_global_model_argon.mph
+D:\桌面\codex\案例下载\电气\萨格纳克干涉仪\sagnac_interferometer.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\circuit_connection_excitation_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\deposited_power_via_ODE_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\formulation_comparison_reset_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\power_current_voltage_excitation_comparison_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\transient_excitation_current_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\transient_excitation_electrical_circuit_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\transient_excitation_transmission_line_v62.mph
+D:\桌面\codex\案例下载\电气\射频热损耗公式比较\transient_excitation_voltage_v62.mph
+D:\桌面\codex\案例下载\电气\使用 KLIPPEL 测量分析中低音扬声器的谐波失真\midwoofer_harmonic_distortion_62.mph
+D:\桌面\codex\案例下载\电气\使用过渡边界条件模拟薄导电层\thin_conductive_layer.mph
+D:\桌面\codex\案例下载\电气\双势垒 - 一维\double_barrier_1d.mph
+D:\桌面\codex\案例下载\电气\通过 Touchstone 文件导入的 S 参数表征的滤波器\two_port_network_touchstone.mph
+D:\桌面\codex\案例下载\电气\通过频域到时域 FFT 分析研究有缺陷的微带线\microstrip_line_discontinuity.mph
+D:\桌面\codex\案例下载\电气\同心圆柱之间的电场\electric_field_concentric_cylinders.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线的不确定性量化研究\microstrip_patch_antenna_uq.mph
+D:\桌面\codex\案例下载\电气\相邻微带线的信号完整性和 TDR 分析\microstrip_line_crosstalk.mph
+D:\桌面\codex\案例下载\电气\压电陶瓷管\piezoceramic_tube.mph
+D:\桌面\codex\案例下载\电气\氧玻尔兹曼分析\boltzmann_oxygen.mph
+D:\桌面\codex\案例下载\电气\应力作用下 PCB 上的微波滤波器\pcb_microwave_filter_with_stress.mph
+D:\桌面\codex\案例下载\电气\圆环天线的无线电能传输仿真\uhf_wireless_power_transfer.mph
+D:\桌面\codex\案例下载\电气\圆形波导滤波器\circular_waveguide_filter.mph
+D:\桌面\codex\案例下载\电气\圆形线圈的感应电流\coil_above_plate.mph
+D:\桌面\codex\案例下载\电气\增量电感的计算和应用示例\biased_inductor.mph
+D:\桌面\codex\案例下载\电气\增量电感的计算和应用示例\inductor.mph
+D:\桌面\codex\案例下载\电气\增量电感的计算和应用示例\solenoid.mph
+D:\桌面\codex\案例下载\电气\增量电感的计算和应用示例\time_periodic_steady_state.mph
+D:\桌面\codex\案例下载\电气\增量电感的计算和应用示例\transformer.mph
+D:\桌面\codex\案例下载\电气\Drude-Lorentz 色散介质的时域建模 (RF)\drude_lorentz_media.mph
+D:\桌面\codex\案例下载\电气\MOSFET 小信号分析\mosfet_small_signal.mph

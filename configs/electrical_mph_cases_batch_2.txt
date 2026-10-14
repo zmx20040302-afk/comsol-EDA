@@ -1,0 +1,23 @@
+# Second electrical-case batch. It is run only after batch 1 completes.
+D:\桌面\codex\案例下载\电气\采用 TSSG 方法制备 SiC 晶片\SiC_TSSG.mph
+D:\桌面\codex\案例下载\电气\分布式布拉格反射镜滤波器\distributed_bragg_reflector_filter.mph
+D:\桌面\codex\案例下载\电气\建立感应加热的边界层网格域\boundary_layer_partitioning_v62.mph
+D:\桌面\codex\案例下载\电气\波导膜片带通滤波器的优化 - EGO 版本\waveguide_filter_optimization_transformation_ego.mph
+D:\桌面\codex\案例下载\电气\光镊中的纳米颗粒\nanoparticles_in_optical_tweezer.mph
+D:\桌面\codex\案例下载\电气\CF4O2 等离子体反应器的全局模型\cf4_o2_global_model.mph
+D:\桌面\codex\案例下载\电气\Electric Field Analysis of a 400 kV Overhead Insulator–Tower System\insulator_with_tower_EF_analysis_cleared.mph
+D:\桌面\codex\案例下载\电气\W 波段波导到微带线过渡\wmlt_model_cleared_solution.mph
+D:\桌面\codex\案例下载\电气\多模式波导\waveguide_with_multiple_modes.mph
+D:\桌面\codex\案例下载\电气\零件（具有温度非线性 BH 曲线）的感应加热\Inductive_Heating_with_nonlinear_BH.mph
+D:\桌面\codex\案例下载\电气\圆锥喇叭透镜天线的前端优化\conical_horn_lens_antenna_shape_optimization.mph
+D:\桌面\codex\案例下载\电气\日食期间针孔相机的光线追踪\pinhole_image_simulation.mph
+D:\桌面\codex\案例下载\电气\等离子体波导滤波器\Plasmonic waveguide filter_Drude Lorentz and Johnson_comparison_v62_clear.mph
+D:\桌面\codex\案例下载\电气\由分散在玻璃中的金纳米颗粒产生的透射光谱和颜色\scattering_nanosphere_color.mph
+D:\桌面\codex\案例下载\电气\堆叠式锂离子电芯中的多孔弹性效应\li_battery_poroelasticity.mph
+D:\桌面\codex\案例下载\电气\线性磁齿轮\linear_magnetic_gear.mph
+D:\桌面\codex\案例下载\电气\使用解析背景场分析基片上的散射体\scatterer_on_substrate.mph
+D:\桌面\codex\案例下载\电气\波纹波导及其阻抗仿真\CorrugatedWaveguide_62.mph
+D:\桌面\codex\案例下载\电气\单相感应电机：TEAM 研讨会问题 30\single_phase_induction_motor_2d.mph
+D:\桌面\codex\案例下载\电气\移动松饼的微波加热\yagi_uda_antenna_muffin_heating_cleared_63.mph
+D:\桌面\codex\案例下载\电气\空气中平行电极的交流击穿电压\breakdown_voltage_ac.mph
+D:\桌面\codex\案例下载\电气\质子治疗用笔形束扫描喷嘴\proton_beam_scanning.mph

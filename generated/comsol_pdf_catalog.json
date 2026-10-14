@@ -1,0 +1,1322 @@
+{
+  "kind": "comsol_pdf_catalog",
+  "module_count": 51,
+  "pdf_count": 107,
+  "total_size_bytes": 526279684,
+  "domain_counts": {
+    "electromagnetics": 1,
+    "acoustics_and_vibration": 1,
+    "electrochemistry_and_energy": 3,
+    "geometry_and_import": 2,
+    "fluid_flow": 5,
+    "chemical_reaction_and_transport": 1,
+    "materials": 3,
+    "core_platform": 1,
+    "electrochemistry_and_material_degradation": 1,
+    "module": 8,
+    "electrochemistry_and_material_processing": 1,
+    "structural_mechanics": 3,
+    "heat_transfer": 1,
+    "automation_and_integration": 8,
+    "automation_and_scripting": 1,
+    "mems_multiphysics": 1,
+    "microfluidics": 1,
+    "optimization_and_inverse_design": 1,
+    "particle_and_ray_methods": 1,
+    "reduced_fluid_networks": 1,
+    "plasma_and_discharge": 1,
+    "porous_media_transport": 1,
+    "waves_and_electromagnetics": 1,
+    "electromagnetic_waves": 1,
+    "semiconductor_devices": 1,
+    "wave_optics": 1
+  },
+  "modules": [
+    {
+      "module": "ACDC_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ACDC_Module",
+      "domain": "electromagnetics",
+      "pdf_count": 2,
+      "total_size_bytes": 9307332,
+      "documents": [
+        {
+          "name": "ACDCModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ACDC_Module\\ACDCModuleUsersGuide.pdf",
+          "size_bytes": 3586980,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToACDCModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ACDC_Module\\IntroductionToACDCModule.pdf",
+          "size_bytes": 5720352,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Acoustics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Acoustics_Module",
+      "domain": "acoustics_and_vibration",
+      "pdf_count": 2,
+      "total_size_bytes": 12427987,
+      "documents": [
+        {
+          "name": "AcousticsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Acoustics_Module\\AcousticsModuleUsersGuide.pdf",
+          "size_bytes": 7964979,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToAcousticsModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Acoustics_Module\\IntroductionToAcousticsModule.pdf",
+          "size_bytes": 4463008,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Battery_Design_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Battery_Design_Module",
+      "domain": "electrochemistry_and_energy",
+      "pdf_count": 2,
+      "total_size_bytes": 9376832,
+      "documents": [
+        {
+          "name": "BatteryDesignModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Battery_Design_Module\\BatteryDesignModuleUsersGuide.pdf",
+          "size_bytes": 7578868,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToBatteryDesignModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Battery_Design_Module\\IntroductionToBatteryDesignModule.pdf",
+          "size_bytes": 1797964,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "CAD_Import_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CAD_Import_Module",
+      "domain": "geometry_and_import",
+      "pdf_count": 2,
+      "total_size_bytes": 9907725,
+      "documents": [
+        {
+          "name": "CADImportModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CAD_Import_Module\\CADImportModuleUsersGuide.pdf",
+          "size_bytes": 1097311,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToCADImportModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CAD_Import_Module\\IntroductionToCADImportModule.pdf",
+          "size_bytes": 8810414,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "CFD_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CFD_Module",
+      "domain": "fluid_flow",
+      "pdf_count": 2,
+      "total_size_bytes": 11445541,
+      "documents": [
+        {
+          "name": "CFDModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CFD_Module\\CFDModuleUsersGuide.pdf",
+          "size_bytes": 8474430,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToCFDModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\CFD_Module\\IntroductionToCFDModule.pdf",
+          "size_bytes": 2971111,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Chemical_Reaction_Engineering_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Chemical_Reaction_Engineering_Module",
+      "domain": "chemical_reaction_and_transport",
+      "pdf_count": 3,
+      "total_size_bytes": 11742781,
+      "documents": [
+        {
+          "name": "ChemicalReactionEngineeringModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Chemical_Reaction_Engineering_Module\\ChemicalReactionEngineeringModuleUsersGuide.pdf",
+          "size_bytes": 4536946,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToChemicalReactionEngineeringModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Chemical_Reaction_Engineering_Module\\IntroductionToChemicalReactionEngineeringModule.pdf",
+          "size_bytes": 3169364,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "IntroductionToThermodynamicProperties.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Chemical_Reaction_Engineering_Module\\IntroductionToThermodynamicProperties.pdf",
+          "size_bytes": 4036471,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Composite_Materials_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Composite_Materials_Module",
+      "domain": "materials",
+      "pdf_count": 1,
+      "total_size_bytes": 5092971,
+      "documents": [
+        {
+          "name": "CompositeMaterialsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Composite_Materials_Module\\CompositeMaterialsModuleUsersGuide.pdf",
+          "size_bytes": 5092971,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "COMSOL_Multiphysics",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics",
+      "domain": "core_platform",
+      "pdf_count": 14,
+      "total_size_bytes": 157814123,
+      "documents": [
+        {
+          "name": "ApplicationProgrammingGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\ApplicationProgrammingGuide.pdf",
+          "size_bytes": 12264014,
+          "role": "programming_api"
+        },
+        {
+          "name": "COMSOL_ApplicationBuilderManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_ApplicationBuilderManual.pdf",
+          "size_bytes": 2715171,
+          "role": "documentation"
+        },
+        {
+          "name": "COMSOL_MultiphysicsInstallationGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_MultiphysicsInstallationGuide.pdf",
+          "size_bytes": 4396953,
+          "role": "installation"
+        },
+        {
+          "name": "COMSOL_PhysicsBuilderManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_PhysicsBuilderManual.pdf",
+          "size_bytes": 2608041,
+          "role": "documentation"
+        },
+        {
+          "name": "COMSOL_PostprocessingAndVisualization.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_PostprocessingAndVisualization.pdf",
+          "size_bytes": 4586005,
+          "role": "documentation"
+        },
+        {
+          "name": "COMSOL_ProgrammingReferenceManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_ProgrammingReferenceManual.pdf",
+          "size_bytes": 6576942,
+          "role": "reference_manual"
+        },
+        {
+          "name": "COMSOL_ReferenceManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_ReferenceManual.pdf",
+          "size_bytes": 71843447,
+          "role": "reference_manual"
+        },
+        {
+          "name": "COMSOL_ReleaseNotes.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_ReleaseNotes.pdf",
+          "size_bytes": 1012458,
+          "role": "release_notes"
+        },
+        {
+          "name": "COMSOL_SoftwareLicenseAgreement.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_SoftwareLicenseAgreement.pdf",
+          "size_bytes": 642327,
+          "role": "documentation"
+        },
+        {
+          "name": "COMSOL_SpecializedTechniquesForPostprocessingAndVisualization.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\COMSOL_SpecializedTechniquesForPostprocessingAndVisualization.pdf",
+          "size_bytes": 17869943,
+          "role": "documentation"
+        },
+        {
+          "name": "IntroductionToApplicationBuilder.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\IntroductionToApplicationBuilder.pdf",
+          "size_bytes": 12871206,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "IntroductionToCOMSOLMultiphysics.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\IntroductionToCOMSOLMultiphysics.pdf",
+          "size_bytes": 11288812,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "ModelManagerReferenceManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\ModelManagerReferenceManual.pdf",
+          "size_bytes": 7366246,
+          "role": "reference_manual"
+        },
+        {
+          "name": "ModelManagerServerManual.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\COMSOL_Multiphysics\\ModelManagerServerManual.pdf",
+          "size_bytes": 1772558,
+          "role": "documentation"
+        }
+      ]
+    },
+    {
+      "module": "Corrosion_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Corrosion_Module",
+      "domain": "electrochemistry_and_material_degradation",
+      "pdf_count": 2,
+      "total_size_bytes": 7332668,
+      "documents": [
+        {
+          "name": "CorrosionModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Corrosion_Module\\CorrosionModuleUsersGuide.pdf",
+          "size_bytes": 4400093,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToCorrosionModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Corrosion_Module\\IntroductionToCorrosionModule.pdf",
+          "size_bytes": 2932575,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Design_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Design_Module",
+      "domain": "module",
+      "pdf_count": 2,
+      "total_size_bytes": 9096044,
+      "documents": [
+        {
+          "name": "DesignModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Design_Module\\DesignModuleUsersGuide.pdf",
+          "size_bytes": 2649334,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToDesignModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Design_Module\\IntroductionToDesignModule.pdf",
+          "size_bytes": 6446710,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "ECAD_Import_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ECAD_Import_Module",
+      "domain": "geometry_and_import",
+      "pdf_count": 2,
+      "total_size_bytes": 3318248,
+      "documents": [
+        {
+          "name": "ECADImportModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ECAD_Import_Module\\ECADImportModuleUsersGuide.pdf",
+          "size_bytes": 683714,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToECADImportModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\ECAD_Import_Module\\IntroductionToECADImportModule.pdf",
+          "size_bytes": 2634534,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Electric_Discharge_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electric_Discharge_Module",
+      "domain": "module",
+      "pdf_count": 2,
+      "total_size_bytes": 3660413,
+      "documents": [
+        {
+          "name": "ElectricDischargeModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electric_Discharge_Module\\ElectricDischargeModuleUsersGuide.pdf",
+          "size_bytes": 3217747,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToElectricDischargeModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electric_Discharge_Module\\IntroductionToElectricDischargeModule.pdf",
+          "size_bytes": 442666,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Electrochemistry_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrochemistry_Module",
+      "domain": "electrochemistry_and_energy",
+      "pdf_count": 2,
+      "total_size_bytes": 7036712,
+      "documents": [
+        {
+          "name": "ElectrochemistryModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrochemistry_Module\\ElectrochemistryModuleUsersGuide.pdf",
+          "size_bytes": 3962126,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToElectrochemistryModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrochemistry_Module\\IntroductionToElectrochemistryModule.pdf",
+          "size_bytes": 3074586,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Electrodeposition_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrodeposition_Module",
+      "domain": "electrochemistry_and_material_processing",
+      "pdf_count": 2,
+      "total_size_bytes": 7813602,
+      "documents": [
+        {
+          "name": "ElectrodepositionModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrodeposition_Module\\ElectrodepositionModuleUsersGuide.pdf",
+          "size_bytes": 4247676,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToElectrodepositionModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Electrodeposition_Module\\IntroductionToElectrodepositionModule.pdf",
+          "size_bytes": 3565926,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Fatigue_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Fatigue_Module",
+      "domain": "structural_mechanics",
+      "pdf_count": 1,
+      "total_size_bytes": 1443541,
+      "documents": [
+        {
+          "name": "FatigueModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Fatigue_Module\\FatigueModuleUsersGuide.pdf",
+          "size_bytes": 1443541,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Fuel_Cell_and_Electrolyzer_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Fuel_Cell_and_Electrolyzer_Module",
+      "domain": "electrochemistry_and_energy",
+      "pdf_count": 2,
+      "total_size_bytes": 10934424,
+      "documents": [
+        {
+          "name": "FuelCellAndElectrolyzerModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Fuel_Cell_and_Electrolyzer_Module\\FuelCellAndElectrolyzerModuleUsersGuide.pdf",
+          "size_bytes": 6858177,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToFuelCellAndElectrolyzerModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Fuel_Cell_and_Electrolyzer_Module\\IntroductionToFuelCellAndElectrolyzerModule.pdf",
+          "size_bytes": 4076247,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Geomechanics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Geomechanics_Module",
+      "domain": "structural_mechanics",
+      "pdf_count": 1,
+      "total_size_bytes": 282302,
+      "documents": [
+        {
+          "name": "GeomechanicsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Geomechanics_Module\\GeomechanicsModuleUsersGuide.pdf",
+          "size_bytes": 282302,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Granular_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Granular_Flow_Module",
+      "domain": "fluid_flow",
+      "pdf_count": 2,
+      "total_size_bytes": 1855175,
+      "documents": [
+        {
+          "name": "GranularFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Granular_Flow_Module\\GranularFlowModuleUsersGuide.pdf",
+          "size_bytes": 1433888,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToGranularFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Granular_Flow_Module\\IntroductionToGranularFlowModule.pdf",
+          "size_bytes": 421287,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Heat_Transfer_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Heat_Transfer_Module",
+      "domain": "heat_transfer",
+      "pdf_count": 2,
+      "total_size_bytes": 14614034,
+      "documents": [
+        {
+          "name": "HeatTransferModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Heat_Transfer_Module\\HeatTransferModuleUsersGuide.pdf",
+          "size_bytes": 9604857,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "IntroductionToHeatTransferModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Heat_Transfer_Module\\IntroductionToHeatTransferModule.pdf",
+          "size_bytes": 5009177,
+          "role": "introduction_and_examples"
+        }
+      ]
+    },
+    {
+      "module": "Liquid_and_Gas_Properties_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Liquid_and_Gas_Properties_Module",
+      "domain": "module",
+      "pdf_count": 2,
+      "total_size_bytes": 4263543,
+      "documents": [
+        {
+          "name": "IntroductionToLiquidAndGasPropertiesModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Liquid_and_Gas_Properties_Module\\IntroductionToLiquidAndGasPropertiesModule.pdf",
+          "size_bytes": 2786704,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiquidAndGasPropertiesModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Liquid_and_Gas_Properties_Module\\LiquidAndGasPropertiesModuleUsersGuide.pdf",
+          "size_bytes": 1476839,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_AutoCAD",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_AutoCAD",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 7650000,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForAutoCAD.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_AutoCAD\\IntroductionToLiveLinkForAutoCAD.pdf",
+          "size_bytes": 6426719,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForAutoCADUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_AutoCAD\\LiveLinkForAutoCADUsersGuide.pdf",
+          "size_bytes": 1223281,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_Excel",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Excel",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 4642470,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForExcel.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Excel\\IntroductionToLiveLinkForExcel.pdf",
+          "size_bytes": 3145175,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForExcelUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Excel\\LiveLinkForExcelUsersGuide.pdf",
+          "size_bytes": 1497295,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_Inventor",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Inventor",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 7757857,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForInventor.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Inventor\\IntroductionToLiveLinkForInventor.pdf",
+          "size_bytes": 6511984,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForInventorUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Inventor\\LiveLinkForInventorUsersGuide.pdf",
+          "size_bytes": 1245873,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_MATLAB",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_MATLAB",
+      "domain": "automation_and_scripting",
+      "pdf_count": 2,
+      "total_size_bytes": 10369550,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForMATLAB.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_MATLAB\\IntroductionToLiveLinkForMATLAB.pdf",
+          "size_bytes": 3093789,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForMATLABUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_MATLAB\\LiveLinkForMATLABUsersGuide.pdf",
+          "size_bytes": 7275761,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_PTC_Creo_Parametric",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_PTC_Creo_Parametric",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 7698810,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForPTCCreoParametric.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_PTC_Creo_Parametric\\IntroductionToLiveLinkForPTCCreoParametric.pdf",
+          "size_bytes": 6450124,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForPTCCreoParametricUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_PTC_Creo_Parametric\\LiveLinkForPTCCreoParametricUsersGuide.pdf",
+          "size_bytes": 1248686,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_Revit",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Revit",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 8048891,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForRevit.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Revit\\IntroductionToLiveLinkForRevit.pdf",
+          "size_bytes": 6802725,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForRevitUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Revit\\LiveLinkForRevitUsersGuide.pdf",
+          "size_bytes": 1246166,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_Simulink",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Simulink",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 2011026,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForSimulink.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Simulink\\IntroductionToLiveLinkForSimulink.pdf",
+          "size_bytes": 1006002,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForSimulinkUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Simulink\\LiveLinkForSimulinkUsersGuide.pdf",
+          "size_bytes": 1005024,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_Solid_Edge",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Solid_Edge",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 7701997,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForSolidEdge.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Solid_Edge\\IntroductionToLiveLinkForSolidEdge.pdf",
+          "size_bytes": 6463265,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForSolidEdgeUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_Solid_Edge\\LiveLinkForSolidEdgeUsersGuide.pdf",
+          "size_bytes": 1238732,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "LiveLink_for_SOLIDWORKS",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_SOLIDWORKS",
+      "domain": "automation_and_integration",
+      "pdf_count": 2,
+      "total_size_bytes": 7683489,
+      "documents": [
+        {
+          "name": "IntroductionToLiveLinkForSOLIDWORKS.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_SOLIDWORKS\\IntroductionToLiveLinkForSOLIDWORKS.pdf",
+          "size_bytes": 6449981,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "LiveLinkForSOLIDWORKSUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\LiveLink_for_SOLIDWORKS\\LiveLinkForSOLIDWORKSUsersGuide.pdf",
+          "size_bytes": 1233508,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Material_Library",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Material_Library",
+      "domain": "materials",
+      "pdf_count": 1,
+      "total_size_bytes": 1589332,
+      "documents": [
+        {
+          "name": "MaterialLibraryUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Material_Library\\MaterialLibraryUsersGuide.pdf",
+          "size_bytes": 1589332,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "MEMS_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\MEMS_Module",
+      "domain": "mems_multiphysics",
+      "pdf_count": 2,
+      "total_size_bytes": 5463657,
+      "documents": [
+        {
+          "name": "IntroductionToMEMSModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\MEMS_Module\\IntroductionToMEMSModule.pdf",
+          "size_bytes": 2998681,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "MEMSModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\MEMS_Module\\MEMSModuleUsersGuide.pdf",
+          "size_bytes": 2464976,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Metal_Processing_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Metal_Processing_Module",
+      "domain": "module",
+      "pdf_count": 1,
+      "total_size_bytes": 976379,
+      "documents": [
+        {
+          "name": "MetalProcessingModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Metal_Processing_Module\\MetalProcessingModuleUsersGuide.pdf",
+          "size_bytes": 976379,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Microfluidics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Microfluidics_Module",
+      "domain": "microfluidics",
+      "pdf_count": 2,
+      "total_size_bytes": 7247870,
+      "documents": [
+        {
+          "name": "IntroductionToMicrofluidicsModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Microfluidics_Module\\IntroductionToMicrofluidicsModule.pdf",
+          "size_bytes": 3517089,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "MicrofluidicsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Microfluidics_Module\\MicrofluidicsModuleUsersGuide.pdf",
+          "size_bytes": 3730781,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Mixer_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Mixer_Module",
+      "domain": "module",
+      "pdf_count": 1,
+      "total_size_bytes": 3275261,
+      "documents": [
+        {
+          "name": "MixerModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Mixer_Module\\MixerModuleUsersGuide.pdf",
+          "size_bytes": 3275261,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Molecular_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Molecular_Flow_Module",
+      "domain": "fluid_flow",
+      "pdf_count": 2,
+      "total_size_bytes": 4494198,
+      "documents": [
+        {
+          "name": "IntroductionToMolecularFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Molecular_Flow_Module\\IntroductionToMolecularFlowModule.pdf",
+          "size_bytes": 3025126,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "MolecularFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Molecular_Flow_Module\\MolecularFlowModuleUsersGuide.pdf",
+          "size_bytes": 1469072,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Multibody_Dynamics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Multibody_Dynamics_Module",
+      "domain": "module",
+      "pdf_count": 1,
+      "total_size_bytes": 7202336,
+      "documents": [
+        {
+          "name": "MultibodyDynamicsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Multibody_Dynamics_Module\\MultibodyDynamicsModuleUsersGuide.pdf",
+          "size_bytes": 7202336,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Nonlinear_Structural_Materials_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Nonlinear_Structural_Materials_Module",
+      "domain": "materials",
+      "pdf_count": 1,
+      "total_size_bytes": 283273,
+      "documents": [
+        {
+          "name": "NonlinearStructuralMaterialsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Nonlinear_Structural_Materials_Module\\NonlinearStructuralMaterialsModuleUsersGuide.pdf",
+          "size_bytes": 283273,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Optimization_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Optimization_Module",
+      "domain": "optimization_and_inverse_design",
+      "pdf_count": 3,
+      "total_size_bytes": 4860873,
+      "documents": [
+        {
+          "name": "gcmma.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Optimization_Module\\gcmma.pdf",
+          "size_bytes": 272654,
+          "role": "documentation"
+        },
+        {
+          "name": "IntroductionToOptimizationModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Optimization_Module\\IntroductionToOptimizationModule.pdf",
+          "size_bytes": 2896522,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "OptimizationModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Optimization_Module\\OptimizationModuleUsersGuide.pdf",
+          "size_bytes": 1691697,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Particle_Tracing_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Particle_Tracing_Module",
+      "domain": "particle_and_ray_methods",
+      "pdf_count": 2,
+      "total_size_bytes": 12720697,
+      "documents": [
+        {
+          "name": "IntroductionToParticleTracingModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Particle_Tracing_Module\\IntroductionToParticleTracingModule.pdf",
+          "size_bytes": 7911326,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "ParticleTracingModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Particle_Tracing_Module\\ParticleTracingModuleUsersGuide.pdf",
+          "size_bytes": 4809371,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Pipe_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Pipe_Flow_Module",
+      "domain": "reduced_fluid_networks",
+      "pdf_count": 2,
+      "total_size_bytes": 4879860,
+      "documents": [
+        {
+          "name": "IntroductionToPipeFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Pipe_Flow_Module\\IntroductionToPipeFlowModule.pdf",
+          "size_bytes": 3994791,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "PipeFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Pipe_Flow_Module\\PipeFlowModuleUsersGuide.pdf",
+          "size_bytes": 885069,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Plasma_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Plasma_Module",
+      "domain": "plasma_and_discharge",
+      "pdf_count": 2,
+      "total_size_bytes": 7143083,
+      "documents": [
+        {
+          "name": "IntroductionToPlasmaModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Plasma_Module\\IntroductionToPlasmaModule.pdf",
+          "size_bytes": 3198238,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "PlasmaModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Plasma_Module\\PlasmaModuleUsersGuide.pdf",
+          "size_bytes": 3944845,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Polymer_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Polymer_Flow_Module",
+      "domain": "fluid_flow",
+      "pdf_count": 2,
+      "total_size_bytes": 6649929,
+      "documents": [
+        {
+          "name": "IntroductionToPolymerFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Polymer_Flow_Module\\IntroductionToPolymerFlowModule.pdf",
+          "size_bytes": 2782945,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "PolymerFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Polymer_Flow_Module\\PolymerFlowModuleUsersGuide.pdf",
+          "size_bytes": 3866984,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Porous_Media_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Porous_Media_Flow_Module",
+      "domain": "porous_media_transport",
+      "pdf_count": 2,
+      "total_size_bytes": 6001841,
+      "documents": [
+        {
+          "name": "IntroductionToPorousMediaFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Porous_Media_Flow_Module\\IntroductionToPorousMediaFlowModule.pdf",
+          "size_bytes": 2928627,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "PorousMediaFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Porous_Media_Flow_Module\\PorousMediaFlowModuleUsersGuide.pdf",
+          "size_bytes": 3073214,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Ray_Optics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Ray_Optics_Module",
+      "domain": "waves_and_electromagnetics",
+      "pdf_count": 2,
+      "total_size_bytes": 12829850,
+      "documents": [
+        {
+          "name": "IntroductionToRayOpticsModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Ray_Optics_Module\\IntroductionToRayOpticsModule.pdf",
+          "size_bytes": 7553128,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "RayOpticsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Ray_Optics_Module\\RayOpticsModuleUsersGuide.pdf",
+          "size_bytes": 5276722,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "RF_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\RF_Module",
+      "domain": "electromagnetic_waves",
+      "pdf_count": 2,
+      "total_size_bytes": 6888705,
+      "documents": [
+        {
+          "name": "IntroductionToRFModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\RF_Module\\IntroductionToRFModule.pdf",
+          "size_bytes": 3141821,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "RFModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\RF_Module\\RFModuleUsersGuide.pdf",
+          "size_bytes": 3746884,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Rotordynamics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Rotordynamics_Module",
+      "domain": "module",
+      "pdf_count": 1,
+      "total_size_bytes": 6236956,
+      "documents": [
+        {
+          "name": "RotordynamicsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Rotordynamics_Module\\RotordynamicsModuleUsersGuide.pdf",
+          "size_bytes": 6236956,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Semiconductor_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Semiconductor_Module",
+      "domain": "semiconductor_devices",
+      "pdf_count": 2,
+      "total_size_bytes": 8531311,
+      "documents": [
+        {
+          "name": "IntroductionToSemiconductorModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Semiconductor_Module\\IntroductionToSemiconductorModule.pdf",
+          "size_bytes": 3639387,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "SemiconductorModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Semiconductor_Module\\SemiconductorModuleUsersGuide.pdf",
+          "size_bytes": 4891924,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Structural_Mechanics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Structural_Mechanics_Module",
+      "domain": "structural_mechanics",
+      "pdf_count": 3,
+      "total_size_bytes": 40012484,
+      "documents": [
+        {
+          "name": "IntroductionToStructuralMechanicsModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Structural_Mechanics_Module\\IntroductionToStructuralMechanicsModule.pdf",
+          "size_bytes": 5287668,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "StructuralMechanicsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Structural_Mechanics_Module\\StructuralMechanicsModuleUsersGuide.pdf",
+          "size_bytes": 21641446,
+          "role": "module_users_guide"
+        },
+        {
+          "name": "StructuralMechanicsVerificationExamples.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Structural_Mechanics_Module\\StructuralMechanicsVerificationExamples.pdf",
+          "size_bytes": 13083370,
+          "role": "documentation"
+        }
+      ]
+    },
+    {
+      "module": "Subsurface_Flow_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Subsurface_Flow_Module",
+      "domain": "fluid_flow",
+      "pdf_count": 2,
+      "total_size_bytes": 6516069,
+      "documents": [
+        {
+          "name": "IntroductionToSubsurfaceFlowModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Subsurface_Flow_Module\\IntroductionToSubsurfaceFlowModule.pdf",
+          "size_bytes": 3119800,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "SubsurfaceFlowModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Subsurface_Flow_Module\\SubsurfaceFlowModuleUsersGuide.pdf",
+          "size_bytes": 3396269,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Uncertainty_Quantification_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Uncertainty_Quantification_Module",
+      "domain": "module",
+      "pdf_count": 1,
+      "total_size_bytes": 596973,
+      "documents": [
+        {
+          "name": "UncertaintyQuantificationModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Uncertainty_Quantification_Module\\UncertaintyQuantificationModuleUsersGuide.pdf",
+          "size_bytes": 596973,
+          "role": "module_users_guide"
+        }
+      ]
+    },
+    {
+      "module": "Wave_Optics_Module",
+      "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Wave_Optics_Module",
+      "domain": "wave_optics",
+      "pdf_count": 2,
+      "total_size_bytes": 9548659,
+      "documents": [
+        {
+          "name": "IntroductionToWaveOpticsModule.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Wave_Optics_Module\\IntroductionToWaveOpticsModule.pdf",
+          "size_bytes": 6974957,
+          "role": "introduction_and_examples"
+        },
+        {
+          "name": "WaveOpticsModuleUsersGuide.pdf",
+          "path": "D:\\COMSOL64\\Multiphysics\\doc\\pdf\\Wave_Optics_Module\\WaveOpticsModuleUsersGuide.pdf",
+          "size_bytes": 2573702,
+          "role": "module_users_guide"
+        }
+      ]
+    }
+  ],
+  "modeling_logic": [
+    {
+      "stage": "problem_definition",
+      "purpose": "Convert an engineering question into a finite element problem.",
+      "learned_objects": [
+        "domain",
+        "physics",
+        "assumptions",
+        "design_variables",
+        "targets"
+      ],
+      "comsol_artifacts": [
+        "model label",
+        "component",
+        "parameters",
+        "global definitions"
+      ]
+    },
+    {
+      "stage": "geometry",
+      "purpose": "Represent the computational domain and named selections.",
+      "learned_objects": [
+        "dimension",
+        "length_scale",
+        "symmetry",
+        "parts",
+        "selections"
+      ],
+      "comsol_artifacts": [
+        "geom",
+        "features",
+        "work planes",
+        "selections"
+      ]
+    },
+    {
+      "stage": "materials",
+      "purpose": "Attach constitutive laws and properties to domains.",
+      "learned_objects": [
+        "material_property",
+        "unit",
+        "temperature_dependence",
+        "anisotropy"
+      ],
+      "comsol_artifacts": [
+        "material",
+        "propertyGroup",
+        "functions"
+      ]
+    },
+    {
+      "stage": "physics",
+      "purpose": "Choose governing equations and dependent variables.",
+      "learned_objects": [
+        "physics_interface",
+        "dependent_variable",
+        "domain_equation",
+        "coupling"
+      ],
+      "comsol_artifacts": [
+        "physics.create",
+        "features",
+        "multiphysics couplings"
+      ]
+    },
+    {
+      "stage": "boundary_initial_conditions",
+      "purpose": "Close the mathematical model and encode loads, sources, and constraints.",
+      "learned_objects": [
+        "boundary_condition",
+        "initial_condition",
+        "source_term",
+        "constraint"
+      ],
+      "comsol_artifacts": [
+        "feature.selection",
+        "feature.set",
+        "initial values"
+      ]
+    },
+    {
+      "stage": "mesh",
+      "purpose": "Discretize geometry with enough resolution for gradients and waves.",
+      "learned_objects": [
+        "element_size",
+        "boundary_layer",
+        "mesh_quality",
+        "convergence"
+      ],
+      "comsol_artifacts": [
+        "mesh",
+        "size",
+        "FreeTri",
+        "FreeTet",
+        "swept mesh"
+      ]
+    },
+    {
+      "stage": "study_solver",
+      "purpose": "Define the mathematical task and numerical solution strategy.",
+      "learned_objects": [
+        "stationary",
+        "time_dependent",
+        "frequency_domain",
+        "eigenvalue",
+        "parametric_sweep"
+      ],
+      "comsol_artifacts": [
+        "study",
+        "solver sequence",
+        "parametric sweep",
+        "time range"
+      ]
+    },
+    {
+      "stage": "results_validation",
+      "purpose": "Extract quantities of interest and compare against expectations.",
+      "learned_objects": [
+        "derived_value",
+        "plot",
+        "probe",
+        "error_metric",
+        "validation_target"
+      ],
+      "comsol_artifacts": [
+        "result",
+        "numerical",
+        "plot group",
+        "export"
+      ]
+    },
+    {
+      "stage": "surrogate_learning",
+      "purpose": "Turn repeated COMSOL solves into a trainable dataset.",
+      "learned_objects": [
+        "input_columns",
+        "output_columns",
+        "units",
+        "constraints",
+        "train_test_split"
+      ],
+      "comsol_artifacts": [
+        "parameter table",
+        "CSV export",
+        "model summary",
+        "surrogate model"
+      ]
+    }
+  ],
+  "small_model_learning_schema": {
+    "knowledge_inputs": {
+      "pdf": "Theory, assumptions, governing equations, validation examples, module-specific feature descriptions.",
+      "matlab": "Executable LiveLink model construction sequence and parameter names.",
+      "java": "COMSOL exported model tree, feature tags, physics interfaces, studies, and result nodes.",
+      "mph_summary": "Authoritative model metadata exported through COMSOL API.",
+      "csv": "Numerical sweep data for surrogate training.",
+      "json": "Constraints, model summaries, module catalogs, or generated knowledge records."
+    },
+    "canonical_model_record": {
+      "physics_domain": [],
+      "parameters": [],
+      "geometry": [],
+      "materials": [],
+      "boundary_conditions": [],
+      "mesh": [],
+      "study_solver": [],
+      "outputs": [],
+      "constraints": [],
+      "training_dataset": [],
+      "validation": [],
+      "source_documents": []
+    },
+    "reasoning_order": [
+      "identify domain and physics interface",
+      "extract parameters and units",
+      "map geometry and selections",
+      "map materials and constitutive properties",
+      "map boundary and initial conditions",
+      "map mesh and solver/study",
+      "map outputs and validation targets",
+      "build constraints JSON",
+      "generate or modify LiveLink script",
+      "train surrogate from exported sweep data"
+    ]
+  }
+}

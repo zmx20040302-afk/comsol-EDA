@@ -1,0 +1,240 @@
+{
+  "schema": "dac-problem1-v11-development",
+  "schemaVersion": "1.0.0",
+  "task_count": 16,
+  "blocked_task_count": 9,
+  "complete_task_count": 7,
+  "v10": {
+    "gate_accuracy": 0.625,
+    "false_safe_count": 6,
+    "false_safe_rate": 0.6667,
+    "false_block_count": 0,
+    "false_block_rate": 0.0
+  },
+  "v11": {
+    "gate_accuracy": 1.0,
+    "false_safe_count": 0,
+    "false_safe_rate": 0.0,
+    "false_block_count": 0,
+    "false_block_rate": 0.0
+  },
+  "details": [
+    {
+      "id": "v11-dev-thermal-ready",
+      "family": "thermal_spreader",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-thermal-missing",
+      "family": "thermal_spreader",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_THERMAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-electrical-ready",
+      "family": "fuse_link",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-electrical-missing",
+      "family": "fuse_link",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_ELECTRICAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "electrical_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-structural-ready",
+      "family": "spring_contact",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-structural-missing",
+      "family": "spring_contact",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-flow-ready",
+      "family": "micro_nozzle",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-flow-missing",
+      "family": "micro_nozzle",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "OBJECTIVE_MISSING",
+        "OBJECTIVE_MISSING_OR_UNRESOLVED",
+        "MISSING_FLOW_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "objective",
+        "flow_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-flowheat-ready",
+      "family": "cold_plate",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-flowheat-missing",
+      "family": "cold_plate",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_THERMAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-species-ready",
+      "family": "diffusion_membrane",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-species-missing",
+      "family": "diffusion_membrane",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_SPECIES_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "species_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-acoustic-ready",
+      "family": "speaker_cavity",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": []
+    },
+    {
+      "id": "v11-dev-acoustic-missing",
+      "family": "speaker_cavity",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_ACOUSTIC_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "acoustic_boundary"
+      ]
+    },
+    {
+      "id": "v11-dev-objective-missing",
+      "family": "sensor_die",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "OBJECTIVE_MISSING",
+        "OBJECTIVE_MISSING_OR_UNRESOLVED"
+      ],
+      "v11_missing_fields": [
+        "objective"
+      ]
+    },
+    {
+      "id": "v11-dev-study-missing",
+      "family": "thermal_cycle",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "STUDY_TYPE_UNRESOLVED"
+      ],
+      "v11_missing_fields": [
+        "study"
+      ]
+    }
+  ],
+  "evidence_limit": "Project-authored adversarial development data used for v1.1 rule selection; not independent validation evidence."
+}

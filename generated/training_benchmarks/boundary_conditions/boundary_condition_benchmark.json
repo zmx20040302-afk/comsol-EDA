@@ -1,0 +1,472 @@
+{
+  "kind": "boundary_condition_benchmark",
+  "created_at": "2026-08-10T12:05:40.903081+00:00",
+  "case_count": 10,
+  "passed": 10,
+  "needs_review": 0,
+  "cases": [
+    {
+      "id": "BC-01",
+      "prompt": "悬臂梁左端固定，右端施加集中力，求位移和应力。",
+      "expected": [
+        "固定约束",
+        "载荷"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“固体力学”来判断。",
+        "boundary_types": [
+          "固定约束",
+          "位移约束",
+          "边界载荷/压力",
+          "接触边界",
+          "初始应力或体载荷"
+        ],
+        "initial_conditions": [
+          "初始位移",
+          "初始速度",
+          "初始应力/预应力",
+          "初始接触状态"
+        ],
+        "theory": "固体力学边界条件来自力平衡；必须明确哪些边界限制位移，哪些边界施加载荷、压力、接触或初始应力。",
+        "checks": [
+          "确认约束不会导致刚体运动",
+          "确认载荷方向和单位",
+          "确认是否需要非线性、大变形、接触或损伤模型"
+        ],
+        "matches": [
+          {
+            "id": "solid_mechanics",
+            "label": "固体力学"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);\nmodel.component('comp1').physics('solid').feature('bndl1').set('FperArea', {'0' '-p_load' '0'});\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').feature('init1').set('u', {'u0' '0' '0'});\nmodel.component('comp1').physics('spf').feature('init1').set('p', 'p0');\nmodel.component('comp1').physics('solid').feature('init1').set('u', {'0' '0' '0'});"
+      }
+    },
+    {
+      "id": "BC-02",
+      "prompt": "二维板左边界温度为 350 K，右边界绝热，求稳态温度场。",
+      "expected": [
+        "固定温度",
+        "绝热"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“传热”来判断。",
+        "boundary_types": [
+          "固定温度/给定温度",
+          "热通量或热源",
+          "绝热/对称",
+          "对流换热",
+          "表面对表面或环境辐射"
+        ],
+        "initial_conditions": [
+          "初始温度",
+          "初始热源状态",
+          "环境温度"
+        ],
+        "theory": "传热边界条件由能量守恒决定；温度、热通量、绝热、对流和辐射分别代表不同的热交换方式。",
+        "checks": [
+          "确认稳态或瞬态",
+          "确认材料热导率、热容和密度",
+          "确认热源是否来自电流、化学反应或激光输入"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer",
+            "label": "传热"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('ht').create('hf1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hf1').set('q0', 'q0');\nmodel.component('comp1').physics('ht').create('hfconv1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hfconv1').set('HeatFluxType', 'ConvectiveHeatFlux');\nmodel.component('comp1').physics('ht').feature('hfconv1').set('h', 'hconv');\nmodel.component('comp1').physics('ht').feature('init1').set('Tinit', 'T0');"
+      }
+    },
+    {
+      "id": "BC-03",
+      "prompt": "金属表面受到 1000 W/m2 热通量，另一侧与环境对流换热。",
+      "expected": [
+        "热通量",
+        "对流换热"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“传热”来判断。",
+        "boundary_types": [
+          "固定温度/给定温度",
+          "热通量或热源",
+          "绝热/对称",
+          "对流换热",
+          "表面对表面或环境辐射"
+        ],
+        "initial_conditions": [
+          "初始温度",
+          "初始热源状态",
+          "环境温度"
+        ],
+        "theory": "传热边界条件由能量守恒决定；温度、热通量、绝热、对流和辐射分别代表不同的热交换方式。",
+        "checks": [
+          "确认稳态或瞬态",
+          "确认材料热导率、热容和密度",
+          "确认热源是否来自电流、化学反应或激光输入"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer",
+            "label": "传热"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('ht').create('hf1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hf1').set('q0', 'q0');\nmodel.component('comp1').physics('ht').create('hfconv1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hfconv1').set('HeatFluxType', 'ConvectiveHeatFlux');\nmodel.component('comp1').physics('ht').feature('hfconv1').set('h', 'hconv');\nmodel.component('comp1').physics('ht').feature('init1').set('Tinit', 'T0');"
+      }
+    },
+    {
+      "id": "BC-04",
+      "prompt": "导电薄膜左端施加电压，右端接地，其他边界绝缘。",
+      "expected": [
+        "电压",
+        "接地",
+        "绝缘"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“电流/静电”来判断。",
+        "boundary_types": [
+          "端子电压或电流",
+          "接地",
+          "电绝缘",
+          "表面电荷",
+          "浮动电势"
+        ],
+        "initial_conditions": [
+          "初始电势",
+          "初始电荷分布",
+          "初始电流状态"
+        ],
+        "theory": "电学边界条件由电荷守恒和电势方程决定；导电问题需要端子、接地和绝缘边界，静电问题需要电势、电荷或零电荷边界。",
+        "checks": [
+          "确认介质是否导电",
+          "确认是否频域或瞬态",
+          "若有发热，需把电损耗作为热源耦合到传热"
+        ],
+        "matches": [
+          {
+            "id": "electric",
+            "label": "电流/静电"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('ec').create('term1', 'Terminal', 1);\nmodel.component('comp1').physics('ec').feature('term1').set('V0', 'V0');\nmodel.component('comp1').physics('ec').create('gnd1', 'Ground', 1);\nmodel.component('comp1').physics('ec').create('ncd1', 'ElectricInsulation', 1);\nmodel.component('comp1').physics('ec').feature('init1').set('V', 'Vinit');"
+      }
+    },
+    {
+      "id": "BC-05",
+      "prompt": "流体从入口以给定速度进入，从出口以给定压力流出，壁面无滑移。",
+      "expected": [
+        "入口",
+        "出口",
+        "无滑移"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“流体流动 + 固体力学”来判断。",
+        "boundary_types": [
+          "入口速度或体积流量",
+          "出口压力",
+          "壁面无滑移",
+          "对称/周期边界",
+          "初始压力或速度",
+          "固定约束",
+          "位移约束",
+          "边界载荷/压力",
+          "接触边界",
+          "初始应力或体载荷"
+        ],
+        "initial_conditions": [
+          "初始压力",
+          "初始速度",
+          "初始流量或静止状态",
+          "初始位移",
+          "初始应力/预应力",
+          "初始接触状态"
+        ],
+        "theory": "流体边界条件由质量守恒和动量守恒决定；通常需要入口速度/流量、出口压力和壁面无滑移。；固体力学边界条件来自力平衡；必须明确哪些边界限制位移，哪些边界施加载荷、压力、接触或初始应力。",
+        "checks": [
+          "确认雷诺数和层流/湍流选择",
+          "确认是否可压缩",
+          "确认入口和出口位置是否与几何方向一致",
+          "确认约束不会导致刚体运动",
+          "确认载荷方向和单位",
+          "确认是否需要非线性、大变形、接触或损伤模型"
+        ],
+        "matches": [
+          {
+            "id": "laminar_flow",
+            "label": "流体流动"
+          },
+          {
+            "id": "solid_mechanics",
+            "label": "固体力学"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);\nmodel.component('comp1').physics('solid').feature('bndl1').set('FperArea', {'0' '-p_load' '0'});\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').create('out1', 'OutletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('out1').set('p0', 'p_out');\nmodel.component('comp1').physics('spf').feature('init1').set('u', {'u0' '0' '0'});\nmodel.component('comp1').physics('spf').feature('init1').set('p', 'p0');\nmodel.component('comp1').physics('solid').feature('init1').set('u', {'0' '0' '0'});"
+      }
+    },
+    {
+      "id": "BC-06",
+      "prompt": "煤层水力压裂外边界施加围压，钻孔内壁施加注入压力，初始孔隙压力为 0.1 MPa。",
+      "expected": [
+        "围压",
+        "注入压力",
+        "初始孔隙压力"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“水力压裂/孔压-应力耦合 + 固体力学 + 流体流动”来判断。",
+        "boundary_types": [
+          "外边界原位地应力、围压或位移约束",
+          "钻孔内壁注入压力或流量",
+          "煤层/岩体渗透率、孔隙率和初始孔隙压力",
+          "裂缝面压力、泄漏或损伤/相场边界",
+          "固定约束",
+          "位移约束",
+          "边界载荷/压力",
+          "接触边界",
+          "初始应力或体载荷",
+          "入口速度或体积流量",
+          "出口压力",
+          "壁面无滑移",
+          "对称/周期边界",
+          "初始压力或速度"
+        ],
+        "initial_conditions": [
+          "初始孔隙压力",
+          "初始地应力",
+          "初始位移为零或原位平衡状态",
+          "初始裂缝/损伤变量",
+          "初始位移",
+          "初始速度",
+          "初始应力/预应力",
+          "初始接触状态",
+          "初始压力",
+          "初始流量或静止状态"
+        ],
+        "theory": "水力压裂边界条件要同时约束岩体力学平衡和压裂液渗流；外部地应力决定初始受力，钻孔内压决定裂缝起裂和扩展驱动力。；固体力学边界条件来自力平衡；必须明确哪些边界限制位移，哪些边界施加载荷、压力、接触或初始应力。；流体边界条件由质量守恒和动量守恒决定；通常需要入口速度/流量、出口压力和壁面无滑移。",
+        "checks": [
+          "确认只求孔压-应力响应，还是要求真实裂缝路径",
+          "确认最大/最小主应力方向、煤层非均质性和抗拉强度",
+          "若生成代码，钻孔、外边界和裂缝面必须使用命名选择集复核",
+          "确认约束不会导致刚体运动",
+          "确认载荷方向和单位",
+          "确认是否需要非线性、大变形、接触或损伤模型",
+          "确认雷诺数和层流/湍流选择",
+          "确认是否可压缩",
+          "确认入口和出口位置是否与几何方向一致"
+        ],
+        "matches": [
+          {
+            "id": "hydraulic_fracturing",
+            "label": "水力压裂/孔压-应力耦合"
+          },
+          {
+            "id": "solid_mechanics",
+            "label": "固体力学"
+          },
+          {
+            "id": "laminar_flow",
+            "label": "流体流动"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);\nmodel.component('comp1').physics('solid').feature('bndl1').set('FperArea', {'0' '-p_load' '0'});\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').create('out1', 'OutletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('out1').set('p0', 'p_out');\nmodel.component('comp1').physics('spf').feature('init1').set('u', {'u0' '0' '0'});\nmodel.component('comp1').physics('spf').feature('init1').set('p', 'p0');\nmodel.component('comp1').physics('solid').feature('init1').set('u', {'0' '0' '0'});"
+      }
+    },
+    {
+      "id": "BC-07",
+      "prompt": "热执行器初始温度为室温，通电后进行瞬态温升分析。",
+      "expected": [
+        "初始温度",
+        "电流"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“传热 + 电流/静电”来判断。",
+        "boundary_types": [
+          "固定温度/给定温度",
+          "热通量或热源",
+          "绝热/对称",
+          "对流换热",
+          "表面对表面或环境辐射",
+          "端子电压或电流",
+          "接地",
+          "电绝缘",
+          "表面电荷",
+          "浮动电势"
+        ],
+        "initial_conditions": [
+          "初始温度",
+          "初始热源状态",
+          "环境温度",
+          "初始电势",
+          "初始电荷分布",
+          "初始电流状态"
+        ],
+        "theory": "传热边界条件由能量守恒决定；温度、热通量、绝热、对流和辐射分别代表不同的热交换方式。；电学边界条件由电荷守恒和电势方程决定；导电问题需要端子、接地和绝缘边界，静电问题需要电势、电荷或零电荷边界。",
+        "checks": [
+          "确认稳态或瞬态",
+          "确认材料热导率、热容和密度",
+          "确认热源是否来自电流、化学反应或激光输入",
+          "确认介质是否导电",
+          "确认是否频域或瞬态",
+          "若有发热，需把电损耗作为热源耦合到传热"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer",
+            "label": "传热"
+          },
+          {
+            "id": "electric",
+            "label": "电流/静电"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('ht').create('hf1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hf1').set('q0', 'q0');\nmodel.component('comp1').physics('ht').create('hfconv1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hfconv1').set('HeatFluxType', 'ConvectiveHeatFlux');\nmodel.component('comp1').physics('ht').feature('hfconv1').set('h', 'hconv');\nmodel.component('comp1').physics('ec').create('term1', 'Terminal', 1);\nmodel.component('comp1').physics('ec').feature('term1').set('V0', 'V0');\nmodel.component('comp1').physics('ec').create('gnd1', 'Ground', 1);\nmodel.component('comp1').physics('ec').create('ncd1', 'ElectricInsulation', 1);\nmodel.component('comp1').physics('ht').feature('init1').set('Tinit', 'T0');\nmodel.component('comp1').physics('ec').feature('init1').set('V', 'Vinit');"
+      }
+    },
+    {
+      "id": "BC-08",
+      "prompt": "利用几何对称性，只建立一半模型，对称面不允许法向位移和法向热流。",
+      "expected": [
+        "对称边界"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“固体力学”来判断。",
+        "boundary_types": [
+          "固定约束",
+          "位移约束",
+          "边界载荷/压力",
+          "接触边界",
+          "初始应力或体载荷",
+          "对称边界"
+        ],
+        "initial_conditions": [
+          "初始位移",
+          "初始速度",
+          "初始应力/预应力",
+          "初始接触状态"
+        ],
+        "theory": "固体力学边界条件来自力平衡；必须明确哪些边界限制位移，哪些边界施加载荷、压力、接触或初始应力。",
+        "checks": [
+          "确认约束不会导致刚体运动",
+          "确认载荷方向和单位",
+          "确认是否需要非线性、大变形、接触或损伤模型"
+        ],
+        "matches": [
+          {
+            "id": "solid_mechanics",
+            "label": "固体力学"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);\nmodel.component('comp1').physics('solid').feature('bndl1').set('FperArea', {'0' '-p_load' '0'});\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').feature('init1').set('u', {'u0' '0' '0'});\nmodel.component('comp1').physics('spf').feature('init1').set('p', 'p0');\nmodel.component('comp1').physics('solid').feature('init1').set('u', {'0' '0' '0'});"
+      }
+    },
+    {
+      "id": "BC-09",
+      "prompt": "两个接触零件之间允许接触和分离，接触面传递压力但不穿透。",
+      "expected": [
+        "接触",
+        "不穿透"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“固体力学 + 流体流动”来判断。",
+        "boundary_types": [
+          "固定约束",
+          "位移约束",
+          "边界载荷/压力",
+          "接触边界",
+          "初始应力或体载荷",
+          "入口速度或体积流量",
+          "出口压力",
+          "壁面无滑移",
+          "对称/周期边界",
+          "初始压力或速度",
+          "不穿透"
+        ],
+        "initial_conditions": [
+          "初始位移",
+          "初始速度",
+          "初始应力/预应力",
+          "初始接触状态",
+          "初始压力",
+          "初始流量或静止状态"
+        ],
+        "theory": "固体力学边界条件来自力平衡；必须明确哪些边界限制位移，哪些边界施加载荷、压力、接触或初始应力。；流体边界条件由质量守恒和动量守恒决定；通常需要入口速度/流量、出口压力和壁面无滑移。",
+        "checks": [
+          "确认约束不会导致刚体运动",
+          "确认载荷方向和单位",
+          "确认是否需要非线性、大变形、接触或损伤模型",
+          "确认雷诺数和层流/湍流选择",
+          "确认是否可压缩",
+          "确认入口和出口位置是否与几何方向一致"
+        ],
+        "matches": [
+          {
+            "id": "solid_mechanics",
+            "label": "固体力学"
+          },
+          {
+            "id": "laminar_flow",
+            "label": "流体流动"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('solid').create('bndl1', 'BoundaryLoad', 1);\nmodel.component('comp1').physics('solid').feature('bndl1').set('FperArea', {'0' '-p_load' '0'});\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').create('out1', 'OutletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('out1').set('p0', 'p_out');\nmodel.component('comp1').physics('spf').feature('init1').set('u', {'u0' '0' '0'});\nmodel.component('comp1').physics('spf').feature('init1').set('p', 'p0');\nmodel.component('comp1').physics('solid').feature('init1').set('u', {'0' '0' '0'});"
+      }
+    },
+    {
+      "id": "BC-10",
+      "prompt": "扩散问题左侧浓度固定为 1，右侧无通量，初始浓度为 0。",
+      "expected": [
+        "浓度",
+        "无通量",
+        "初始浓度"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "按当前需求，边界条件应优先按“稀物质传递”来判断。",
+        "boundary_types": [
+          "入口浓度",
+          "无通量壁面",
+          "指定通量",
+          "表面反应/吸附",
+          "出口流出条件"
+        ],
+        "initial_conditions": [
+          "初始浓度",
+          "初始吸附量",
+          "初始反应物分布"
+        ],
+        "theory": "传质边界条件由对流-扩散方程决定；入口浓度、壁面通量、反应和出口流出条件决定浓度场。",
+        "checks": [
+          "确认扩散系数和反应速率",
+          "确认是否由流场携带",
+          "确认浓度是否影响材料或流体性质"
+        ],
+        "matches": [
+          {
+            "id": "species_transport",
+            "label": "稀物质传递"
+          }
+        ],
+        "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('spf').create('inl1', 'InletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('inl1').set('U0in', 'u_in');\nmodel.component('comp1').physics('spf').create('out1', 'OutletBoundary', 1);\nmodel.component('comp1').physics('spf').feature('out1').set('p0', 'p_out');"
+      }
+    }
+  ],
+  "interpretation": "该基准检查边界类别和初始条件的可解释提取，不替代 COMSOL 中的真实边界编号与命名选择集核验。"
+}

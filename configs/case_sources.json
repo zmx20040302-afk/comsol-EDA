@@ -1,0 +1,20 @@
+{
+  "schema": "comsol-case-sources",
+  "schemaVersion": "1.0.0",
+  "default_source_id": "linux_downloaded_cases",
+  "sources": [
+    {
+      "id": "linux_downloaded_cases",
+      "display_name": "Linux 下载案例库",
+      "source_path": "/home/lab/zhangmx/案例下载/案例下载/",
+      "access_mode": "auto",
+      "windows_mirror": "",
+      "wsl_distribution": "",
+      "ssh_host": "",
+      "ssh_port": 22,
+      "ssh_user": "zhangmx",
+      "cache_dir": "generated/case_sources/linux_downloaded_cases",
+      "notes": "Linux 部署时直接读取；Windows 可填写镜像目录、WSL 发行版或 SSH 主机。"
+    }
+  ]
+}

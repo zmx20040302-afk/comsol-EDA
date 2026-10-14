@@ -1,0 +1,20 @@
+{
+  "kind": "comsol_bounded_parameter_sweep_plan",
+  "case": "热微执行器的简化模型",
+  "model_path": "D:\\桌面\\codex\\案例下载\\COMSOL\\热微执行器的简化模型\\thermal_actuator_simplified.mph",
+  "training_inputs": {
+    "DV_V": [4.5, 5.0, 5.5],
+    "htc_s_W_m2K": [15000, 20000, 25000],
+    "htc_us_W_m2K": 400
+  },
+  "training_rows": 9,
+  "outputs": ["Tmax_K", "umax_m", "joule_power_W"],
+  "independent_holdout_inputs": {
+    "DV_V": [4.75, 5.25],
+    "htc_s_W_m2K": [17500, 22500],
+    "htc_us_W_m2K": 400
+  },
+  "holdout_rows": 4,
+  "scope": "固定热微执行器简化模型的几何、材料、物理场和边界条件；仅在 DV=4.5-5.5 V、htc_s=15000-25000 W/(m^2*K)、htc_us=400 W/(m^2*K) 内使用。",
+  "safety": "原始 MPH 只读打开；参数改变仅存在于 MATLAB 会话；训练前必须完成 CSV 有效性检查。"
+}

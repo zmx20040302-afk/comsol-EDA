@@ -1,0 +1,52 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T08:28:45.951974+00:00",
+  "name": "三维导线电阻电导率代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\simple_resistor_conductivity_training.csv",
+    "rows": 5,
+    "inputs": [
+      "conductivity_S_m"
+    ],
+    "outputs": [
+      "resistance_ohm"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\simple_resistor_conductivity_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "三维铜导线 Conductive Media 模型；固定几何、1 A 端子、接地和网格，仅改变各向同性电导率 sigma=3e7-7e7 S/m。",
+  "validated_input_ranges": {
+    "conductivity_S_m": {
+      "min": 30000000.0,
+      "max": 70000000.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "simple_resistor_conductivity_independent_comsol_validation",
+    "created_at": "2026-08-25T08:28:45.946817+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\simple_resistor_conductivity_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\simple_resistor_conductivity_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "selected_model": "reciprocal_conductivity_linear_regression",
+    "selection_reason": "Fixed-geometry ohmic resistance follows R proportional to 1/sigma.",
+    "per_output_relative_validation": {
+      "resistance_ohm": {
+        "max_relative_error_percent": 6.087371346939983e-11,
+        "mean_relative_error_percent": 4.47515994448404e-11,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "三维铜导线 Conductive Media 模型；固定几何、1 A 端子、接地和网格，仅改变各向同性电导率 sigma=3e7-7e7 S/m。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

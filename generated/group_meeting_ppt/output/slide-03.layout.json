@@ -1,0 +1,889 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/wekpfi",
+    "id": "wekpfi",
+    "slide": 3,
+    "layoutId": "c1918948-6926-49a2-9d0b-16eb72d43dac",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "e50176f4-edb9-4e12-96a5-70f29f2c5eb5",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "c1918948-6926-49a2-9d0b-16eb72d43dac",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "e50176f4-edb9-4e12-96a5-70f29f2c5eb5",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "e50176f4-edb9-4e12-96a5-70f29f2c5eb5",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kvm9ofmt",
+      "id": "1",
+      "name": "title",
+      "bbox": [
+        42,
+        38,
+        1110,
+        58
+      ],
+      "geometry": "rect",
+      "text": "结论：小模型已能组织建模，尚不能替代裂纹模型校准",
+      "textPreview": "结论：小模型已能组织建模，尚不能替代裂纹模型校准",
+      "resolvedFontSize": 39,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 39,
+        "typeface": "Arial",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "结论：小模型已能组织建模，尚不能替代裂纹模型校准"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "结论：小模型已能组织建模，尚不能替代裂纹模型校准",
+          "resolvedTextStyle": {
+            "fontSize": 39,
+            "typeface": "Arial",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "结论：小模型已能组织建模，尚不能替代裂纹模型校准",
+              "fontSize": 39,
+              "typeface": "Arial",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zudsva58",
+      "id": "2",
+      "name": "ready-panel",
+      "bbox": [
+        42,
+        140,
+        558,
+        412
+      ],
+      "geometry": "rect",
+      "fillColor": "#F5FAFE",
+      "lineColor": "#3D8DFF",
+      "lineWidth": 1
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytkrm54n",
+      "id": "3",
+      "name": "ready-title",
+      "bbox": [
+        70,
+        170,
+        200,
+        30
+      ],
+      "geometry": "rect",
+      "text": "已经可用",
+      "textPreview": "已经可用",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "Arial",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "已经可用"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "已经可用",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Arial",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "已经可用",
+              "fontSize": 25,
+              "typeface": "Arial",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xsbatkn2",
+      "id": "4",
+      "name": "ready-copy",
+      "bbox": [
+        70,
+        220,
+        486,
+        240
+      ],
+      "geometry": "rect",
+      "text": "• 读取 Word、PDF、MATLAB、Java 与案例资料\n• 提取参数、总结理论、检索本地案例记忆\n• 给出物理场、几何、材料、边界与研究建议\n• 分步审批并输出 MATLAB/Java 建模骨架\n• 已在更简单的二维热传导标杆中验证 COMSOL → CSV → 代理模型重训练闭环",
+      "textPreview": "• 读取 Word、PDF、MATLAB、Java 与案例资料 | • 提取参数、总结理论、检索本地案例记忆 | • 给出物理场、几何、材料、边界与研究建议 | • 分步审批并输出 MATLAB/Java 建模骨架 | • 已在更简单的二维热传导标杆中验证 COMSOL →...",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• 读取 Word、PDF、MATLAB、Java 与案例资料"
+          },
+          {
+            "index": 2,
+            "text": "• 提取参数、总结理论、检索本地案例记忆"
+          },
+          {
+            "index": 3,
+            "text": "• 给出物理场、几何、材料、边界与研究建议"
+          },
+          {
+            "index": 4,
+            "text": "• 分步审批并输出 MATLAB/Java 建模骨架"
+          },
+          {
+            "index": 5,
+            "text": "• 已在更简单的二维热传导标杆中验证 COMSOL →"
+          },
+          {
+            "index": 6,
+            "text": "CSV → 代理模型重训练闭环"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "• 读取 Word、PDF、MATLAB、Java 与案例资料",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 读取 Word、PDF、MATLAB、Java 与案例资料",
+              "fontSize": 21,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "• 提取参数、总结理论、检索本地案例记忆",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 提取参数、总结理论、检索本地案例记忆",
+              "fontSize": 21,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "• 给出物理场、几何、材料、边界与研究建议",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 给出物理场、几何、材料、边界与研究建议",
+              "fontSize": 21,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "• 分步审批并输出 MATLAB/Java 建模骨架",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 分步审批并输出 MATLAB/Java 建模骨架",
+              "fontSize": 21,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "• 已在更简单的二维热传导标杆中验证 COMSOL → CSV → 代理模型重训练闭环",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 已在更简单的二维热传导标杆中验证 COMSOL → CSV → 代理模型重训练闭环",
+              "fontSize": 21,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cr29kfmh",
+      "id": "5",
+      "name": "gap-panel",
+      "bbox": [
+        638,
+        140,
+        600,
+        412
+      ],
+      "geometry": "rect",
+      "fillColor": "#EDEDED",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bqtsra5c",
+      "id": "6",
+      "name": "gap-title",
+      "bbox": [
+        668,
+        170,
+        360,
+        30
+      ],
+      "geometry": "rect",
+      "text": "本案例暴露的关键缺口",
+      "textPreview": "本案例暴露的关键缺口",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "Arial",
+        "color": "#111111",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本案例暴露的关键缺口"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本案例暴露的关键缺口",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Arial",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本案例暴露的关键缺口",
+              "fontSize": 25,
+              "typeface": "Arial",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/apkri54r",
+      "id": "7",
+      "name": "gap-copy",
+      "bbox": [
+        668,
+        220,
+        526,
+        220
+      ],
+      "geometry": "rect",
+      "text": "• 通用代码把二维几何误建为 3D，且缺少命名选择\n• 流动接口应由层流改为孔隙介质/达西流\n• 相场/内聚区裂纹与断裂参数尚未落实\n• 生成代码仍需静态检查、mphserver 编译和结果校验\n• 需用试验或现场数据标定起裂压力、路径和长度",
+      "textPreview": "• 通用代码把二维几何误建为 3D，且缺少命名选择 | • 流动接口应由层流改为孔隙介质/达西流 | • 相场/内聚区裂纹与断裂参数尚未落实 | • 生成代码仍需静态检查、mphserver 编译和结果校验 | • 需用试验或现场数据标定起裂压力、路径和长度",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#111111",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• 通用代码把二维几何误建为 3D，且缺少命名选择"
+          },
+          {
+            "index": 2,
+            "text": "• 流动接口应由层流改为孔隙介质/达西流"
+          },
+          {
+            "index": 3,
+            "text": "• 相场/内聚区裂纹与断裂参数尚未落实"
+          },
+          {
+            "index": 4,
+            "text": "• 生成代码仍需静态检查、mphserver 编译和结果校验"
+          },
+          {
+            "index": 5,
+            "text": "• 需用试验或现场数据标定起裂压力、路径和长度"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "• 通用代码把二维几何误建为 3D，且缺少命名选择",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 通用代码把二维几何误建为 3D，且缺少命名选择",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "• 流动接口应由层流改为孔隙介质/达西流",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 流动接口应由层流改为孔隙介质/达西流",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "• 相场/内聚区裂纹与断裂参数尚未落实",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 相场/内聚区裂纹与断裂参数尚未落实",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "• 生成代码仍需静态检查、mphserver 编译和结果校验",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 生成代码仍需静态检查、mphserver 编译和结果校验",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "• 需用试验或现场数据标定起裂压力、路径和长度",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#111111",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• 需用试验或现场数据标定起裂压力、路径和长度",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#111111",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hofa54nm",
+      "id": "8",
+      "name": "recommendation-band",
+      "bbox": [
+        42,
+        580,
+        1196,
+        50
+      ],
+      "geometry": "rect",
+      "fillColor": "#111111",
+      "lineColor": "#111111",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wn6twzm1",
+      "id": "9",
+      "name": "recommendation",
+      "bbox": [
+        66,
+        593,
+        1140,
+        24
+      ],
+      "geometry": "rect",
+      "text": "建议下一步：先建立一个可运行的单孔水力压裂参考模型，再用 20–50 组扫参案例训练自动建模与校验规则。",
+      "textPreview": "建议下一步：先建立一个可运行的单孔水力压裂参考模型，再用 20–50 组扫参案例训练自动建模与校验规则。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "建议下一步：先建立一个可运行的单孔水力压裂参考模型，再用 20–50 组扫参案例训练自动建模与校验规则。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "建议下一步：先建立一个可运行的单孔水力压裂参考模型，再用 20–50 组扫参案例训练自动建模与校验规则。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "建议下一步：先建立一个可运行的单孔水力压裂参考模型，再用 20–50 组扫参案例训练自动建模与校验规则。",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qhcned8n",
+      "id": "10",
+      "name": "footer-rule",
+      "bbox": [
+        42,
+        650,
+        1196,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#B8BCC4",
+      "lineColor": "#B8BCC4",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rilonip8",
+      "id": "11",
+      "name": "source-footer",
+      "bbox": [
+        42,
+        665,
+        560,
+        20
+      ],
+      "geometry": "rect",
+      "text": "本地论文与 COMSOL 小模型运行记录",
+      "textPreview": "本地论文与 COMSOL 小模型运行记录",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial",
+        "color": "#5D6470",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本地论文与 COMSOL 小模型运行记录"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本地论文与 COMSOL 小模型运行记录",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial",
+            "color": "#5D6470",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本地论文与 COMSOL 小模型运行记录",
+              "fontSize": 12,
+              "typeface": "Arial",
+              "color": "#5D6470",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sju5gnqt",
+      "id": "12",
+      "name": "slide-number",
+      "bbox": [
+        1184,
+        662,
+        54,
+        22
+      ],
+      "geometry": "rect",
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial",
+        "color": "#5D6470",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial",
+            "color": "#5D6470",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 13,
+              "typeface": "Arial",
+              "color": "#5D6470",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

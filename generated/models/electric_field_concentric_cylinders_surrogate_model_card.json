@@ -1,0 +1,59 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T08:03:26.664047+00:00",
+  "name": "同心圆柱静电场代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\electric_field_concentric_cylinders_training.csv",
+    "rows": 5,
+    "inputs": [
+      "voltage_V"
+    ],
+    "outputs": [
+      "potential_mid_V",
+      "electric_field_mid_V_m"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\electric_field_concentric_cylinders_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "同心圆柱一维轴对称静电模型；ri=0.1 m、ro=1 m、外圆柱接地，仅改变内圆柱 V0=50-150 V。",
+  "validated_input_ranges": {
+    "voltage_V": {
+      "min": 50.0,
+      "max": 150.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "electric_field_concentric_cylinders_independent_comsol_validation",
+    "created_at": "2026-08-25T08:03:26.659989+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\electric_field_concentric_cylinders_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\electric_field_concentric_cylinders_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "selected_model": "linear_regression_physics_consistent",
+    "selection_reason": "The governing electrostatic response is linear in V0 for fixed geometry, materials, and grounded outer boundary.",
+    "per_output_relative_validation": {
+      "potential_mid_V": {
+        "max_relative_error_percent": 1.1801461415443595e-13,
+        "mean_relative_error_percent": 6.884185825675429e-14,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      },
+      "electric_field_mid_V_m": {
+        "max_relative_error_percent": 3.623008780674628e-11,
+        "mean_relative_error_percent": 1.9095813280030575e-11,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "同心圆柱一维轴对称静电模型；ri=0.1 m、ro=1 m、外圆柱接地，仅改变内圆柱 V0=50-150 V。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

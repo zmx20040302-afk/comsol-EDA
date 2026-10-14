@@ -1,0 +1,406 @@
+{
+  "schema": "comsol-p4-adaptive-training",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T11:05:10.716693+00:00",
+  "base_rows": 140,
+  "adaptive_rounds": 4,
+  "cases_per_round": 20,
+  "final_training_rows": 220,
+  "rounds": [
+    {
+      "round": 1,
+      "training_rows_after_round": 160,
+      "selected_models_before_round": {
+        "Tmax_K": "extra_trees_leaf1",
+        "Jmax_A_m2": "extra_trees_leaf1",
+        "normalized_voltage_at_160A_mV": "extra_trees_leaf1",
+        "joule_power_W": "extra_trees_leaf1",
+        "copper_mass_kg": "extra_trees_leaf1"
+      },
+      "cross_validation_before_round": {
+        "Tmax_K": {
+          "rmse": 27.38132164770209,
+          "mae": 10.994258064636576,
+          "r2": 0.6421448832745051,
+          "maximum_absolute_error": 217.50146056662936
+        },
+        "Jmax_A_m2": {
+          "rmse": 689816.6206711293,
+          "mae": 519997.589819458,
+          "r2": 0.9388125615808209,
+          "maximum_absolute_error": 2263091.3760179523
+        },
+        "normalized_voltage_at_160A_mV": {
+          "rmse": 1.737126092435243,
+          "mae": 1.048953029104009,
+          "r2": 0.9431411663974516,
+          "maximum_absolute_error": 9.822498323902096
+        },
+        "joule_power_W": {
+          "rmse": 0.8529810174076261,
+          "mae": 0.500037552258996,
+          "r2": 0.8979798842646478,
+          "maximum_absolute_error": 4.986218544685062
+        },
+        "copper_mass_kg": {
+          "rmse": 0.012848982633917452,
+          "mae": 0.009327289291786596,
+          "r2": 0.9841304308410622,
+          "maximum_absolute_error": 0.06540153705140972
+        }
+      },
+      "solved_rows": 20,
+      "feasible_rows": 2,
+      "wall_seconds": 107.05065549999927,
+      "input_sha256": "e21e31325785f498e5dabb2246fc83f63b7f1b1883c0108ea5a127bb932e99ca",
+      "result_sha256": "b840f4bee3de8503124a0f547e2804beb9a140a18d594cf20833cc7570a3809a"
+    },
+    {
+      "round": 2,
+      "training_rows_after_round": 180,
+      "selected_models_before_round": {
+        "Tmax_K": "extra_trees_leaf1",
+        "Jmax_A_m2": "extra_trees_leaf2",
+        "normalized_voltage_at_160A_mV": "extra_trees_leaf2",
+        "joule_power_W": "extra_trees_leaf1",
+        "copper_mass_kg": "extra_trees_leaf1"
+      },
+      "cross_validation_before_round": {
+        "Tmax_K": {
+          "rmse": 22.2086804743443,
+          "mae": 11.411624984376138,
+          "r2": 0.8421769015756542,
+          "maximum_absolute_error": 129.85300171072697
+        },
+        "Jmax_A_m2": {
+          "rmse": 669071.2576681491,
+          "mae": 510272.3808464447,
+          "r2": 0.9437274599191111,
+          "maximum_absolute_error": 2316029.651572982
+        },
+        "normalized_voltage_at_160A_mV": {
+          "rmse": 1.435226733620048,
+          "mae": 0.945523518127288,
+          "r2": 0.9634691382924153,
+          "maximum_absolute_error": 7.179291660966548
+        },
+        "joule_power_W": {
+          "rmse": 0.7268078437967235,
+          "mae": 0.48282367602454174,
+          "r2": 0.9361181044562503,
+          "maximum_absolute_error": 3.409437291160005
+        },
+        "copper_mass_kg": {
+          "rmse": 0.0142825786442053,
+          "mae": 0.009549177574635142,
+          "r2": 0.9820272910910902,
+          "maximum_absolute_error": 0.10596183934065817
+        }
+      },
+      "solved_rows": 20,
+      "feasible_rows": 0,
+      "wall_seconds": 109.10941869999806,
+      "input_sha256": "8e2c0ec421b79fce5b6ef7f351ba3027d2d65d08d24739589c756902de5cc8d9",
+      "result_sha256": "cdc497539eecc230ee20a8b6fce148d07a8842c5d711b2d28acb7ea58dfe8f00"
+    },
+    {
+      "round": 3,
+      "training_rows_after_round": 200,
+      "selected_models_before_round": {
+        "Tmax_K": "extra_trees_leaf1",
+        "Jmax_A_m2": "extra_trees_leaf2",
+        "normalized_voltage_at_160A_mV": "extra_trees_leaf1",
+        "joule_power_W": "extra_trees_leaf1",
+        "copper_mass_kg": "extra_trees_leaf1"
+      },
+      "cross_validation_before_round": {
+        "Tmax_K": {
+          "rmse": 23.809746946996935,
+          "mae": 12.427686583060172,
+          "r2": 0.8238741646673258,
+          "maximum_absolute_error": 142.27609178614853
+        },
+        "Jmax_A_m2": {
+          "rmse": 642715.4870565747,
+          "mae": 492344.8461698641,
+          "r2": 0.9458589132945685,
+          "maximum_absolute_error": 2077493.0815734789
+        },
+        "normalized_voltage_at_160A_mV": {
+          "rmse": 1.1706698164784304,
+          "mae": 0.7974621452137595,
+          "r2": 0.9789559122968747,
+          "maximum_absolute_error": 4.9031060602903835
+        },
+        "joule_power_W": {
+          "rmse": 0.6764651132340014,
+          "mae": 0.4441729474623939,
+          "r2": 0.9436888909186014,
+          "maximum_absolute_error": 3.8402383452821525
+        },
+        "copper_mass_kg": {
+          "rmse": 0.011596495640018342,
+          "mae": 0.008333801701392307,
+          "r2": 0.9887542459287763,
+          "maximum_absolute_error": 0.05466170727062303
+        }
+      },
+      "solved_rows": 20,
+      "feasible_rows": 1,
+      "wall_seconds": 99.99270459999752,
+      "input_sha256": "44ab78a4a4a32af4b56472ca0117c5ff64b26a3c7a2c974e1094b61fbf967882",
+      "result_sha256": "c4686f7066e1e2cddcb9fede4c6a02bafcc2e7662257b561be640e67af70f343"
+    },
+    {
+      "round": 4,
+      "training_rows_after_round": 220,
+      "selected_models_before_round": {
+        "Tmax_K": "extra_trees_leaf1",
+        "Jmax_A_m2": "extra_trees_leaf1",
+        "normalized_voltage_at_160A_mV": "extra_trees_leaf1",
+        "joule_power_W": "extra_trees_leaf1",
+        "copper_mass_kg": "extra_trees_leaf1"
+      },
+      "cross_validation_before_round": {
+        "Tmax_K": {
+          "rmse": 21.939291098768642,
+          "mae": 12.336742373505349,
+          "r2": 0.8508934231626452,
+          "maximum_absolute_error": 118.66534072004526
+        },
+        "Jmax_A_m2": {
+          "rmse": 607193.6820202204,
+          "mae": 463990.55542239704,
+          "r2": 0.9503545530599737,
+          "maximum_absolute_error": 1939017.6079753377
+        },
+        "normalized_voltage_at_160A_mV": {
+          "rmse": 1.1105067684304255,
+          "mae": 0.704661972206114,
+          "r2": 0.9799039496330403,
+          "maximum_absolute_error": 5.280967599173472
+        },
+        "joule_power_W": {
+          "rmse": 0.690381667483403,
+          "mae": 0.4635781292916217,
+          "r2": 0.9378044124968611,
+          "maximum_absolute_error": 3.673403934567757
+        },
+        "copper_mass_kg": {
+          "rmse": 0.01135970828402928,
+          "mae": 0.00839467558169387,
+          "r2": 0.9896059925635889,
+          "maximum_absolute_error": 0.04131131168650537
+        }
+      },
+      "solved_rows": 20,
+      "feasible_rows": 1,
+      "wall_seconds": 105.78503990000172,
+      "input_sha256": "9f5d53b7de3bbae0f36b8e0e38a328f58b05390a385ed73a17e00e07658f6d4e",
+      "result_sha256": "473ef43920d6b405b93d95d5ab440bf13264d6a35b492e50cdc7a7859f033c84"
+    }
+  ],
+  "final_model_comparison": {
+    "Tmax_K": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 20.82736508195566,
+        "mae": 11.187127697955333,
+        "r2": 0.8528805072887036,
+        "maximum_absolute_error": 110.98080435402608
+      },
+      "conformal_absolute_error_95": 47.44942154727897,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 20.82736508195566,
+          "mae": 11.187127697955333,
+          "r2": 0.8528805072887036,
+          "maximum_absolute_error": 110.98080435402608
+        },
+        "extra_trees_leaf2": {
+          "rmse": 21.20727286718036,
+          "mae": 11.363467554181964,
+          "r2": 0.8474644024343826,
+          "maximum_absolute_error": 110.0520820104914
+        },
+        "random_forest_leaf1": {
+          "rmse": 23.457539269110374,
+          "mae": 13.336864807055008,
+          "r2": 0.8133764428224659,
+          "maximum_absolute_error": 115.4318497226484
+        },
+        "random_forest_leaf2": {
+          "rmse": 24.25961451875293,
+          "mae": 13.64499335442199,
+          "r2": 0.8003959492828231,
+          "maximum_absolute_error": 118.63432168569318
+        }
+      }
+    },
+    "Jmax_A_m2": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 604420.2712351688,
+        "mae": 465405.6148796711,
+        "r2": 0.9488927099150151,
+        "maximum_absolute_error": 2103601.7413143255
+      },
+      "conformal_absolute_error_95": 1191481.7084011696,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 604420.2712351688,
+          "mae": 465405.6148796711,
+          "r2": 0.9488927099150151,
+          "maximum_absolute_error": 2103601.7413143255
+        },
+        "extra_trees_leaf2": {
+          "rmse": 605755.4501888073,
+          "mae": 469038.129934176,
+          "r2": 0.9486666660499866,
+          "maximum_absolute_error": 2081898.1712200958
+        },
+        "random_forest_leaf1": {
+          "rmse": 669740.7072996009,
+          "mae": 516387.3906276664,
+          "r2": 0.9372493536410809,
+          "maximum_absolute_error": 2083262.1725349035
+        },
+        "random_forest_leaf2": {
+          "rmse": 676676.4887544523,
+          "mae": 522550.22786340915,
+          "r2": 0.9359429425447807,
+          "maximum_absolute_error": 2115297.3725884203
+        }
+      }
+    },
+    "normalized_voltage_at_160A_mV": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 1.0756854202947836,
+        "mae": 0.6986859817660483,
+        "r2": 0.9812117877767079,
+        "maximum_absolute_error": 4.938486245222556
+      },
+      "conformal_absolute_error_95": 2.555791665609405,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 1.0756854202947836,
+          "mae": 0.6986859817660483,
+          "r2": 0.9812117877767079,
+          "maximum_absolute_error": 4.938486245222556
+        },
+        "extra_trees_leaf2": {
+          "rmse": 1.130698959963171,
+          "mae": 0.7299541230067638,
+          "r2": 0.9792408829367477,
+          "maximum_absolute_error": 5.300871403265035
+        },
+        "random_forest_leaf1": {
+          "rmse": 1.6407283853172179,
+          "mae": 1.1479474848862878,
+          "r2": 0.9562892482334583,
+          "maximum_absolute_error": 6.816110699677289
+        },
+        "random_forest_leaf2": {
+          "rmse": 1.6342950278866843,
+          "mae": 1.1523006831792693,
+          "r2": 0.9566313591895573,
+          "maximum_absolute_error": 6.974674546291169
+        }
+      }
+    },
+    "joule_power_W": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 0.6685465622263261,
+        "mae": 0.4392966111604775,
+        "r2": 0.9383463520396095,
+        "maximum_absolute_error": 3.754270195965846
+      },
+      "conformal_absolute_error_95": 1.371099014784801,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 0.6685465622263261,
+          "mae": 0.4392966111604775,
+          "r2": 0.9383463520396095,
+          "maximum_absolute_error": 3.754270195965846
+        },
+        "extra_trees_leaf2": {
+          "rmse": 0.6705924052773455,
+          "mae": 0.44458196229528424,
+          "r2": 0.937968437657956,
+          "maximum_absolute_error": 3.798931884634886
+        },
+        "random_forest_leaf1": {
+          "rmse": 0.8339045938679125,
+          "mae": 0.5970300520248579,
+          "r2": 0.9040757988645705,
+          "maximum_absolute_error": 3.51481894678955
+        },
+        "random_forest_leaf2": {
+          "rmse": 0.8432589483509525,
+          "mae": 0.6116716657657403,
+          "r2": 0.9019116621388943,
+          "maximum_absolute_error": 3.5019889281264884
+        }
+      }
+    },
+    "copper_mass_kg": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 0.009381860974604517,
+        "mae": 0.007033021602908672,
+        "r2": 0.9931567291221919,
+        "maximum_absolute_error": 0.043832444538250415
+      },
+      "conformal_absolute_error_95": 0.018065780464025294,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 0.009381860974604517,
+          "mae": 0.007033021602908672,
+          "r2": 0.9931567291221919,
+          "maximum_absolute_error": 0.043832444538250415
+        },
+        "extra_trees_leaf2": {
+          "rmse": 0.009897120394054734,
+          "mae": 0.007382364339730835,
+          "r2": 0.9923844118128762,
+          "maximum_absolute_error": 0.0409117153475711
+        },
+        "random_forest_leaf1": {
+          "rmse": 0.01572301811364164,
+          "mae": 0.011762321040469226,
+          "r2": 0.9807798145183977,
+          "maximum_absolute_error": 0.06862688380005222
+        },
+        "random_forest_leaf2": {
+          "rmse": 0.015965469847612688,
+          "mae": 0.011904192065377872,
+          "r2": 0.9801824869537635,
+          "maximum_absolute_error": 0.07018442288915694
+        }
+      }
+    }
+  },
+  "selected_final_models": {
+    "Tmax_K": "extra_trees_leaf1",
+    "Jmax_A_m2": "extra_trees_leaf1",
+    "normalized_voltage_at_160A_mV": "extra_trees_leaf1",
+    "joule_power_W": "extra_trees_leaf1",
+    "copper_mass_kg": "extra_trees_leaf1"
+  },
+  "execution_checks": {
+    "all_80_adaptive_cases_solved": true,
+    "terminal_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true,
+    "sealed_final_design_exists": true
+  },
+  "wall_seconds_new_comsol": 421.93781869999657,
+  "artifacts": {
+    "model": "generated\\p4\\p4_adaptive_surrogate.joblib",
+    "training_data": "generated\\p4\\p4_training_220.csv",
+    "sealed_design_manifest": "generated\\p4\\sealed_final_design\\sealed_design_manifest.json"
+  },
+  "policy": "The opened P3 domain set is diagnostic training evidence. P4 release requires the separately seeded sealed final design.",
+  "execution_passed": true
+}

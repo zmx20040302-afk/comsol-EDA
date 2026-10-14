@@ -1,0 +1,51 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T08:16:50.410749+00:00",
+  "name": "三维电容介电常数代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_training.csv",
+    "rows": 5,
+    "inputs": [
+      "relative_permittivity"
+    ],
+    "outputs": [
+      "capacitance_F"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "三维电容器静电模型；固定几何、金属端子、接地和网格，仅改变石英域相对介电常数 epsilon_r=2-8。",
+  "validated_input_ranges": {
+    "relative_permittivity": {
+      "min": 2.0,
+      "max": 8.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "capacitor_dc_permittivity_independent_comsol_validation",
+    "created_at": "2026-08-25T08:16:50.405391+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "selected_model": "linear_regression",
+    "per_output_relative_validation": {
+      "capacitance_F": {
+        "max_relative_error_percent": 0.002262589556872893,
+        "mean_relative_error_percent": 0.001975180093416065,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "三维电容器静电模型；固定几何、金属端子、接地和网格，仅改变石英域相对介电常数 epsilon_r=2-8。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

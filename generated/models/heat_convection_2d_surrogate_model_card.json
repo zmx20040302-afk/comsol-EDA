@@ -1,0 +1,145 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T03:52:24.687329+00:00",
+  "name": "二维传导-对流温度代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_convection_2d_training.csv",
+    "rows": 5,
+    "inputs": [
+      "convection_coefficient_W_m2_K"
+    ],
+    "outputs": [
+      "temperature_at_0p6_0p2_K",
+      "maximum_temperature_K"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_convection_2d_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "二维稳态传导传热；固定矩形几何、导热系数 52 W/(m*K)、左边界 100 degC、环境温度 0 degC、网格与稳态研究；仅改变另外两边的对流换热系数 h=500-1000 W/(m^2*K)。",
+  "validated_input_ranges": {
+    "convection_coefficient_W_m2_K": {
+      "min": 500.0,
+      "max": 1000.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "heat_convection_2d_independent_comsol_validation",
+    "created_at": "2026-08-25T03:52:24.684924+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_convection_2d_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_convection_2d_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "holdout_rmse": 2.8898455976606963,
+        "holdout_mae": 2.041571450708247,
+        "per_output": {
+          "temperature_at_0p6_0p2_K": {
+            "rmse": 4.086858837375939,
+            "mae": 4.083142901416494,
+            "r2": -0.0018209633733707875
+          },
+          "maximum_temperature_K": {
+            "rmse": 0.0,
+            "mae": 0.0,
+            "r2": 1.0
+          }
+        }
+      },
+      {
+        "name": "ridge_scaled",
+        "holdout_rmse": 0.46206173142305235,
+        "holdout_mae": 0.3148979533283125,
+        "per_output": {
+          "temperature_at_0p6_0p2_K": {
+            "rmse": 0.6534539672320752,
+            "mae": 0.629795906656625,
+            "r2": 0.9743881565365927
+          },
+          "maximum_temperature_K": {
+            "rmse": 0.0,
+            "mae": 0.0,
+            "r2": 1.0
+          }
+        }
+      },
+      {
+        "name": "polynomial_ridge_degree2",
+        "holdout_rmse": 0.29533591445123586,
+        "holdout_mae": 0.17670050074583799,
+        "per_output": {
+          "temperature_at_0p6_0p2_K": {
+            "rmse": 0.41766805567279786,
+            "mae": 0.35340100149167597,
+            "r2": 0.9895365871361506
+          },
+          "maximum_temperature_K": {
+            "rmse": 0.0,
+            "mae": 0.0,
+            "r2": 1.0
+          }
+        }
+      },
+      {
+        "name": "random_forest",
+        "holdout_rmse": 0.16215495719235368,
+        "holdout_mae": 0.10850419797337452,
+        "per_output": {
+          "temperature_at_0p6_0p2_K": {
+            "rmse": 0.22932173966745525,
+            "mae": 0.21700839594575427,
+            "r2": 0.996845712344588
+          },
+          "maximum_temperature_K": {
+            "rmse": 9.95165771656252e-13,
+            "mae": 9.947598300641403e-13,
+            "r2": 0.0
+          }
+        }
+      },
+      {
+        "name": "mlp_scaled",
+        "holdout_rmse": 0.05206734998532841,
+        "holdout_mae": 0.034093131836854695,
+        "per_output": {
+          "temperature_at_0p6_0p2_K": {
+            "rmse": 0.07355604073313693,
+            "mae": 0.06479132863199766,
+            "r2": 0.9996754754696445
+          },
+          "maximum_temperature_K": {
+            "rmse": 0.0033951053966639116,
+            "mae": 0.003394935041711733,
+            "r2": 0.0
+          }
+        }
+      }
+    ],
+    "selected_model": "mlp_scaled",
+    "per_output_relative_validation": {
+      "temperature_at_0p6_0p2_K": {
+        "max_relative_error_percent": 0.03361468750854772,
+        "mean_relative_error_percent": 0.022007228821919682,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      },
+      "maximum_temperature_K": {
+        "max_relative_error_percent": 0.0009189188220295348,
+        "mean_relative_error_percent": 0.0009098043793948099,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "二维稳态传导传热；固定矩形几何、导热系数 52 W/(m*K)、左边界 100 degC、环境温度 0 degC、网格与稳态研究；仅改变另外两边的对流换热系数 h=500-1000 W/(m^2*K)。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

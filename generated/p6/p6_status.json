@@ -1,0 +1,42 @@
+{
+  "schema": "comsol-p6-external-evidence-status",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T04:42:26.266277+00:00",
+  "phase": "P6",
+  "title": "外部证据与双执行路径",
+  "status": "external_evidence_pending",
+  "local_readiness_passed": true,
+  "publication_external_gate_passed": false,
+  "gates": {
+    "java_dual_path": true,
+    "current_host_preflight": true,
+    "evidence_acquisition_assets": true,
+    "temperature_experiment": false,
+    "fixed_task_external_comparison": false,
+    "destination_host_acceptance": false
+  },
+  "java": {
+    "template_count": 6,
+    "java_exported_count": 6,
+    "java_compiled_count": 6,
+    "java_executed_count": 6,
+    "java_verified_count": 6,
+    "java_dual_path_gate_passed": true
+  },
+  "experiment": {
+    "status": "awaiting_measurements",
+    "sample_count": 0,
+    "minimum_required": 5
+  },
+  "baseline_comparison": {
+    "status": "awaiting_measurements",
+    "measured_row_count": 0,
+    "required_rows": 180
+  },
+  "remaining_actions": [
+    "temperature_experiment",
+    "fixed_task_external_comparison",
+    "destination_host_acceptance"
+  ],
+  "policy": "P6 local readiness and external publication evidence are separate. Missing measurements, participants or destination-host runs cannot be replaced by synthetic rows."
+}

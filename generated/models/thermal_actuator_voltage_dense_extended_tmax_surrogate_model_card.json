@@ -1,0 +1,111 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-23T12:13:59.634421+00:00",
+  "name": "微执行器焦耳热最高温度代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_dense_extended_training.csv",
+    "rows": 63,
+    "inputs": [
+      "DV_V",
+      "htc_s_W_m2K",
+      "htc_us_W_m2K"
+    ],
+    "outputs": [
+      "Tmax_K"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_extension_holdout.csv",
+    "rows": 4
+  },
+  "physical_scope": "微执行器焦耳热分布参数案例；DV=2-6.6 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至更高电压或改变后的几何、材料与边界条件。",
+  "validated_input_ranges": {
+    "DV_V": {
+      "min": 2.0,
+      "max": 6.6
+    },
+    "htc_s_W_m2K": {
+      "min": 15000.0,
+      "max": 25000.0
+    },
+    "htc_us_W_m2K": {
+      "min": 300.0,
+      "max": 500.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "thermal_actuator_independent_comsol_validation",
+    "created_at": "2026-08-23T12:13:59.631338+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_dense_extended_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_extension_holdout.csv",
+    "training_rows": 63,
+    "holdout_rows": 4,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "holdout_rmse": 133.85598214320692,
+        "holdout_mae": 123.25859442758977,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 133.85598214320692,
+            "mae": 123.25859442758977,
+            "r2": -5.5758219792926145
+          }
+        }
+      },
+      {
+        "name": "ridge_scaled",
+        "holdout_rmse": 16.912888683596943,
+        "holdout_mae": 13.072775351394256,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 16.912888683596943,
+            "mae": 13.072775351394256,
+            "r2": 0.8950191563685326
+          }
+        }
+      },
+      {
+        "name": "random_forest",
+        "holdout_rmse": 50.355747251841265,
+        "holdout_mae": 37.34457624608663,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 50.355747251841265,
+            "mae": 37.34457624608663,
+            "r2": 0.06937960167557866
+          }
+        }
+      },
+      {
+        "name": "mlp_scaled",
+        "holdout_rmse": 14.073509982998129,
+        "holdout_mae": 12.065252044569064,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 14.073509982998129,
+            "mae": 12.065252044569064,
+            "r2": 0.9273092200758031
+          }
+        }
+      }
+    ],
+    "selected_model": "mlp_scaled",
+    "max_absolute_error": {
+      "Tmax_K": {
+        "rmse": 14.073509982998129,
+        "mae": 12.065252044569064,
+        "r2": 0.9273092200758031
+      }
+    },
+    "rmse_threshold_k": 8.0,
+    "passed": false,
+    "scope": "微执行器焦耳热分布参数案例；DV=2-6.6 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至更高电压或改变后的几何、材料与边界条件。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

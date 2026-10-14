@@ -1,0 +1,88 @@
+{
+  "schema": "dac2027-p2-controlled-method-comparison",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-13T14:40:00+08:00",
+  "scope": "requirement-to-physics intent compilation on the frozen project-authored v1.1 task set",
+  "evidence_tier": "project_authored_development_comparison",
+  "publication_main_result": false,
+  "task_set": {
+    "path": "benchmarks/dac_problem1_v11/final_tasks.jsonl",
+    "sha256": "2ab9f1240c8abcc4724307b0a6573010c2fe816def7dd0e2f069948913af91d2",
+    "task_count": 24,
+    "family_count": 8,
+    "status_counts": {"complete": 8, "missing": 8, "conflict": 8}
+  },
+  "methods": [
+    "direct_llm",
+    "retrieval_llm",
+    "existing_selector",
+    "contract_dependency_v11"
+  ],
+  "ablations": {
+    "without_dependency_graph": "existing_selector",
+    "without_negation_aware_completeness": "dependency_v10",
+    "without_safety_gate": "no_safety_gate"
+  },
+  "llm_control": {
+    "provider": "codex_local",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "fresh_ephemeral_session_per_task_and_method": true,
+    "tools_allowed": false,
+    "timeout_seconds": 180,
+    "output_contract": {
+      "predicted_interfaces": ["interface_id"],
+      "predicted_couplings": ["coupling_id"],
+      "predicted_study": "Stationary|TimeDependent|Frequency|Eigenfrequency",
+      "predicted_blocked": true
+    }
+  },
+  "retrieval_corpus": [
+    {
+      "path": "template_catalog.json",
+      "sha256": "ea4b596f6814ad83e39de63ba237c72ef1f4baf4b54637dfa2ed6bb0bfc330e6"
+    },
+    {
+      "path": "configs/modeling_contract.schema.json",
+      "sha256": "a475ed3b954442f9d3cf215980810afbfe638c34b3e858d288aacfb6071d4789"
+    }
+  ],
+  "local_method_sources": [
+    {
+      "path": "src/comsol_small_model/physics_selection.py",
+      "sha256": "42622764e070781b1b6af2665de1b4be99a3821a9ffdb04239a3dfff599dc241"
+    },
+    {
+      "path": "src/comsol_small_model/physics_dependency_graph.py",
+      "sha256": "c5167f97e625271ba55383de00810eef215f5063e377e49e9308fbe8ddcc4d21"
+    },
+    {
+      "path": "src/comsol_small_model/physics_dependency_graph_v11.py",
+      "sha256": "b721e687eb0f07f46520cd66ff467a284c8b5a251ce08346c2a5b7bda1bc7a7f"
+    }
+  ],
+  "run_controls": {
+    "same_task_text": true,
+    "same_json_output_schema": true,
+    "same_llm_model_and_reasoning_effort": true,
+    "no_retry_after_valid_json": true,
+    "invalid_or_timeout_output_scored_as_incorrect": true,
+    "method_outputs_frozen_before_scoring": true
+  },
+  "metrics": [
+    "physics_and_coupling_exact_accuracy",
+    "study_exact_accuracy",
+    "gate_accuracy",
+    "false_safe_rate",
+    "false_block_rate",
+    "completion_seconds"
+  ],
+  "statistics": {
+    "proportion_interval": "Wilson 95%",
+    "paired_binary_test": "two-sided exact McNemar",
+    "paired_efficiency_interval": "paired bootstrap 95%",
+    "bootstrap_seed": 20271013,
+    "bootstrap_resamples": 10000
+  },
+  "evidence_boundary": "The task set was authored inside the project and may have influenced development. Results validate implementation and controlled comparison machinery only; DAC main-result claims require rerunning this frozen protocol on P0 independently authored blind tasks."
+}

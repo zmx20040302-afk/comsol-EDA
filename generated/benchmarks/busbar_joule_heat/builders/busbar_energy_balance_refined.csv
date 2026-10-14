@@ -1,0 +1,2 @@
+current_a,electrical_input_w,joule_power_w,heat_flux_w,outward_convection_w,electrical_to_joule_percent,joule_to_convection_percent,current_expression
+161.548895669554,3.23097791339109,3.22864839296184,3.22712091859827,3.22712091859827,0.0721515676443596,0.0473100250526646,ec.nJ

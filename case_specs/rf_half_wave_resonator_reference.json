@@ -1,0 +1,10 @@
+{
+  "id": "rf_half_wave_resonator_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "uniform_half_wave_resonator", "dimension": "1D reference or 3D cavity", "length_m": 0.1},
+  "physics": ["Electromagnetic Waves, Frequency Domain", "Eigenfrequency study"],
+  "parameters": {"relative_permittivity": 1.0, "relative_permeability": 1.0},
+  "boundary_conditions": {"ends": "ideal resonance boundary condition consistent with the chosen field polarization", "walls": "PEC for ideal cavity baseline"},
+  "reference_checks": {"equation": "f1=c/(2*L*sqrt(epsilon_r*mu_r))", "trend": "Increasing epsilon_r lowers the eigenfrequency by 1/sqrt(epsilon_r)"},
+  "acceptance": ["First eigenfrequency follows the length and dielectric trends", "Boundary/port convention and mode polarization are reported", "Mesh resolution is documented relative to wavelength in the dielectric"]
+}

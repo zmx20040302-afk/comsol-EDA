@@ -1,0 +1,43 @@
+{
+  "kind": "lid_driven_cavity_reynolds_independent_comsol_validation",
+  "created_at": "2026-08-25T09:45:12.287655+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\lid_driven_cavity_re_training_dense.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\lid_driven_cavity_re_holdout_v2.csv",
+  "training_rows": 10,
+  "holdout_rows": 3,
+  "candidate_metrics": {
+    "linear_regression": {
+      "max_relative_error_percent": 7.0879155302131345,
+      "mean_relative_error_percent": 6.045104619215713
+    },
+    "polynomial_degree_2": {
+      "max_relative_error_percent": 6.554105345189461,
+      "mean_relative_error_percent": 4.5125474482667896
+    },
+    "polynomial_degree_3": {
+      "max_relative_error_percent": 9.523099924163981,
+      "mean_relative_error_percent": 6.045226915507271
+    },
+    "random_forest": {
+      "max_relative_error_percent": 83.93413929760045,
+      "mean_relative_error_percent": 29.33813680935934
+    },
+    "distance_weighted_local_interpolation": {
+      "max_relative_error_percent": 0.6828252990242009,
+      "mean_relative_error_percent": 0.463877453999344
+    }
+  },
+  "selected_model": "distance_weighted_local_interpolation",
+  "selection_reason": "Selected by independent COMSOL holdout error; local interpolation is preferred for this nonlinear one-dimensional response.",
+  "per_output_relative_validation": {
+    "speed_mid_upper_m_s": {
+      "max_relative_error_percent": 0.6828252990242009,
+      "mean_relative_error_percent": 0.463877453999344,
+      "threshold_relative_error_percent": 5.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "二维单位方腔稳态层流；顶盖单位滑移速度、密度 1、黏度 1/Re、固定网格和压力点约束，仅改变 Reynolds 数 Re=50-800，输出 (0.5,0.75) 的速度模。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\lid_driven_cavity_reynolds_surrogate.holdout_validation.json"
+}

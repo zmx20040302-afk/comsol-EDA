@@ -1,0 +1,120 @@
+{
+  "kind": "generated_comsol_code_verification",
+  "status": "review_required",
+  "ready_to_open": true,
+  "ready_to_solve": false,
+  "structural_checks": {
+    "matlab_has_model_creation": true,
+    "matlab_has_geometry": true,
+    "matlab_has_material": true,
+    "matlab_has_physics": true,
+    "matlab_has_mesh": true,
+    "matlab_has_study": true,
+    "java_has_model_creation": true,
+    "java_has_geometry": true,
+    "java_has_physics": true,
+    "matlab_has_expected_study": true,
+    "java_has_expected_study": true,
+    "matlab_has_conductive_media": true,
+    "matlab_has_heat_transfer": true,
+    "matlab_has_joule_heating_coupling": true,
+    "matlab_has_electrothermal_parameters": true,
+    "matlab_has_electrical_material_property": true,
+    "matlab_has_boundary_review_template": true,
+    "java_has_joule_heating_coupling": true,
+    "java_has_boundary_selection_template": true
+  },
+  "unresolved_requirements": [
+    "确认生成几何中的材料域和边界选择集。",
+    "在 COMSOL 中核对物理接口名称是否与已安装模块一致。",
+    "把已批准边界条件绑定到经过核对的命名选择集。"
+  ],
+  "material_readiness": {
+    "ready_for_model_generation": true,
+    "missing_required_properties": [],
+    "risks": [],
+    "required_properties": [
+      {
+        "comsol_key": "electricconductivity",
+        "symbol": "sigma",
+        "name": "电导率",
+        "unit": "S/m",
+        "reason": "电流守恒和焦耳热计算需要"
+      },
+      {
+        "comsol_key": "density",
+        "symbol": "rho",
+        "name": "密度",
+        "unit": "kg/m^3",
+        "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+      },
+      {
+        "comsol_key": "thermalconductivity",
+        "symbol": "k",
+        "name": "导热系数",
+        "unit": "W/(m*K)",
+        "reason": "决定热传导能力，可为各向异性张量"
+      },
+      {
+        "comsol_key": "heatcapacity",
+        "symbol": "Cp",
+        "name": "比热容",
+        "unit": "J/(kg*K)",
+        "reason": "瞬态传热必须给出"
+      }
+    ],
+    "recognized_materials": [
+      {
+        "name": "Copper",
+        "properties": {
+          "density": "8960[kg/m^3]",
+          "thermalconductivity": "400[W/(m*K)]",
+          "heatcapacity": "385[J/(kg*K)]",
+          "electricconductivity": "5.998e7[S/m]"
+        },
+        "note": "Check temperature-dependent electrical conductivity for Joule heating."
+      }
+    ],
+    "assumptions": [
+      "Check temperature-dependent electrical conductivity for Joule heating."
+    ]
+  },
+  "geometry_readiness": {
+    "ready_for_meshing": true,
+    "missing_geometry_evidence": [],
+    "dimension_evidence_found": true,
+    "matched_patterns": [
+      {
+        "id": "heat_transfer_domain",
+        "label": "传热几何与参数"
+      }
+    ],
+    "selection_advice": [
+      "命名热源域",
+      "命名固定温度边界",
+      "命名对流边界",
+      "命名输出点/面"
+    ]
+  },
+  "approved_domains": [
+    "heat_transfer",
+    "electromagnetics"
+  ],
+  "boundary_families": [
+    "固定温度/给定温度",
+    "热通量或热源",
+    "绝热/对称",
+    "对流换热",
+    "表面对表面或环境辐射",
+    "端子电压或电流",
+    "接地",
+    "电绝缘",
+    "表面电荷",
+    "浮动电势"
+  ],
+  "instructions": [
+    "先在 COMSOL with MATLAB 或 COMSOL Java 环境中运行到几何构建结束。",
+    "核对命名选择集、材料域、边界条件和单位。",
+    "清空 unresolved_requirements 后再启用基准求解。"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T09:26:22.347528+00:00",
+  "name": "锥形悬臂梁边界力位移代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\tapered_cantilever_force_training.csv",
+    "rows": 5,
+    "inputs": [
+      "boundary_force_N_m"
+    ],
+    "outputs": [
+      "force_case_tip_displacement_m"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\tapered_cantilever_force_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "二维锥形悬臂梁小变形线弹性静力学；固定几何、E=210 GPa、nu=0.3、重力工况、约束和网格，仅改变边界力工况 5e6-1.5e7 N/m。",
+  "validated_input_ranges": {
+    "boundary_force_N_m": {
+      "min": 5000000.0,
+      "max": 15000000.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "tapered_cantilever_force_independent_comsol_validation",
+    "created_at": "2026-08-25T09:26:22.341527+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\tapered_cantilever_force_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\tapered_cantilever_force_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "selected_model": "linear_regression",
+    "selection_reason": "Small-deformation linear elastic response gives displacement proportional to applied load.",
+    "per_output_relative_validation": {
+      "force_case_tip_displacement_m": {
+        "max_relative_error_percent": 4.636475437780387e-13,
+        "mean_relative_error_percent": 3.1775072980927074e-13,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "二维锥形悬臂梁小变形线弹性静力学；固定几何、E=210 GPa、nu=0.3、重力工况、约束和网格，仅改变边界力工况 5e6-1.5e7 N/m。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

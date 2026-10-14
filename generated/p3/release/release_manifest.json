@@ -1,0 +1,284 @@
+{
+  "schema": "comsol-p3-release-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T10:16:51.486421+00:00",
+  "scope": "P3 source, compact COMSOL evidence, surrogate artifact, manuscript and reproducibility metadata; large MPH files are excluded.",
+  "release_decision": {
+    "comsol_execution_passed": true,
+    "verified_pareto_count": 3,
+    "surrogate_release_passed": false,
+    "surrogate_policy": "A failed surrogate release is retained as evidence and is not converted to a pass."
+  },
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 24465,
+      "sha256": "388e75e0befee07bf7da70e9168a92f96654e39df4a13ab519a010aebcedfb1d"
+    },
+    {
+      "path": "EDA_PUBLICATION_ROADMAP.md",
+      "size_bytes": 10452,
+      "sha256": "ca6c8e9b4aa453c092a0767755fab4277f54fb987d9ef3d4136d6b37d9b48c6c"
+    },
+    {
+      "path": "P3_COMPLETION_REPORT.md",
+      "size_bytes": 3790,
+      "sha256": "1820087fd88d5102251d100468c769ed4cf20c932a43e46880973823e3f550b4"
+    },
+    {
+      "path": "PROJECT_READINESS.md",
+      "size_bytes": 10975,
+      "sha256": "623b18e8a614e2419d65aab4b59e7e9dcf55f8a8636e8455ed46695841325388"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 34047,
+      "sha256": "e5e7498ce7f8e7cd9bc2790898968753df9915c165b4b0fe496ff7d3ef1b4da0"
+    },
+    {
+      "path": "configs/busbar_eda_design_problem.json",
+      "size_bytes": 6110,
+      "sha256": "72de6ce33e5f89cfae83e05fea050e005c46fefccfd0b78c902219efabc54e5e"
+    },
+    {
+      "path": "configs/execution_node.json",
+      "size_bytes": 1210,
+      "sha256": "490c2816602e5e6a44691a7b94b89f52b8202ef6a73ff80a13240e611a0aaaae"
+    },
+    {
+      "path": "generated/p3/current_drive_baseline/busbar_current_drive_baseline.csv",
+      "size_bytes": 372,
+      "sha256": "8e2c4becf3589d2cabea130193dbba62e77b37dcfe4ec36e6664fa189b52d68a"
+    },
+    {
+      "path": "generated/p3/current_drive_baseline/busbar_current_drive_baseline.png",
+      "size_bytes": 40178,
+      "sha256": "475b469c15633311f4efcf3781ac25402b45f36a811c1b981eb437d88bb4dd40"
+    },
+    {
+      "path": "generated/p3/current_drive_baseline/current_drive_baseline_report.json",
+      "size_bytes": 2334,
+      "sha256": "5c9896f5709ce0c87cbd7a0af13664fcd9180b4611e7fbaf89dd1669d5c672e2"
+    },
+    {
+      "path": "generated/p3/current_drive_baseline/run_busbar_current_drive_baseline.m",
+      "size_bytes": 3621,
+      "sha256": "7313588af5d7cebc8b4816957a54927adddf08aaeeb0d1be25b8e635934faadb"
+    },
+    {
+      "path": "generated/p3/designs/design_manifest.json",
+      "size_bytes": 2000,
+      "sha256": "2898d8bf37cfe92200bcec2be7915733de57c30d6d1ae732219b6badbbf297e4"
+    },
+    {
+      "path": "generated/p3/designs/independent_domain_test_inputs.csv",
+      "size_bytes": 9949,
+      "sha256": "e204dab2c664095a1f9865bca6bddf1759b474fa89dbb1575970b91b2447c03d"
+    },
+    {
+      "path": "generated/p3/designs/initial_design_inputs.csv",
+      "size_bytes": 12353,
+      "sha256": "22a5e940f875f739eea7dccd12ad819259999344f15ecaed64e39d72f6ee953a"
+    },
+    {
+      "path": "generated/p3/designs/out_of_domain_test_inputs.csv",
+      "size_bytes": 3522,
+      "sha256": "0db9b6c72f42e9de7fcd8f258cd6ea1a3b2113818c05647e07f8ca064b44fdd3"
+    },
+    {
+      "path": "generated/p3/final_evaluation/final_evaluation_evaluated.csv",
+      "size_bytes": 53452,
+      "sha256": "86d6d232c4c7c19010e521eb246cb50491b05d0fa87a569c3cc3bb72bfe5bbe7"
+    },
+    {
+      "path": "generated/p3/final_evaluation/final_evaluation_inputs.csv",
+      "size_bytes": 13013,
+      "sha256": "08747d2343884b705d2f342826e6ccce0bc3f8f5b162b94358cf455121232e8c"
+    },
+    {
+      "path": "generated/p3/final_evaluation/final_evaluation_report.json",
+      "size_bytes": 3254,
+      "sha256": "8a9722b2594dedb7a5ce34579fe1d45a143a75ca7661849cd3b8c469dc00b76d"
+    },
+    {
+      "path": "generated/p3/final_evaluation/final_evaluation_results.csv",
+      "size_bytes": 26192,
+      "sha256": "ea910ba8add56003d89b9cb6affff63684cf834e31ebac512fde20eec1d264df"
+    },
+    {
+      "path": "generated/p3/final_evaluation/run_p3_final_evaluation.m",
+      "size_bytes": 4392,
+      "sha256": "1b7d2364f025de884d7a6134cd53fabc7a6f10ef8e0e56485cd5981e384ead34"
+    },
+    {
+      "path": "generated/p3/geometry_smoke/busbar_geometry_smoke.csv",
+      "size_bytes": 2168,
+      "sha256": "8abd83ae9f4b4c6c4a8e532f1c88bdfe808a6f60e3d7a2654975e4e1ef33d42a"
+    },
+    {
+      "path": "generated/p3/geometry_smoke/busbar_geometry_smoke_evaluated.csv",
+      "size_bytes": 2616,
+      "sha256": "91c1c520bb1738f9c2e3370ea330cf815f3cd5dc837262b1c96691c09e62f244"
+    },
+    {
+      "path": "generated/p3/geometry_smoke/geometry_smoke_report.json",
+      "size_bytes": 1927,
+      "sha256": "a841fca31302df4f38a482fbe76fa300447a032c18ba0fde95070bcec1fe75ba"
+    },
+    {
+      "path": "generated/p3/geometry_smoke/run_busbar_geometry_smoke.m",
+      "size_bytes": 3493,
+      "sha256": "2dc9b4205530b788a9f27474b3b4c99f1a89c8ff57f9754cd3e507f0f012b6d6"
+    },
+    {
+      "path": "generated/p3/initial_design/busbar_p3_initial_design_evaluated.csv",
+      "size_bytes": 30298,
+      "sha256": "553c4ea8bbf8e0ef3713ad1055425eca3dac52efa2668581812509b3c9efcae3"
+    },
+    {
+      "path": "generated/p3/initial_design/busbar_p3_initial_design_results.csv",
+      "size_bytes": 26070,
+      "sha256": "db331efe0faeec1371930ea9b3f524c43fc86f2650fcb92214889ff6a8ceb78f"
+    },
+    {
+      "path": "generated/p3/initial_design/initial_design_report.json",
+      "size_bytes": 2098,
+      "sha256": "9a4d1c43e912589c45d321c7af1a92cf01412a3c8df433721bc685b34fd7c1c2"
+    },
+    {
+      "path": "generated/p3/initial_design/run_busbar_p3_initial_design.m",
+      "size_bytes": 4390,
+      "sha256": "3ebda7ac052cffbd88200f899701ada557da547c24f68d1b65354c89fd4cec84"
+    },
+    {
+      "path": "generated/p3/optimization/fresh_pareto_verification_inputs.csv",
+      "size_bytes": 2574,
+      "sha256": "b00f1c1e5e8cd56b3f97388ebd3a4f370b739d86dde5484d5ef55e55eafd988f"
+    },
+    {
+      "path": "generated/p3/optimization/nominal_candidate_predictions.csv",
+      "size_bytes": 7472145,
+      "sha256": "d774ed45fb114fa65ecf43e8ab20b0d7b8d81800baa29ac5456081d8d08a64e5"
+    },
+    {
+      "path": "generated/p3/optimization/p3_busbar_surrogate_models.joblib",
+      "size_bytes": 12101729,
+      "sha256": "a913ffbd7173d09f02efa3f58b99e9af3f87138a76c0dbe73d211c50204287c0"
+    },
+    {
+      "path": "generated/p3/optimization/predicted_conservative_pareto.csv",
+      "size_bytes": 3334,
+      "sha256": "52407873317bc8660dafec55b25ee8742cf6207becbab14b54215d1613c1378c"
+    },
+    {
+      "path": "generated/p3/optimization/surrogate_optimization_report.json",
+      "size_bytes": 2714,
+      "sha256": "d81bb882acde0cb1e237d59b521325f10fc65b435c6ac85b19b2f553416ad860"
+    },
+    {
+      "path": "generated/p3/pareto_verification/fresh_pareto_verification_evaluated.csv",
+      "size_bytes": 3913,
+      "sha256": "10aca060424a3c0dfb4ad7846e4de137d81da3215b21aefbe9ae9efafb06a855"
+    },
+    {
+      "path": "generated/p3/pareto_verification/fresh_pareto_verification_results.csv",
+      "size_bytes": 1704,
+      "sha256": "9b5eda7b13a6a7073a0d807f56d78da561918d0efda319b7a653fd3864bd4e85"
+    },
+    {
+      "path": "generated/p3/pareto_verification/pareto_verification_report.json",
+      "size_bytes": 1571,
+      "sha256": "9b53ab68972139f98e6948409b3a662bd073976935b5d927ab68a31b48c93045"
+    },
+    {
+      "path": "generated/p3/pareto_verification/run_fresh_pareto_verification.m",
+      "size_bytes": 3365,
+      "sha256": "20fe91cafaec2aa109dae9faf78fc4ec26a18376cdfade33a94f921c32bc8099"
+    },
+    {
+      "path": "generated/p3/pareto_verification/verified_pareto.csv",
+      "size_bytes": 2654,
+      "sha256": "16f26a6ab1b791381b6f8de338621cba6604b3af80223b3235d630867e2f7d40"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 90398,
+      "sha256": "ff0682f47f461e56ae227e42328c178f3186f3d6f27a217da8fcf1ce8c8b2c70"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 323261,
+      "sha256": "cb211ceb2a09536131c98777a312b4e7b6003e8edc7bb92d8a01a9f30d58676c"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf",
+      "size_bytes": 856387,
+      "sha256": "8569ad714e78dc597394a41d825636bc815f50746f2acf1137ff1c535b8e91c8"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "size_bytes": 420,
+      "sha256": "dc426c66871c54bb80f7f38a47569777f0d6abce432a07ecf7b046c60fb0334b"
+    },
+    {
+      "path": "scripts/build_p3_design_package.py",
+      "size_bytes": 489,
+      "sha256": "b116a5b52800d79e1aaf6fa7c8019b16c049682599a76dd7a58ee55bb3666224"
+    },
+    {
+      "path": "scripts/build_p3_release_package.py",
+      "size_bytes": 4718,
+      "sha256": "468404b249bf696caff92fbb428659d0998ff02d1570c1c185ef6ef4928b54c2"
+    },
+    {
+      "path": "scripts/run_p3_current_drive_baseline.py",
+      "size_bytes": 8006,
+      "sha256": "c73ff4907c399ae42a5eda0d2b9bf93e1a3a668c8765575a6bc6b77616248525"
+    },
+    {
+      "path": "scripts/run_p3_final_evaluation.py",
+      "size_bytes": 10803,
+      "sha256": "a4c0065f80dad2038353aaca5c04173cbc82234a83c549b872a8e2fd79df74b9"
+    },
+    {
+      "path": "scripts/run_p3_geometry_smoke.py",
+      "size_bytes": 9349,
+      "sha256": "d58b87fe96b5f79778569cda037de470779a8235af87efef11c2047df275810f"
+    },
+    {
+      "path": "scripts/run_p3_initial_design.py",
+      "size_bytes": 9753,
+      "sha256": "b86f8bd139873bfa53fef7fde093258c619cc835ab3b57faa7fde2fcc8543b7b"
+    },
+    {
+      "path": "scripts/run_p3_pareto_verification.py",
+      "size_bytes": 8929,
+      "sha256": "5bd94b06846090baf90fa2083fc485306ca421d5890f7620ebb151fdbe9f5a9a"
+    },
+    {
+      "path": "scripts/run_p3_surrogate_optimization.py",
+      "size_bytes": 661,
+      "sha256": "4e614f759c156690372a6790469aacb10276e044d5bc209bfd12f6224b46ba89"
+    },
+    {
+      "path": "src/comsol_small_model/eda_design.py",
+      "size_bytes": 10355,
+      "sha256": "40316d4a976d8f00b6022d61c03e47d5f3967312a1deaa72fc4b314a8455dec5"
+    },
+    {
+      "path": "src/comsol_small_model/eda_optimization.py",
+      "size_bytes": 8503,
+      "sha256": "c5bd766a9ad6950dcbdc07ba1b91fcf7b6eb068362c321a90bf4b356c5d63134"
+    },
+    {
+      "path": "tests/test_p3_eda_design.py",
+      "size_bytes": 5243,
+      "sha256": "d3b6926e859d940dd4a29b68fe66c314d9be168ddf6141f48823107735c9b67b"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 401802,
+      "sha256": "db3cdfd0e3424c87d8cb982d2e48dbdc0604465325c6db93cd62c9d116c59e79"
+    }
+  ]
+}

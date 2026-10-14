@@ -1,0 +1,10 @@
+{
+  "id": "acoustic_rectangular_cavity_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "rectangle", "dimension": "2D", "length_x_m": 0.4, "length_y_m": 0.3},
+  "physics": ["Pressure Acoustics", "Eigenfrequency"],
+  "parameters_si": {"sound_speed_m_s": 343.0, "density_kg_m3": 1.2, "mode_m": 1, "mode_n": 0},
+  "boundary_conditions": {"walls": "Sound Hard Boundary"},
+  "reference_checks": {"equation": "f_mn=(c/2)*sqrt((m/Lx)^2+(n/Ly)^2)", "mode_note": "Compare physical mode shape, not only eigenfrequency list position"},
+  "acceptance": ["Eigenfrequency agrees with the selected (m,n) reference mode", "Pressure pattern has the expected nodal structure", "Mesh is refined relative to acoustic wavelength"]
+}

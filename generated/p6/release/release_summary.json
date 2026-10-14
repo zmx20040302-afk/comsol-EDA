@@ -1,0 +1,15 @@
+{
+  "archive": "generated\\p6\\release\\comsol_auto_modeling_p6_evidence.zip",
+  "size_bytes": 1280971,
+  "sha256": "2f8e1c02f6c8f00127e8755b15b2d3cf1436a7cfdc6ee08e096c5e936e9e954c",
+  "file_count": 49,
+  "java_verified_count": 6,
+  "local_readiness_passed": true,
+  "publication_external_gate_passed": false,
+  "mph_class_logs_excluded": true,
+  "remaining_actions": [
+    "temperature_experiment",
+    "fixed_task_external_comparison",
+    "destination_host_acceptance"
+  ]
+}

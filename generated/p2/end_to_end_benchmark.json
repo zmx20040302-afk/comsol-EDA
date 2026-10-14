@@ -1,0 +1,1498 @@
+{
+  "schema": "comsol-p2-end-to-end-benchmark",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T03:43:42.951198+00:00",
+  "scope_note": "Sixty requirements exercise intent, completeness, conflict, routing, and code-generator availability. COMSOL build/mesh/solve rates use six representative current-workstation templates; the report does not claim sixty new COMSOL solves.",
+  "task_matrix": {
+    "task_count": 60,
+    "domain_count": 6,
+    "category_counts": {
+      "complete": 24,
+      "incomplete": 18,
+      "parameterized_or_coupled": 12,
+      "conflict": 6
+    }
+  },
+  "metrics": {
+    "physics_and_coupling_exact_accuracy": 1.0,
+    "study_accuracy": 1.0,
+    "critical_missing_recall": 1.0,
+    "critical_missing_precision": 1.0,
+    "code_generation_rate_on_eligible_tasks": 1.0,
+    "code_generation_eligible_count": 36,
+    "false_safe_count": 0,
+    "false_safe_rate_on_blocked_tasks": 0.0,
+    "representative_comsol_template_count": 6,
+    "representative_comsol_build_mesh_solve_export_rate": 1.0,
+    "representative_physics_validation_rate": 1.0,
+    "controlled_repair_success_rate": 1.0,
+    "controlled_repair_average_retries": 1.0,
+    "decision_pipeline_wall_seconds": 0.048
+  },
+  "comparison_methods": {
+    "direct_keyword_proxy": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 0.9333,
+      "false_safe_count": 24,
+      "false_safe_rate_on_blocked_tasks": 1.0
+    },
+    "rules_without_memory": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 0.8833,
+      "false_safe_count": 24,
+      "false_safe_rate_on_blocked_tasks": 1.0
+    },
+    "retrieval_generation": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 1.0,
+      "false_safe_count": 6,
+      "false_safe_rate_on_blocked_tasks": 0.25
+    },
+    "full_staged": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 1.0,
+      "false_safe_count": 0,
+      "false_safe_rate_on_blocked_tasks": 0.0
+    }
+  },
+  "ablations": {
+    "without_case_memory": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 0.8833,
+      "false_safe_count": 24,
+      "false_safe_rate_on_blocked_tasks": 1.0
+    },
+    "without_contract_and_completeness": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 0.8833,
+      "false_safe_count": 24,
+      "false_safe_rate_on_blocked_tasks": 1.0
+    },
+    "without_conflict_gate": {
+      "task_count": 60,
+      "physics_and_coupling_exact_accuracy": 1.0,
+      "false_safe_count": 6,
+      "false_safe_rate_on_blocked_tasks": 0.25
+    },
+    "without_static_audit": {
+      "injected_static_failures_misclassified_safe": 2,
+      "false_safe_increase": 2
+    },
+    "without_physics_validation": {
+      "representative_execution_completion_would_be_treated_as_safe_without_physics_checks": 6
+    },
+    "without_controlled_repair": {
+      "repair_success_rate": 0.0,
+      "failed_fixtures_remaining": 2
+    }
+  },
+  "representative_comsol_evidence": [
+    {
+      "id": "solid_heat",
+      "job_id": "job_20261010041936_3505063a",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\one_dimensional_heat_conduction.json",
+          "exists": true,
+          "size_bytes": 769,
+          "sha256": "c1b7a449e22db0e6a7fd2f1106a054dfa1f874e48dc538f12d06223838c20e1f"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\generated_build_one_dimensional_heat_conduction.m",
+          "exists": true,
+          "size_bytes": 2936,
+          "sha256": "b1df917019ac6e0b180886c03b15158e423a2c23039cf1ea2035c7b01e3aeab9"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\run_job_20261010041936_3505063a.m",
+          "exists": true,
+          "size_bytes": 3226,
+          "sha256": "281bc4ae7497802102061d6a7bda2141dcecad05649443658eba62e295d437c6"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\job_20261010041936_3505063a.mph",
+          "exists": true,
+          "size_bytes": 1562679,
+          "sha256": "d139e4283a851228b64c1e6fe6908d35ed0168b50f70a6160f98f33a25f32266"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\job_20261010041936_3505063a_results.csv",
+          "exists": true,
+          "size_bytes": 47,
+          "sha256": "5572b051952e9d2317ca23ad22058a29e43a26f058365dd407add1a27ef2dd3b"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\job_20261010041936_3505063a_preview.png",
+          "exists": true,
+          "size_bytes": 19127,
+          "sha256": "6e4c66ecf720ca459ec233bae8dc1799d95ea6191e08489692cd8f64d5efc8e8"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\heat\\job_20261010041936_3505063a\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4220,
+          "sha256": "7d16131e0fa1248bddb0b8c22cd6c7ef8d19ebe4ed57a773a62cc4e75cf67ccd"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\heat\\logs\\job_20261010041936_3505063a.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "be873ebce9a2e74d11b9fbe718047fd5998e1bd5a0106c0ff28044c3646c01f0"
+        }
+      }
+    },
+    {
+      "id": "electric_current",
+      "job_id": "job_20261010042005_6556125a",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\one_dimensional_electric_current.json",
+          "exists": true,
+          "size_bytes": 694,
+          "sha256": "e91574fc95b5e2ecf402c003dc58e3b625f6ddfdedc21c8c822e16a2d557c556"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\generated_build_one_dimensional_electric_current.m",
+          "exists": true,
+          "size_bytes": 2715,
+          "sha256": "efcd3c291121b18738346c3ff0693cddbd0b196f06485ac6b74c4b452fa60a24"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\run_job_20261010042005_6556125a.m",
+          "exists": true,
+          "size_bytes": 3268,
+          "sha256": "e6ca9469a2e8c427ae7cd2ebb3a0368148d7fbabe244f7370b2c800ddc964a99"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\job_20261010042005_6556125a.mph",
+          "exists": true,
+          "size_bytes": 740918,
+          "sha256": "1c7e2f00c60fe70767470e57ca2c17d77e822536f7bc2af2b49ea300a282cf85"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\job_20261010042005_6556125a_results.csv",
+          "exists": true,
+          "size_bytes": 85,
+          "sha256": "d0411dcad4c8e7418a953b147e379bbe340e20299f2229f49e4e11310dc154b9"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\job_20261010042005_6556125a_preview.png",
+          "exists": true,
+          "size_bytes": 19127,
+          "sha256": "6b6f8c62f7349b5e3e13e0271fd39828efad78526f077d0180e073159cbc11a2"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\current\\job_20261010042005_6556125a\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4228,
+          "sha256": "e608d04dc4c37379aa0d76fd490a956c08aab329a0f7d281c30f5343209cacee"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\current\\logs\\job_20261010042005_6556125a.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "d3c9c5df9cab9ddaae308abbd77f53dd43e7b37fce93effcb766171842551bcd"
+        }
+      }
+    },
+    {
+      "id": "electrothermal",
+      "job_id": "job_20261010042032_b32119c0",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\one_dimensional_electrothermal.json",
+          "exists": true,
+          "size_bytes": 892,
+          "sha256": "ca9b716a629482ca82cdd66257b3f0432adc22e2a10dec3e37a352aaa71eec1d"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\generated_build_one_dimensional_electrothermal_wire.m",
+          "exists": true,
+          "size_bytes": 4125,
+          "sha256": "f1b11fa7194d569270b9fc13ea7da57cdaca27c34cbad5cf2e598465074ce47d"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\run_job_20261010042032_b32119c0.m",
+          "exists": true,
+          "size_bytes": 3302,
+          "sha256": "483a12786f30631d96d2d7b1decde968c1597af20d63c2caa9986ea5fff30c42"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\job_20261010042032_b32119c0.mph",
+          "exists": true,
+          "size_bytes": 1794612,
+          "sha256": "df4bfbe512d56abbd0b1037c32901daf077a7b973491ba399c266637328e736a"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\job_20261010042032_b32119c0_results.csv",
+          "exists": true,
+          "size_bytes": 104,
+          "sha256": "42c97619d6d04004861905cde888fad003e566ff3c397e82d6408d4df7581a4c"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\job_20261010042032_b32119c0_preview.png",
+          "exists": true,
+          "size_bytes": 19127,
+          "sha256": "fe310e3030736c3304213520320764c9147de434b561539648b8e271a527c15d"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\job_20261010042032_b32119c0\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4251,
+          "sha256": "692bd7a4164688bafed23644039846db783bb1b35872ad990b9884d1e86933d0"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\electrothermal\\logs\\job_20261010042032_b32119c0.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "1592f27657872dc0b62834575129782d451e3efde0b33360c732012291040c59"
+        }
+      }
+    },
+    {
+      "id": "solid_mechanics",
+      "job_id": "job_20261010042103_2b649dc4",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\solid_mechanics_rectangle.json",
+          "exists": true,
+          "size_bytes": 677,
+          "sha256": "4f420c4dfb71db4766dc3d1a02b975344b9b6b009c94e4b9d5c7464ef57b3dc3"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\generated_build_solid_mechanics_rectangle.m",
+          "exists": true,
+          "size_bytes": 2630,
+          "sha256": "f02244670cd1693c16092a2cdf7d1c0c5b78bbcd7f75a5af06d2128cf1aa96d7"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\run_job_20261010042103_2b649dc4.m",
+          "exists": true,
+          "size_bytes": 3269,
+          "sha256": "3fe8c21fb280d5d3015b50ac3b9f7174697b2de1c028ecf11eb28a0509df863a"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\job_20261010042103_2b649dc4.mph",
+          "exists": true,
+          "size_bytes": 2027771,
+          "sha256": "1c91191ac8d6586f4632e46e897ab29f3ceda02c4466ed6ad9b37e289573aa0a"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\job_20261010042103_2b649dc4_results.csv",
+          "exists": true,
+          "size_bytes": 121,
+          "sha256": "d17825a6e576f63ecf5e2ffa53babb6783476b6ee90a5207d757f60762996c67"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\job_20261010042103_2b649dc4_preview.png",
+          "exists": true,
+          "size_bytes": 21682,
+          "sha256": "15097da4720d43421e03a30acb5c5418d3275d2a98a03ca08d02188cc3a3c7c4"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\solid\\job_20261010042103_2b649dc4\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4224,
+          "sha256": "3c1468295f81c208d5d9694c0f4c6d6112c60faafbeb1ec6a6607f22214ad411"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\solid\\logs\\job_20261010042103_2b649dc4.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "3cf30b0848e3459c73d807341155e313bca4292db1bed1d1753b20c281b45aab"
+        }
+      }
+    },
+    {
+      "id": "flow_heat",
+      "job_id": "job_20261010041659_beaba35f",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\flow_heat_channel_2d.json",
+          "exists": true,
+          "size_bytes": 1396,
+          "sha256": "f2e9bf3d3e2a38b0ee2a490158a9a2080acafda1e19b05bf74aed12ca1f6a117"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\generated_build_flow_heat_channel_2d.m",
+          "exists": true,
+          "size_bytes": 5473,
+          "sha256": "0bf9d3beb2bfe6293050e30cf1fe5e491c718b2a093dfc619bc7244215619ef9"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\run_job_20261010041659_beaba35f.m",
+          "exists": true,
+          "size_bytes": 3483,
+          "sha256": "6a88c308c55d430ba1c57925b2be0fc55b483ebe6d82cf086fb3405b4549b0e5"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\job_20261010041659_beaba35f.mph",
+          "exists": true,
+          "size_bytes": 2624647,
+          "sha256": "47a6ebb73812c361aaba27b9cca26a065f22b32f2aedcf7e3472ed79a6caa7ff"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\job_20261010041659_beaba35f_results.csv",
+          "exists": true,
+          "size_bytes": 347,
+          "sha256": "ebccc9fa8e2af41f774a086d7204cad70fb0d19d2494f109a6a72850f67c1775"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\job_20261010041659_beaba35f_preview.png",
+          "exists": true,
+          "size_bytes": 21331,
+          "sha256": "02768dad142524d9d1539ec585fa34a06f8d30ce9e0033953aee0b3853fe0e9e"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\job_20261010041659_beaba35f\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4254,
+          "sha256": "1ed51bc76aa94ae43173d00a5f2edbeefb5510e08b5209f27d87c34547eef844"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\flow_heat_final\\logs\\job_20261010041659_beaba35f.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "8036677d57d31e3d3f351d367ac6ca3508f1859e52d4b0f995835ea876392dee"
+        }
+      }
+    },
+    {
+      "id": "pressure_acoustics",
+      "job_id": "job_20261010040946_abe0631f",
+      "validation_passed": true,
+      "artifacts": {
+        "config": {
+          "path": "configs\\one_dimensional_acoustic_tube.json",
+          "exists": true,
+          "size_bytes": 907,
+          "sha256": "604df283bb5a1cedbcdc49921b536787f49a8dd7521d345633bb9faa1b486caf"
+        },
+        "matlab_builder": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\generated_build_one_dimensional_acoustic_open_tube.m",
+          "exists": true,
+          "size_bytes": 2948,
+          "sha256": "920426052efdd13a3192724c1fe14ba3ed9299a9ac47024515f452b31d66dd9c"
+        },
+        "runner": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\run_job_20261010040946_abe0631f.m",
+          "exists": true,
+          "size_bytes": 3280,
+          "sha256": "19897cc2c195c7bb8b950ddd6e1a92489a1f1bb390893929d6656b1f2c16c098"
+        },
+        "mph": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\job_20261010040946_abe0631f.mph",
+          "exists": true,
+          "size_bytes": 719972,
+          "sha256": "02f7ae25b6e748f9782fd9f51cf51341051c427a863e4510d5df4a94657d166d"
+        },
+        "results_csv": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\job_20261010040946_abe0631f_results.csv",
+          "exists": true,
+          "size_bytes": 93,
+          "sha256": "a9ce7e1d2444c9e2bb634994113131083c2d84576b91197baba429d79ad08149"
+        },
+        "preview_png": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\job_20261010040946_abe0631f_preview.png",
+          "exists": true,
+          "size_bytes": 17874,
+          "sha256": "9a78c248615fdcd89b233f1d8b5e887e724ae31e9923de3c7c61dc3b1e1049e0"
+        },
+        "execution_evidence": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\job_20261010040946_abe0631f\\execution_evidence.json",
+          "exists": true,
+          "size_bytes": 4231,
+          "sha256": "a41329fef110efcc01d9024b90e48010a909cede1ab47ddbd3734305142cbef4"
+        },
+        "log": {
+          "path": "generated\\p1_execution_jobs\\acoustic\\logs\\job_20261010040946_abe0631f.log",
+          "exists": true,
+          "size_bytes": 528,
+          "sha256": "8834aa643b2fb1a8886c772be0ab66cfd6a75d44cca5a4fb826dd9e46d0108e5"
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "id": "solid_heat-complete-1",
+      "domain": "solid_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-complete-2",
+      "domain": "solid_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-complete-3",
+      "domain": "solid_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-complete-4",
+      "domain": "solid_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-incomplete-1",
+      "domain": "solid_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-incomplete-2",
+      "domain": "solid_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-incomplete-3",
+      "domain": "solid_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-parameterized-1",
+      "domain": "solid_heat",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-parameterized-2",
+      "domain": "solid_heat",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_heat-conflict-1",
+      "domain": "solid_heat",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "NONPOSITIVE_GEOMETRY",
+          "severity": "critical",
+          "message": "几何尺寸包含负值，无法进入自动建模。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-complete-1",
+      "domain": "electric_current",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-complete-2",
+      "domain": "electric_current",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-complete-3",
+      "domain": "electric_current",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-complete-4",
+      "domain": "electric_current",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-incomplete-1",
+      "domain": "electric_current",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-incomplete-2",
+      "domain": "electric_current",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-incomplete-3",
+      "domain": "electric_current",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-parameterized-1",
+      "domain": "electric_current",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-parameterized-2",
+      "domain": "electric_current",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electric_current-conflict-1",
+      "domain": "electric_current",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "ELECTRICAL_BOUNDARY_CONFLICT",
+          "severity": "critical",
+          "message": "同一端子同时设置电势和接地。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-complete-1",
+      "domain": "electrothermal",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-complete-2",
+      "domain": "electrothermal",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-complete-3",
+      "domain": "electrothermal",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-complete-4",
+      "domain": "electrothermal",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-incomplete-1",
+      "domain": "electrothermal",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-incomplete-2",
+      "domain": "electrothermal",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-incomplete-3",
+      "domain": "electrothermal",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-parameterized-1",
+      "domain": "electrothermal",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-parameterized-2",
+      "domain": "electrothermal",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "electrothermal-conflict-1",
+      "domain": "electrothermal",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "PHYSICS_SCOPE_CONFLICT",
+          "severity": "critical",
+          "message": "需求禁止传热，同时又要求电热温度结果。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-complete-1",
+      "domain": "solid_mechanics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-complete-2",
+      "domain": "solid_mechanics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-complete-3",
+      "domain": "solid_mechanics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-complete-4",
+      "domain": "solid_mechanics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-incomplete-1",
+      "domain": "solid_mechanics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-incomplete-2",
+      "domain": "solid_mechanics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-incomplete-3",
+      "domain": "solid_mechanics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-parameterized-1",
+      "domain": "solid_mechanics",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-parameterized-2",
+      "domain": "solid_mechanics",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "solid_mechanics-conflict-1",
+      "domain": "solid_mechanics",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "STRUCTURAL_BOUNDARY_CONFLICT",
+          "severity": "critical",
+          "message": "同一结构边界同时完全固定和自由位移。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-complete-1",
+      "domain": "flow_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-complete-2",
+      "domain": "flow_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-complete-3",
+      "domain": "flow_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-complete-4",
+      "domain": "flow_heat",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-incomplete-1",
+      "domain": "flow_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-incomplete-2",
+      "domain": "flow_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-incomplete-3",
+      "domain": "flow_heat",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-parameterized-1",
+      "domain": "flow_heat",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-parameterized-2",
+      "domain": "flow_heat",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "flow_heat-conflict-1",
+      "domain": "flow_heat",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "FLOW_BOUNDARY_CONFLICT",
+          "severity": "critical",
+          "message": "同一入口同时设置入口速度和封闭壁。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-complete-1",
+      "domain": "pressure_acoustics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-complete-2",
+      "domain": "pressure_acoustics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-complete-3",
+      "domain": "pressure_acoustics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-complete-4",
+      "domain": "pressure_acoustics",
+      "category": "complete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-incomplete-1",
+      "domain": "pressure_acoustics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "geometry"
+      ],
+      "predicted_missing": [
+        "geometry"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-incomplete-2",
+      "domain": "pressure_acoustics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "materials"
+      ],
+      "predicted_missing": [
+        "materials"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-incomplete-3",
+      "domain": "pressure_acoustics",
+      "category": "incomplete",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [
+        "boundary_conditions"
+      ],
+      "predicted_missing": [
+        "boundary_conditions"
+      ],
+      "conflicts": [],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-parameterized-1",
+      "domain": "pressure_acoustics",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": false,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-parameterized-2",
+      "domain": "pressure_acoustics",
+      "category": "parameterized_or_coupled",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [],
+      "expected_blocked": false,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": true,
+      "code_generated": true,
+      "generation_error": ""
+    },
+    {
+      "id": "pressure_acoustics-conflict-1",
+      "domain": "pressure_acoustics",
+      "category": "conflict",
+      "selection_passed": true,
+      "study_passed": true,
+      "expected_missing": [],
+      "predicted_missing": [],
+      "conflicts": [
+        {
+          "code": "ACOUSTIC_BOUNDARY_CONFLICT",
+          "severity": "critical",
+          "message": "同一声学边界同时设置刚性壁和压力释放。",
+          "blocks_automatic_execution": true
+        }
+      ],
+      "expected_blocked": true,
+      "blocked": true,
+      "false_safe": false,
+      "code_generation_attempted": false,
+      "code_generated": false,
+      "generation_error": ""
+    }
+  ]
+}

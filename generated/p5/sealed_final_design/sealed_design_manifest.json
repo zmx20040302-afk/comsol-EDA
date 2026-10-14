@@ -1,0 +1,30 @@
+{
+  "schema": "comsol-p5-sealed-final-design",
+  "schemaVersion": "1.0.0",
+  "created_at": "2026-10-11T02:35:51.487980+00:00",
+  "domain_seed": 20270119,
+  "ood_seed": 20270129,
+  "domain_rows": 60,
+  "ood_rows": 20,
+  "files": {
+    "domain": {
+      "path": "generated\\p5\\sealed_final_design\\p5_independent_domain_inputs.csv",
+      "sha256": "fe8e487908d1c812d6266a61b1a24e16ecab3d0da66f2d6212fba857de2b2f48"
+    },
+    "ood": {
+      "path": "generated\\p5\\sealed_final_design\\p5_out_of_domain_inputs.csv",
+      "sha256": "412ca5c2a35b426bad4b8d74cb1a88b29da07d060f228bbabf2d12a51410da91"
+    }
+  },
+  "frozen_before_sealing": {
+    "model": {
+      "path": "generated\\p5\\p5_one_sided_surrogate.joblib",
+      "sha256": "8839e8fbfe2b3846540d515057138e1b1b3f3f2e6b0fd54aa68238078b094df6"
+    },
+    "calibration_report": {
+      "path": "generated\\p5\\calibration_selection_report.json",
+      "sha256": "aae194b4fcf00144a28236702f73e0e483d0c5570bf31420af8b850b34ddede5"
+    }
+  },
+  "policy": "P5 inputs were generated only after calibration selection, model packaging and release thresholds were frozen."
+}

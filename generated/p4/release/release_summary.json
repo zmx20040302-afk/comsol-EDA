@@ -1,0 +1,11 @@
+{
+  "archive": "generated\\p4\\release\\comsol_auto_modeling_p4_evidence.zip",
+  "size_bytes": 19501000,
+  "sha256": "9855ba5e876b9005b97a2227a9315e39306b32e05cb78de16c7ab46b2af22812",
+  "file_count": 50,
+  "large_mph_files_excluded": true,
+  "comsol_execution_passed": true,
+  "accuracy_passed": true,
+  "safe_release_coverage": 0.03333333333333333,
+  "surrogate_release_passed": false
+}

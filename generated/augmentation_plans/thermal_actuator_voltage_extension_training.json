@@ -1,0 +1,20 @@
+{
+  "kind": "thermal_actuator_voltage_extension_training",
+  "purpose": "Extend the validated micro-actuator Joule-heating temperature surrogate from 2-5 V to 2-6.6 V while retaining the original geometry, materials, electric-thermal coupling, and convection-boundary definitions.",
+  "inputs": ["DV_V", "htc_s_W_m2K", "htc_us_W_m2K"],
+  "outputs": ["Tmax_K", "joule_power_W"],
+  "recommended_comsol_samples": [
+    {"DV_V": 5.4, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 300},
+    {"DV_V": 5.4, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 500},
+    {"DV_V": 5.4, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 300},
+    {"DV_V": 5.4, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 500},
+    {"DV_V": 6.0, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 300},
+    {"DV_V": 6.0, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 500},
+    {"DV_V": 6.0, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 300},
+    {"DV_V": 6.0, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 500},
+    {"DV_V": 6.6, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 300},
+    {"DV_V": 6.6, "htc_s_W_m2K": 15000, "htc_us_W_m2K": 500},
+    {"DV_V": 6.6, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 300},
+    {"DV_V": 6.6, "htc_s_W_m2K": 25000, "htc_us_W_m2K": 500}
+  ]
+}

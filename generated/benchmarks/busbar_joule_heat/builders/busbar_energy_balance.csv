@@ -1,0 +1,2 @@
+joule_power_w,convection_power_w,relative_imbalance_percent,convection_expression,status
+3.22864839296184,3.22712091859827,0.0473100250526646,ht.nteflux,completed

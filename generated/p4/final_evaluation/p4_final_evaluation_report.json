@@ -1,0 +1,95 @@
+{
+  "schema": "comsol-p4-final-independent-evaluation",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T11:19:10.489430+00:00",
+  "training_rows": 220,
+  "counts": {
+    "domain_holdout": 60,
+    "out_of_domain": 20,
+    "released_safe_conservative_95": 2,
+    "false_safe_conservative_95": 0,
+    "released_safe_mean_gate": 28,
+    "false_safe_mean_gate": 4
+  },
+  "execution_checks": {
+    "sealed_hashes_verified_before_opening": true,
+    "all_60_domain_cases_solved": true,
+    "all_20_ood_cases_solved": true,
+    "terminal_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true
+  },
+  "execution_passed": true,
+  "release_checks": {
+    "ood_auroc_at_least_0_95": true,
+    "ood_detection_rate_at_least_0_95": true,
+    "domain_false_alarm_at_most_0_05": true,
+    "false_safe_rate_at_most_0_05": true,
+    "safe_release_coverage_at_least_0_10": false,
+    "tmax_rmse_at_most_15_K": true,
+    "power_relative_rmse_at_most_15_percent": true,
+    "mass_relative_rmse_at_most_10_percent": true,
+    "all_intervals_picp_at_least_0_90": true
+  },
+  "surrogate_release_passed": false,
+  "holdout_metrics": {
+    "Tmax_K": {
+      "rmse": 8.92473577861375,
+      "mae": 6.5330419148535155,
+      "r2": 0.9631036686643518,
+      "maximum_absolute_error": 35.12071556194559,
+      "picp_95_conformal": 1.0,
+      "mpiw_95_conformal": 94.89884309455798
+    },
+    "Jmax_A_m2": {
+      "rmse": 502137.1706473656,
+      "mae": 382973.77453564474,
+      "r2": 0.953992832600946,
+      "maximum_absolute_error": 1404217.9302357174,
+      "picp_95_conformal": 0.9666666666666667,
+      "mpiw_95_conformal": 2382963.4168023397
+    },
+    "normalized_voltage_at_160A_mV": {
+      "rmse": 0.6295754071811541,
+      "mae": 0.44798793344632737,
+      "r2": 0.9936329848519202,
+      "maximum_absolute_error": 2.039715173081003,
+      "picp_95_conformal": 1.0,
+      "mpiw_95_conformal": 5.11158333121881
+    },
+    "joule_power_W": {
+      "rmse": 0.3377468080880605,
+      "mae": 0.24600437556487506,
+      "r2": 0.9797918857540746,
+      "maximum_absolute_error": 1.1991928656345525,
+      "picp_95_conformal": 1.0,
+      "mpiw_95_conformal": 2.7421980295696025
+    },
+    "copper_mass_kg": {
+      "rmse": 0.008312591387692157,
+      "mae": 0.006382187775343037,
+      "r2": 0.9942421006497036,
+      "maximum_absolute_error": 0.02640999863297777,
+      "picp_95_conformal": 0.9666666666666667,
+      "mpiw_95_conformal": 0.0361315609280506
+    }
+  },
+  "ood": {
+    "auroc": 1.0,
+    "detection_rate": 1.0,
+    "domain_false_alarm_rate": 0.0
+  },
+  "safe_release_coverage": 0.03333333333333333,
+  "false_safe_rate": 0.0,
+  "mean_gate_diagnostic": {
+    "released_safe": 28,
+    "false_safe": 4,
+    "false_safe_rate": 0.14285714285714285
+  },
+  "wall_seconds": 408.9454549999973,
+  "artifacts": {
+    "evaluated_results": "generated\\p4\\final_evaluation\\p4_final_evaluation_evaluated.csv",
+    "model": "generated\\p4\\p4_adaptive_surrogate.joblib",
+    "final_mph": "generated\\p4\\final_evaluation\\p4_final_evaluation_final.mph"
+  },
+  "policy": "This new sealed set was opened only after P4 adaptive sampling, feature engineering, estimator selection, interval calibration and thresholds were frozen. It must now be retired from independent use."
+}

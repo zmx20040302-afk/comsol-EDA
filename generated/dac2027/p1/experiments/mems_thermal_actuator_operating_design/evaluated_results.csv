@@ -1,0 +1,5 @@
+case_id,DV_V,htc_s_W_m2K,htc_us_W_m2K,Tmax_K,umax_m,joule_power_W,solve_seconds,solver_status,error_message,temperature_passed,displacement_passed,power_passed,all_gates_passed
+p1_mems_01,4.75,17500,400,510.714755908565,1.09657372457875e-06,0.0127818765799744,11.3518972,solved,,True,True,True,True
+p1_mems_02,4.75,22500,400,471.132383002407,9.32168357797216e-07,0.0131356744910943,10.5379827,solved,,True,True,True,True
+p1_mems_03,5.25,17500,400,555.083003709175,1.31678306684635e-06,0.0151216671985527,11.7339015,solved,,False,True,True,False
+p1_mems_04,5.25,22500,400,507.376527896092,1.1197447963966e-06,0.0156044322604733,10.3145559,solved,,True,True,True,True

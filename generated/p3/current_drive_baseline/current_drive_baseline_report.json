@@ -1,0 +1,59 @@
+{
+  "schema": "comsol-p3-current-drive-baseline",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T09:29:30.319313+00:00",
+  "source_mph": "generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_joule_heat_baseline.mph",
+  "drive_mode": "fixed_terminal_current",
+  "nominal_current_A": 160.0,
+  "measured": {
+    "Tmax_K": 329.797551926714,
+    "Tavg_K": 322.24345474104,
+    "Jmax_A_m2": 5141738.84968363,
+    "terminal_current_A": 160.094954456957,
+    "voltage_drop_mV": 19.8187306261752,
+    "joule_power_W": 3.17079395640271,
+    "convection_power_W": 3.16929385307633,
+    "energy_imbalance_percent": 0.0473100222532715,
+    "copper_volume_m3": 4.62488234956185e-05,
+    "copper_mass_kg": 0.414389458520742,
+    "solve_seconds": 5.9292481,
+    "solver_status": "solved"
+  },
+  "checks": {
+    "terminal_current_within_1_percent": true,
+    "baseline_equivalent_voltage_within_1_mV": true,
+    "temperature_within_2_K_of_voltage_baseline": true,
+    "energy_imbalance_below_0_1_percent": true,
+    "temperature_below_provisional_limit": true,
+    "mph_created": true
+  },
+  "passed": true,
+  "wall_seconds": 36.70656249999956,
+  "artifacts": {
+    "runner": {
+      "path": "generated\\p3\\current_drive_baseline\\run_busbar_current_drive_baseline.m",
+      "exists": true,
+      "size_bytes": 3621,
+      "sha256": "7313588af5d7cebc8b4816957a54927adddf08aaeeb0d1be25b8e635934faadb"
+    },
+    "csv": {
+      "path": "generated\\p3\\current_drive_baseline\\busbar_current_drive_baseline.csv",
+      "exists": true,
+      "size_bytes": 372,
+      "sha256": "8e2c4becf3589d2cabea130193dbba62e77b37dcfe4ec36e6664fa189b52d68a"
+    },
+    "mph": {
+      "path": "generated\\p3\\current_drive_baseline\\busbar_current_drive_baseline.mph",
+      "exists": true,
+      "size_bytes": 17349289,
+      "sha256": "801baac8c950a370da7373bd02064e14c4bc83c6a73b647cfa2f5d92f4ed58bd"
+    },
+    "preview_png": {
+      "path": "generated\\p3\\current_drive_baseline\\busbar_current_drive_baseline.png",
+      "exists": true,
+      "size_bytes": 40178,
+      "sha256": "475b469c15633311f4efcf3781ac25402b45f36a811c1b981eb437d88bb4dd40"
+    }
+  },
+  "scope": "This verifies current-drive migration at the baseline geometry. It does not yet verify all 80 geometry candidates."
+}

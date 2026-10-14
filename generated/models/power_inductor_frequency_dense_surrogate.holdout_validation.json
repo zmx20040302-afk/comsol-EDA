@@ -1,0 +1,80 @@
+{
+  "kind": "power_inductor_frequency_independent_comsol_validation",
+  "created_at": "2026-09-03T13:03:06.311792+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_training_dense.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_holdout_dense.csv",
+  "training_rows": 13,
+  "holdout_rows": 12,
+  "candidate_reports": {
+    "linear_regression": {
+      "max_relative_error_percent": 284.58304564582295,
+      "mean_relative_error_percent": 65.3534209268086,
+      "per_output": {
+        "inductance_H": {
+          "max_relative_error_percent": 0.008227129076817486,
+          "mean_relative_error_percent": 0.004922191515324807
+        },
+        "conductance_S": {
+          "max_relative_error_percent": 284.58304564582295,
+          "mean_relative_error_percent": 130.70191966210186
+        }
+      }
+    },
+    "polynomial_ridge_degree2": {
+      "max_relative_error_percent": 447.6932061376976,
+      "mean_relative_error_percent": 65.9473224300725,
+      "per_output": {
+        "inductance_H": {
+          "max_relative_error_percent": 0.006404631784267773,
+          "mean_relative_error_percent": 0.003921458568479838
+        },
+        "conductance_S": {
+          "max_relative_error_percent": 447.6932061376976,
+          "mean_relative_error_percent": 131.89072340157654
+        }
+      }
+    },
+    "random_forest": {
+      "max_relative_error_percent": 34.07283569446811,
+      "mean_relative_error_percent": 9.706500931556981,
+      "per_output": {
+        "inductance_H": {
+          "max_relative_error_percent": 0.004306371867629085,
+          "mean_relative_error_percent": 0.001627622346668635
+        },
+        "conductance_S": {
+          "max_relative_error_percent": 34.07283569446811,
+          "mean_relative_error_percent": 19.41137424076729
+        }
+      }
+    },
+    "log_frequency_log_output": {
+      "max_relative_error_percent": 1.23794557817607,
+      "mean_relative_error_percent": 0.35417890726459084,
+      "per_output": {
+        "inductance_H": {
+          "max_relative_error_percent": 0.003649267885884969,
+          "mean_relative_error_percent": 0.001965359080671409
+        },
+        "conductance_S": {
+          "max_relative_error_percent": 1.23794557817607,
+          "mean_relative_error_percent": 0.7063924554485103
+        }
+      }
+    }
+  },
+  "selected_model": "log_frequency_log_output",
+  "max_relative_error_percent": 1.23794557817607,
+  "mean_relative_error_percent": 0.35417890726459084,
+  "selection_reason": "Selected by independent COMSOL holdout maximum relative error for both outputs.",
+  "validated_input_ranges": {
+    "frequency_Hz": {
+      "min": 500.0,
+      "max": 20000.0
+    }
+  },
+  "threshold_relative_error_percent": 5.0,
+  "passed": true,
+  "scope": "功率电感器频率响应模型；几何、材料、端口、网格与研究设置固定，仅改变频率，输出 real(1/mef.Y11/mef.iomega) 电感和 real(mef.Y11) 等效电导。仅适用于 COMSOL 已验证的 500-20000 Hz 范围。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_dense_surrogate.holdout_validation.json"
+}

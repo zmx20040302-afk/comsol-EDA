@@ -1,0 +1,15 @@
+# Third electrical-case batch. One COMSOL model per line.
+D:\桌面\codex\案例下载\电气\悬浮金属颗粒引发的流注放电\streamer_from_metal_particles.mph
+D:\桌面\codex\案例下载\电气\同轴电缆的特性参数\characteristic_parameters_coax_cable.mph
+D:\桌面\codex\案例下载\电气\空气中平行电极的直流击穿电压\breakdown_voltage_dc.mph
+D:\桌面\codex\案例下载\电气\模拟 SPP 的传播和色散\graphene_spp.mph
+D:\桌面\codex\案例下载\电气\模拟 SPP 的传播和色散\silver_spp.mph
+D:\桌面\codex\案例下载\电气\麦克风振膜形状优化\microphone_diaphragm_shape_optimization.mph
+D:\桌面\codex\案例下载\电气\正辉光电晕放电\positive_glow_corona.mph
+D:\桌面\codex\案例下载\电气\肖特基二极管\shockley_diode.mph
+D:\桌面\codex\案例下载\电气\构建不规则几何的替代方法：对规则形状进行材料数据插值\sar_in_human_head_interpolated_materials_v63.mph
+D:\桌面\codex\案例下载\电气\太阳能板的光学智能散热装置 (SRD)\smart_radiator_device.mph
+D:\桌面\codex\案例下载\电气\轴向磁场磁齿轮三维模型\axial_field_magnetic_gear_3d.mph
+D:\桌面\codex\案例下载\电气\径向磁耦合器三维模型\magnetic_coupling_radial.mph
+D:\桌面\codex\案例下载\电气\介电液体中的电流体动力学流动\ehd_flow_dielectric_liquid.mph
+D:\桌面\codex\案例下载\电气\压痕球的黏附与剥离\ball_adhesion_decohesion_v63.mph

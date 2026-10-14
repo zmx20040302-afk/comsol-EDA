@@ -1,0 +1,267 @@
+{
+  "schema": "comsol-p4-evidence-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T11:41:51.630233+00:00",
+  "scope": "P4 source, compact COMSOL evidence, frozen surrogate, manuscript and reproducibility metadata; MPH and logs are excluded.",
+  "release_decision": {
+    "adaptive_comsol_cases": 80,
+    "final_comsol_cases": 80,
+    "comsol_execution_passed": true,
+    "accuracy_passed": true,
+    "safe_release_coverage": 0.03333333333333333,
+    "surrogate_release_passed": false,
+    "policy": "This archive preserves a failed surrogate release decision as evidence; it does not authorize direct prediction."
+  },
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 26177,
+      "sha256": "42ee1251a0d72925403e3768497def40e9a854e866739b52e3ef72b60eb6a139"
+    },
+    {
+      "path": "EDA_PUBLICATION_ROADMAP.md",
+      "size_bytes": 11412,
+      "sha256": "111439a91943efc04124d9c7ba05d89e6643dae53a893aaf41de2393e5775b63"
+    },
+    {
+      "path": "P3_COMPLETION_REPORT.md",
+      "size_bytes": 3790,
+      "sha256": "1820087fd88d5102251d100468c769ed4cf20c932a43e46880973823e3f550b4"
+    },
+    {
+      "path": "P4_COMPLETION_REPORT.md",
+      "size_bytes": 4621,
+      "sha256": "9a311f9e3e8cecbb890dae93d36556022ce853f60f2cde43107fa876e3d177ef"
+    },
+    {
+      "path": "PROJECT_READINESS.md",
+      "size_bytes": 11606,
+      "sha256": "67312d98d1bc57d9f00696783561830878fdba7005d7cdb3111f9b4fa4575799"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 35113,
+      "sha256": "cc82af629da93a3afa00212a87c20fdf76b290528f40408d804dc63412914d51"
+    },
+    {
+      "path": "configs/busbar_eda_design_problem.json",
+      "size_bytes": 6110,
+      "sha256": "72de6ce33e5f89cfae83e05fea050e005c46fefccfd0b78c902219efabc54e5e"
+    },
+    {
+      "path": "configs/execution_node.json",
+      "size_bytes": 1210,
+      "sha256": "490c2816602e5e6a44691a7b94b89f52b8202ef6a73ff80a13240e611a0aaaae"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_1_evaluated.csv",
+      "size_bytes": 8353,
+      "sha256": "5045b409fcc2f2777795e16fe3f163d39a4cc259e91d96d069869786cb89fd14"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_1_inputs.csv",
+      "size_bytes": 9641,
+      "sha256": "e21e31325785f498e5dabb2246fc83f63b7f1b1883c0108ea5a127bb932e99ca"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_1_results.csv",
+      "size_bytes": 6719,
+      "sha256": "b840f4bee3de8503124a0f547e2804beb9a140a18d594cf20833cc7570a3809a"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_2_evaluated.csv",
+      "size_bytes": 8351,
+      "sha256": "3c841ddfd367f911b22f2d53e81d4ea3dd09feefc8ea490bb8e9f0448e013fc9"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_2_inputs.csv",
+      "size_bytes": 9641,
+      "sha256": "8e2c0ec421b79fce5b6ef7f351ba3027d2d65d08d24739589c756902de5cc8d9"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_2_results.csv",
+      "size_bytes": 6722,
+      "sha256": "cdc497539eecc230ee20a8b6fce148d07a8842c5d711b2d28acb7ea58dfe8f00"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_3_evaluated.csv",
+      "size_bytes": 8344,
+      "sha256": "508fc3644ef8bb70aa9478b012e6b1334938f0c663d78df1eba67d5b1fed7b82"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_3_inputs.csv",
+      "size_bytes": 9689,
+      "sha256": "44ab78a4a4a32af4b56472ca0117c5ff64b26a3c7a2c974e1094b61fbf967882"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_3_results.csv",
+      "size_bytes": 6716,
+      "sha256": "c4686f7066e1e2cddcb9fede4c6a02bafcc2e7662257b561be640e67af70f343"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_4_evaluated.csv",
+      "size_bytes": 8358,
+      "sha256": "8d8ae1ca633602cef7bb23c73366aea1d12b4ed73e82dd2f4c575c8a72c0dff3"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_4_inputs.csv",
+      "size_bytes": 9710,
+      "sha256": "9f5d53b7de3bbae0f36b8e0e38a328f58b05390a385ed73a17e00e07658f6d4e"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/round_4_results.csv",
+      "size_bytes": 6730,
+      "sha256": "473ef43920d6b405b93d95d5ab440bf13264d6a35b492e50cdc7a7859f033c84"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/run_p4_adaptive_round_1.m",
+      "size_bytes": 4363,
+      "sha256": "e2a1887ea1d38c6b31a4bc23f72c2db82fc84b21eecbb5e377ba806769f87b41"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/run_p4_adaptive_round_2.m",
+      "size_bytes": 4363,
+      "sha256": "e3ee60340d92b9e32f7791cb66e13fb139ad30658aee13df44fddf6f5d702c22"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/run_p4_adaptive_round_3.m",
+      "size_bytes": 4363,
+      "sha256": "800e0fd176ad917030ae67af80439dc409a9d036a5aa41a30bc9011c250c7687"
+    },
+    {
+      "path": "generated/p4/adaptive_rounds/run_p4_adaptive_round_4.m",
+      "size_bytes": 4363,
+      "sha256": "ed247d3f3edf9290a4be12aff4e15b2c7f2a0568a37870783132302efb5ad0f2"
+    },
+    {
+      "path": "generated/p4/adaptive_training_report.json",
+      "size_bytes": 14367,
+      "sha256": "ad2e9ef07a6a6673b1a2b795e7e5c8c02c8c9b1eebd2403f3b1f45fcdf6566e3"
+    },
+    {
+      "path": "generated/p4/final_evaluation/p4_final_evaluation_evaluated.csv",
+      "size_bytes": 60785,
+      "sha256": "5c64c7521490379c2c24554e50cb1c66484bd042204dfd78a190c72f4e8526fd"
+    },
+    {
+      "path": "generated/p4/final_evaluation/p4_final_evaluation_inputs.csv",
+      "size_bytes": 13949,
+      "sha256": "9df377dc8509fdef5f32e66c7ea724043f04eafdedb674f53f3ec0605ab8ca84"
+    },
+    {
+      "path": "generated/p4/final_evaluation/p4_final_evaluation_report.json",
+      "size_bytes": 3374,
+      "sha256": "49113de9c38b178027b627e354f033bc06d0f5bb7e649a96db2a6fabf48a280f"
+    },
+    {
+      "path": "generated/p4/final_evaluation/p4_final_evaluation_results.csv",
+      "size_bytes": 26429,
+      "sha256": "5fbdf5a2165c7539c57bb73622ba12665577bf7be97ced3f73abf61c3c78a670"
+    },
+    {
+      "path": "generated/p4/final_evaluation/run_p4_final_evaluation.m",
+      "size_bytes": 4404,
+      "sha256": "e9f9bfc477931055e51b635f3c615b1ea82f2511f56ccd226d010a73628154e1"
+    },
+    {
+      "path": "generated/p4/model_selection/candidate_model_report.json",
+      "size_bytes": 8596,
+      "sha256": "edceb24841f5df6c949fd505b974b3bdc9d3d601b674477b943770d7226c4084"
+    },
+    {
+      "path": "generated/p4/p4_adaptive_surrogate.joblib",
+      "size_bytes": 76615223,
+      "sha256": "730654ec1a8a83c3685d5bdc3acb85465b27749e988c50560f2eabc642ac844b"
+    },
+    {
+      "path": "generated/p4/p4_training_220.csv",
+      "size_bytes": 107550,
+      "sha256": "2b8025afde44e9629baf6a81055fa398c43bbd085fa31697809ff06db7cbbfdb"
+    },
+    {
+      "path": "generated/p4/p4_training_base_140.csv",
+      "size_bytes": 73740,
+      "sha256": "fa354315e49fc6875be14b18e075f366873822400a2cadf6dc9e33646df73af0"
+    },
+    {
+      "path": "generated/p4/sealed_final_design/p4_independent_domain_inputs.csv",
+      "size_bytes": 10303,
+      "sha256": "db02ca03d7c9fc2e3de79d7c84bea2d93f0fd73cfca35f709f5b2108ac43f0b1"
+    },
+    {
+      "path": "generated/p4/sealed_final_design/p4_out_of_domain_inputs.csv",
+      "size_bytes": 3645,
+      "sha256": "b636027c3a6825da344d41e957a13285784ad414d31214cd0c8c837f658bbb33"
+    },
+    {
+      "path": "generated/p4/sealed_final_design/sealed_design_manifest.json",
+      "size_bytes": 783,
+      "sha256": "9e99ba3262df2bfa02f94cd8b2741431445e9ed9db8d32319dc0628933da5a3d"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 95074,
+      "sha256": "58c6736b486857f95f4559c24a5a7087abbbe13212378fea897defd92f12d88f"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 324900,
+      "sha256": "7f693599c81c6daa7d3a15c03095e9d36d583a011b141420971e578a701663a0"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf",
+      "size_bytes": 869834,
+      "sha256": "17a930bf85fe9aebf76a381549bf03a73a7cc6ae479fa93ce83fee2d9bdaa89f"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "size_bytes": 420,
+      "sha256": "dc426c66871c54bb80f7f38a47569777f0d6abce432a07ecf7b046c60fb0334b"
+    },
+    {
+      "path": "scripts/benchmark_p4_candidate_models.py",
+      "size_bytes": 1575,
+      "sha256": "ed0a4c2f2af82ddfd992aff3b757296d937970efc0a1d88025fa7f4b93d44e83"
+    },
+    {
+      "path": "scripts/build_p4_release_package.py",
+      "size_bytes": 5299,
+      "sha256": "d9a0fcd443ce97093159d15ec72deca5d3e7d267ecef1c7caa9054d96113c917"
+    },
+    {
+      "path": "scripts/run_p4_adaptive_training.py",
+      "size_bytes": 10969,
+      "sha256": "acc26327904d1fc28bab315e0964231a7686bcc186412f0dc707ea94bcf45428"
+    },
+    {
+      "path": "scripts/run_p4_final_evaluation.py",
+      "size_bytes": 13502,
+      "sha256": "e7b1bb6a51e4f6ded2da9794a642073cea51e42d12ee3addbd9004402f8fa2ff"
+    },
+    {
+      "path": "src/comsol_small_model/eda_adaptive.py",
+      "size_bytes": 9759,
+      "sha256": "0c729fc18c8f79a2cfc0b22a498d11c9d16145f1c60252bf1005e595389287cb"
+    },
+    {
+      "path": "src/comsol_small_model/eda_design.py",
+      "size_bytes": 10355,
+      "sha256": "40316d4a976d8f00b6022d61c03e47d5f3967312a1deaa72fc4b314a8455dec5"
+    },
+    {
+      "path": "src/comsol_small_model/eda_optimization.py",
+      "size_bytes": 8503,
+      "sha256": "c5bd766a9ad6950dcbdc07ba1b91fcf7b6eb068362c321a90bf4b356c5d63134"
+    },
+    {
+      "path": "tests/test_p4_adaptive.py",
+      "size_bytes": 2959,
+      "sha256": "11d85cd3b7f9cdadf3a47e2e3e628cbc5b97bda848f2a7463c05ed77a4eb3fd7"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 408380,
+      "sha256": "0105c2c2afa251550162c6dab67b80585b6fd9c0ae9786e9cbce2aa1d5c5c183"
+    }
+  ]
+}

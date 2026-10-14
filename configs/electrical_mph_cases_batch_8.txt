@@ -1,0 +1,36 @@
+D:\桌面\codex\案例下载\电气\计算电机的损耗、温度和效率\pm_motor_2d_temperature_efficiency_63_clear.mph
+D:\桌面\codex\案例下载\电气\计算电机的损耗、温度和效率\pm_motor_2d_temperature_efficiency_63.mph
+D:\桌面\codex\案例下载\电气\鳍式场效应晶体管\finfet.mph
+D:\桌面\codex\案例下载\电气\基片集成波导漏波天线\siw_leaky_wave_antenna.mph
+D:\桌面\codex\案例下载\电气\四分之一波长变换器\quarter_wave_transformer.mph
+D:\桌面\codex\案例下载\电气\GPS 应用的圆极化天线\circularly_polarized_antenna.mph
+D:\桌面\codex\案例下载\电气\壁虎足\gecko_foot.mph
+D:\桌面\codex\案例下载\电气\会议扬声器系统\conference_speaker_system_63_cleared.mph
+D:\桌面\codex\案例下载\电气\会议扬声器系统\conference_speaker_system_63.mph
+D:\桌面\codex\案例下载\电气\轧制工艺\roll_forming.mph
+D:\桌面\codex\案例下载\电气\磁流环\magnetic_frill.mph
+D:\桌面\codex\案例下载\电气\负折射率建模 (RF)\negative_refractive_index.mph
+D:\桌面\codex\案例下载\电气\变压器油中的正流注传播\streamer_in_transformer_oil.mph
+D:\桌面\codex\案例下载\电气\非晶硅等离子体增强化学气相沉积的硅烷氩气 ICP 反应器仿真\icp_pecvd_sih4_ar.mph
+D:\桌面\codex\案例下载\电气\氮中的负流注\disc_resonator_anchor_losses.mph
+D:\桌面\codex\案例下载\电气\氮中的负流注\streamer_1d.mph
+D:\桌面\codex\案例下载\电气\有损圆波导\lossy_circular_waveguide.mph
+D:\桌面\codex\案例下载\电气\电磁散射的多极分析\multipole_coefficients.mph
+D:\桌面\codex\案例下载\电气\使用虚功和麦克斯韦应力张量计算电磁力\magnetic_bearing_force_calculation.mph
+D:\桌面\codex\案例下载\电气\超透镜设计 App\metalens_designer.mph
+D:\桌面\codex\案例下载\电气\电动轮磁悬浮二维模型\edw_maglev_rotating_transient.mph
+D:\桌面\codex\案例下载\电气\电动轮磁悬浮二维模型\edw_maglev_velocity_sweep.mph
+D:\桌面\codex\案例下载\电气\有效 H-BB-H 曲线验证模型\effective_bh_comparison.mph
+D:\桌面\codex\案例下载\电气\管式永磁发电机\tubular_permanent_magnet_generator.mph
+D:\桌面\codex\案例下载\电气\硅纳米线环栅元件的表面陷阱\nanowire_traps.mph
+D:\桌面\codex\案例下载\电气\肖特基接触\schottky_contact.mph
+D:\桌面\codex\案例下载\电气\单极发电机\homopolar_generator.mph
+D:\桌面\codex\案例下载\电气\设计 5G 移动网络的波导双工器\waveguide_diplexer.mph
+D:\桌面\codex\案例下载\电气\偏振光束分束器\polarizing_beam_splitter (1).mph
+D:\桌面\codex\案例下载\电气\偏振光束分束器\polarizing_beam_splitter.mph
+D:\桌面\codex\案例下载\电气\无极灯\electrodeless_lamp.mph
+D:\桌面\codex\案例下载\电气\预应力微镜\micromirror.mph
+D:\桌面\codex\案例下载\电气\PIN 二极管的正向恢复\pin_forward_recovery.mph
+D:\桌面\codex\案例下载\电气\平凸透镜定向\planoconvex_lens_orientation.mph
+D:\桌面\codex\案例下载\电气\电阻 FEM 场路耦合\circuit_fem_resistor.mph
+D:\桌面\codex\案例下载\电气\声光调制器\acousto_optic_modulator.mph

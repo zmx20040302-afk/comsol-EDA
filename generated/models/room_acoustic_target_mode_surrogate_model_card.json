@@ -1,0 +1,52 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T10:00:02.233584+00:00",
+  "name": "房间声学目标模态频率代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\eigenmodes_of_room_target_mode_training.csv",
+    "rows": 5,
+    "inputs": [
+      "sound_speed_m_s"
+    ],
+    "outputs": [
+      "tracked_eigenfrequency_Hz"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\eigenmodes_of_room_target_mode_holdout.csv",
+    "rows": 2
+  },
+  "physical_scope": "固定房间几何、空气密度、网格和压力声学特征频率研究；仅改变声速 300-380 m/s，追踪基准声速 343 m/s 时靠近 90 Hz 的同一目标模态。",
+  "validated_input_ranges": {
+    "sound_speed_m_s": {
+      "min": 300.0,
+      "max": 380.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "room_acoustic_target_mode_independent_comsol_validation",
+    "created_at": "2026-08-25T10:00:02.228065+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\eigenmodes_of_room_target_mode_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\eigenmodes_of_room_target_mode_holdout.csv",
+    "training_rows": 5,
+    "holdout_rows": 2,
+    "selected_model": "linear_regression",
+    "selection_reason": "For fixed geometry and boundary conditions, the tracked acoustic eigenfrequency is proportional to sound speed.",
+    "per_output_relative_validation": {
+      "tracked_eigenfrequency_Hz": {
+        "max_relative_error_percent": 3.508872133332528e-14,
+        "mean_relative_error_percent": 2.4894025270264557e-14,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "固定房间几何、空气密度、网格和压力声学特征频率研究；仅改变声速 300-380 m/s，追踪基准声速 343 m/s 时靠近 90 Hz 的同一目标模态。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "dac2027-p3-prospective-multicase-evaluation",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-14T00:00:00+08:00",
+  "scope": "prospective independently authored multi-family evaluation of requirement-to-physics compilation",
+  "task_source": {
+    "path": "benchmarks/dac2027_p0/blind_tasks.measured.jsonl",
+    "required_task_count": 24,
+    "required_family_count": 8,
+    "required_status_counts": {
+      "complete": 8,
+      "missing": 8,
+      "conflict": 8
+    },
+    "require_external_author": true,
+    "require_separate_adjudicator": true,
+    "require_family_disjoint_from_all_development_sets": true
+  },
+  "methods": [
+    "direct_llm",
+    "retrieval_llm",
+    "existing_selector",
+    "contract_dependency_v11"
+  ],
+  "full_method": "contract_dependency_v11",
+  "repetitions": {
+    "direct_llm": 3,
+    "retrieval_llm": 3,
+    "existing_selector": 1,
+    "contract_dependency_v11": 1
+  },
+  "llm_control": {
+    "provider": "codex_local",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "fresh_ephemeral_session_per_task_method_and_repeat": true,
+    "tools_allowed": false,
+    "timeout_seconds": 180,
+    "temperature": 0
+  },
+  "retrieval_corpus": [
+    {
+      "path": "template_catalog.json",
+      "sha256": "ea4b596f6814ad83e39de63ba237c72ef1f4baf4b54637dfa2ed6bb0bfc330e6"
+    },
+    {
+      "path": "configs/modeling_contract.schema.json",
+      "sha256": "a475ed3b954442f9d3cf215980810afbfe638c34b3e858d288aacfb6071d4789"
+    }
+  ],
+  "local_method_sources": [
+    {
+      "path": "src/comsol_small_model/physics_selection.py",
+      "sha256": "42622764e070781b1b6af2665de1b4be99a3821a9ffdb04239a3dfff599dc241"
+    },
+    {
+      "path": "src/comsol_small_model/physics_dependency_graph_v11.py",
+      "sha256": "b721e687eb0f07f46520cd66ff467a284c8b5a251ce08346c2a5b7bda1bc7a7f"
+    }
+  ],
+  "historical_family_sources": [
+    {
+      "path": "benchmarks/dac_problem1/development_tasks.jsonl",
+      "sha256": "c1d9726b8f3bbbea4eeffba8871998ee0e223bb5c88cfd5e99bdd02fe7d4a26d"
+    },
+    {
+      "path": "benchmarks/dac_problem1/validation_tasks.jsonl",
+      "sha256": "aea02652c8a28b94d8f217a3a388d27bd8a5fdef82781ef776d391a7c7e83af5"
+    },
+    {
+      "path": "benchmarks/dac_problem1/final_tasks.jsonl",
+      "sha256": "4b21a9f945b4e8d2394acd1a6b61f753bcf1d7d008450cb210068c0bda557a8a"
+    },
+    {
+      "path": "benchmarks/dac_problem1_v11/development_negation_tasks.jsonl",
+      "sha256": "76d0cf6470d0b40692acebbcf961f6baa769b37fc3a2e16d1330147b539379dc"
+    },
+    {
+      "path": "benchmarks/dac_problem1_v11/validation_tasks.jsonl",
+      "sha256": "1530195db2e6ca45cde98412aad3afc44318314afd9c31356658ca3322cad7d3"
+    },
+    {
+      "path": "benchmarks/dac_problem1_v11/final_tasks.jsonl",
+      "sha256": "2ab9f1240c8abcc4724307b0a6573010c2fe816def7dd0e2f069948913af91d2"
+    }
+  ],
+  "statistics": {
+    "primary_unit": "task_consensus",
+    "proportion_interval": "Wilson 95%",
+    "paired_binary_test": "two-sided exact McNemar",
+    "paired_efficiency_interval": "paired bootstrap 95%",
+    "bootstrap_seed": 20271014,
+    "bootstrap_resamples": 10000,
+    "report_per_family": true,
+    "report_repeat_agreement": true,
+    "report_failure_taxonomy": true
+  },
+  "gates": {
+    "infrastructure_ready_requires_protocol_hashes_and_tests": true,
+    "evaluation_ready_requires_sealed_external_tasks": true,
+    "main_result_requires_all_expected_repeats": true,
+    "main_result_requires_family_disjointness": true,
+    "no_post_unseal_method_changes": true
+  },
+  "evidence_boundary": "P3 main-result evidence exists only after the P0 external tasks are accepted, shown disjoint from every declared development family, sealed by SHA-256, and measured for every required method and repeat. Templates, synthetic rows, project-authored tasks, partial runs, and post-unseal method changes do not pass the gate."
+}

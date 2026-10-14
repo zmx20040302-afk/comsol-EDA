@@ -1,0 +1,89 @@
+{
+  "schema": "comsol-p7-eda-multicase-benchmark",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-11T12:00:00+08:00",
+  "acceptance": {
+    "minimum_main_cases": 4,
+    "minimum_physics_families": 4,
+    "require_independent_holdout": true,
+    "require_local_source_artifacts": true,
+    "require_validation_passed": true
+  },
+  "cases": [
+    {
+      "id": "busbar_electrothermal_design",
+      "role": "main",
+      "name_zh": "母排电热设计优化",
+      "physics_family": "electrothermal_design_optimization",
+      "input_columns": ["L_mm", "wbb_mm", "tbb_mm", "bolt_radius_mm", "I_load_A", "htc_W_m2K", "T_amb_K"],
+      "training_csv": "generated/p4/p4_training_220.csv",
+      "holdout_csv": "generated/p5/final_evaluation/p5_final_evaluation_inputs.csv",
+      "validation_report": "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+      "model_artifact": "generated/p5/p5_one_sided_surrogate.joblib",
+      "comsol_artifact": "generated/p5/final_evaluation/p5_final_evaluation_final.mph",
+      "minimum_training_rows": 200,
+      "minimum_holdout_rows": 60,
+      "validation_mode": "p5_release_gate"
+    },
+    {
+      "id": "mems_thermal_actuator",
+      "role": "main",
+      "name_zh": "MEMS 热微执行器多物理场",
+      "physics_family": "electrothermal_structural_multiphysics",
+      "input_columns": ["DV_V", "htc_s_W_m2K", "htc_us_W_m2K"],
+      "training_csv": "generated/training_runs/thermal_actuator_simplified_training.csv",
+      "holdout_csv": "generated/training_runs/thermal_actuator_simplified_holdout.csv",
+      "validation_report": "generated/models/thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+      "model_artifact": "generated/models/thermal_actuator_simplified_multioutput_surrogate.joblib",
+      "comsol_artifact": "generated/training_runs/thermal_actuator_simplified_attach.log",
+      "minimum_training_rows": 9,
+      "minimum_holdout_rows": 4,
+      "validation_mode": "relative_error_gate"
+    },
+    {
+      "id": "circuit_fem_resistor",
+      "role": "main",
+      "name_zh": "电阻 FEM 场路耦合",
+      "physics_family": "electric_circuit_field_coupling",
+      "input_columns": ["sigma_S_m"],
+      "training_csv": "generated/training_runs/circuit_fem_resistor_training.csv",
+      "holdout_csv": "generated/training_runs/circuit_fem_resistor_holdout.csv",
+      "validation_report": "generated/models/circuit_fem_resistor_multioutput_surrogate.holdout_validation.json",
+      "model_artifact": "generated/models/circuit_fem_resistor_multioutput_surrogate.joblib",
+      "comsol_artifact": "generated/training_runs/circuit_fem_resistor_attach.log",
+      "minimum_training_rows": 5,
+      "minimum_holdout_rows": 2,
+      "validation_mode": "relative_error_gate"
+    },
+    {
+      "id": "power_inductor_frequency",
+      "role": "main",
+      "name_zh": "功率电感器频域响应",
+      "physics_family": "magnetic_frequency_domain",
+      "input_columns": ["frequency_Hz"],
+      "training_csv": "generated/training_runs/power_inductor_frequency_training_dense.csv",
+      "holdout_csv": "generated/training_runs/power_inductor_frequency_holdout_dense.csv",
+      "validation_report": "generated/models/power_inductor_frequency_dense_surrogate.holdout_validation.json",
+      "model_artifact": "generated/models/power_inductor_frequency_dense_surrogate.joblib",
+      "comsol_artifact": "generated/working_models/power_inductor_working.mph",
+      "minimum_training_rows": 13,
+      "minimum_holdout_rows": 12,
+      "validation_mode": "relative_error_gate"
+    },
+    {
+      "id": "capacitor_dc_permittivity",
+      "role": "extension",
+      "name_zh": "三维电容器静电响应",
+      "physics_family": "electrostatics",
+      "input_columns": ["relative_permittivity"],
+      "training_csv": "generated/training_runs/capacitor_dc_permittivity_training.csv",
+      "holdout_csv": "generated/training_runs/capacitor_dc_permittivity_holdout.csv",
+      "validation_report": "generated/models/capacitor_dc_permittivity_surrogate.holdout_validation.json",
+      "model_artifact": "generated/models/capacitor_dc_permittivity_surrogate.joblib",
+      "comsol_artifact": "generated/mph_exports/capacitor_dc/capacitor_dc.java",
+      "minimum_training_rows": 5,
+      "minimum_holdout_rows": 2,
+      "validation_mode": "relative_error_gate"
+    }
+  ]
+}

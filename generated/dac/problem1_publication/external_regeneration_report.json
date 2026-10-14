@@ -1,0 +1,10 @@
+{
+  "schema": "dac-problem1-external-regeneration-evidence",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-12T12:11:08.753251+00:00",
+  "status": "awaiting_external_model_observations",
+  "passed": false,
+  "measured_count": 0,
+  "required_count": 6,
+  "policy": "Template, local proxy, or synthetic responses do not count as measured external-model evidence."
+}

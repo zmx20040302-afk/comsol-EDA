@@ -1,0 +1,12 @@
+{
+  "kind": "dense_comsol_parameter_sweep_plan",
+  "purpose": "Generate enough nonlinear electrothermal response data for a first usable local temperature surrogate.",
+  "inputs": {
+    "Vtot_mV": {"range": [10, 30], "levels": 7},
+    "htc_W_m2K": {"range": [2, 10], "levels": 7}
+  },
+  "run_count": 49,
+  "external_holdout": {"Vtot_mV": 25, "htc_W_m2K": 7},
+  "acceptance": {"max_energy_imbalance_percent": 0.1, "minimum_completed_rows": 49},
+  "status": "ready_to_run"
+}

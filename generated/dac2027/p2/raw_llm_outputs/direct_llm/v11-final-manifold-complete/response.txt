@@ -1,0 +1,1 @@
+{"predicted_interfaces":["laminar_flow","heat_transfer_fluids"],"predicted_couplings":["nonisothermal_flow"],"predicted_study":"Stationary","predicted_blocked":true}

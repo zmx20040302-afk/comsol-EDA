@@ -1,0 +1,28 @@
+D:\桌面\codex\案例下载\电气\半导体可饱和吸收镜 (SESAM) 的热效应\sesam_laser_heating.mph
+D:\桌面\codex\案例下载\电气\波导膜片带通滤波器优化 - 多项式版本\waveguide_filter_optimization_polynomial_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\波导膜片带通滤波器优化 - 多项式版本\waveguide_filter_optimization_polynomial.mph
+D:\桌面\codex\案例下载\电气\磁流体力学\mhd_fully_coupled.mph
+D:\桌面\codex\案例下载\电气\磁流体力学\mhd_one_way_coupled.mph
+D:\桌面\codex\案例下载\电气\电波暗室的锥形吸波器建模\pyramidal_absorber.mph
+D:\桌面\codex\案例下载\电气\电磁波三维模型与电路连接\coaxial_cable_circuit.mph
+D:\桌面\codex\案例下载\电气\电容式位置传感器的边界元建模\capacitive_position_sensor_bem.mph
+D:\桌面\codex\案例下载\电气\负极气-固界面的表面放电\negative_surface_discharge.mph
+D:\桌面\codex\案例下载\电气\干空气玻尔兹曼分析\boltzmann_dry_air.mph
+D:\桌面\codex\案例下载\电气\高斯光束的二次谐波产生（波动光学）\second_harmonic_generation.mph
+D:\桌面\codex\案例下载\电气\兼具发射器与接收器功能的压电器件仿真\piezoelectric_transmitter_receiver.mph
+D:\桌面\codex\案例下载\电气\阶跃折射率光纤\step_index_fiber.mph
+D:\桌面\codex\案例下载\电气\利用时域反射法进行高速互连调优\high_speed_interconnect_tdr.mph
+D:\桌面\codex\案例下载\电气\纳米棒\nanorods.mph
+D:\桌面\codex\案例下载\电气\氢玻尔兹曼分析\boltzmann_hydrogen.mph
+D:\桌面\codex\案例下载\电气\氢全局模型与两项玻尔兹曼方程耦合\hydrogen_global_model.mph
+D:\桌面\codex\案例下载\电气\射频识别系统\rfid_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\射频识别系统\rfid.mph
+D:\桌面\codex\案例下载\电气\砷化镓 PIN 光电二极管\gaas_pin_photodiode.mph
+D:\桌面\codex\案例下载\电气\使用不确定性量化分析压电能量采集器\piezoelectric_energy_harvester_uncertainty_quantification.mph
+D:\桌面\codex\案例下载\电气\使用等离子体模块的表面化学反应教程\surface_chemistry_tutorial.mph
+D:\桌面\codex\案例下载\电气\智能手机微型扬声器和端口声学：线性和非线性分析\smartphone_speaker_acoustics_64_cleared.mph
+D:\桌面\codex\案例下载\电气\智能手机微型扬声器和端口声学：线性和非线性分析\smartphone_speaker_acoustics_64.mph
+D:\桌面\codex\案例下载\电气\轴对称空腔谐振器\axisymmetric_cavity_resonator.mph
+D:\桌面\codex\案例下载\电气\InGaNAlGaN 双异质结 LED\gan_double_heterostructure_led.mph
+D:\桌面\codex\案例下载\电气\MEMS 谐振器的热弹性阻尼\thermoelastic_damping_3d.mph
+D:\桌面\codex\案例下载\电气\UHF RFID 标签建模\uhf_rfid_tag.mph

@@ -1,0 +1,35 @@
+{
+  "kind": "effective_diffusivity_1d_independent_comsol_validation",
+  "created_at": "2026-08-25T10:18:11.998096+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\effective_diffusivity_1d_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\effective_diffusivity_1d_holdout.csv",
+  "training_rows": 5,
+  "holdout_rows": 2,
+  "candidate_metrics": {
+    "linear_regression": {
+      "max_relative_error_percent": 12.520027126387523,
+      "mean_relative_error_percent": 6.731358746891608
+    },
+    "polynomial_degree_2": {
+      "max_relative_error_percent": 12.520027126946284,
+      "mean_relative_error_percent": 6.731358747192873
+    },
+    "distance_weighted_local_interpolation": {
+      "max_relative_error_percent": 4.404322761179986,
+      "mean_relative_error_percent": 2.5470865374784117
+    }
+  },
+  "selected_model": "distance_weighted_local_interpolation",
+  "selection_reason": "Selected by independent COMSOL holdout error for a nonlinear transient diffusion response.",
+  "per_output_relative_validation": {
+    "concentration_x0p2mm_t100ms_mol_m3": {
+      "max_relative_error_percent": 4.404322761179986,
+      "mean_relative_error_percent": 2.5470865374784117,
+      "threshold_relative_error_percent": 5.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "一维等效多孔扩散瞬态模型；固定孔隙率 epsilon=0.383、传质系数、初始浓度、几何、网格和 100 ms 观测时刻，仅改变等效扩散系数 D1=1e-6-4e-6 m^2/s，输出 x=0.2 mm 的浓度。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\effective_diffusivity_1d_surrogate.holdout_validation.json"
+}

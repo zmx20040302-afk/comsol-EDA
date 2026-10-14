@@ -1,0 +1,70 @@
+{
+  "kind": "thermal_actuator_independent_comsol_validation",
+  "created_at": "2026-08-23T12:09:40.389892+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_extended_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_voltage_extension_holdout.csv",
+  "training_rows": 48,
+  "holdout_rows": 4,
+  "candidate_reports": [
+    {
+      "name": "dummy_mean_baseline",
+      "holdout_rmse": 171.19247101904645,
+      "holdout_mae": 163.0402382185134,
+      "per_output": {
+        "Tmax_K": {
+          "rmse": 171.19247101904645,
+          "mae": 163.0402382185134,
+          "r2": -9.755826766206111
+        }
+      }
+    },
+    {
+      "name": "ridge_scaled",
+      "holdout_rmse": 20.43006246366378,
+      "holdout_mae": 15.496533377133744,
+      "per_output": {
+        "Tmax_K": {
+          "rmse": 20.43006246366378,
+          "mae": 15.496533377133744,
+          "r2": 0.846815837515146
+        }
+      }
+    },
+    {
+      "name": "random_forest",
+      "holdout_rmse": 30.776194105995508,
+      "holdout_mae": 22.718354703428588,
+      "per_output": {
+        "Tmax_K": {
+          "rmse": 30.776194105995508,
+          "mae": 22.718354703428588,
+          "r2": 0.6523803624909719
+        }
+      }
+    },
+    {
+      "name": "mlp_scaled",
+      "holdout_rmse": 22.706951265375462,
+      "holdout_mae": 19.45280957936049,
+      "per_output": {
+        "Tmax_K": {
+          "rmse": 22.706951265375462,
+          "mae": 19.45280957936049,
+          "r2": 0.8107690658686334
+        }
+      }
+    }
+  ],
+  "selected_model": "ridge_scaled",
+  "max_absolute_error": {
+    "Tmax_K": {
+      "rmse": 20.43006246366378,
+      "mae": 15.496533377133744,
+      "r2": 0.846815837515146
+    }
+  },
+  "rmse_threshold_k": 8.0,
+  "passed": false,
+  "scope": "微执行器焦耳热分布参数案例；DV=2-5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至高温失控区。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_extended_tmax_surrogate.holdout_validation.json"
+}

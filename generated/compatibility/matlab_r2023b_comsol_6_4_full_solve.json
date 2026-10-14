@@ -1,0 +1,35 @@
+{
+  "kind": "matlab_comsol_livelink_full_solve_compatibility_evidence",
+  "verified_at": "2026-10-08T00:00:00+08:00",
+  "platform": "Windows",
+  "matlab_version": "R2023b Update 6 (23.2.0.2485118)",
+  "comsol_version": "6.4",
+  "livelink_host": "localhost",
+  "livelink_port": 2036,
+  "test": {
+    "physics": "Heat Transfer in Solids",
+    "dimension": "2D",
+    "study": "stationary",
+    "mesh": "free triangular",
+    "inputs": {
+      "L_m": 0.06,
+      "W_m": 0.0225,
+      "k_W_mK": 40.0,
+      "T_hot_K": 363.15,
+      "T_cold_K": 288.15
+    },
+    "outputs": {
+      "Tmax_K": 363.15,
+      "Tavg_K": 303.407819233167
+    },
+    "csv_path": "generated/compatibility/livelink_full_solve_smoke.csv",
+    "passed": true
+  },
+  "execution_controls": {
+    "model_review_required": true,
+    "worker_lock": "single local execution worker",
+    "timeout_seconds": 3600,
+    "kill_matlab_process_tree_on_timeout": true
+  },
+  "conclusion": "The installed MATLAB and COMSOL versions completed a real LiveLink model build, mesh, stationary solve, result extraction, and CSV export."
+}

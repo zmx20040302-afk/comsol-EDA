@@ -1,0 +1,10 @@
+{
+  "archive": "generated/p7/release/comsol_auto_modeling_p7_multicase.zip",
+  "size_bytes": 1341905,
+  "sha256": "0d0b4cabc7292b317c73fe0c9b2d4a783b5bdf50da9c80bec3d9dc10e6ee41c2",
+  "file_count": 32,
+  "passed_main_cases": 4,
+  "physics_families": 4,
+  "passed_extension_cases": 1,
+  "large_mph_and_logs_excluded": true
+}

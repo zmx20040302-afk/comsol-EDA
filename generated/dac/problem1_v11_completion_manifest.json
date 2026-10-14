@@ -1,0 +1,47 @@
+{
+  "schema": "dac-problem1-v11-completion-manifest",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.1.0",
+  "completed_at": "2026-10-12T18:48:00+08:00",
+  "status": "frozen_evaluation_complete",
+  "protocol": {
+    "path": "configs/dac_problem1_v11_frozen_protocol.json",
+    "sha256": "9ad94a55319023de23217cc5d1cfa0d43767b43df270fd1b7c90366f7325c437"
+  },
+  "reports": {
+    "development": "generated/dac/problem1_v11_development_report.json",
+    "validation": {
+      "path": "generated/dac/problem1_v11_validation_report.json",
+      "sha256": "2117c56d0a594d68b569f930c892b788a4e4c1b73802d2f3317d934e7de595ab"
+    },
+    "final": {
+      "path": "generated/dac/problem1_v11_final_report.json",
+      "sha256": "664ed1c697ce3f2039f2144416f3070d06659df12c4e1d301c184f02cb1b1b48"
+    }
+  },
+  "validation_metrics": {
+    "task_count": 12,
+    "false_safe_count": 0,
+    "false_block_count": 0,
+    "selection_exact_count": 12,
+    "study_exact_count": 12
+  },
+  "final_metrics": {
+    "task_count": 24,
+    "false_safe_count": 0,
+    "false_safe_rate": 0.0,
+    "false_safe_wilson95": [0.0, 0.1936],
+    "false_block_count": 0,
+    "false_block_rate": 0.0,
+    "false_block_wilson95": [0.0, 0.3244],
+    "selection_exact_count": 22,
+    "selection_exact_accuracy": 0.9167,
+    "study_exact_count": 24,
+    "study_exact_accuracy": 1.0
+  },
+  "open_evidence_gaps": [
+    "Frozen external-model whole-code regeneration comparison",
+    "Third-party blinded task authorship and adjudication",
+    "End-to-end COMSOL build, solve, artifact and physical-validation execution on the same contracts"
+  ]
+}

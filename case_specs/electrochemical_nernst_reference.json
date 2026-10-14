@@ -1,0 +1,10 @@
+{
+  "id": "electrochemical_nernst_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "well_mixed_electrochemical_cell", "dimension": "0D equilibrium reference"},
+  "physics": ["Electrochemistry", "Secondary Current Distribution or Electroanalysis"],
+  "reaction": "Ox + n e- <-> Red",
+  "parameters": {"standard_potential_v": 0.34, "temperature_k": 298.15, "electron_count": 1, "oxidized_activity": 1.0, "reduced_activity": 0.1},
+  "reference_checks": {"equation": "E=E0+(R*T/(n*F))*ln(a_ox/a_red)", "trend": "Increasing a_ox/a_red increases E for the stated reduction reaction"},
+  "acceptance": ["Equilibrium potential follows the Nernst trend during activity sweeps", "The report states the reaction direction and potential reference", "Kinetic overpotential and concentration polarization are not conflated with equilibrium potential"]
+}

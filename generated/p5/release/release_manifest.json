@@ -1,0 +1,199 @@
+{
+  "schema": "comsol-p5-release-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T03:57:58.003995+00:00",
+  "scope": "P0-P5 source, compact COMSOL evidence, frozen P5 surrogate, manuscript and reproducibility metadata; large MPH files and transient logs are excluded.",
+  "release_decision": {
+    "comsol_execution_passed": true,
+    "calibration_method": "normalized_one_sided",
+    "domain_holdout_cases": 60,
+    "out_of_domain_cases": 20,
+    "released_safe_count": 10,
+    "false_safe_count": 0,
+    "safe_release_coverage": 0.16666666666666666,
+    "surrogate_release_passed": true,
+    "policy": "Controlled prediction is permitted only inside the declared seven-variable domain and fixed physical assumptions. Out-of-domain or changed-physics requests require COMSOL."
+  },
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 27967,
+      "sha256": "9c1467d6b181d8577cd89d3a08bd7390f6f63e930ea36c0677fd0ef2428b35a5"
+    },
+    {
+      "path": "EDA_PUBLICATION_ROADMAP.md",
+      "size_bytes": 12311,
+      "sha256": "fe594e0b0c53809d7c1efacfcf8e495c540dbec0cac0fc92a3e2351a9bd9afdf"
+    },
+    {
+      "path": "P0_P5_AUDIT_REPORT.md",
+      "size_bytes": 4396,
+      "sha256": "17c85b7f156730a6b3dff03473a44d97ceec3d7be153a6679f84645d39715ede"
+    },
+    {
+      "path": "P3_COMPLETION_REPORT.md",
+      "size_bytes": 3790,
+      "sha256": "1820087fd88d5102251d100468c769ed4cf20c932a43e46880973823e3f550b4"
+    },
+    {
+      "path": "P4_COMPLETION_REPORT.md",
+      "size_bytes": 4621,
+      "sha256": "9a311f9e3e8cecbb890dae93d36556022ce853f60f2cde43107fa876e3d177ef"
+    },
+    {
+      "path": "P5_COMPLETION_REPORT.md",
+      "size_bytes": 4619,
+      "sha256": "3439557e4738ace2467a2b89d5f070ecfdbe06cda483461cbfb78a2091de7d53"
+    },
+    {
+      "path": "PROJECT_READINESS.md",
+      "size_bytes": 12291,
+      "sha256": "b8abc105aad11c0efe9b2c7596973e94e122dee721b168cb92f390f107286294"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 36470,
+      "sha256": "372c09667281f4a820a000252a6c39c13c25f9a7dee281a830e4ef86d512e574"
+    },
+    {
+      "path": "configs/busbar_eda_design_problem.json",
+      "size_bytes": 6110,
+      "sha256": "72de6ce33e5f89cfae83e05fea050e005c46fefccfd0b78c902219efabc54e5e"
+    },
+    {
+      "path": "configs/execution_node.json",
+      "size_bytes": 1210,
+      "sha256": "490c2816602e5e6a44691a7b94b89f52b8202ef6a73ff80a13240e611a0aaaae"
+    },
+    {
+      "path": "generated/p5/calibration_selection_report.json",
+      "size_bytes": 3296,
+      "sha256": "aae194b4fcf00144a28236702f73e0e483d0c5570bf31420af8b850b34ddede5"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_evaluated.csv",
+      "size_bytes": 68937,
+      "sha256": "88f5351d732a3711d14a202d0a2f897bfb101566954b56ae83b56b8116f16cf4"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_inputs.csv",
+      "size_bytes": 13938,
+      "sha256": "8779cd139d2d06af4495056b82fa19d28b6c7ccc6c257295b382b74cf63edc3d"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+      "size_bytes": 3268,
+      "sha256": "facda0e1bf31d1e44755dedaed9c3aa67743fa3aae7e26cf12ffbdcc60629ded"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_results.csv",
+      "size_bytes": 26428,
+      "sha256": "1be5f9b5beeb7518aafce62d968c813d25aef207944da8708dff0178b492b51a"
+    },
+    {
+      "path": "generated/p5/final_evaluation/run_p5_final_evaluation.m",
+      "size_bytes": 4404,
+      "sha256": "595e7256446772abbee159a65f9b86968d3e1b5a7af754a88565ce3e768b2b2d"
+    },
+    {
+      "path": "generated/p5/p5_one_sided_surrogate.joblib",
+      "size_bytes": 76616227,
+      "sha256": "8839e8fbfe2b3846540d515057138e1b1b3f3f2e6b0fd54aa68238078b094df6"
+    },
+    {
+      "path": "generated/p5/sealed_final_design/p5_independent_domain_inputs.csv",
+      "size_bytes": 10313,
+      "sha256": "fe8e487908d1c812d6266a61b1a24e16ecab3d0da66f2d6212fba857de2b2f48"
+    },
+    {
+      "path": "generated/p5/sealed_final_design/p5_out_of_domain_inputs.csv",
+      "size_bytes": 3646,
+      "sha256": "412ca5c2a35b426bad4b8d74cb1a88b29da07d060f228bbabf2d12a51410da91"
+    },
+    {
+      "path": "generated/p5/sealed_final_design/sealed_design_manifest.json",
+      "size_bytes": 1149,
+      "sha256": "db7d7280cb4846f80cb58796efc01df07e9c3a206f3254cd41f2366501523f82"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 98610,
+      "sha256": "b2708e94b3abd728143b86e0647613ac639b9d33d19891535aab1bbb87825101"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 326001,
+      "sha256": "d33e42d2c6a300b169595066360ec91ee2daaf5fa9dfb2f8ce8e0971cc446f8b"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf",
+      "size_bytes": 876224,
+      "sha256": "710e5adfd4bd8d38bf07b8b2b427f2ebeb811799d034c2d660094a13c072e17b"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "size_bytes": 420,
+      "sha256": "dc426c66871c54bb80f7f38a47569777f0d6abce432a07ecf7b046c60fb0334b"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 74,
+      "sha256": "ea42f6dc0a65c4fe05015ae0c0576d961e4ef99cb7c2666279900746b8484231"
+    },
+    {
+      "path": "scripts/build_p5_release_package.py",
+      "size_bytes": 5957,
+      "sha256": "289650b9aca2d56f72b003d2eaf70df40270cdb66923aba3a838518eef911104"
+    },
+    {
+      "path": "scripts/prepare_p5_calibration.py",
+      "size_bytes": 7124,
+      "sha256": "61d852acc5105156228cd3310fc5daf93f2c09cd9dca1e366daaca0f8ef49b12"
+    },
+    {
+      "path": "scripts/run_p5_final_evaluation.py",
+      "size_bytes": 14086,
+      "sha256": "e08c378efa2fbad09e6ca4d6c7168bd09575af0655d4ec427764033ae6b40afe"
+    },
+    {
+      "path": "src/comsol_small_model/eda_adaptive.py",
+      "size_bytes": 9759,
+      "sha256": "0c729fc18c8f79a2cfc0b22a498d11c9d16145f1c60252bf1005e595389287cb"
+    },
+    {
+      "path": "src/comsol_small_model/eda_conformal.py",
+      "size_bytes": 4921,
+      "sha256": "7a501811b6fd42176cdb3939c00831a17d3aa06f730ce8be2fc14c34fea0fcdf"
+    },
+    {
+      "path": "src/comsol_small_model/eda_design.py",
+      "size_bytes": 10355,
+      "sha256": "40316d4a976d8f00b6022d61c03e47d5f3967312a1deaa72fc4b314a8455dec5"
+    },
+    {
+      "path": "src/comsol_small_model/eda_optimization.py",
+      "size_bytes": 8503,
+      "sha256": "c5bd766a9ad6950dcbdc07ba1b91fcf7b6eb068362c321a90bf4b356c5d63134"
+    },
+    {
+      "path": "start_local_8880.bat",
+      "size_bytes": 862,
+      "sha256": "b79e91b82a5658037fc4ea9267fa00c7af00d08f777fa8b595da99cf8587a349"
+    },
+    {
+      "path": "start_windows.bat",
+      "size_bytes": 862,
+      "sha256": "b79e91b82a5658037fc4ea9267fa00c7af00d08f777fa8b595da99cf8587a349"
+    },
+    {
+      "path": "tests/test_p5_conformal_release.py",
+      "size_bytes": 4135,
+      "sha256": "db4a66aaa1830f8b8441a9c169bac95f40d50602bbd4f14eaec79d28018fe85e"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 414362,
+      "sha256": "498690f688d5a10654c77c678e5a5661f17d989f4cfa861b114511f56c654d1a"
+    }
+  ]
+}

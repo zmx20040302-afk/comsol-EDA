@@ -1,0 +1,23 @@
+{
+  "node_id": "local-windows-comsol-node",
+  "enabled": true,
+  "matlab_executable": "D:\\matlab\\bin\\matlab.exe",
+  "livelink_matlab_path": "D:\\COMSOL64\\Multiphysics\\mli",
+  "comsol_executable": "D:\\COMSOL64\\Multiphysics\\bin\\win64\\comsol.exe",
+  "comsol_server_executable": "D:\\COMSOL64\\Multiphysics\\bin\\win64\\comsolmphserver.exe",
+  "comsol_server_host": "localhost",
+  "comsol_server_port": 2036,
+  "start_comsol_server": false,
+  "comsol_server_startup_timeout_seconds": 60,
+  "comsol_server_multi_connection": true,
+  "comsol_server_silent": true,
+  "allow_preview_export": true,
+  "preview_export_timeout_seconds": 300,
+  "matlab_prefdir": "generated/matlab_prefs",
+  "working_directory": "generated/execution_jobs",
+  "timeout_seconds": 3600,
+  "kill_matlab_process_tree_on_timeout": true,
+  "compatibility_evidence_path": "generated/compatibility/matlab_r2023b_comsol_6_4_full_solve.json",
+  "allow_external_execution": true,
+  "note": "2026-10-08 已验证 MATLAB R2023b Update 6 与 COMSOL 6.4 LiveLink：localhost:2036 完成二维稳态传热完整求解并导出 CSV。外部执行已开放，但任务仍必须通过模型审查门槛；MATLAB 超时后会终止其进程树。"
+}

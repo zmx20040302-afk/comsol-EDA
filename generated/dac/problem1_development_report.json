@@ -1,0 +1,640 @@
+{
+  "schema": "dac-problem1-development-benchmark",
+  "schemaVersion": "0.1.0",
+  "split": "development_only",
+  "task_count": 18,
+  "method_frozen_for_final_evaluation": false,
+  "independent_final_test_claimed": false,
+  "methods": {
+    "keyword_baseline": {
+      "task_count": 18,
+      "physics_and_coupling_exact_count": 11,
+      "physics_and_coupling_exact_accuracy": 0.6111,
+      "study_exact_count": 13,
+      "study_exact_accuracy": 0.7222,
+      "details": [
+        {
+          "id": "dev-electrothermal-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electrothermal-02",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-actuator-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-stress-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-02",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-heat-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electric-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-solid-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-acoustic-01",
+          "selection_ok": true,
+          "study_ok": false,
+          "actual_interfaces": [
+            "pressure_acoustics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-species-01",
+          "selection_ok": true,
+          "study_ok": false,
+          "actual_interfaces": [
+            "transport_diluted_species"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-transient-heat-01",
+          "selection_ok": true,
+          "study_ok": false,
+          "actual_interfaces": [
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-frequency-electric-01",
+          "selection_ok": true,
+          "study_ok": false,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-eigen-solid-01",
+          "selection_ok": true,
+          "study_ok": false,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-explicit-joule-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-explicit-thermal-expansion-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-domain-hint-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-output-driven-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        }
+      ]
+    },
+    "existing_selector": {
+      "task_count": 18,
+      "physics_and_coupling_exact_count": 10,
+      "physics_and_coupling_exact_accuracy": 0.5556,
+      "study_exact_count": 18,
+      "study_exact_accuracy": 1.0,
+      "details": [
+        {
+          "id": "dev-electrothermal-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electrothermal-02",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-actuator-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-stress-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_fluids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-02",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_fluids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-heat-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electric-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-solid-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-acoustic-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "pressure_acoustics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Eigenfrequency"
+        },
+        {
+          "id": "dev-species-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "transport_diluted_species"
+          ],
+          "actual_couplings": [],
+          "actual_study": "TimeDependent"
+        },
+        {
+          "id": "dev-transient-heat-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [],
+          "actual_couplings": [],
+          "actual_study": "TimeDependent"
+        },
+        {
+          "id": "dev-frequency-electric-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Frequency"
+        },
+        {
+          "id": "dev-eigen-solid-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Eigenfrequency"
+        },
+        {
+          "id": "dev-explicit-joule-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-explicit-thermal-expansion-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-domain-hint-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-output-driven-01",
+          "selection_ok": false,
+          "study_ok": true,
+          "actual_interfaces": [],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        }
+      ]
+    },
+    "dependency_graph": {
+      "task_count": 18,
+      "physics_and_coupling_exact_count": 18,
+      "physics_and_coupling_exact_accuracy": 1.0,
+      "study_exact_count": 18,
+      "study_exact_accuracy": 1.0,
+      "details": [
+        {
+          "id": "dev-electrothermal-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electrothermal-02",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-actuator-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating",
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-thermal-stress-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_fluids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [
+            "nonisothermal_flow"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-flowheat-02",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_fluids",
+            "laminar_flow"
+          ],
+          "actual_couplings": [
+            "nonisothermal_flow"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-heat-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-electric-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-solid-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-acoustic-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "pressure_acoustics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Eigenfrequency"
+        },
+        {
+          "id": "dev-species-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "transport_diluted_species"
+          ],
+          "actual_couplings": [],
+          "actual_study": "TimeDependent"
+        },
+        {
+          "id": "dev-transient-heat-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [],
+          "actual_study": "TimeDependent"
+        },
+        {
+          "id": "dev-frequency-electric-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Frequency"
+        },
+        {
+          "id": "dev-eigen-solid-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "solid_mechanics"
+          ],
+          "actual_couplings": [],
+          "actual_study": "Eigenfrequency"
+        },
+        {
+          "id": "dev-explicit-joule-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-explicit-thermal-expansion-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-domain-hint-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating"
+          ],
+          "actual_study": "Stationary"
+        },
+        {
+          "id": "dev-output-driven-01",
+          "selection_ok": true,
+          "study_ok": true,
+          "actual_interfaces": [
+            "electric_currents",
+            "heat_transfer_solids",
+            "solid_mechanics"
+          ],
+          "actual_couplings": [
+            "electromagnetic_heating",
+            "thermal_expansion"
+          ],
+          "actual_study": "Stationary"
+        }
+      ]
+    }
+  },
+  "interpretation_limit": "This set was created during method development. It can diagnose implementation behavior but cannot support a final generalization claim."
+}

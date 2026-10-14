@@ -1,0 +1,244 @@
+{
+  "schema": "dac2027-p1-eda-scenario-report",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-13T14:35:33.842404+08:00",
+  "phase": "DAC2027-P1",
+  "title": "EDA 场景与设计任务定义",
+  "status": "completed",
+  "p1_definition_completed": true,
+  "submission_two_case_experiment_completed": true,
+  "primary_scenario_count": 2,
+  "definition_ready_count": 2,
+  "fresh_post_freeze_count": 2,
+  "eda_stage_count": 2,
+  "gates": {
+    "minimum_primary_scenarios": true,
+    "minimum_eda_stages": true,
+    "all_primary_contracts_complete": true,
+    "all_primary_artifacts_traceable": true,
+    "all_linked_numerical_evidence_passed": true,
+    "historical_evidence_not_misclassified_as_fresh": true
+  },
+  "scenarios": [
+    {
+      "id": "busbar_power_delivery_design",
+      "name_zh": "母排电热协同设计",
+      "role": "primary",
+      "eda_stage": "封装与供电互连设计",
+      "contract": {
+        "valid": true,
+        "missing_fields": [],
+        "checks": {
+          "required_fields_present": true,
+          "design_question_present": true,
+          "engineering_decision_complete": true,
+          "design_variables_valid": true,
+          "operating_variables_valid": true,
+          "objectives_present": true,
+          "constraints_present": true,
+          "outputs_present": true,
+          "physics_plan_complete": true,
+          "stop_conditions_present": true
+        }
+      },
+      "evidence_tier": "fresh_current_project_comsol_closed_loop",
+      "linked_p7_case": "busbar_electrothermal_design",
+      "linked_p7_case_passed": true,
+      "artifacts_present": true,
+      "artifacts": [
+        {
+          "path": "configs/busbar_eda_design_problem.json",
+          "exists": true,
+          "size_bytes": 6110,
+          "sha256": "72de6ce33e5f89cfae83e05fea050e005c46fefccfd0b78c902219efabc54e5e"
+        },
+        {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+          "exists": true,
+          "size_bytes": 3268,
+          "sha256": "facda0e1bf31d1e44755dedaed9c3aa67743fa3aae7e26cf12ffbdcc60629ded"
+        },
+        {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_evaluated.csv",
+          "exists": true,
+          "size_bytes": 68937,
+          "sha256": "88f5351d732a3711d14a202d0a2f897bfb101566954b56ae83b56b8116f16cf4"
+        },
+        {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_final.mph",
+          "exists": true,
+          "size_bytes": 19707596,
+          "sha256": "309d51b26261fdf4cd86a06a023ceddbe17ce4fce614a139b0c1173f67e4216d"
+        }
+      ],
+      "fresh_current_project_evidence": true,
+      "fresh_post_p1_freeze_run": true,
+      "fresh_experiment": {
+        "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/report.json",
+        "checks": {
+          "report_path_declared": true,
+          "report_exists": true,
+          "scenario_matches": true,
+          "report_passed": true,
+          "generated_after_contract_freeze": true,
+          "required_artifacts_exist": true,
+          "artifact_hashes_match": true
+        },
+        "valid": true,
+        "generated_at": "2026-10-13T02:57:00.676266+00:00",
+        "experiment_type": "fresh_post_p1_freeze_comsol",
+        "artifacts": {
+          "input_csv": {
+            "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/input_points.csv",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "result_csv": {
+            "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/results.csv",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "mph": {
+            "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/busbar_p1_post_freeze_final.mph",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "matlab_log": {
+            "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/matlab_stdout.log",
+            "exists": true,
+            "sha256_matches": true
+          }
+        }
+      },
+      "definition_ready": true,
+      "submission_experiment_ready": true,
+      "decision_snapshot": {
+        "available": true,
+        "scope": "retired P5 independent domain set; diagnostic only after P1 freeze",
+        "evaluated_points": 60,
+        "comsol_feasible_points": 21,
+        "safely_released_points": 10,
+        "false_safe_points": 0
+      }
+    },
+    {
+      "id": "mems_thermal_actuator_operating_design",
+      "name_zh": "MEMS 热微执行器工作点设计",
+      "role": "primary",
+      "eda_stage": "MEMS 多物理场协同设计",
+      "contract": {
+        "valid": true,
+        "missing_fields": [],
+        "checks": {
+          "required_fields_present": true,
+          "design_question_present": true,
+          "engineering_decision_complete": true,
+          "design_variables_valid": true,
+          "operating_variables_valid": true,
+          "objectives_present": true,
+          "constraints_present": true,
+          "outputs_present": true,
+          "physics_plan_complete": true,
+          "stop_conditions_present": true
+        }
+      },
+      "evidence_tier": "historical_independent_comsol_holdout",
+      "linked_p7_case": "mems_thermal_actuator",
+      "linked_p7_case_passed": true,
+      "artifacts_present": true,
+      "artifacts": [
+        {
+          "path": "generated/training_runs/thermal_actuator_simplified_training.csv",
+          "exists": true,
+          "size_bytes": 700,
+          "sha256": "f5699fad8560a804e25451040ea7cf8ca7e863955ae9820773ba6292e09129ac"
+        },
+        {
+          "path": "generated/training_runs/thermal_actuator_simplified_holdout.csv",
+          "exists": true,
+          "size_bytes": 350,
+          "sha256": "8789fb18da27e42eef4da21c2e35507c5edd301fe61293de2ab19533f8e2c825"
+        },
+        {
+          "path": "generated/models/thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+          "exists": true,
+          "size_bytes": 4705,
+          "sha256": "ca6ae698d110c328e9abcf9bc80651583e221d99b823bf6a20950e1a2e3f700b"
+        },
+        {
+          "path": "generated/training_runs/thermal_actuator_simplified_attach.log",
+          "exists": true,
+          "size_bytes": 235371,
+          "sha256": "7027b81d89b28ea1ae84733dcf01e58c454e4c830314b737bafb527392e8d264"
+        }
+      ],
+      "fresh_current_project_evidence": false,
+      "fresh_post_p1_freeze_run": true,
+      "fresh_experiment": {
+        "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/report.json",
+        "checks": {
+          "report_path_declared": true,
+          "report_exists": true,
+          "scenario_matches": true,
+          "report_passed": true,
+          "generated_after_contract_freeze": true,
+          "required_artifacts_exist": true,
+          "artifact_hashes_match": true
+        },
+        "valid": true,
+        "generated_at": "2026-10-13T02:57:01.104416+00:00",
+        "experiment_type": "fresh_post_p1_freeze_comsol",
+        "artifacts": {
+          "input_csv": {
+            "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/input_points.csv",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "result_csv": {
+            "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/results.csv",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "mph": {
+            "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/mems_p1_post_freeze_final.mph",
+            "exists": true,
+            "sha256_matches": true
+          },
+          "matlab_log": {
+            "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/matlab_stdout.log",
+            "exists": true,
+            "sha256_matches": true
+          }
+        }
+      },
+      "definition_ready": true,
+      "submission_experiment_ready": true,
+      "decision_snapshot": {
+        "available": true,
+        "scope": "historical COMSOL training plus independent holdout; diagnostic only after P1 freeze",
+        "evaluated_points": 13,
+        "feasible_points_under_p1_thresholds": 7,
+        "best_feasible_observed": {
+          "DV_V": 5.25,
+          "htc_s_W_m2K": 22500.0,
+          "htc_us_W_m2K": 400.0,
+          "Tmax_K": 507.376527652577,
+          "umax_m": 1.1197447955717e-06,
+          "joule_power_W": 0.0156044322622144
+        }
+      }
+    }
+  ],
+  "config": {
+    "path": "configs/dac2027_p1_eda_scenarios.json",
+    "exists": true,
+    "size_bytes": 8374,
+    "sha256": "62852d4719f7921f9775aaa826328b2917151784e0f41b21de1267fd184f3f20"
+  },
+  "next_actions": [
+    "冻结并保存两个 P1 实验包，不再使用本轮结果调整阈值或选择规则",
+    "进入 P2：在同一任务、工具与预算下执行方法对照和消融实验",
+    "论文中仅声明冻结的名义工况候选与四点 MEMS 网格，不外推为产品认证或全工作域鲁棒性"
+  ],
+  "claim_boundary": "Two fresh post-freeze COMSOL experiments completed under predeclared points, thresholds, and selection rules. They support the two named EDA decisions at the tested nominal points, but do not establish product qualification or robustness over the full manufacturing and operating space."
+}

@@ -1,0 +1,54 @@
+D:\桌面\codex\案例下载\电气\表面微机械加速度计\surface_micromachined_accelerometer_geom_subsequence.mph
+D:\桌面\codex\案例下载\电气\表面微机械加速度计\surface_micromachined_accelerometer_geom.mph
+D:\桌面\codex\案例下载\电气\表面微机械加速度计\surface_micromachined_accelerometer.mph
+D:\桌面\codex\案例下载\电气\波导 S 弯\waveguide_s_bend.mph
+D:\桌面\codex\案例下载\电气\部件模态综合法教程\cms_tutorial.mph
+D:\桌面\codex\案例下载\电气\采用 SMA 连接器连接的 Wilkinson 功分器\wilkinson_power_divider.mph
+D:\桌面\codex\案例下载\电气\带屏蔽线圈的交流接触器\contactor_shading_coil.mph
+D:\桌面\codex\案例下载\电气\单模光纤到光纤耦合\single_mode_fiber_coupling.mph
+D:\桌面\codex\案例下载\电气\电磁力验证系列\force_calculation_01_introduction.mph
+D:\桌面\codex\案例下载\电气\电磁力验证系列\force_calculation_02_magnetic_force_bem.mph
+D:\桌面\codex\案例下载\电气\电磁力验证系列\force_calculation_03_magnetic_torque_bem.mph
+D:\桌面\codex\案例下载\电气\电磁制动器\magnetic_brake.mph
+D:\桌面\codex\案例下载\电气\电容式压力传感器\capacitive_pressure_sensor_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\电容式压力传感器\capacitive_pressure_sensor.mph
+D:\桌面\codex\案例下载\电气\碟式太阳能接收器\solar_dish_receiver.mph
+D:\桌面\codex\案例下载\电气\发电机二维模型\generator_2d.mph
+D:\桌面\codex\案例下载\电气\格里高利-马克苏托夫望远镜\gregory_maksutov_telescope_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\格里高利-马克苏托夫望远镜\gregory_maksutov_telescope.mph
+D:\桌面\codex\案例下载\电气\光学环形谐振腔陷波滤波器\optical_ring_resonator.mph
+D:\桌面\codex\案例下载\电气\环形耦合器\rat_race_coupler.mph
+D:\桌面\codex\案例下载\电气\流-固耦合\fluid_structure_interaction.mph
+D:\桌面\codex\案例下载\电气\六边形等离激元滤色镜\hexagonal_plasmonic_color_filter.mph
+D:\桌面\codex\案例下载\电气\六边形光栅（波动光学）\hexagonal_grating.mph
+D:\桌面\codex\案例下载\电气\偶极天线\dipole_antenna.mph
+D:\桌面\codex\案例下载\电气\腔体滤波器的热结构效应\cavity_filter_5g.mph
+D:\桌面\codex\案例下载\电气\石墨烯超材料完美吸收器\graphene_metamaterial_perfect_absorber.mph
+D:\桌面\codex\案例下载\电气\石墨烯对圆柱散射体的隐身作用（波动光学\cylinder_graphene_cloak.mph
+D:\桌面\codex\案例下载\电气\使用开口谐振环的陷波滤波器\notch_filter_srr.mph
+D:\桌面\codex\案例下载\电气\双臂螺旋天线\helical_antenna.mph
+D:\桌面\codex\案例下载\电气\双高斯透镜成像仿真\double_gauss_lens_image_simulation.mph
+D:\桌面\codex\案例下载\电气\双极晶体管的三维分析\bipolar_transistor_3d.mph
+D:\桌面\codex\案例下载\电气\微机电镜的增强涂层\enhanced_mems_mirror_coating.mph
+D:\桌面\codex\案例下载\电气\微型相机模组\compact_camera_module_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\微型相机模组\compact_camera_module.mph
+D:\桌面\codex\案例下载\电气\线圈形状优化\coil_shape_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\线圈形状优化\coil_shape_optimization.mph
+D:\桌面\codex\案例下载\电气\消失模圆柱腔滤波器\cylindrical_cavity_filter_evanescent.mph
+D:\桌面\codex\案例下载\电气\压电剪切驱动梁\shear_bender.mph
+D:\桌面\codex\案例下载\电气\压阻式压力传感器，壳\piezoresistive_pressure_sensor_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\压阻式压力传感器，壳\piezoresistive_pressure_sensor_shell_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\压阻式压力传感器，壳\piezoresistive_pressure_sensor_shell.mph
+D:\桌面\codex\案例下载\电气\压阻式压力传感器，壳\piezoresistive_pressure_sensor.mph
+D:\桌面\codex\案例下载\电气\氩氧电感耦合等离子体反应器模型\icp_argon_oxygen.mph
+D:\桌面\codex\案例下载\电气\永磁电机坎贝尔图\pm_motor_2d_campbell_diagram_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\永磁电机坎贝尔图\pm_motor_2d_campbell_diagram.mph
+D:\桌面\codex\案例下载\电气\用于皮肤癌诊断的圆锥形介电探针建模\conical_dielectric_probe.mph
+D:\桌面\codex\案例下载\电气\直线电机二维模型\linear_motor_2d.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜\petzval_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜\petzval_lens.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜优化\petzval_lens_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜优化\petzval_lens_optimization.mph
+D:\桌面\codex\案例下载\电气\RF MEMS 开关的吸合\rf_mems_switch.mph
+D:\桌面\codex\案例下载\电气\Vivaldi 天线\vivaldi_antenna.mph
+D:\桌面\codex\案例下载\电气\Wi-Fi 天线附近人体头部的 SAR\sar_wifi_antenna.mph

@@ -1,0 +1,64 @@
+D:\桌面\codex\案例下载\电气\电屏蔽比较\electric_shielding_comparison.mph
+D:\桌面\codex\案例下载\电气\平行载流导线上的电磁力\parallel_wires.mph
+D:\桌面\codex\案例下载\电气\光学八木-宇田天线\optical_yagi_uda_antenna.mph
+D:\桌面\codex\案例下载\电气\电容器频域建模\capacitor_ac.mph
+D:\桌面\codex\案例下载\电气\使用 k.p 法分析应变纤锌矿 GaN 能带结构\k_dot_p_method_strained_wurtzite_gan_band_structure.mph
+D:\桌面\codex\案例下载\电气\接触阻抗比较\contact_impedance_comparison.mph
+D:\桌面\codex\案例下载\电气\使用压电执行器的可调消失模腔体滤波器\tunable_cavity_filter_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\使用压电执行器的可调消失模腔体滤波器\tunable_cavity_filter.mph
+D:\桌面\codex\案例下载\电气\面内微波等离子体\inplane_microwave_plasma.mph
+D:\桌面\codex\案例下载\电气\SF6氩等离子体全局模型\sf6_argon_global_model.mph
+D:\桌面\codex\案例下载\电气\电磁柱塞\electromagnetic_plunger.mph
+D:\桌面\codex\案例下载\电气\圆形端口偏振\polarized_circular_ports.mph
+D:\桌面\codex\案例下载\电气\六边形光栅 (RF)\hexagonal_grating.mph
+D:\桌面\codex\案例下载\电气\高频电磁学中的多尺度建模\antenna_to_antenna_using_ff_63.mph
+D:\桌面\codex\案例下载\电气\高频电磁学中的多尺度建模\antenna_to_antenna_using_ff_general_63.mph
+D:\桌面\codex\案例下载\电气\高频电磁学中的多尺度建模\half_wavelength_dipole_antenna_63.mph
+D:\桌面\codex\案例下载\电气\高频电磁学中的多尺度建模\rf_to_beam_envelopes_63.mph
+D:\桌面\codex\案例下载\电气\氙的瞬态负迁移率和负微分电导率效应\transient_negative_mobility.mph
+D:\桌面\codex\案例下载\电气\频域中的二次谐波产生\second_harmonic_generation_frequency_domain.mph
+D:\桌面\codex\案例下载\电气\热电发电机\thermoelectric_generator_reset.mph
+D:\桌面\codex\案例下载\电气\热电发电机\thermoelectric_generator.mph
+D:\桌面\codex\案例下载\电气\霍尔效应传感器\hall_effect_sensor.mph
+D:\桌面\codex\案例下载\电气\反向偏置漏电流\reverse_bias_leakage_current.mph
+D:\桌面\codex\案例下载\电气\缝隙螺旋天线\spiral_slot_antenna.mph
+D:\桌面\codex\案例下载\电气\等离子体阻抗计算\computing_plasma_impedance.mph
+D:\桌面\codex\案例下载\电气\使用集总元件的低通和带通滤波器\lumped_element_filter.mph
+D:\桌面\codex\案例下载\电气\异质结 - 一维\heterojunction_1d.mph
+D:\桌面\codex\案例下载\电气\6 GHz 的平衡贴片天线\patch_antenna.mph
+D:\桌面\codex\案例下载\电气\带射频偏压的 CF4O2 电感耦合等离子体反应器模型（用于硅刻蚀）\icp_rf_bias_cf4_o2_si_etching.mph
+D:\桌面\codex\案例下载\电气\细胞膜电穿孔\cell_membrane_electroporation.mph
+D:\桌面\codex\案例下载\电气\应力作用下 PCB 上的微波滤波器（IPC-2581，ECAD 导入）\pcb_microwave_filter_with_stress_ecad.mph
+D:\桌面\codex\案例下载\电气\通过 PVT 法实现 SiC 的外延生长\SiC_PVT_62_clearsol.mph
+D:\桌面\codex\案例下载\电气\通过 PVT 法实现 SiC 的外延生长\SiC_PVT_62_withsol.mph
+D:\桌面\codex\案例下载\电气\α 到 γ 转变\alpha_to_gamma_transition.mph
+D:\桌面\codex\案例下载\电气\用于石油勘探的电磁探测方法仿真\marine_csem.mph
+D:\桌面\codex\案例下载\电气\MOSFET 击穿\mosfet_breakdown.mph
+D:\桌面\codex\案例下载\电气\压电阀\piezoelectric_valve_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\压电阀\piezoelectric_valve.mph
+D:\桌面\codex\案例下载\电气\超透镜的拓扑优化\metalens_topology_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\超透镜的拓扑优化\metalens_topology_optimization.mph
+D:\桌面\codex\案例下载\电气\三端口铁氧体环行器\circulator.mph
+D:\桌面\codex\案例下载\电气\Drude–Lorentz 色散介质的时域建模（波动光学）\drude_lorentz_media.mph
+D:\桌面\codex\案例下载\电气\用于 EMIEMC 测试的双锥形天线建模\biconical_frame_antenna.mph
+D:\桌面\codex\案例下载\电气\缝隙耦合微带贴片天线阵列合成器\microstrip_patch_antenna_array_synthesizer (1).mph
+D:\桌面\codex\案例下载\电气\缝隙耦合微带贴片天线阵列合成器\microstrip_patch_antenna_array_synthesizer.mph
+D:\桌面\codex\案例下载\电气\锥形天线\conical_antenna.mph
+D:\桌面\codex\案例下载\电气\基于射线光学模拟硅太阳能电池\si_solar_cell_with_ray_optics_embedded.mph
+D:\桌面\codex\案例下载\电气\基于射线光学模拟硅太阳能电池\si_solar_cell_with_ray_optics.mph
+D:\桌面\codex\案例下载\电气\导电球的快速雷达散射截面渐近分析\rcs_sphere_asymptotic.mph
+D:\桌面\codex\案例下载\电气\无限导体的磁场\magnetic_field_infinite_conductor.mph
+D:\桌面\codex\案例下载\电气\GEC CCP 反应器，氩化学\argon_gec_ccp.mph
+D:\桌面\codex\案例下载\电气\同轴电缆的阻抗\coaxial_cable_impedance.mph
+D:\桌面\codex\案例下载\电气\同轴电缆瞬态建模\coaxial_cable_transient.mph
+D:\桌面\codex\案例下载\电气\外部材料示例，结构力学\linear_elastic_6.3.mph
+D:\桌面\codex\案例下载\电气\外部材料示例，结构力学\linear_hardening_6.3.mph
+D:\桌面\codex\案例下载\电气\外部材料示例，结构力学\Mazars_damage_6.3.mph
+D:\桌面\codex\案例下载\电气\金属-介质多层超材料中的色散和双曲波\dipole_near_hyperbolic_metamaterial.mph
+D:\桌面\codex\案例下载\电气\MOSCAP 小信号分析 - 一维\moscap_1d_small_signal.mph
+D:\桌面\codex\案例下载\电气\可调 MEMS 电容器\capacitor_tunable_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\可调 MEMS 电容器\capacitor_tunable.mph
+D:\桌面\codex\案例下载\电气\空气中的大气压电晕放电\corona_discharge_air_1d.mph
+D:\桌面\codex\案例下载\电气\单导线之间的自感和互感\mutual_inductance.mph
+D:\桌面\codex\案例下载\电气\沟槽栅 IGBT 二维模型\trench_gate_igbt_2d.mph
+D:\桌面\codex\案例下载\电气\薄膜体声波谐振器的 S 参数\thin_film_baw_resonator_s_parameter.mph

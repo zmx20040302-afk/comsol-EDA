@@ -1,0 +1,831 @@
+{
+  "schema": "comsol-modeling-intent-benchmark",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-09T13:32:08.741516+00:00",
+  "task_count": 35,
+  "passed": 35,
+  "metrics": {
+    "interface_precision": 1.0,
+    "interface_recall": 1.0,
+    "interface_f1": 1.0,
+    "coupling_accuracy": 1.0,
+    "study_accuracy": 1.0,
+    "high_confidence_error_rate": 0.0
+  },
+  "errors": [],
+  "rows": [
+    {
+      "id": "heat-01",
+      "passed": true,
+      "requirement": "二维铜板稳态固体传热，左侧恒温右侧热流",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.6152,
+      "abstained": false
+    },
+    {
+      "id": "heat-02",
+      "passed": true,
+      "requirement": "计算散热片随时间变化的瞬态温度场",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "heat-03",
+      "passed": true,
+      "requirement": "一维导热杆两端恒温的稳态热传导",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "heat-04",
+      "passed": true,
+      "requirement": "固体芯片热传导和表面对流散热，求稳态最高温度",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "heat-05",
+      "passed": true,
+      "requirement": "脉冲热源作用后材料内部的时间历程温度",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.4658,
+      "abstained": true
+    },
+    {
+      "id": "ec-01",
+      "passed": true,
+      "requirement": "稳态直流导体，端子施加电压并设置接地，求电流密度",
+      "expected": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.98,
+      "abstained": false
+    },
+    {
+      "id": "ec-02",
+      "passed": true,
+      "requirement": "电阻片两端电势差下的静态电流连续性",
+      "expected": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.887,
+      "abstained": false
+    },
+    {
+      "id": "ec-03",
+      "passed": true,
+      "requirement": "导电介质频域扫频阻抗",
+      "expected": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "confidence": 0.4658,
+      "abstained": true
+    },
+    {
+      "id": "ec-04",
+      "passed": true,
+      "requirement": "三维母排电流路径和电压降，稳态求解",
+      "expected": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "joule-01",
+      "passed": true,
+      "requirement": "母排焦耳热稳态分析，电压端子接地并计算温升",
+      "expected": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.98,
+      "abstained": false
+    },
+    {
+      "id": "joule-02",
+      "passed": true,
+      "requirement": "导线通电发热瞬态过程，计算电流和温度随时间变化",
+      "expected": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.7352,
+      "abstained": false
+    },
+    {
+      "id": "joule-03",
+      "passed": true,
+      "requirement": "电热耦合加热器稳态最高温度和耗散功率",
+      "expected": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.5858,
+      "abstained": false
+    },
+    {
+      "id": "joule-04",
+      "passed": true,
+      "requirement": "electrothermal Joule heating stationary model for a copper strip",
+      "expected": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.5858,
+      "abstained": false
+    },
+    {
+      "id": "joule-05",
+      "passed": true,
+      "requirement": "通电电阻温升，焦耳热传给固体并通过外表面对流散热",
+      "expected": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "electric_currents",
+          "heat_transfer_solids"
+        ],
+        "couplings": [
+          "electromagnetic_heating"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.8552,
+      "abstained": false
+    },
+    {
+      "id": "solid-01",
+      "passed": true,
+      "requirement": "二维悬臂梁固定端和面载荷下的稳态位移应力",
+      "expected": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.98,
+      "abstained": false
+    },
+    {
+      "id": "solid-02",
+      "passed": true,
+      "requirement": "结构模态与前六阶特征频率分析",
+      "expected": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "actual": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "confidence": 0.6152,
+      "abstained": false
+    },
+    {
+      "id": "solid-03",
+      "passed": true,
+      "requirement": "脉冲载荷作用下固体力学瞬态位移时间历程",
+      "expected": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.887,
+      "abstained": false
+    },
+    {
+      "id": "solid-04",
+      "passed": true,
+      "requirement": "谐波面载荷下结构频域响应和等效应力",
+      "expected": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "actual": {
+        "interfaces": [
+          "solid_mechanics"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "confidence": 0.887,
+      "abstained": false
+    },
+    {
+      "id": "thermal-stress-01",
+      "passed": true,
+      "requirement": "温差引起的热应力和热膨胀位移，稳态分析",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.8736,
+      "abstained": false
+    },
+    {
+      "id": "thermal-stress-02",
+      "passed": true,
+      "requirement": "thermal expansion transient response of a constrained plate",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.5858,
+      "abstained": false
+    },
+    {
+      "id": "thermal-stress-03",
+      "passed": true,
+      "requirement": "受约束构件的温差变形和热应力，静态求解",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_solids",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "thermal_expansion"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.7352,
+      "abstained": false
+    },
+    {
+      "id": "flow-01",
+      "passed": true,
+      "requirement": "二维层流通道入口速度出口压力，求稳态压降",
+      "expected": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "flow-02",
+      "passed": true,
+      "requirement": "脉冲入口质量流量下流体瞬态速度场",
+      "expected": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "flow-03",
+      "passed": true,
+      "requirement": "laminar channel flow steady state pressure drop",
+      "expected": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "laminar_flow"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.6152,
+      "abstained": false
+    },
+    {
+      "id": "flowheat-01",
+      "passed": true,
+      "requirement": "流热耦合通道冷却，入口质量流量和壁面恒温，求出口温度",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.98,
+      "abstained": false
+    },
+    {
+      "id": "flowheat-02",
+      "passed": true,
+      "requirement": "非等温流瞬态计算流道速度和温度变化",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.8552,
+      "abstained": false
+    },
+    {
+      "id": "flowheat-03",
+      "passed": true,
+      "requirement": "nonisothermal conjugate heat transfer in a laminar channel at steady state",
+      "expected": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "heat_transfer_fluids",
+          "laminar_flow"
+        ],
+        "couplings": [
+          "nonisothermal_flow"
+        ],
+        "study": "Stationary"
+      },
+      "confidence": 0.8696,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-01",
+      "passed": true,
+      "requirement": "矩形声学腔体前五阶特征频率和声压模态",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-02",
+      "passed": true,
+      "requirement": "开开管压力声学共振频率分析",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Eigenfrequency"
+      },
+      "confidence": 0.887,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-03",
+      "passed": true,
+      "requirement": "声源频域扫频，计算管道内声压级",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "Frequency"
+      },
+      "confidence": 0.6152,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-04",
+      "passed": true,
+      "requirement": "声学脉冲传播的瞬态声压场",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-structure-01",
+      "passed": true,
+      "requirement": "声固耦合悬臂梁的特征频率和声压模态",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "acoustic_structure_boundary"
+        ],
+        "study": "Eigenfrequency"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "acoustic_structure_boundary"
+        ],
+        "study": "Eigenfrequency"
+      },
+      "confidence": 0.8552,
+      "abstained": false
+    },
+    {
+      "id": "acoustic-structure-02",
+      "passed": true,
+      "requirement": "acoustic structure coupling frequency domain response",
+      "expected": {
+        "interfaces": [
+          "pressure_acoustics",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "acoustic_structure_boundary"
+        ],
+        "study": "Frequency"
+      },
+      "actual": {
+        "interfaces": [
+          "pressure_acoustics",
+          "solid_mechanics"
+        ],
+        "couplings": [
+          "acoustic_structure_boundary"
+        ],
+        "study": "Frequency"
+      },
+      "confidence": 0.7352,
+      "abstained": false
+    },
+    {
+      "id": "diffusion-01",
+      "passed": true,
+      "requirement": "一维稳态扩散，两端浓度边界和扩散通量",
+      "expected": {
+        "interfaces": [
+          "transport_diluted_species"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "actual": {
+        "interfaces": [
+          "transport_diluted_species"
+        ],
+        "couplings": [],
+        "study": "Stationary"
+      },
+      "confidence": 0.7536,
+      "abstained": false
+    },
+    {
+      "id": "diffusion-02",
+      "passed": true,
+      "requirement": "稀物质瞬态浓度扩散过程",
+      "expected": {
+        "interfaces": [
+          "transport_diluted_species"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "actual": {
+        "interfaces": [
+          "transport_diluted_species"
+        ],
+        "couplings": [],
+        "study": "TimeDependent"
+      },
+      "confidence": 0.887,
+      "abstained": false
+    }
+  ]
+}

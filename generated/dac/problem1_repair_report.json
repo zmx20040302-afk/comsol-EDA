@@ -1,0 +1,86 @@
+{
+  "schema": "dac-problem1-bounded-repair-benchmark",
+  "schemaVersion": "1.0.0",
+  "task_count": 6,
+  "bounded_repair_success_count": 6,
+  "bounded_repair_success_rate": 1.0,
+  "contract_preservation_count": 6,
+  "contract_preservation_rate": 1.0,
+  "mean_local_scope_fraction": 0.1788,
+  "comparison_type": "deterministic whole-artifact replacement scope proxy",
+  "details": [
+    {
+      "id": "undefined_parameter",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 1,
+      "whole_artifact_replacement_scope_lines": 12,
+      "local_scope_fraction": 0.0833,
+      "remaining_findings": []
+    },
+    {
+      "id": "empty_selection",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 2,
+      "whole_artifact_replacement_scope_lines": 11,
+      "local_scope_fraction": 0.1818,
+      "remaining_findings": []
+    },
+    {
+      "id": "missing_material",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 2,
+      "whole_artifact_replacement_scope_lines": 9,
+      "local_scope_fraction": 0.2222,
+      "remaining_findings": []
+    },
+    {
+      "id": "missing_study",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 2,
+      "whole_artifact_replacement_scope_lines": 9,
+      "local_scope_fraction": 0.2222,
+      "remaining_findings": []
+    },
+    {
+      "id": "unknown_result_prefix",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 2,
+      "whole_artifact_replacement_scope_lines": 11,
+      "local_scope_fraction": 0.1818,
+      "remaining_findings": []
+    },
+    {
+      "id": "unsafe_output_path",
+      "initial_audit_passed": false,
+      "policy_auto_repair_allowed": true,
+      "repair_applied": true,
+      "final_audit_passed": true,
+      "contract_preserved": true,
+      "local_changed_lines": 2,
+      "whole_artifact_replacement_scope_lines": 11,
+      "local_scope_fraction": 0.1818,
+      "remaining_findings": []
+    }
+  ],
+  "interpretation_limit": "This verifies patch locality, static-audit recovery, and contract preservation on injected faults. It does not measure semantic drift from an external LLM whole-code regeneration system."
+}

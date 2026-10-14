@@ -1,0 +1,27 @@
+{
+  "schema": "dac2027-p0-method-response-row",
+  "record_status": "template",
+  "required_rows": "one row for every task_id x method (24 x 4 = 96)",
+  "methods": [
+    "direct_llm",
+    "retrieval_llm",
+    "existing_selector",
+    "contract_dependency_v11"
+  ],
+  "fields": {
+    "task_id": "blind task id",
+    "method": "one of methods",
+    "predicted_interfaces": [],
+    "predicted_couplings": [],
+    "predicted_study": "",
+    "predicted_blocked": null,
+    "completion_seconds": null,
+    "interactions": null,
+    "human_edits": null,
+    "provider": "",
+    "model_id": "",
+    "model_version": "",
+    "operator_id": "",
+    "run_at": ""
+  }
+}

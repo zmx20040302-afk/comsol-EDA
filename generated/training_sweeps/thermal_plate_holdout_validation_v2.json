@@ -1,0 +1,98 @@
+{
+  "kind": "comsol_surrogate_holdout_validation",
+  "created_at": "2026-08-03T03:24:17.414468+00:00",
+  "model_path": "models\\thermal_plate_surrogate_comsol_validated_v2.joblib",
+  "csv_path": "generated\\training_sweeps\\thermal_plate_holdout_v2.csv",
+  "rows": [
+    {
+      "inputs": {
+        "L_m": 0.06,
+        "W_m": 0.0225,
+        "k_W_mK": 40.0,
+        "T_hot_K": 343.15,
+        "T_cold_K": 278.15
+      },
+      "actual": {
+        "Tmax_K": 343.15,
+        "Tavg_K": 291.373443335409
+      },
+      "predicted": {
+        "Tmax_K": 343.35408163265305,
+        "Tavg_K": 292.96723354582775
+      },
+      "absolute_error": {
+        "Tmax_K": 0.20408163265307167,
+        "Tavg_K": 1.5937902104187742
+      }
+    },
+    {
+      "inputs": {
+        "L_m": 0.06,
+        "W_m": 0.0225,
+        "k_W_mK": 40.0,
+        "T_hot_K": 343.15,
+        "T_cold_K": 288.15
+      },
+      "actual": {
+        "Tmax_K": 343.15,
+        "Tavg_K": 299.339067437656
+      },
+      "predicted": {
+        "Tmax_K": 343.35408163265305,
+        "Tavg_K": 300.54895363412857
+      },
+      "absolute_error": {
+        "Tmax_K": 0.20408163265307167,
+        "Tavg_K": 1.209886196472553
+      }
+    },
+    {
+      "inputs": {
+        "L_m": 0.06,
+        "W_m": 0.0225,
+        "k_W_mK": 40.0,
+        "T_hot_K": 363.15,
+        "T_cold_K": 278.15
+      },
+      "actual": {
+        "Tmax_K": 363.15,
+        "Tavg_K": 295.44219513092
+      },
+      "predicted": {
+        "Tmax_K": 362.9459183673469,
+        "Tavg_K": 297.3956301039238
+      },
+      "absolute_error": {
+        "Tmax_K": 0.20408163265307167,
+        "Tavg_K": 1.9534349730037661
+      }
+    },
+    {
+      "inputs": {
+        "L_m": 0.06,
+        "W_m": 0.0225,
+        "k_W_mK": 40.0,
+        "T_hot_K": 363.15,
+        "T_cold_K": 288.15
+      },
+      "actual": {
+        "Tmax_K": 363.15,
+        "Tavg_K": 303.407819233167
+      },
+      "predicted": {
+        "Tmax_K": 362.9459183673469,
+        "Tavg_K": 304.9773501922246
+      },
+      "absolute_error": {
+        "Tmax_K": 0.20408163265307167,
+        "Tavg_K": 1.5695309590576016
+      }
+    }
+  ],
+  "max_absolute_error": {
+    "Tmax_K": 0.20408163265307167,
+    "Tavg_K": 1.9534349730037661
+  },
+  "passed": true,
+  "criterion": "Each fresh-COMSOL holdout output must have absolute error below 5 K."
+}

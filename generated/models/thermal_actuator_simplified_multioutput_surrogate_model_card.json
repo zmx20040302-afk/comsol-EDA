@@ -1,0 +1,187 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-24T11:03:15.559255+00:00",
+  "name": "热微执行器简化模型多输出代理",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_simplified_training.csv",
+    "rows": 9,
+    "inputs": [
+      "DV_V",
+      "htc_s_W_m2K",
+      "htc_us_W_m2K"
+    ],
+    "outputs": [
+      "Tmax_K",
+      "umax_m",
+      "joule_power_W"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_simplified_holdout.csv",
+    "rows": 4
+  },
+  "physical_scope": "热微执行器简化模型；固定几何、材料、电流-传热-结构耦合和边界条件；DV=4.5-5.5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=400 W/(m^2*K)。",
+  "validated_input_ranges": {
+    "DV_V": {
+      "min": 4.5,
+      "max": 5.5
+    },
+    "htc_s_W_m2K": {
+      "min": 15000.0,
+      "max": 25000.0
+    },
+    "htc_us_W_m2K": {
+      "min": 400.0,
+      "max": 400.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "thermal_actuator_simplified_independent_comsol_validation",
+    "created_at": "2026-08-24T11:03:15.555840+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_simplified_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermal_actuator_simplified_holdout.csv",
+    "training_rows": 9,
+    "holdout_rows": 4,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "holdout_rmse": 17.402527990046124,
+        "holdout_mae": 8.117636869621013,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 30.142062634183905,
+            "mae": 24.35170836292852,
+            "r2": -0.02488779587217915
+          },
+          "umax_m": {
+            "rmse": 1.3755316932692774e-07,
+            "mae": 1.0883723895253882e-07,
+            "r2": -0.01590069697407981
+          },
+          "joule_power_W": {
+            "rmse": 0.001220635475756452,
+            "mae": 0.001202137097280025,
+            "r2": -2.5491902629015684e-05
+          }
+        }
+      },
+      {
+        "name": "ridge_scaled",
+        "holdout_rmse": 3.203794901893247,
+        "holdout_mae": 1.6255257310131943,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 5.5491355455814215,
+            "mae": 4.876452011830594,
+            "r2": 0.9652639003346555
+          },
+          "umax_m": {
+            "rmse": 2.205003256561626e-08,
+            "mae": 2.0448892715429417e-08,
+            "r2": 0.9738947097596667
+          },
+          "joule_power_W": {
+            "rmse": 0.00013021620982952488,
+            "mae": 0.00012516076009620996,
+            "r2": 0.9886192942239374
+          }
+        }
+      },
+      {
+        "name": "polynomial_ridge_degree2",
+        "holdout_rmse": 2.991701523442558,
+        "holdout_mae": 1.615536311323826,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 5.181779039377137,
+            "mae": 4.846560669067912,
+            "r2": 0.9697107747000182
+          },
+          "umax_m": {
+            "rmse": 1.9311495542827542e-08,
+            "mae": 1.7712727257620264e-08,
+            "r2": 0.979976413322419
+          },
+          "joule_power_W": {
+            "rmse": 5.636777732300363e-05,
+            "mae": 4.824719083789102e-05,
+            "r2": 0.9978674416864977
+          }
+        }
+      },
+      {
+        "name": "random_forest",
+        "holdout_rmse": 5.8827642075269955,
+        "holdout_mae": 2.885058983807577,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 10.189246445225935,
+            "mae": 8.654221308997364,
+            "r2": 0.8828844617002939
+          },
+          "umax_m": {
+            "rmse": 3.480433497573366e-08,
+            "mae": 2.6075102770613396e-08,
+            "r2": 0.9349605686584355
+          },
+          "joule_power_W": {
+            "rmse": 0.0010210449593007615,
+            "mae": 0.0009556163502643933,
+            "r2": 0.3002726869701837
+          }
+        }
+      },
+      {
+        "name": "mlp_scaled",
+        "holdout_rmse": 3.882307928089262,
+        "holdout_mae": 2.0913872061537915,
+        "per_output": {
+          "Tmax_K": {
+            "rmse": 6.7243545806656115,
+            "mae": 6.2740466009209825,
+            "r2": 0.9489927866121004
+          },
+          "umax_m": {
+            "rmse": 3.09087675082281e-08,
+            "mae": 2.336502021042685e-08,
+            "r2": 0.9487051893066443
+          },
+          "joule_power_W": {
+            "rmse": 0.00013782459518819207,
+            "mae": 0.00011499417537224861,
+            "r2": 0.9872505178199598
+          }
+        }
+      }
+    ],
+    "selected_model": "polynomial_ridge_degree2",
+    "per_output_relative_validation": {
+      "Tmax_K": {
+        "max_relative_error_percent": 1.407389748548021,
+        "mean_relative_error_percent": 0.9532040782760919,
+        "threshold_relative_error_percent": 7.0,
+        "passed": true
+      },
+      "umax_m": {
+        "max_relative_error_percent": 2.4945810448482937,
+        "mean_relative_error_percent": 1.628462251958265,
+        "threshold_relative_error_percent": 10.0,
+        "passed": true
+      },
+      "joule_power_W": {
+        "max_relative_error_percent": 0.5573220462822325,
+        "mean_relative_error_percent": 0.3291960200446019,
+        "threshold_relative_error_percent": 7.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "热微执行器简化模型；固定几何、材料、电流-传热-结构耦合和边界条件；DV=4.5-5.5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=400 W/(m^2*K)。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

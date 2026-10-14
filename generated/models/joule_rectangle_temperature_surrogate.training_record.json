@@ -1,0 +1,233 @@
+{
+  "kind": "comsol_surrogate_training_record",
+  "model_path": "generated\\models\\joule_rectangle_temperature_surrogate.joblib",
+  "csv_path": "generated\\staged_workflows\\final_code\\joule_rectangle_auto_solve_results.csv",
+  "inspection": {
+    "kind": "training_csv_inspection",
+    "path": "generated\\staged_workflows\\final_code\\joule_rectangle_auto_solve_results.csv",
+    "rows": 37,
+    "columns": [
+      "Vtot_V",
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "numeric_columns": [
+      "Vtot_V",
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "inferred_input_columns": [
+      "Vtot_V"
+    ],
+    "inferred_output_columns": [
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "ignored_columns": [],
+    "ready_for_training": true,
+    "warnings": [],
+    "limitations": [],
+    "automation_plan": [
+      "Use inferred inputs: Vtot_V.",
+      "Use inferred outputs: Tmax_K, Tavg_K.",
+      "Train baseline, Ridge, RandomForest, and MLP candidates.",
+      "Save the best model plus a .training_record.json file.",
+      "Validate the surrogate with fresh COMSOL runs before design use."
+    ]
+  },
+  "report": {
+    "best_model": "random_forest",
+    "train_rmse": 0.8545669535764622,
+    "test_rmse": 1.594827775305172,
+    "test_mae": 1.3658547080202332,
+    "test_r2": 0.9947188133505939,
+    "rows": 37,
+    "input_columns": [
+      "Vtot_V"
+    ],
+    "output_columns": [
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "train_rows": 29,
+    "test_rows": 8,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "train_rmse": 21.729761180237073,
+        "test_rmse": 22.19792434710559,
+        "test_mae": 19.614745978297933,
+        "test_r2": -0.02312493525841797,
+        "warnings": []
+      },
+      {
+        "name": "ridge_scaled",
+        "train_rmse": 4.802865851152451,
+        "test_rmse": 4.343005611354036,
+        "test_mae": 3.394214640133832,
+        "test_r2": 0.9608362097112076,
+        "warnings": []
+      },
+      {
+        "name": "random_forest",
+        "train_rmse": 0.8545669535764622,
+        "test_rmse": 1.594827775305172,
+        "test_mae": 1.3658547080202332,
+        "test_r2": 0.9947188133505939,
+        "warnings": []
+      },
+      {
+        "name": "mlp_scaled",
+        "train_rmse": 2.007920243299444,
+        "test_rmse": 2.5109540595142197,
+        "test_mae": 1.8353011286282275,
+        "test_r2": 0.986908739368412,
+        "warnings": []
+      }
+    ],
+    "per_output_metrics": {
+      "Tmax_K": {
+        "rmse": 1.5968071565552278,
+        "mae": 1.3675509595742241,
+        "r2": 0.9947188133505936
+      },
+      "Tavg_K": {
+        "rmse": 1.5928459343400718,
+        "mae": 1.3641584564662423,
+        "r2": 0.9947188133505942
+      }
+    },
+    "data_quality": {
+      "rows": 37,
+      "columns": [
+        "Vtot_V",
+        "Tmax_K",
+        "Tavg_K"
+      ],
+      "selected_columns": [
+        "Vtot_V",
+        "Tmax_K",
+        "Tavg_K"
+      ],
+      "missing_values": {
+        "Vtot_V": 0,
+        "Tmax_K": 0,
+        "Tavg_K": 0
+      },
+      "duplicate_rows": 0,
+      "input_columns": [
+        "Vtot_V"
+      ],
+      "output_columns": [
+        "Tmax_K",
+        "Tavg_K"
+      ]
+    },
+    "feature_stats": {
+      "Vtot_V": {
+        "min": 0.0001,
+        "max": 0.001,
+        "mean": 0.00055,
+        "std": 0.00026692695630078277
+      }
+    },
+    "output_stats": {
+      "Tmax_K": {
+        "min": 293.877163870913,
+        "max": 365.866387091282,
+        "mean": 320.32774967536653,
+        "std": 21.846990016432535
+      },
+      "Tavg_K": {
+        "min": 293.87535998516,
+        "max": 365.685998516015,
+        "mean": 320.2603294453607,
+        "std": 21.79279387769993
+      }
+    },
+    "sample_predictions": [
+      {
+        "actual": {
+          "Tmax_K": 313.192454192035,
+          "Tavg_K": 313.142734590977
+        },
+        "predicted": {
+          "Tmax_K": 312.4116051759637,
+          "Tavg_K": 312.3638226381627
+        },
+        "absolute_error": {
+          "Tmax_K": 0.7808490160712722,
+          "Tavg_K": 0.778911952814326
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 306.284397418363,
+          "Tavg_K": 306.251814731955
+        },
+        "predicted": {
+          "Tmax_K": 306.96043257960156,
+          "Tavg_K": 306.92617284315867
+        },
+        "absolute_error": {
+          "Tmax_K": 0.6760351612385307,
+          "Tavg_K": 0.6743581112036736
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 296.058655483651,
+          "Tavg_K": 296.05143994064
+        },
+        "predicted": {
+          "Tmax_K": 295.72830720948235,
+          "Tavg_K": 295.7219111661321
+        },
+        "absolute_error": {
+          "Tmax_K": 0.33034827416867074,
+          "Tavg_K": 0.32952877450793494
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 342.642590964004,
+          "Tavg_K": 342.519813989963
+        },
+        "predicted": {
+          "Tmax_K": 341.1388388028273,
+          "Tavg_K": 341.0197922081519
+        },
+        "absolute_error": {
+          "Tmax_K": 1.503752161176692,
+          "Tavg_K": 1.5000217818110855
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 362.27601547865,
+          "Tavg_K": 362.104533589287
+        },
+        "predicted": {
+          "Tmax_K": 359.696856124006,
+          "Tavg_K": 359.53177239192115
+        },
+        "absolute_error": {
+          "Tmax_K": 2.5791593546439913,
+          "Tavg_K": 2.5727611973658213
+        }
+      }
+    ],
+    "training_summary": [
+      "Compared 4 candidate regressors on 37 COMSOL sweep rows.",
+      "Inputs: Vtot_V; outputs: Tmax_K, Tavg_K.",
+      "Selected random_forest with test RMSE 1.59483, MAE 1.36585, R2 0.994719.",
+      "Best model improved RMSE over mean baseline by 92.8%."
+    ],
+    "recommendations": [
+      "Add more COMSOL parameter-sweep rows before relying on the surrogate for design decisions.",
+      "Validate the saved surrogate on fresh COMSOL runs that were not included in the CSV.",
+      "Keep the CSV, constraints JSON, generated script, and trained joblib together as one training record."
+    ],
+    "warnings": []
+  }
+}

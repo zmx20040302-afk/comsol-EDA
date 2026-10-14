@@ -1,0 +1,15 @@
+{
+  "schema": "comsol-p6-external-evidence-config",
+  "schemaVersion": "1.0.0",
+  "comparison_methods": [
+    "human_comsol",
+    "direct_llm",
+    "staged_platform"
+  ],
+  "required_task_count_per_method": 60,
+  "fixed_task_report": "generated/p2/end_to_end_benchmark.json",
+  "experiment_minimum_samples": 5,
+  "require_destination_host_acceptance": true,
+  "require_java_template_count": 6,
+  "policy": "External comparison rows must be observed on the fixed P2 tasks. Template or synthetic rows never count as measured evidence."
+}

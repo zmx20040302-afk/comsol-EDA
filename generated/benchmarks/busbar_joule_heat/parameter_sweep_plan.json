@@ -1,0 +1,16 @@
+{
+  "kind": "comsol_parameter_sweep_plan",
+  "model": "busbar_joule_heat_baseline",
+  "purpose": "Generate a small validated COMSOL dataset before surrogate-model training.",
+  "inputs": {
+    "Vtot": {"unit": "mV", "values": [10, 20, 30]},
+    "htc": {"unit": "W/(m^2*K)", "values": [2, 5, 10]}
+  },
+  "outputs": ["Tmax_K", "Tmax_C", "terminal_current_A", "joule_power_W", "convection_power_W", "energy_imbalance_percent"],
+  "run_count": 9,
+  "status": "completed_smoke_sweep",
+  "acceptance": {
+    "max_energy_imbalance_percent": 0.1,
+    "minimum_completed_rows": 9
+  }
+}

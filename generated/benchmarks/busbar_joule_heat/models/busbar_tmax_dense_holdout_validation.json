@@ -1,0 +1,27 @@
+{
+  "kind": "surrogate_holdout_validation",
+  "model": "busbar_tmax_dense.joblib",
+  "status": "passed_for_benchmark_fast_estimation",
+  "holdout_input": {
+    "Vtot_mV": 25,
+    "htc_W_m2K": 7
+  },
+  "surrogate_prediction_Tmax_C": 64.7496197040151,
+  "comsol_holdout_Tmax_C": 65.0870421605449,
+  "absolute_error_C": 0.3374224565298,
+  "relative_error_percent": 0.51842500254158,
+  "acceptance": {
+    "maximum_absolute_error_C": 3,
+    "maximum_relative_error_percent": 5
+  },
+  "applicability": {
+    "inputs": ["Vtot_mV", "htc_W_m2K"],
+    "validated_ranges": {
+      "Vtot_mV": [10, 30],
+      "htc_W_m2K": [2, 10]
+    },
+    "use": "Rapid maximum-temperature estimation for the validated busbar Joule-heating benchmark.",
+    "restriction": "Do not extrapolate beyond the validated ranges or use it as a replacement for COMSOL when geometry, material, boundary conditions, or coupled physics change."
+  },
+  "conclusion": "The dense surrogate passes the independent holdout check and may be used by the local assistant as a fast-estimation tool within the stated benchmark range."
+}

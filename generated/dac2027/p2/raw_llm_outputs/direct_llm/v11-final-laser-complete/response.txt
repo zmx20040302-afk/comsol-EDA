@@ -1,0 +1,1 @@
+{"predicted_interfaces":["heat_transfer_solids","electric_currents"],"predicted_couplings":["electromagnetic_heating"],"predicted_study":"Stationary","predicted_blocked":true}

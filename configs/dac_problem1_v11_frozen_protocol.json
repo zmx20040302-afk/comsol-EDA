@@ -1,0 +1,41 @@
+{
+  "schema": "dac-problem1-v11-frozen-protocol",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.1.0",
+  "frozen_at": "2026-10-12T00:00:00+08:00",
+  "parent_method_version": "problem1-v1.0.0",
+  "freeze_scope": "Negation-aware execution-critical requirement completeness layered over the frozen v1.0 physics dependency compiler",
+  "method_files_sha256": {
+    "src/comsol_small_model/physics_dependency_graph.py": "c5167f97e625271ba55383de00810eef215f5063e377e49e9308fbe8ddcc4d21",
+    "src/comsol_small_model/physics_selection.py": "42622764e070781b1b6af2665de1b4be99a3821a9ffdb04239a3dfff599dc241",
+    "src/comsol_small_model/requirement_conflicts.py": "118dec9f60c17bdaaea2988a3b600e29f309700d5d9251c5fe6087633886a453",
+    "src/comsol_small_model/requirement_completeness_v11.py": "ab3a2e07cbfeeae9510371dfa2a5420dbf7dd86e037813207f60b6153d7d71d6",
+    "src/comsol_small_model/physics_dependency_graph_v11.py": "b721e687eb0f07f46520cd66ff467a284c8b5a251ce08346c2a5b7bda1bc7a7f"
+  },
+  "datasets_sha256": {
+    "benchmarks/dac_problem1_v11/development_negation_tasks.jsonl": "76d0cf6470d0b40692acebbcf961f6baa769b37fc3a2e16d1330147b539379dc",
+    "benchmarks/dac_problem1_v11/validation_tasks.jsonl": "1530195db2e6ca45cde98412aad3afc44318314afd9c31356658ca3322cad7d3",
+    "benchmarks/dac_problem1_v11/final_tasks.jsonl": "2ab9f1240c8abcc4724307b0a6573010c2fe816def7dd0e2f069948913af91d2"
+  },
+  "split_policy": {
+    "development_families": ["thermal_spreader", "fuse_link", "spring_contact", "micro_nozzle", "cold_plate", "diffusion_membrane", "speaker_cavity", "sensor_die", "thermal_cycle"],
+    "validation_families": ["optoelectronic_receiver", "magnetic_sensor_flexure", "inkjet_microchannel", "gas_diffusion_sensor"],
+    "final_families": ["laser_diode_submount", "battery_interconnect", "capacitive_accelerometer", "micro_gripper_flexure", "liquid_cooling_manifold", "dialysis_membrane", "acoustic_muffler", "ceramic_resonator"],
+    "family_overlap_allowed": false,
+    "validation_policy": "execute after freeze; do not tune method or labels after observing results",
+    "final_execution_policy": "execute once after validation; do not change method or labels after observing final results"
+  },
+  "primary_metrics": [
+    "blocked_task_false_safe_rate",
+    "complete_task_false_block_rate",
+    "gate_accuracy",
+    "physics_and_coupling_exact_accuracy",
+    "study_exact_accuracy"
+  ],
+  "evidence_limits": [
+    "Development tasks were used for rule selection and are not independent evidence.",
+    "Validation and final families are disjoint by project labels, but all tasks are project-authored and are not blinded or independently adjudicated.",
+    "The experiment evaluates requirement interpretation and blocking decisions, not completed COMSOL builds or solves.",
+    "The v1.1 layer remains a bounded lexicon and regular-expression method rather than unrestricted natural-language understanding."
+  ]
+}

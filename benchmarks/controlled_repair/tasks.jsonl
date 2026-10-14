@@ -1,0 +1,12 @@
+{"id":"undefined_variable","error":"undefined variable comp1.mat1.def.mu","expected_category":"variable","expected_auto":true,"attempt":1}
+{"id":"invalid_api_property","error":"invalid parameter value for feature property","expected_category":"api_property","expected_auto":true,"attempt":1}
+{"id":"mesh_failure","error":"mesh operation failed: empty domain","expected_category":"mesh","expected_auto":true,"attempt":1}
+{"id":"solver_failure","error":"solver failed to converge","expected_category":"solver","expected_auto":true,"attempt":1}
+{"id":"result_validation","error":"COMSOL physical result validation did not pass","expected_category":"result_validation","expected_auto":true,"attempt":1}
+{"id":"missing_artifact","error":"MPH artifact was not generated","expected_category":"artifact","expected_auto":true,"attempt":1}
+{"id":"unsupported_physics","error":"unknown physics interface","expected_category":"physics_interface","expected_auto":false,"attempt":1}
+{"id":"license_failure","error":"license checkout failed","expected_category":"license","expected_auto":false,"attempt":1}
+{"id":"connection_failure","error":"mphserver connection refused","expected_category":"connection","expected_auto":false,"attempt":1}
+{"id":"timeout","error":"process timed out after 60 seconds","expected_category":"timeout","expected_auto":false,"attempt":1}
+{"id":"approval_gate","error":"undefined variable","expected_category":"variable","expected_auto":false,"attempt":1,"changes":[{"field":"geometry_dimensions","before":"0.1 m","after":"0.2 m"}],"expected_approval":true}
+{"id":"retry_limit","error":"undefined variable","expected_category":"variable","expected_auto":false,"attempt":3,"max_attempts":3,"expected_retry":false}

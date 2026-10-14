@@ -1,0 +1,194 @@
+{
+  "kind": "independent_thermal_holdout_design",
+  "created_at": "2026-10-08T02:51:07.438733+00:00",
+  "method": "deterministic_anchor_plus_latin_hypercube",
+  "seed": 20261008,
+  "sample_count": 18,
+  "input_columns": [
+    "L_m",
+    "W_m",
+    "k_W_mK",
+    "T_hot_K",
+    "T_cold_K"
+  ],
+  "validated_ranges": {
+    "L_m": {
+      "min": 0.04,
+      "max": 0.08
+    },
+    "W_m": {
+      "min": 0.015,
+      "max": 0.03
+    },
+    "k_W_mK": {
+      "min": 10.0,
+      "max": 60.0
+    },
+    "T_hot_K": {
+      "min": 333.15,
+      "max": 373.15
+    },
+    "T_cold_K": {
+      "min": 273.15,
+      "max": 293.15
+    }
+  },
+  "coverage": {
+    "center": 1,
+    "boundary": 2,
+    "high_temperature": 5,
+    "space_filling": 10
+  },
+  "training_overlap_count": 0,
+  "rows": [
+    {
+      "region": "center",
+      "L_m": 0.06,
+      "W_m": 0.0225,
+      "k_W_mK": 35.0,
+      "T_hot_K": 353.15,
+      "T_cold_K": 283.15
+    },
+    {
+      "region": "boundary_low",
+      "L_m": 0.042,
+      "W_m": 0.01575,
+      "k_W_mK": 12.5,
+      "T_hot_K": 337.15,
+      "T_cold_K": 275.15
+    },
+    {
+      "region": "boundary_high",
+      "L_m": 0.078,
+      "W_m": 0.029249999999999998,
+      "k_W_mK": 57.5,
+      "T_hot_K": 369.15,
+      "T_cold_K": 291.15
+    },
+    {
+      "region": "high_temperature_gradient",
+      "L_m": 0.06,
+      "W_m": 0.0225,
+      "k_W_mK": 35.0,
+      "T_hot_K": 371.15,
+      "T_cold_K": 274.15
+    },
+    {
+      "region": "high_temperature_low_conductivity",
+      "L_m": 0.07,
+      "W_m": 0.01875,
+      "k_W_mK": 14.0,
+      "T_hot_K": 371.15,
+      "T_cold_K": 278.15
+    },
+    {
+      "region": "high_temperature_high_conductivity",
+      "L_m": 0.05,
+      "W_m": 0.02625,
+      "k_W_mK": 56.0,
+      "T_hot_K": 371.15,
+      "T_cold_K": 278.15
+    },
+    {
+      "region": "high_temperature",
+      "L_m": 0.06094280834986406,
+      "W_m": 0.02050845883578218,
+      "k_W_mK": 44.61842087428057,
+      "T_hot_K": 368.2015713794616,
+      "T_cold_K": 277.9789891565077
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.0527105158182943,
+      "W_m": 0.017875784318716042,
+      "k_W_mK": 32.18929266455164,
+      "T_hot_K": 347.6610354289253,
+      "T_cold_K": 280.40291619245346
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.043551782088122805,
+      "W_m": 0.018778411468314982,
+      "k_W_mK": 22.821311519699307,
+      "T_hot_K": 350.7859354622409,
+      "T_cold_K": 275.85657334021255
+    },
+    {
+      "region": "high_temperature",
+      "L_m": 0.05750570290629224,
+      "W_m": 0.02164927110366308,
+      "k_W_mK": 37.004617250255095,
+      "T_hot_K": 366.07804787743714,
+      "T_cold_K": 291.0653991899759
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.07386046691155203,
+      "W_m": 0.028489653583654906,
+      "k_W_mK": 51.19022973202357,
+      "T_hot_K": 345.71550097539034,
+      "T_cold_K": 289.54565696200524
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.07546399938786337,
+      "W_m": 0.027742047869942152,
+      "k_W_mK": 40.551243087212114,
+      "T_hot_K": 338.6048524660897,
+      "T_cold_K": 283.1243132140434
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.056533642129597814,
+      "W_m": 0.02482980887654042,
+      "k_W_mK": 26.88474396975599,
+      "T_hot_K": 340.32489201777264,
+      "T_cold_K": 279.6354655231796
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.07060852333835327,
+      "W_m": 0.01689905120980467,
+      "k_W_mK": 29.935402559073427,
+      "T_hot_K": 354.6180207005856,
+      "T_cold_K": 284.67589302412875
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.06822415200151355,
+      "W_m": 0.02024362689001188,
+      "k_W_mK": 20.091870924569154,
+      "T_hot_K": 358.72997098966357,
+      "T_cold_K": 287.5807387376057
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.051575916123574775,
+      "W_m": 0.023610503198140106,
+      "k_W_mK": 55.98694293471504,
+      "T_hot_K": 342.16947910327497,
+      "T_cold_K": 287.1037460433467
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.0633033262990276,
+      "W_m": 0.023074065256436495,
+      "k_W_mK": 16.264240472872658,
+      "T_hot_K": 359.6027917471824,
+      "T_cold_K": 284.31654688232305
+    },
+    {
+      "region": "space_filling",
+      "L_m": 0.04871772852525845,
+      "W_m": 0.026463247544210686,
+      "k_W_mK": 46.29118366631234,
+      "T_hot_K": 361.8568451260524,
+      "T_cold_K": 276.3594489379335
+    }
+  ],
+  "policy": [
+    "These points are reserved for validation and must not be merged into fitting data.",
+    "Every output must come from a fresh COMSOL solve using the declared physical scope.",
+    "A replacement holdout must be generated after any data-driven tuning against this set."
+  ]
+}

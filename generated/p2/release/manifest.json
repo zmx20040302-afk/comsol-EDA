@@ -1,0 +1,1094 @@
+{
+  "schema": "comsol-p2-release-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T09:08:53.439350+00:00",
+  "exclusions": [
+    "generated/local_secrets",
+    ".venv",
+    "MATLAB preferences",
+    "temporary logs",
+    "non-demo MPH files"
+  ],
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 22623,
+      "sha256": "d9936c71bd3d6fcd3d7cbf17c650de6be74497828ee85f9e07e1222eaae8fda3"
+    },
+    {
+      "path": "benchmarks/controlled_repair/tasks.jsonl",
+      "size_bytes": 1726,
+      "sha256": "f6a8f946a6f31d413a033358f893d39faeeb422bfcdd33962b164f7642344bb7"
+    },
+    {
+      "path": "benchmarks/end_to_end/tasks.jsonl",
+      "size_bytes": 26693,
+      "sha256": "ae7e4d8bdfd417d1b65486af45b5e42c962107eb8847f0e806e48028f7701f8f"
+    },
+    {
+      "path": "benchmarks/physics_selection/tasks.jsonl",
+      "size_bytes": 8060,
+      "sha256": "390fa1d9450c155491c0fc5c2db3f2ae8c70d3d5cbb86d950440775446c47baf"
+    },
+    {
+      "path": "benchmarks/requirement_completeness/tasks.json",
+      "size_bytes": 6442,
+      "sha256": "723b7462ceb52499c377c445c1d11aaf9d0f3c7804c449556a8bf6904b2dcae8"
+    },
+    {
+      "path": "case_specs/acoustic_rectangular_cavity_reference.json",
+      "size_bytes": 763,
+      "sha256": "ce043b5186bb097878e9774e865d9307993379e44121852354caea4c8c2a0744"
+    },
+    {
+      "path": "case_specs/acoustic_structure_cantilever_reference.json",
+      "size_bytes": 1175,
+      "sha256": "2f72cc21dcbfdd553ab6b0ffd2b035d26e2c1cd6a2a5b245471ed27ed052ecf1"
+    },
+    {
+      "path": "case_specs/electrochemical_nernst_reference.json",
+      "size_bytes": 891,
+      "sha256": "581add4e1170e85d8d5607ab444e94a34a6040ad54fa1a4cf4f2d3b7a2e3fd08"
+    },
+    {
+      "path": "case_specs/flow_heat_channel_reference.json",
+      "size_bytes": 1074,
+      "sha256": "10f41b8b7b7544d652429ccf640bf24bdedc9d3c30c75d3fa88f88ed2347d89f"
+    },
+    {
+      "path": "case_specs/laminar_pipe_poiseuille_reference.json",
+      "size_bytes": 1085,
+      "sha256": "4726eed5ee89299caf81ede520006437e162944d23bcc4a8c55cffe071736a69"
+    },
+    {
+      "path": "case_specs/mesh_convergence_record.schema.json",
+      "size_bytes": 444,
+      "sha256": "6eb67c17bb84b735f5537edc9931ed6e66430ef9154343b80a94706dcfe78105"
+    },
+    {
+      "path": "case_specs/particle_stokes_settling_reference.json",
+      "size_bytes": 967,
+      "sha256": "e362df07fe10592167d5c94f94db358f463a118dd3103c29e19171e3a49909db"
+    },
+    {
+      "path": "case_specs/rf_half_wave_resonator_reference.json",
+      "size_bytes": 918,
+      "sha256": "66aef3cb4b38b1f2b6ac18ac9958b49ade513734da2223e9bdb636967cd2d099"
+    },
+    {
+      "path": "case_specs/thermoacoustic_open_tube_reference.json",
+      "size_bytes": 1366,
+      "sha256": "f1a34dbab51b4f9e9a0a53f7e8cc5fbf532ce2098f48bf1ac20820e0f6e66c60"
+    },
+    {
+      "path": "configs/assistant_mode.json",
+      "size_bytes": 657,
+      "sha256": "1dd852e048b5afc5554ddc3392bf630e4b3852151069fe7d5fcb68914bd881f9"
+    },
+    {
+      "path": "configs/busbar_assembly_csv_training.json",
+      "size_bytes": 587,
+      "sha256": "be91e4b368784f1f2cf7795b610f8f1da67532e5aa6cb215b8007c85b800d6e0"
+    },
+    {
+      "path": "configs/busbar_eda_design_problem.json",
+      "size_bytes": 6110,
+      "sha256": "72de6ce33e5f89cfae83e05fea050e005c46fefccfd0b78c902219efabc54e5e"
+    },
+    {
+      "path": "configs/case_sources.json",
+      "size_bytes": 639,
+      "sha256": "0998ca106dcce2855dc5d85ee1479a5a52317f3626d6fffda91bdc6064be87e8"
+    },
+    {
+      "path": "configs/execution_node.json",
+      "size_bytes": 1210,
+      "sha256": "490c2816602e5e6a44691a7b94b89f52b8202ef6a73ff80a13240e611a0aaaae"
+    },
+    {
+      "path": "configs/experimental_temperature_measurements.schema.json",
+      "size_bytes": 1299,
+      "sha256": "90bdb2336cd884452b116243bc3e48b87eed46fe5e118d668f7256078e286fda"
+    },
+    {
+      "path": "configs/experimental_temperature_validation.json",
+      "size_bytes": 334,
+      "sha256": "dbb30e9182268ca508a586105ed718076af9c615f9ecda105f62475bf118e070"
+    },
+    {
+      "path": "configs/flow_heat_channel_2d.json",
+      "size_bytes": 1396,
+      "sha256": "f2e9bf3d3e2a38b0ee2a490158a9a2080acafda1e19b05bf74aed12ca1f6a117"
+    },
+    {
+      "path": "configs/modeling_contract.example.json",
+      "size_bytes": 18234,
+      "sha256": "715842a918e24e42f01c25792b65b74684193c802e3e14d4bbfb1097f6fa22a5"
+    },
+    {
+      "path": "configs/modeling_contract.schema.json",
+      "size_bytes": 6704,
+      "sha256": "a475ed3b954442f9d3cf215980810afbfe638c34b3e858d288aacfb6071d4789"
+    },
+    {
+      "path": "configs/one_dimensional_acoustic_tube.json",
+      "size_bytes": 907,
+      "sha256": "604df283bb5a1cedbcdc49921b536787f49a8dd7521d345633bb9faa1b486caf"
+    },
+    {
+      "path": "configs/one_dimensional_cantilever_beam.json",
+      "size_bytes": 760,
+      "sha256": "f88b5f9b20e76ff13297eea9e773f5d3cb8a0d3c2efc5bfda10452e6cce568e1"
+    },
+    {
+      "path": "configs/one_dimensional_diffusion.json",
+      "size_bytes": 591,
+      "sha256": "17045dd7a062ab2d7344860f657697d3d2ecb7a54175eeb34c20c8e0ea12e812"
+    },
+    {
+      "path": "configs/one_dimensional_electric_current.json",
+      "size_bytes": 694,
+      "sha256": "e91574fc95b5e2ecf402c003dc58e3b625f6ddfdedc21c8c822e16a2d557c556"
+    },
+    {
+      "path": "configs/one_dimensional_electrothermal.json",
+      "size_bytes": 892,
+      "sha256": "ca9b716a629482ca82cdd66257b3f0432adc22e2a10dec3e37a352aaa71eec1d"
+    },
+    {
+      "path": "configs/one_dimensional_heat_conduction.json",
+      "size_bytes": 769,
+      "sha256": "c1b7a449e22db0e6a7fd2f1106a054dfa1f874e48dc538f12d06223838c20e1f"
+    },
+    {
+      "path": "configs/solid_mechanics_rectangle.json",
+      "size_bytes": 677,
+      "sha256": "4f420c4dfb71db4766dc3d1a02b975344b9b6b009c94e4b9d5c7464ef57b3dc3"
+    },
+    {
+      "path": "configs/thermal_constraints.json",
+      "size_bytes": 1169,
+      "sha256": "d7539c9cb278b012b0d0c235d80579f7d5ca997709f33b294a4c781239b0b304"
+    },
+    {
+      "path": "configs/thermal_plate_sweep_training.json",
+      "size_bytes": 733,
+      "sha256": "8ad359d3f8427b3edf0ccd433e1f5c6db3711b695ec69fce9f116ab75a4a0b95"
+    },
+    {
+      "path": "configs/thermal_stress_rectangle.json",
+      "size_bytes": 922,
+      "sha256": "d82d761147d0c498f289115cbe7022a844e27990dd4ac229eccffbc5e046192a"
+    },
+    {
+      "path": "configs/thermal_surrogate_training.json",
+      "size_bytes": 496,
+      "sha256": "d782cdf6161c01232866aa16c7e15d04cae1f021f46993d8050313b8cb42517e"
+    },
+    {
+      "path": "EDA_PUBLICATION_ROADMAP.md",
+      "size_bytes": 9609,
+      "sha256": "c8e084aa631a0534bc39e8a3fc31a4e519f10ed2102a0b5885f3b939dcd7ff39"
+    },
+    {
+      "path": "execution_worker.py",
+      "size_bytes": 2802,
+      "sha256": "42243132af357cb9559d45ce28bfb4409a13f83fc3509cb627db76f4a79ad913"
+    },
+    {
+      "path": "generated/benchmarks/controlled_repair/report.json",
+      "size_bytes": 19420,
+      "sha256": "28ad43350f0ebdaca3e692e9d49d1000c6e31f943f914a2d24f99b71875234f3"
+    },
+    {
+      "path": "generated/benchmarks/physics_selection/report.json",
+      "size_bytes": 20383,
+      "sha256": "a6db6cbee0c8c42a31a6e94d5a4b48773bb012545f32f3a004bb84a1c5a3c4d4"
+    },
+    {
+      "path": "generated/p1/template_maturity.json",
+      "size_bytes": 24474,
+      "sha256": "ebf9140923120c8013d56da71eb06326f6061f36ead9f64abb93eb8f8710af1b"
+    },
+    {
+      "path": "generated/p1/template_maturity.md",
+      "size_bytes": 956,
+      "sha256": "aa0b60975570039851b746629707ed38a34449cf53b04aaf20723a570ffdf3ac"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/execution_evidence.json",
+      "size_bytes": 4231,
+      "sha256": "a41329fef110efcc01d9024b90e48010a909cede1ab47ddbd3734305142cbef4"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/generated_build_one_dimensional_acoustic_open_tube.m",
+      "size_bytes": 2948,
+      "sha256": "920426052efdd13a3192724c1fe14ba3ed9299a9ac47024515f452b31d66dd9c"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/job_20261010040946_abe0631f.mph",
+      "size_bytes": 719972,
+      "sha256": "02f7ae25b6e748f9782fd9f51cf51341051c427a863e4510d5df4a94657d166d"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/job_20261010040946_abe0631f_preview.png",
+      "size_bytes": 17874,
+      "sha256": "9a78c248615fdcd89b233f1d8b5e887e724ae31e9923de3c7c61dc3b1e1049e0"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/job_20261010040946_abe0631f_results.csv",
+      "size_bytes": 93,
+      "sha256": "a9ce7e1d2444c9e2bb634994113131083c2d84576b91197baba429d79ad08149"
+    },
+    {
+      "path": "generated/p1_execution_jobs/acoustic/job_20261010040946_abe0631f/run_job_20261010040946_abe0631f.m",
+      "size_bytes": 3280,
+      "sha256": "19897cc2c195c7bb8b950ddd6e1a92489a1f1bb390893929d6656b1f2c16c098"
+    },
+    {
+      "path": "generated/p2/end_to_end_benchmark.json",
+      "size_bytes": 49007,
+      "sha256": "4a174a356bdce0f8177f95c9c517e5ed04229837f199c25905fa5b11c1bce639"
+    },
+    {
+      "path": "generated/p2/migration_acceptance.json",
+      "size_bytes": 3849,
+      "sha256": "e9980e9cda00c52fa2bc4b9fc90aac06cd325fa7517fba4052caa43ea8f67488"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 83646,
+      "sha256": "bb293b0a8366cf112d41d185d242de426357304bd97560647844dca4d6131aa8"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 320289,
+      "sha256": "8a29243d57ff6791504a991c9f939d24d02a6a843e3ce31f34c43af400a8e7c9"
+    },
+    {
+      "path": "PROJECT_READINESS.md",
+      "size_bytes": 10074,
+      "sha256": "487c58aa1b725d02256dc957837b059292c3ac0233849462f17a2f30284eeae4"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 32450,
+      "sha256": "fd7cad1fc606b259dfbfdf4f6d08266401e61667b55b1ddbfee1d20ea62e3c08"
+    },
+    {
+      "path": "RELEASE_MIGRATION_GUIDE.md",
+      "size_bytes": 2023,
+      "sha256": "c287934863e67ff8207535d89eb0a7776c1e75e2f3809896cb888b19b90c9b2a"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "size_bytes": 420,
+      "sha256": "dc426c66871c54bb80f7f38a47569777f0d6abce432a07ecf7b046c60fb0334b"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 74,
+      "sha256": "ea42f6dc0a65c4fe05015ae0c0576d961e4ef99cb7c2666279900746b8484231"
+    },
+    {
+      "path": "scripts/attach_case_csv_training.py",
+      "size_bytes": 4733,
+      "sha256": "a3ebd51d2277ced6d1e8d06473f473c5f9a4d07f50816e82541de3383c8a750c"
+    },
+    {
+      "path": "scripts/audit_registered_surrogate_runtime.py",
+      "size_bytes": 1864,
+      "sha256": "03b7f48800625afb59ed687986435658d4aefa2e1f5b59a7a61316436973cd61"
+    },
+    {
+      "path": "scripts/batch_export_mph_cases.py",
+      "size_bytes": 3255,
+      "sha256": "d57a9ae28310def706b229e572255afcb7d641c6416b03d7be771c8f7f1fe059"
+    },
+    {
+      "path": "scripts/benchmark_busbar_multiphysics_sweep.py",
+      "size_bytes": 16837,
+      "sha256": "97548a5f84ec8bfc42830b89aba3647053349d3708d83da058a57fc493aca9ef"
+    },
+    {
+      "path": "scripts/benchmark_comsol_repeated.py",
+      "size_bytes": 18989,
+      "sha256": "ace26392419e5c15d5a9497a9d4ea2005de834d429a9dbb51c7d930589ca7ba7"
+    },
+    {
+      "path": "scripts/benchmark_runtime.py",
+      "size_bytes": 10799,
+      "sha256": "ba1441de6fe765409d65d4a077e0c50085b4c112e266d3bc708b13d8dedcd885"
+    },
+    {
+      "path": "scripts/build_auto_modeling_baseline.py",
+      "size_bytes": 7052,
+      "sha256": "8878a9a242a3dbc22f53cf87392f312371e8ae42a74c5d755b3bc4b8a4a1656c"
+    },
+    {
+      "path": "scripts/build_independent_holdout.py",
+      "size_bytes": 1078,
+      "sha256": "b6b776848f11c479eda4282cfee3c9ebae9cc2cf17c62a409cad80885fa1ccfb"
+    },
+    {
+      "path": "scripts/build_p1_evidence_report.py",
+      "size_bytes": 6041,
+      "sha256": "5ac001baba84538a19ef81bc38665c7c16a1f4de47f87bbf05614cf91ef1f820"
+    },
+    {
+      "path": "scripts/build_p2_release_package.py",
+      "size_bytes": 3430,
+      "sha256": "906f5873fe632a63be5881f8d8fa6647cf7d0ca2c877a676de131f96eba8cd70"
+    },
+    {
+      "path": "scripts/build_p2_task_matrix.py",
+      "size_bytes": 13122,
+      "sha256": "dfa646b0a37f6bc365ed840cf26b6af9189f898b4f80fdd2dac8f9a21599a9ed"
+    },
+    {
+      "path": "scripts/build_release_snapshot.py",
+      "size_bytes": 9601,
+      "sha256": "73529d4e025f4e2c0e8e9960d6289bdcd1a0ac10d36db2ced0fb653d1a1d6cdb"
+    },
+    {
+      "path": "scripts/consolidate_surrogate_registries.py",
+      "size_bytes": 1098,
+      "sha256": "6fb8200b1058d05bcac05aa7104781b21b4c0515c6f8d454bccb5aa3793508da"
+    },
+    {
+      "path": "scripts/export_mph_code_and_learn.py",
+      "size_bytes": 7318,
+      "sha256": "2cf2eb1710efa0baec4f9e17ec85b16e86b48f8e7cc95a7b750dc9456a4310ba"
+    },
+    {
+      "path": "scripts/mark_surrogates_superseded.py",
+      "size_bytes": 1279,
+      "sha256": "d7e416765ef3950f6d997eee2f1a9d201156c78d5ed1ab99452c4660c7811d25"
+    },
+    {
+      "path": "scripts/merge_power_inductor_frequency_data.py",
+      "size_bytes": 3264,
+      "sha256": "6bebbdcc2377f7c5c0e55f5d2379e3250edc3989cfe39c851d6d85bdf7b67f6f"
+    },
+    {
+      "path": "scripts/plan_case_csv_candidates.py",
+      "size_bytes": 9777,
+      "sha256": "2cb74723944ed44ad43abba388648ddf6760d6dc769db926a73b8bdcfccc98df"
+    },
+    {
+      "path": "scripts/rank_surrogate_candidates.py",
+      "size_bytes": 9817,
+      "sha256": "5eaec4bee11238fd62a33120ddeb34f44dc395a03c76330709ef408ba08dc765"
+    },
+    {
+      "path": "scripts/record_case_preflight.py",
+      "size_bytes": 3813,
+      "sha256": "e92229bceeba82243e253bf05b1e740e7cab976a93f49dc10615eef59ef3efcc"
+    },
+    {
+      "path": "scripts/refit_linear_electric_field_concentric_cylinders_surrogate.py",
+      "size_bytes": 3876,
+      "sha256": "c3627f2e304ac3775c418a07f3b283d7d27418cb4d6f1bf8f6bdc81b071b1432"
+    },
+    {
+      "path": "scripts/run_boundary_benchmark.py",
+      "size_bytes": 4128,
+      "sha256": "e64f6724564e57cc7f15fadfeec684ed3e2c9ab74a08f078e5fb4cf10e541e63"
+    },
+    {
+      "path": "scripts/run_comsol_build_check.py",
+      "size_bytes": 9474,
+      "sha256": "f5d4a32dafb29bdb3ef780ed5aca133df22d84c10d7028ed360b5ba6f7d61b39"
+    },
+    {
+      "path": "scripts/run_controlled_repair_benchmark.py",
+      "size_bytes": 4391,
+      "sha256": "860f806f9876bb63e95319433b8c3e2323e830ad259f0758dfb170f25b29726e"
+    },
+    {
+      "path": "scripts/run_fifty_training_tasks.py",
+      "size_bytes": 8458,
+      "sha256": "9c3e712c8c3eb56f789719034ab0f0469142b109c4b21499ecb75f3db911f51e"
+    },
+    {
+      "path": "scripts/run_local_api_smoke_test.py",
+      "size_bytes": 12342,
+      "sha256": "8faef51c272827d97a2c7e88eda0d39d4552d86f522612660ae33d224658926a"
+    },
+    {
+      "path": "scripts/run_material_benchmark.py",
+      "size_bytes": 4044,
+      "sha256": "ce849aa1de16112f5cdf4d20eecbd3519b3accb8e0059109af65d8ba2760bdc9"
+    },
+    {
+      "path": "scripts/run_modeling_intent_benchmark.py",
+      "size_bytes": 3887,
+      "sha256": "15726e5ab4f8752f5d655f8f3a217667c30c50733051f861b0f208104ed7b455"
+    },
+    {
+      "path": "scripts/run_next_execution_job.py",
+      "size_bytes": 359,
+      "sha256": "d29f7a56670964f3bb66ebc7d3fc267ba46a4647621da71dbf68d2ca5bd8fbfe"
+    },
+    {
+      "path": "scripts/run_p2_end_to_end_benchmark.py",
+      "size_bytes": 11194,
+      "sha256": "2bd436d4675f47f743b6bcfc0b5f8fc777d20f2e85570b5b2bd7f5432b1af6e4"
+    },
+    {
+      "path": "scripts/run_p2_migration_acceptance.py",
+      "size_bytes": 5160,
+      "sha256": "35dc17f0f4e3363b31c2b0d3084646aff64b84f6e92978aa2b8013b77ae9d17c"
+    },
+    {
+      "path": "scripts/run_physics_benchmark.py",
+      "size_bytes": 4150,
+      "sha256": "117a1067229557a58f19cca3d1cbef6a96e58375dc8ce0377c2b10c039ff4db6"
+    },
+    {
+      "path": "scripts/run_regression_tests.py",
+      "size_bytes": 716,
+      "sha256": "f11f37a550c97f4d94b6d7199caa1584b18cf8e6d5bc495bc0a9a4540746d92f"
+    },
+    {
+      "path": "scripts/run_requirement_completeness_benchmark.py",
+      "size_bytes": 3104,
+      "sha256": "3830cab186d465674b02ce0d30049bbf359abb40625ce6de533de2578ae11fc2"
+    },
+    {
+      "path": "scripts/run_twenty_training_tasks.py",
+      "size_bytes": 5467,
+      "sha256": "cb92eb7e9be363c9be6d705339e09fd6529ee4549da94d5600ac360df1da4c9e"
+    },
+    {
+      "path": "scripts/start_local_service.py",
+      "size_bytes": 11007,
+      "sha256": "010208385d98d3efbeb69b13877fff3a0f2bff47e0a0b4cf82f6f49b5812b470"
+    },
+    {
+      "path": "scripts/train_validated_capacitor_dc_permittivity_surrogate.py",
+      "size_bytes": 3285,
+      "sha256": "1f2625f0eba8a7592e771f64d849d7b2d6c71ab070e1c27b1086ae7211b2495a"
+    },
+    {
+      "path": "scripts/train_validated_circuit_fem_resistor_surrogate.py",
+      "size_bytes": 4012,
+      "sha256": "25fbee2a38164a13dd6d7eef1a3955c7520b236163dc88d0a67f159c1baf240d"
+    },
+    {
+      "path": "scripts/train_validated_effective_diffusivity_1d_surrogate.py",
+      "size_bytes": 4068,
+      "sha256": "ecce2945ef2fbcec83fb252937a97942d0102fd6178bdd7c325bb79357c783a7"
+    },
+    {
+      "path": "scripts/train_validated_electric_field_concentric_cylinders_surrogate.py",
+      "size_bytes": 3961,
+      "sha256": "8ebb4bad7cf05c2713650a00d078a441b577c3eb8f60a90a970e92e9ca80017c"
+    },
+    {
+      "path": "scripts/train_validated_fresnel_equations_rf_surrogate.py",
+      "size_bytes": 4327,
+      "sha256": "81010bcb30f7f56d8c9c6aa1deea6e71f4a58914e997feac8ffb30eb9dd47529"
+    },
+    {
+      "path": "scripts/train_validated_gecko_foot_surrogate.py",
+      "size_bytes": 14613,
+      "sha256": "c35b6880be4dbffe48defd86e63f73e05a4b2ecb64b620c32b1705ac8233877e"
+    },
+    {
+      "path": "scripts/train_validated_heat_convection_2d_surrogate.py",
+      "size_bytes": 3524,
+      "sha256": "796a0ba3beb7c3e21d394e64b103ccece4151fd5b5d8056a1e9078ec863eca96"
+    },
+    {
+      "path": "scripts/train_validated_heat_radiation_1d_surrogate.py",
+      "size_bytes": 3849,
+      "sha256": "3708b69c33cad5678d4253ad13104532511f532d94491fea760c7c3c4b87d2f5"
+    },
+    {
+      "path": "scripts/train_validated_helmholtz_coil_surrogate.py",
+      "size_bytes": 3769,
+      "sha256": "ba8cd3633744898b778d7056ec529305ea731c5377d8f606741d4b68c09001f3"
+    },
+    {
+      "path": "scripts/train_validated_joule_surrogate.py",
+      "size_bytes": 3371,
+      "sha256": "6516dd894d452b6cb0cb83bdf8485b05e0e6e9f9a688d103e5ce1a145be72090"
+    },
+    {
+      "path": "scripts/train_validated_lid_driven_cavity_surrogate.py",
+      "size_bytes": 4990,
+      "sha256": "6febd82deba5d50c1441c3f1118f0b9fe66ef53ac6f321164b610acbf93ee325"
+    },
+    {
+      "path": "scripts/train_validated_magnetic_field_infinite_conductor_surrogate.py",
+      "size_bytes": 3817,
+      "sha256": "53b93e2a6cf8c429f43137ebb0198f360c1e46ec0639ffb35ee82876523f4d38"
+    },
+    {
+      "path": "scripts/train_validated_mast_diagonal_mounting_surrogate.py",
+      "size_bytes": 3995,
+      "sha256": "2a775cf7ff35b5ee0fb896d7e0227e80311218f83cce31f8f146c07aa56ab660"
+    },
+    {
+      "path": "scripts/train_validated_micromixer_surrogate.py",
+      "size_bytes": 4107,
+      "sha256": "3447ff77f3c0a429cef47eab2943afbedd692778a835c80dc2f907054b10a7b2"
+    },
+    {
+      "path": "scripts/train_validated_parallel_wires_force_surrogate.py",
+      "size_bytes": 3840,
+      "sha256": "b064334fda2cace5729a6cc08bdc3d3234860b0fc59fe0652e4a22cb3b346072"
+    },
+    {
+      "path": "scripts/train_validated_pn_junction_carrier_surrogate.py",
+      "size_bytes": 3698,
+      "sha256": "cdd858cb2a7c8317a32ffe4c585540865e81cc218ee519d75d96aa23cfb0ad79"
+    },
+    {
+      "path": "scripts/train_validated_pn_junction_current_density_surrogate.py",
+      "size_bytes": 3852,
+      "sha256": "459ee658131a92f1672102d7b0005ab5a38f493e1a9551ebc92beec34a3d2809"
+    },
+    {
+      "path": "scripts/train_validated_power_inductor_surrogate.py",
+      "size_bytes": 7176,
+      "sha256": "8f0fa94dd0b4d4e3b59e3eade0a85b3a5f31643dece254f3febd18027205701b"
+    },
+    {
+      "path": "scripts/train_validated_room_acoustic_mode_surrogate.py",
+      "size_bytes": 3416,
+      "sha256": "1b53b3daf60254f0cbc594668e9b3c596b70a869dea1ebacf27004f1f012432e"
+    },
+    {
+      "path": "scripts/train_validated_simple_resistor_conductivity_surrogate.py",
+      "size_bytes": 3594,
+      "sha256": "0e577c67d56c05c549f17473b691b21db446b3f24f5fbb86d0813d2d24fb07b5"
+    },
+    {
+      "path": "scripts/train_validated_tapered_cantilever_force_surrogate.py",
+      "size_bytes": 3155,
+      "sha256": "a43f7a34c719eac3553f6b8641238fd09719ea1c53db566a375dda969e58e30f"
+    },
+    {
+      "path": "scripts/train_validated_thermal_actuator_simplified_surrogate.py",
+      "size_bytes": 4086,
+      "sha256": "0f37ce978d9c51b45195246ed1087c588b297072835bb98582bc183433083b3e"
+    },
+    {
+      "path": "scripts/train_validated_thermal_actuator_surrogate.py",
+      "size_bytes": 3630,
+      "sha256": "6286593b3cfc402ab113cdbfb12ffcd658857bc466190b30d1558e26b9a18801"
+    },
+    {
+      "path": "scripts/train_validated_thermoelectric_generator_surrogate.py",
+      "size_bytes": 4085,
+      "sha256": "bc9d853e6e5a0a9b3b9eec0ff20543b3db95a3f41dc74b86a9993f6185d11d45"
+    },
+    {
+      "path": "scripts/validate_joule_training_data.py",
+      "size_bytes": 2298,
+      "sha256": "94ae7816c3d5fa93c729c08555b87b3ee94c7d4c81393251ca944865bee83355"
+    },
+    {
+      "path": "scripts/verify_locked_environment.py",
+      "size_bytes": 2387,
+      "sha256": "928aed92015dfc6522d6158b130434fc09de5761ca849e664c3a74aa441cc1cd"
+    },
+    {
+      "path": "src/comsol_small_model/__init__.py",
+      "size_bytes": 180,
+      "sha256": "23b119b5cd309d2ae1a46b3dc1428e08a5cde550a45abade40f05705a9bcb503"
+    },
+    {
+      "path": "src/comsol_small_model/acoustic_cavity_reference.py",
+      "size_bytes": 1479,
+      "sha256": "6f9b8e1d14c1f846dffdb7c1f905af0216dc01ee0f011947791bb8209c187f9f"
+    },
+    {
+      "path": "src/comsol_small_model/article_knowledge.py",
+      "size_bytes": 15063,
+      "sha256": "95ae4f2cce0f4b6479bd717899bbda53673906722e7a0420f85022e412732d83"
+    },
+    {
+      "path": "src/comsol_small_model/augmentation_retrain.py",
+      "size_bytes": 2333,
+      "sha256": "f1a143d4e471028ba9a71cbce52e93aeb89f693c99e6b694566644beabd0e12f"
+    },
+    {
+      "path": "src/comsol_small_model/boundary_knowledge.py",
+      "size_bytes": 13525,
+      "sha256": "228084fc327ab9f635b55c4741bd0e7e9dc9c3c964e86f9391139713bb1ecce3"
+    },
+    {
+      "path": "src/comsol_small_model/cantilever_reference.py",
+      "size_bytes": 1743,
+      "sha256": "e1badc3547c1383f210ad1357c0d75850055d9c55e34e331ab62f9a00100009c"
+    },
+    {
+      "path": "src/comsol_small_model/case_export_adapter.py",
+      "size_bytes": 2475,
+      "sha256": "0ebe3ccf1b51c0213ff7227e82f585d7a6113baa2d68c37335db5febfc146ff5"
+    },
+    {
+      "path": "src/comsol_small_model/case_knowledge.py",
+      "size_bytes": 68712,
+      "sha256": "39e303ee62c9c12224283c69cfa72706ee5f25fca4e463842e78db8adcfc0894"
+    },
+    {
+      "path": "src/comsol_small_model/case_memory.py",
+      "size_bytes": 46628,
+      "sha256": "0b72e99795a05b6fadb5ceffa9fffe9dcef656eda096b11d0780f6c5bf21c025"
+    },
+    {
+      "path": "src/comsol_small_model/case_sources.py",
+      "size_bytes": 5479,
+      "sha256": "6db6adc3cb07d7f3417fff90ba71caee5006df701a18c4a08a23067d77ab3fab"
+    },
+    {
+      "path": "src/comsol_small_model/cli.py",
+      "size_bytes": 11836,
+      "sha256": "c642af73ec1ca04f140989a021d70d34c691d9a5aaca653926394fc6c3a56071"
+    },
+    {
+      "path": "src/comsol_small_model/closure_audit.py",
+      "size_bytes": 3415,
+      "sha256": "6b6bf8e449bbd333c6ba06be7ac9fd7a3e3d6f919efbd3295bb6681fc6c7c5d9"
+    },
+    {
+      "path": "src/comsol_small_model/code_generator.py",
+      "size_bytes": 63964,
+      "sha256": "25815b54ef9d8345ca74f6b9e1b90dd775955a9520f6ce5394d4ca0c4a116996"
+    },
+    {
+      "path": "src/comsol_small_model/code_workspace.py",
+      "size_bytes": 9758,
+      "sha256": "ccb9b4eee35fd6aec678e9266a1f7e1f4fc1b2815dc229e8b9df0d471fce91ad"
+    },
+    {
+      "path": "src/comsol_small_model/comsol_3d_preview.py",
+      "size_bytes": 5688,
+      "sha256": "e3bb0f91224cee63e881bdc24d3b071cfa29afc6030ca637a9436b0f79bb88a4"
+    },
+    {
+      "path": "src/comsol_small_model/comsol_knowledge.py",
+      "size_bytes": 14066,
+      "sha256": "78d9c7871c93de1131db5b3e32643e1ed39f33a81b72162c95c464fa291d3f96"
+    },
+    {
+      "path": "src/comsol_small_model/comsol_preview.py",
+      "size_bytes": 4776,
+      "sha256": "11f980743d91b1ed1921a06d2a4f7a1e8d7c159414b079ab868f3781e3fa575d"
+    },
+    {
+      "path": "src/comsol_small_model/comsol_server.py",
+      "size_bytes": 4954,
+      "sha256": "1789fedb8d6b831b9d9e521bfb0a1960de5c62eb29a037dcb68a5bb25c2add00"
+    },
+    {
+      "path": "src/comsol_small_model/constraints.py",
+      "size_bytes": 3099,
+      "sha256": "2d21c8ce79112953ff64c2df9b077c4ed57af73cb2c510d8ece5e99b6ae1e4ff"
+    },
+    {
+      "path": "src/comsol_small_model/coupled_physics_knowledge.py",
+      "size_bytes": 8616,
+      "sha256": "0419c8c6f685ae3b7192d5d0b0b0aba8aa45fe1420272e80363f8340ccfca375"
+    },
+    {
+      "path": "src/comsol_small_model/dataset_contract.py",
+      "size_bytes": 2821,
+      "sha256": "d366687bfde7d7049f1a4832c2d52c9d3a6a1237f50910bf87d131139418b9a2"
+    },
+    {
+      "path": "src/comsol_small_model/electrochemistry_reference.py",
+      "size_bytes": 2150,
+      "sha256": "60550ffa7f30bfb93811f474cacb6351b5db8574df2a603d7bb511a930c2d3c1"
+    },
+    {
+      "path": "src/comsol_small_model/execution_diagnostics.py",
+      "size_bytes": 5061,
+      "sha256": "ef106b1c219c5f1d0fb7ec9277aef58021a5b1425fd4cd2e54b96883c41f6ee0"
+    },
+    {
+      "path": "src/comsol_small_model/execution_jobs.py",
+      "size_bytes": 62096,
+      "sha256": "0c99b50372c6b71f98d22ec8e6bc4dd028055e5726de0536e823ce70fc42a507"
+    },
+    {
+      "path": "src/comsol_small_model/execution_pipeline.py",
+      "size_bytes": 6340,
+      "sha256": "70c70ef96afe252fe8ef21f7ace9f1a14265f01d3c3b661862995bbf2a28f2c0"
+    },
+    {
+      "path": "src/comsol_small_model/experimental_validation.py",
+      "size_bytes": 11455,
+      "sha256": "e5cba9283c73bf295089ed269f3dfde14297c2d97a16e1a47dc571de4ed0947b"
+    },
+    {
+      "path": "src/comsol_small_model/file_reader.py",
+      "size_bytes": 34325,
+      "sha256": "5b69ffffd6eab7bf6217ab8f143703a85e6d9dce29fd4a7178601d8c7584088f"
+    },
+    {
+      "path": "src/comsol_small_model/flow_heat_reference.py",
+      "size_bytes": 2251,
+      "sha256": "42eef957af0af9de668f2e9f6b3172b9608cdac62cd18ca445ad82ad3fd638ab"
+    },
+    {
+      "path": "src/comsol_small_model/fluid_reference.py",
+      "size_bytes": 2261,
+      "sha256": "13641b525f7b22725bbd5e901aa3d8e7fe2d185e1787c8fcaa8a72590840e9a9"
+    },
+    {
+      "path": "src/comsol_small_model/geometry_parameter_knowledge.py",
+      "size_bytes": 12278,
+      "sha256": "b8c2492134c78e34d64baf37553025b5b0b5fd27d31b2fb01735c77bbb9bc126"
+    },
+    {
+      "path": "src/comsol_small_model/holdout_independence.py",
+      "size_bytes": 2736,
+      "sha256": "727eb1906aacf2306ce44731bcd0740280547db1df31bc02f91b3b979cacb4f8"
+    },
+    {
+      "path": "src/comsol_small_model/instruction_agent.py",
+      "size_bytes": 38603,
+      "sha256": "a8ee2cfc845e9b085f0a474634e877fbb1264355e138578d43683b06723f4354"
+    },
+    {
+      "path": "src/comsol_small_model/knowledge_bridge.py",
+      "size_bytes": 9116,
+      "sha256": "43c3219ac28a307b39a8d205335bdcd236ff8fa0fb998ba758673f2e493708f9"
+    },
+    {
+      "path": "src/comsol_small_model/livelink_builder.py",
+      "size_bytes": 30025,
+      "sha256": "b26fca2e6f00eca621d61f89981c4f66761bdc55ce753fde9c3ee6eaffa1f8a8"
+    },
+    {
+      "path": "src/comsol_small_model/material_property_knowledge.py",
+      "size_bytes": 16328,
+      "sha256": "226c1c5e904a4c05b75c757d9d1cc847ab734942ee9263ee6dc4103f54cef96e"
+    },
+    {
+      "path": "src/comsol_small_model/matlab_reader.py",
+      "size_bytes": 1460,
+      "sha256": "c3ebd0eece1d913402eb1f85ee48086d16d389f1ae5369a55d4635fa5005b49b"
+    },
+    {
+      "path": "src/comsol_small_model/mesh_convergence.py",
+      "size_bytes": 2198,
+      "sha256": "12082d8b6c2a9a8c01d184d78345bc014cc8238e46b5958b860fadfdff0c7b8b"
+    },
+    {
+      "path": "src/comsol_small_model/mesh_knowledge.py",
+      "size_bytes": 2268,
+      "sha256": "e48322364644dca05591c6df72a0e36713ef5cc890036a0db381024985e5d769"
+    },
+    {
+      "path": "src/comsol_small_model/modeling_contract.py",
+      "size_bytes": 17999,
+      "sha256": "8affa5a7f5127399a89d5475b9f5e083355e09fd28f5108f6f895e35b7f12389"
+    },
+    {
+      "path": "src/comsol_small_model/modeling_readiness.py",
+      "size_bytes": 2061,
+      "sha256": "07c199beda78225f9b27234b65c4159eb81640332825658d1ed6f147ba912ed1"
+    },
+    {
+      "path": "src/comsol_small_model/parameter_coverage.py",
+      "size_bytes": 2141,
+      "sha256": "8b79fee457e1ea3447e897e546fe6b0307d81abf501f4ab8e0b7825b8e8b269c"
+    },
+    {
+      "path": "src/comsol_small_model/particle_reference.py",
+      "size_bytes": 1906,
+      "sha256": "05004adbc0c3413ea89bcf8685ca63ac24a7a0cb48d487bed345953ecd6f1159"
+    },
+    {
+      "path": "src/comsol_small_model/physics_selection.py",
+      "size_bytes": 11831,
+      "sha256": "42622764e070781b1b6af2665de1b4be99a3821a9ffdb04239a3dfff599dc241"
+    },
+    {
+      "path": "src/comsol_small_model/physics_validation.py",
+      "size_bytes": 8023,
+      "sha256": "bf8c9b99e3e1a74dedf520780f8424400fda2d2a6e0aee82418f65ad42353193"
+    },
+    {
+      "path": "src/comsol_small_model/reference_artifacts.py",
+      "size_bytes": 1653,
+      "sha256": "9711cb1b7879c7e4ffbd958c57a2e254b1a815aba2b821bf75b80af3ae14c3f7"
+    },
+    {
+      "path": "src/comsol_small_model/reference_checks.py",
+      "size_bytes": 3492,
+      "sha256": "6e269aee5a978eb30094987a00f0e6320636328719221e884ceb886d522bd9ed"
+    },
+    {
+      "path": "src/comsol_small_model/reference_comparison.py",
+      "size_bytes": 3858,
+      "sha256": "49529e3e8d057d15d229e8493c392b4648119624ad62ebdc475c43d9e022aca4"
+    },
+    {
+      "path": "src/comsol_small_model/reference_metadata.py",
+      "size_bytes": 1460,
+      "sha256": "2c8f727853a1177d8b1cc027e3f92fbeac83e69cf704f20e88c81ff513847d32"
+    },
+    {
+      "path": "src/comsol_small_model/remote_assistant.py",
+      "size_bytes": 16993,
+      "sha256": "485f02963e47b3e34b736f06ccb27f05f8838025aa6a8737a94452e43e65c8ca"
+    },
+    {
+      "path": "src/comsol_small_model/repair_policy.py",
+      "size_bytes": 2163,
+      "sha256": "86ebcaa1f0a553ad75f7e252b0e84ea63136a12189a6bed86ed19189a7256242"
+    },
+    {
+      "path": "src/comsol_small_model/requirement_conflicts.py",
+      "size_bytes": 2268,
+      "sha256": "118dec9f60c17bdaaea2988a3b600e29f309700d5d9251c5fe6087633886a453"
+    },
+    {
+      "path": "src/comsol_small_model/requirement_parser.py",
+      "size_bytes": 22697,
+      "sha256": "c6359c0e1cf02d7e13192fad267529336c1d5743d2fd9679891f0516071e3910"
+    },
+    {
+      "path": "src/comsol_small_model/result_knowledge.py",
+      "size_bytes": 1724,
+      "sha256": "cfc8db1531018628fd82f13c27b3b01beb9f3db710d4ff09f44d395613b40624"
+    },
+    {
+      "path": "src/comsol_small_model/result_validation.py",
+      "size_bytes": 7574,
+      "sha256": "35135726919bf48791fbe57a54861c9c0b235f8aa6a0b1b2c658b9443d93378f"
+    },
+    {
+      "path": "src/comsol_small_model/rf_reference.py",
+      "size_bytes": 1521,
+      "sha256": "bf97ba12190d21f9a528eab283ec8b0ecb6afe333287e2b784b18526e2856690"
+    },
+    {
+      "path": "src/comsol_small_model/solver_knowledge.py",
+      "size_bytes": 1839,
+      "sha256": "b79799cf4752e289e78ed838634277e31b4bc8aa71da76625567c80638a9a3f4"
+    },
+    {
+      "path": "src/comsol_small_model/staged_modeling.py",
+      "size_bytes": 47365,
+      "sha256": "0efd98d83870c3f73f02e08d4e0e594396722cefcb28355609fd2f40642e88aa"
+    },
+    {
+      "path": "src/comsol_small_model/static_model_audit.py",
+      "size_bytes": 6094,
+      "sha256": "476c377896d1ff93665a48cd68e709821588c723327818616a3612d765d04f11"
+    },
+    {
+      "path": "src/comsol_small_model/surrogate.py",
+      "size_bytes": 23642,
+      "sha256": "6aa650aa9217094566fffbb6b551a092dbe30c39ef2de7e1de807f21f5a52fe9"
+    },
+    {
+      "path": "src/comsol_small_model/surrogate_model_card.py",
+      "size_bytes": 13985,
+      "sha256": "4562877a0386c334d987e6f24cd29d510b6c18b4735b83ae0eeebc580077ff0a"
+    },
+    {
+      "path": "src/comsol_small_model/surrogate_runtime.py",
+      "size_bytes": 35108,
+      "sha256": "87eb0416f482bed7111a25a1fba20b328e7a159f4590f85c3f480877bbf467f0"
+    },
+    {
+      "path": "src/comsol_small_model/surrogate_runtime_audit.py",
+      "size_bytes": 11693,
+      "sha256": "99d27f34731c92677e16da6bbb9ad80740c159f83737040b03dcd6b6463408e0"
+    },
+    {
+      "path": "src/comsol_small_model/surrogate_validation.py",
+      "size_bytes": 5394,
+      "sha256": "b947d06d8806a0723cfaaf69b7ade542a3c934a2ddd948ccba33bf8a7f020c19"
+    },
+    {
+      "path": "src/comsol_small_model/template_parameters.py",
+      "size_bytes": 6073,
+      "sha256": "67124be08fcd4904ce4b29493718cbd20085965fe3358d9fb4c9c86a0e48c794"
+    },
+    {
+      "path": "src/comsol_small_model/thermal_sweep.py",
+      "size_bytes": 4714,
+      "sha256": "17e164e6c0ebd4f9cbfec5d4bdc6462ba444ae76a33bbfcdfd994c6a3a68d109"
+    },
+    {
+      "path": "src/comsol_small_model/thermoacoustic_reference.py",
+      "size_bytes": 2352,
+      "sha256": "a124e174128511289f8368300775a10d2332d9cbe1341efbab4e8541fac3b0c5"
+    },
+    {
+      "path": "src/comsol_small_model/training_roadmap.py",
+      "size_bytes": 7491,
+      "sha256": "8221d1186e680046a6816c9b1b9805c694469369436706a74dde5c0286dcedbb"
+    },
+    {
+      "path": "src/comsol_small_model/validated_templates.py",
+      "size_bytes": 1526,
+      "sha256": "9cdc0c154b8ade4cd87e4a95adc9f7db8a81eafefda0ec3b66baeaa6eb7767b3"
+    },
+    {
+      "path": "src/comsol_small_model/validation_design.py",
+      "size_bytes": 7288,
+      "sha256": "5ec5f5dbe20b8020e78ce0bd621f938cb6e20fb74cf7fe67195ba4778b014449"
+    },
+    {
+      "path": "src/comsol_small_model/work_feedback.py",
+      "size_bytes": 13419,
+      "sha256": "4339f79687116ef42a1e80d05a3f973916bfcebd6f74620d66bbce12cf058b5c"
+    },
+    {
+      "path": "src/comsol_small_model/workchain_package.py",
+      "size_bytes": 9616,
+      "sha256": "ddee326c45641e79609832e36e4ce0f126398704dece7c535623ce012ace563a"
+    },
+    {
+      "path": "src/comsol_small_model/workflow_status.py",
+      "size_bytes": 1585,
+      "sha256": "35655e826090b3528ed6d73f72ca7e085595182d6e7a4ca94c46a9dbd4413d9e"
+    },
+    {
+      "path": "start_local_8880.bat",
+      "size_bytes": 862,
+      "sha256": "b79e91b82a5658037fc4ea9267fa00c7af00d08f777fa8b595da99cf8587a349"
+    },
+    {
+      "path": "start_network.bat",
+      "size_bytes": 687,
+      "sha256": "9b905d0bd167c8fe77a431bdac939f7f4b4c6335bd685a15eeb55b6ba73dca6c"
+    },
+    {
+      "path": "start_p2_release.bat",
+      "size_bytes": 495,
+      "sha256": "95ada62c826f164b6f9aad4fb5a72ae92a0704e7d3993c0f6fdebb524d7a6507"
+    },
+    {
+      "path": "start_windows.bat",
+      "size_bytes": 862,
+      "sha256": "b79e91b82a5658037fc4ea9267fa00c7af00d08f777fa8b595da99cf8587a349"
+    },
+    {
+      "path": "template_catalog.json",
+      "size_bytes": 10021,
+      "sha256": "ea4b596f6814ad83e39de63ba237c72ef1f4baf4b54637dfa2ed6bb0bfc330e6"
+    },
+    {
+      "path": "tests/test_candidate_ranking.py",
+      "size_bytes": 5989,
+      "sha256": "406101cf3001b1f6a7fcc01d140252314f0321e93f5b6add03bbdc9953c57dd7"
+    },
+    {
+      "path": "tests/test_chat_routing.py",
+      "size_bytes": 794,
+      "sha256": "0158acd2ca04b8be106e75bad9841fe1edbcaef38f09737e7f4fe416f5956c7a"
+    },
+    {
+      "path": "tests/test_comsol_3d_preview.py",
+      "size_bytes": 2193,
+      "sha256": "1918f988806087ca51bed76eca57c41fdbfdb10b77944d5bb588e3e5f911cfb3"
+    },
+    {
+      "path": "tests/test_comsol_preview.py",
+      "size_bytes": 2319,
+      "sha256": "9485a0ad2ab9f1c8b3db73e6b1ddcef831f98968c0b890ef4b0e0078c04c7c2f"
+    },
+    {
+      "path": "tests/test_comsol_server.py",
+      "size_bytes": 2873,
+      "sha256": "482197f2656d27763f935fe6aca37f7463156b81f92dc9596419aedf732938b0"
+    },
+    {
+      "path": "tests/test_csv_candidate_planning.py",
+      "size_bytes": 2373,
+      "sha256": "a93dc8eb0107409c9dd7791d3a0ad15f75c236a2a7974a15d85b8b941b2bb636"
+    },
+    {
+      "path": "tests/test_eda_design_problem.py",
+      "size_bytes": 1552,
+      "sha256": "cdac13b2519cd8f1e1375a58af041e5b571688864738f109a2d01c68476be6f5"
+    },
+    {
+      "path": "tests/test_experimental_validation.py",
+      "size_bytes": 6261,
+      "sha256": "dd60e7d73f0e282a1531c6b3d66bb2d0447185e72a88cf8dbfb4f8d6a1f3245c"
+    },
+    {
+      "path": "tests/test_modeling_contract.py",
+      "size_bytes": 9910,
+      "sha256": "bac627ad3cac5c68673f4ec5cb48a9db1991bf2a6077fffa2561ca5f1549bd72"
+    },
+    {
+      "path": "tests/test_p1_modeling_pipeline.py",
+      "size_bytes": 6725,
+      "sha256": "aed6bdfd48f78e0bbb8693528156b9956c2690462e30e2f8c0222aa176e67434"
+    },
+    {
+      "path": "tests/test_p2_release.py",
+      "size_bytes": 3918,
+      "sha256": "b8477e7210b5bdbdf37210e97fbe2d9ab5d80f4ce0cb4e13020956b4326e0957"
+    },
+    {
+      "path": "tests/test_performance_evidence.py",
+      "size_bytes": 3992,
+      "sha256": "254cd8f9adc38b49913613207aa17f8699c7e8bb819bf61141a42faf33e00bc2"
+    },
+    {
+      "path": "tests/test_power_inductor_data.py",
+      "size_bytes": 2491,
+      "sha256": "43538f240d6ef3d14bb38f7f878c6228f5865be16ff9b27b240d175be5b71dc5"
+    },
+    {
+      "path": "tests/test_prediction_quality.py",
+      "size_bytes": 5100,
+      "sha256": "d446fc14e3690aaf3b7c481d6b25498260bbbc252cb50fe9ef5740737e29ae1c"
+    },
+    {
+      "path": "tests/test_remote_assistant.py",
+      "size_bytes": 5595,
+      "sha256": "4e5b20419dcd1cf9832e897555f225ed904c5bf201e66ef20ee714526ed1af65"
+    },
+    {
+      "path": "tests/test_start_local_service.py",
+      "size_bytes": 2750,
+      "sha256": "2d1391e3b98b28ab86eb051850ec332c563756fe3489aef559503e7776490c05"
+    },
+    {
+      "path": "tests/test_surrogate_registry_lifecycle.py",
+      "size_bytes": 7619,
+      "sha256": "2f518f35f5f320a2b81782cd7f79b3019d0dde80769c64ec1426c4cfc41a746a"
+    },
+    {
+      "path": "tests/test_surrogate_runtime_audit.py",
+      "size_bytes": 3357,
+      "sha256": "722abb386cf8c5aff9897d0963ffd87efe83788eff10010c990f56ea90bf19c1"
+    },
+    {
+      "path": "tests/test_training_regressions.py",
+      "size_bytes": 39950,
+      "sha256": "87ce058c76aaebedb78ec9647cbf57778149b50b353944d8018c5c55057679c0"
+    },
+    {
+      "path": "training_dataset_manifest.schema.json",
+      "size_bytes": 1397,
+      "sha256": "ecae0b893b283c545516b58150363ee85db5aeada1295eb10533b7ffdbce5175"
+    },
+    {
+      "path": "training_program.json",
+      "size_bytes": 8182,
+      "sha256": "4b8a6395409af5e46fa2af25b834572abe7f678da83509c14dd51a27b729d065"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 396010,
+      "sha256": "e02b62c5a42d621cec02c2b76f05e62f8e49c8e093f6c8f7eb60dc1d1ca0166f"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+expressions,locations,values,status
+ec.Qh,domain,3.22864839296184,"ok"
+ht.Q,domain,3.22864839296184,"ok"
+emh1.Qh,domain,NaN,"mphnumerical (0): Java exception occurred: 
+Exception:
+	com.comsol.util.exceptions.FlException: 无法计算表达式。
+Messages:
+	未定义变量。
+	- 变量: emh1.Qh
+	- 几何: geom1
+	- 域: 1
+
+	无法计算表达式。
+	- 表达式: emh1.Qh
+	- 特征: 体积分 1"
+emh1.Q,domain,3.22864839296184,"ok"
+ht.Qext,domain,NaN,"mphnumerical (0): Java exception occurred: 
+Exception:
+	com.comsol.util.exceptions.FlException: 无法计算表达式。
+Messages:
+	未定义变量。
+	- 变量: ht.Qext
+	- 几何: geom1
+	- 域: 1
+
+	无法计算表达式。
+	- 表达式: ht.Qext
+	- 特征: 体积分 1"

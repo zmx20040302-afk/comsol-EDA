@@ -1,0 +1,173 @@
+{
+  "schema": "comsol-p7-multicase-release-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T10:24:25.968388+00:00",
+  "p7_completed": true,
+  "passed_main_cases": 4,
+  "physics_families": 4,
+  "passed_extension_cases": 1,
+  "claim_boundary": "P7 demonstrates a repeatable evidence and validation contract across several EDA physics families. Only the busbar case is a fresh current-project COMSOL closed loop; the other cases use preserved independent COMSOL holdouts and are reported as historical evidence. P6 external experiment and human-baseline gates remain separate.",
+  "large_mph_and_logs_excluded": true,
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 29494,
+      "sha256": "5074153f8ab44842bb08e4563b717d354bdef4d771f87433623244a0a897e6fb"
+    },
+    {
+      "path": "P7_COMPLETION_REPORT.md",
+      "size_bytes": 3616,
+      "sha256": "0190e40af2c922843a8e8ba91959966a1284c577c33b3dfe06129e8ae0150d0a"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 37825,
+      "sha256": "88dd50b085c16ed2a804fc11fa81117284ac9695b830189a279ff6691470be01"
+    },
+    {
+      "path": "configs/p7_eda_multicase_benchmark.json",
+      "size_bytes": 4377,
+      "sha256": "cebf2cf396ce67eb805d08d8eaa9ee31c200146af385e1007e7d31634854b38b"
+    },
+    {
+      "path": "generated/models/capacitor_dc_permittivity_surrogate.holdout_validation.json",
+      "size_bytes": 1080,
+      "sha256": "23de8c3e2977115d8553658f328ad54a5c3a276585520368991efdb3b4b0b279"
+    },
+    {
+      "path": "generated/models/capacitor_dc_permittivity_surrogate.joblib",
+      "size_bytes": 1392,
+      "sha256": "469c061d4e9d30e1fa332d2f01a7512dd40ce4aa0555166b97e11e7a8900c224"
+    },
+    {
+      "path": "generated/models/circuit_fem_resistor_multioutput_surrogate.holdout_validation.json",
+      "size_bytes": 3844,
+      "sha256": "88a516cc212c93fa5bb1acaf36bba22155098ea8398a7b6408f8a11f032ed315"
+    },
+    {
+      "path": "generated/models/circuit_fem_resistor_multioutput_surrogate.joblib",
+      "size_bytes": 35307,
+      "sha256": "28d849ea02e76080762d52eb6156bd7cb7d95cbdd2d214148df393d669c1f52e"
+    },
+    {
+      "path": "generated/models/power_inductor_frequency_dense_surrogate.holdout_validation.json",
+      "size_bytes": 3376,
+      "sha256": "5a044189b7d15337f671c27ed295644affdc02edf3ec1606231405b72ae63225"
+    },
+    {
+      "path": "generated/models/power_inductor_frequency_dense_surrogate.joblib",
+      "size_bytes": 1872,
+      "sha256": "cb4d0e670fdb21e62a1afbe72d1acd428e6e7233a9f3cbb314a57ed23f4856ec"
+    },
+    {
+      "path": "generated/models/thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+      "size_bytes": 4705,
+      "sha256": "ca6ae698d110c328e9abcf9bc80651583e221d99b823bf6a20950e1a2e3f700b"
+    },
+    {
+      "path": "generated/models/thermal_actuator_simplified_multioutput_surrogate.joblib",
+      "size_bytes": 3075,
+      "sha256": "4a4d22aa7cd9965a98eaf822170973de8dc4cc869041c7072d47f0b6677cd7f2"
+    },
+    {
+      "path": "generated/p4/p4_training_220.csv",
+      "size_bytes": 107550,
+      "sha256": "2b8025afde44e9629baf6a81055fa398c43bbd085fa31697809ff06db7cbbfdb"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_inputs.csv",
+      "size_bytes": 13938,
+      "sha256": "8779cd139d2d06af4495056b82fa19d28b6c7ccc6c257295b382b74cf63edc3d"
+    },
+    {
+      "path": "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+      "size_bytes": 3268,
+      "sha256": "facda0e1bf31d1e44755dedaed9c3aa67743fa3aae7e26cf12ffbdcc60629ded"
+    },
+    {
+      "path": "generated/p7/p7_eda_multicase_report.json",
+      "size_bytes": 14468,
+      "sha256": "3934bbe4ea9bd0aca487bcb5a2b67ab5058cc4fb5a506a22f85eb4d2f7624240"
+    },
+    {
+      "path": "generated/training_runs/capacitor_dc_permittivity_holdout.csv",
+      "size_bytes": 89,
+      "sha256": "50677e39980b2b70052e642b809600c36de54d474a87a8e04113e964070430fe"
+    },
+    {
+      "path": "generated/training_runs/capacitor_dc_permittivity_training.csv",
+      "size_bytes": 161,
+      "sha256": "147248ae6a496eac26b4758b7694e577e6fb04f7b23e4a69cf54a299662932cd"
+    },
+    {
+      "path": "generated/training_runs/circuit_fem_resistor_holdout.csv",
+      "size_bytes": 136,
+      "sha256": "1d4e79db9fe13e6feb6d0dd461e7c2f4f9262d97e4baa1b7aa59a8812322e907"
+    },
+    {
+      "path": "generated/training_runs/circuit_fem_resistor_training.csv",
+      "size_bytes": 255,
+      "sha256": "0b93597a170bf2e66d1edd0752898d1c8aecf52f97d9154a1bc70c1d3a5a6c50"
+    },
+    {
+      "path": "generated/training_runs/power_inductor_frequency_holdout_dense.csv",
+      "size_bytes": 563,
+      "sha256": "8a20b741df3d222a6305f3b72dd2a63f802026bf380ba2f34687550da5843a07"
+    },
+    {
+      "path": "generated/training_runs/power_inductor_frequency_training_dense.csv",
+      "size_bytes": 613,
+      "sha256": "7d3953da6c64c301cdf7aa36fe67ee3b65200ae4e14d0a51fbdd9b4f456b1397"
+    },
+    {
+      "path": "generated/training_runs/thermal_actuator_simplified_holdout.csv",
+      "size_bytes": 350,
+      "sha256": "8789fb18da27e42eef4da21c2e35507c5edd301fe61293de2ab19533f8e2c825"
+    },
+    {
+      "path": "generated/training_runs/thermal_actuator_simplified_training.csv",
+      "size_bytes": 700,
+      "sha256": "f5699fad8560a804e25451040ea7cf8ca7e863955ae9820773ba6292e09129ac"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 103316,
+      "sha256": "b7465f16dafc36ff14c16675fa8da6fb5e794400bac9b60e40833e6b42dc1345"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 327892,
+      "sha256": "a3ad007175ad52c81407a7a1c27c67b9b70459ea3ceadac821694bd8b2649a95"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf",
+      "size_bytes": 891581,
+      "sha256": "96b77a6dccd6d981b3d8cd7f9dde727d6809d8b9776d272459b1314a696ae2dd"
+    },
+    {
+      "path": "scripts/build_p7_release_package.py",
+      "size_bytes": 4675,
+      "sha256": "40b5d700eb33ab1e6401f37f034a2fc789d893e62d1fe5b8c95d55b9b4e1939f"
+    },
+    {
+      "path": "scripts/run_p7_eda_multicase_benchmark.py",
+      "size_bytes": 1389,
+      "sha256": "64737b5d3ff4c506325b55f52021a5dbff12e80dddaf866720495941b3b9bf3a"
+    },
+    {
+      "path": "src/comsol_small_model/p7_eda_multicase.py",
+      "size_bytes": 10354,
+      "sha256": "11acf19ac4d611856b9a9e4156cec011bc70b10e06ff49d32f186524efacf4c4"
+    },
+    {
+      "path": "tests/test_p7_eda_multicase.py",
+      "size_bytes": 3154,
+      "sha256": "e135da0308e23f4a40dd3985859d6c55ef5dba48db2eadea7377be5e5a9d9162"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 424224,
+      "sha256": "280d1238e0575f8034ff7337d14206a61110cc13435fdb14274a3d3b21e97f56"
+    }
+  ]
+}

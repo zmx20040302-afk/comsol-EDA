@@ -1,0 +1,41 @@
+{
+  "schema": "comsol-requirement-completeness-benchmark",
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {"id": "heat_complete", "requirement": "建立一维铜棒稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K，输出最高温度和热流", "expected_missing_categories": []},
+    {"id": "heat_missing_geometry", "requirement": "建立铜棒稳态传热模型，左端固定温度300 K，右端固定温度350 K，输出最高温度", "expected_missing_categories": ["geometry"]},
+    {"id": "heat_missing_material", "requirement": "建立一维稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K，输出最高温度", "expected_missing_categories": ["materials"]},
+    {"id": "heat_missing_boundary", "requirement": "建立一维铜棒稳态传热模型，长度100 mm，输出最高温度", "expected_missing_categories": ["boundary_conditions"]},
+    {"id": "heat_missing_output", "requirement": "建立一维铜棒稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K", "expected_missing_categories": ["outputs"]},
+
+    {"id": "electric_complete", "requirement": "建立一维铜导线稳态电流模型，长度200 mm，一端端子电流10 A，另一端接地，输出电压和电流密度", "expected_missing_categories": []},
+    {"id": "electric_missing_geometry", "requirement": "建立铜导线稳态电流模型，一端端子电流10 A，另一端接地，输出电压", "expected_missing_categories": ["geometry"]},
+    {"id": "electric_missing_material", "requirement": "建立一维稳态电流模型，长度200 mm，一端端子电流10 A，另一端接地，输出电压", "expected_missing_categories": ["materials"]},
+    {"id": "electric_missing_boundary", "requirement": "建立一维铜导线稳态电流模型，长度200 mm，输出电流密度", "expected_missing_categories": ["boundary_conditions"]},
+    {"id": "electric_missing_output", "requirement": "建立一维铜导线稳态电流模型，长度200 mm，一端端子电流10 A，另一端接地", "expected_missing_categories": ["outputs"]},
+
+    {"id": "joule_complete", "requirement": "建立三维铜母排稳态焦耳热模型，长度100 mm，宽度50 mm，厚度5 mm，端子电流160 A，另一端接地，表面对流，输出最高温度和电流密度", "expected_missing_categories": []},
+    {"id": "joule_missing_geometry", "requirement": "建立铜母排稳态焦耳热模型，端子电流160 A，另一端接地，表面对流，输出最高温度", "expected_missing_categories": ["geometry"]},
+    {"id": "joule_missing_material", "requirement": "建立三维母排稳态焦耳热模型，长度100 mm，宽度50 mm，厚度5 mm，端子电流160 A，另一端接地，表面对流，输出最高温度", "expected_missing_categories": ["materials"]},
+    {"id": "joule_missing_boundary", "requirement": "建立三维铜母排稳态焦耳热模型，长度100 mm，宽度50 mm，厚度5 mm，输出最高温度和电流密度", "expected_missing_categories": ["boundary_conditions"]},
+    {"id": "joule_missing_output", "requirement": "建立三维铜母排稳态焦耳热模型，长度100 mm，宽度50 mm，厚度5 mm，端子电流160 A，另一端接地，表面对流", "expected_missing_categories": ["outputs"]},
+
+    {"id": "structural_missing_material", "requirement": "建立二维矩形板稳态固体力学模型，长度100 mm，宽度20 mm，左端固定约束，右端载荷100 N，输出最大位移", "expected_missing_categories": ["materials"]},
+    {"id": "structural_missing_geometry", "requirement": "建立固体力学模型，左端固定约束，右端载荷100 N，输出最大位移", "expected_missing_categories": ["geometry"]},
+    {"id": "structural_missing_boundary", "requirement": "建立二维结构模型，长度100 mm，宽度20 mm，材料弹性响应，输出最大位移和应力", "expected_missing_categories": ["boundary_conditions", "materials"]},
+    {"id": "structural_missing_output", "requirement": "建立二维结构模型，长度100 mm，宽度20 mm，左端固定约束，右端载荷100 N", "expected_missing_categories": ["outputs", "materials"]},
+    {"id": "structural_unit_missing", "requirement": "建立二维结构模型，长度100，宽度20，左端固定约束，右端载荷100，输出最大位移", "expected_missing_categories": ["units", "geometry", "materials"]},
+
+    {"id": "flow_missing_material", "requirement": "建立二维层流通道稳态模型，长度100 mm，入口速度1 m/s，出口压力0 Pa，壁面无滑移，输出压降和速度", "expected_missing_categories": ["materials"]},
+    {"id": "flow_missing_geometry", "requirement": "建立层流模型，入口速度1 m/s，出口压力0 Pa，输出压降", "expected_missing_categories": ["geometry", "materials"]},
+    {"id": "flow_missing_boundary", "requirement": "建立二维空气层流模型，长度100 mm，输出压力和速度", "expected_missing_categories": ["boundary_conditions"]},
+    {"id": "flow_missing_output", "requirement": "建立二维空气层流模型，长度100 mm，入口速度1 m/s，出口压力0 Pa，壁面无滑移", "expected_missing_categories": ["outputs"]},
+    {"id": "flow_unit_missing", "requirement": "建立二维空气层流模型，长度100，入口速度1，出口压力0，输出速度", "expected_missing_categories": ["units", "geometry"]},
+
+    {"id": "acoustic_missing_material", "requirement": "建立一维开口管特征频率声学模型，长度1 m，两端压力释放，输出特征频率和声压", "expected_missing_categories": ["materials"]},
+    {"id": "acoustic_missing_geometry", "requirement": "建立压力声学特征频率模型，两端压力释放，输出特征频率", "expected_missing_categories": ["geometry", "materials"]},
+    {"id": "acoustic_missing_boundary", "requirement": "建立一维空气声学模型，长度1 m，特征频率研究，输出声压和频率", "expected_missing_categories": ["boundary_conditions"]},
+    {"id": "acoustic_missing_output", "requirement": "建立一维空气声学模型，长度1 m，两端压力释放，特征频率研究", "expected_missing_categories": ["outputs"]},
+    {"id": "unknown_physics", "requirement": "自动建立一个二维模型，长度100 mm，材料为铜，输出结果", "expected_missing_categories": ["physics", "boundary_conditions"]}
+  ]
+}

@@ -1,0 +1,882 @@
+{
+  "generated_at": "2026-10-13T15:09:24.762380+08:00",
+  "methods": {
+    "existing_selector": {
+      "task_count": 24,
+      "selection_exact": 21,
+      "selection_accuracy": 0.875,
+      "selection_wilson95": [
+        0.69,
+        0.9566
+      ],
+      "study_exact": 24,
+      "study_accuracy": 1.0,
+      "study_wilson95": [
+        0.862,
+        1.0
+      ],
+      "gate_correct": 19,
+      "gate_accuracy": 0.7917,
+      "gate_wilson95": [
+        0.5953,
+        0.9076
+      ],
+      "false_safe_count": 2,
+      "false_safe_rate": 0.125,
+      "false_block_count": 3,
+      "false_block_rate": 0.375
+    },
+    "dependency_v10": {
+      "task_count": 24,
+      "selection_exact": 22,
+      "selection_accuracy": 0.9167,
+      "selection_wilson95": [
+        0.7415,
+        0.9768
+      ],
+      "study_exact": 24,
+      "study_accuracy": 1.0,
+      "study_wilson95": [
+        0.862,
+        1.0
+      ],
+      "gate_correct": 16,
+      "gate_accuracy": 0.6667,
+      "gate_wilson95": [
+        0.4671,
+        0.8203
+      ],
+      "false_safe_count": 8,
+      "false_safe_rate": 0.5,
+      "false_block_count": 0,
+      "false_block_rate": 0.0
+    },
+    "contract_dependency_v11": {
+      "task_count": 24,
+      "selection_exact": 22,
+      "selection_accuracy": 0.9167,
+      "selection_wilson95": [
+        0.7415,
+        0.9768
+      ],
+      "study_exact": 24,
+      "study_accuracy": 1.0,
+      "study_wilson95": [
+        0.862,
+        1.0
+      ],
+      "gate_correct": 24,
+      "gate_accuracy": 1.0,
+      "gate_wilson95": [
+        0.862,
+        1.0
+      ],
+      "false_safe_count": 0,
+      "false_safe_rate": 0.0,
+      "false_block_count": 0,
+      "false_block_rate": 0.0
+    },
+    "no_safety_gate": {
+      "task_count": 24,
+      "selection_exact": 22,
+      "selection_accuracy": 0.9167,
+      "selection_wilson95": [
+        0.7415,
+        0.9768
+      ],
+      "study_exact": 24,
+      "study_accuracy": 1.0,
+      "study_wilson95": [
+        0.862,
+        1.0
+      ],
+      "gate_correct": 8,
+      "gate_accuracy": 0.3333,
+      "gate_wilson95": [
+        0.1797,
+        0.5329
+      ],
+      "false_safe_count": 16,
+      "false_safe_rate": 1.0,
+      "false_block_count": 0,
+      "false_block_rate": 0.0
+    }
+  },
+  "paired_comparisons_against_full_method": {
+    "existing_selector": {
+      "selection_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 1,
+        "baseline_only_correct": 0,
+        "discordant_count": 1,
+        "two_sided_exact_p": 1.0
+      },
+      "gate_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 5,
+        "baseline_only_correct": 0,
+        "discordant_count": 5,
+        "two_sided_exact_p": 0.0625
+      }
+    },
+    "dependency_v10": {
+      "selection_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 0,
+        "baseline_only_correct": 0,
+        "discordant_count": 0,
+        "two_sided_exact_p": 1.0
+      },
+      "gate_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 8,
+        "baseline_only_correct": 0,
+        "discordant_count": 8,
+        "two_sided_exact_p": 0.007812
+      }
+    },
+    "no_safety_gate": {
+      "selection_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 0,
+        "baseline_only_correct": 0,
+        "discordant_count": 0,
+        "two_sided_exact_p": 1.0
+      },
+      "gate_mcnemar": {
+        "paired_count": 24,
+        "full_only_correct": 16,
+        "baseline_only_correct": 0,
+        "discordant_count": 16,
+        "two_sided_exact_p": 3.1e-05
+      }
+    }
+  },
+  "mapping": {
+    "without_dependency_graph": "existing_selector",
+    "without_negation_aware_completeness": "dependency_v10",
+    "without_safety_gate": "no_safety_gate"
+  },
+  "details": [
+    {
+      "task_id": "v11-final-laser-complete",
+      "family": "laser_diode_submount",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-laser-missing",
+      "family": "laser_diode_submount",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-laser-conflict",
+      "family": "laser_diode_submount",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-battery-complete",
+      "family": "battery_interconnect",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-battery-missing",
+      "family": "battery_interconnect",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-battery-conflict",
+      "family": "battery_interconnect",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-accelerometer-complete",
+      "family": "capacitive_accelerometer",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-accelerometer-missing",
+      "family": "capacitive_accelerometer",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-accelerometer-conflict",
+      "family": "capacitive_accelerometer",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-actuator-complete",
+      "family": "micro_gripper_flexure",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-actuator-missing",
+      "family": "micro_gripper_flexure",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-actuator-conflict",
+      "family": "micro_gripper_flexure",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-manifold-complete",
+      "family": "liquid_cooling_manifold",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-manifold-missing",
+      "family": "liquid_cooling_manifold",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": false,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-manifold-conflict",
+      "family": "liquid_cooling_manifold",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-dialysis-complete",
+      "family": "dialysis_membrane",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-dialysis-missing",
+      "family": "dialysis_membrane",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-dialysis-conflict",
+      "family": "dialysis_membrane",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-muffler-complete",
+      "family": "acoustic_muffler",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-muffler-missing",
+      "family": "acoustic_muffler",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-muffler-conflict",
+      "family": "acoustic_muffler",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-crystal-complete",
+      "family": "ceramic_resonator",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-crystal-missing",
+      "family": "ceramic_resonator",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    },
+    {
+      "task_id": "v11-final-crystal-conflict",
+      "family": "ceramic_resonator",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "dependency_v10": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "contract_dependency_v11": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": true,
+        "blocked": true
+      },
+      "no_safety_gate": {
+        "selection_ok": true,
+        "study_ok": true,
+        "gate_ok": false,
+        "blocked": false
+      }
+    }
+  ]
+}

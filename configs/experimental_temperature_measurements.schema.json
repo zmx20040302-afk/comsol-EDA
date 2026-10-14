@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "experimental_temperature_measurements.schema.json",
+  "title": "Experimental temperature measurement row",
+  "description": "CSV row contract. Only rows with record_status=measured or valid are evaluated.",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "record_status",
+    "L_m",
+    "W_m",
+    "k_W_mK",
+    "T_hot_K",
+    "T_cold_K",
+    "measured_Tmax_K",
+    "measurement_u95_Tmax_K",
+    "comsol_Tmax_K",
+    "measured_Tavg_K",
+    "measurement_u95_Tavg_K",
+    "comsol_Tavg_K"
+  ],
+  "properties": {
+    "sample_id": {"type": "string", "minLength": 1},
+    "record_status": {"enum": ["template", "measured", "valid", "excluded"]},
+    "L_m": {"type": "number"},
+    "W_m": {"type": "number"},
+    "k_W_mK": {"type": "number"},
+    "T_hot_K": {"type": "number"},
+    "T_cold_K": {"type": "number"},
+    "measured_Tmax_K": {"type": "number"},
+    "measurement_u95_Tmax_K": {"type": "number", "minimum": 0},
+    "comsol_Tmax_K": {"type": "number"},
+    "measured_Tavg_K": {"type": "number"},
+    "measurement_u95_Tavg_K": {"type": "number", "minimum": 0},
+    "comsol_Tavg_K": {"type": "number"},
+    "sensor_id": {"type": "string"},
+    "measured_at": {"type": "string"},
+    "notes": {"type": "string"}
+  }
+}

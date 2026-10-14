@@ -1,0 +1,11 @@
+{
+  "model_name": "one_dimensional_heat_conduction",
+  "physics": "heat_transfer_1d",
+  "geometry": {"type": "interval_1d", "parameters": {"L": {"value": 0.1, "unit": "m", "min": 0.01, "max": 1.0}}},
+  "materials": {"k": {"value": 45, "unit": "W/(m*K)", "min": 1, "max": 400}, "rho": {"value": 7800, "unit": "kg/m^3", "min": 100, "max": 20000}, "Cp": {"value": 460, "unit": "J/(kg*K)", "min": 1, "max": 5000}},
+  "boundary_conditions": {"T_left": {"value": 373.15, "unit": "K", "min": 250, "max": 1000}, "T_right": {"value": 293.15, "unit": "K", "min": 250, "max": 1000}},
+  "mesh": {"hmax": {"value": 0.002, "unit": "m", "min": 0.0001, "max": 0.02}},
+  "study": {"type": "stationary"},
+  "outputs": {"T_max": "maxop1(T)"},
+  "sweep": {"hmax": [0.005, 0.002, 0.001]}
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "comsol_thermal_surrogate_augmentation_plan",
+  "created_at": "2026-08-03T08:16:17.488863+00:00",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\execution_jobs\\job_20260803060429_c167ab54\\thermal_plate_surrogate_comsol_validated.joblib",
+  "reason": "用户请求超出已验证代理模型范围，需要先由 COMSOL 生成真实补充样本。",
+  "requested_inputs": {
+    "L_m": 0.12,
+    "W_m": 0.0225,
+    "k_W_mK": 40.0,
+    "T_hot_K": 353.15,
+    "T_cold_K": 283.15
+  },
+  "out_of_range": {
+    "L_m": {
+      "value": 0.12,
+      "min": 0.04,
+      "max": 0.08
+    }
+  },
+  "existing_validated_ranges": {
+    "L_m": {
+      "min": 0.04,
+      "max": 0.08
+    },
+    "W_m": {
+      "min": 0.015,
+      "max": 0.03
+    },
+    "k_W_mK": {
+      "min": 10.0,
+      "max": 60.0
+    },
+    "T_hot_K": {
+      "min": 333.15,
+      "max": 373.15
+    },
+    "T_cold_K": {
+      "min": 273.15,
+      "max": 293.15
+    }
+  },
+  "recommended_comsol_samples": [
+    {
+      "L_m": 0.12,
+      "W_m": 0.0225,
+      "k_W_mK": 40.0,
+      "T_hot_K": 353.15,
+      "T_cold_K": 283.15
+    },
+    {
+      "L_m": 0.11199999999999999,
+      "W_m": 0.0225,
+      "k_W_mK": 40.0,
+      "T_hot_K": 353.15,
+      "T_cold_K": 283.15
+    },
+    {
+      "L_m": 0.128,
+      "W_m": 0.0225,
+      "k_W_mK": 40.0,
+      "T_hot_K": 353.15,
+      "T_cold_K": 283.15
+    }
+  ],
+  "sample_count": 3,
+  "execution_order": [
+    "用 Heat Transfer in Solids 的同一二维矩形板模型逐点求解。",
+    "导出 L_m、W_m、k_W_mK、T_hot_K、T_cold_K、Tmax_K、Tavg_K 到 CSV。",
+    "将新 CSV 与原训练集汇合，并使用新的独立 COMSOL 工况重新验证。"
+  ]
+}

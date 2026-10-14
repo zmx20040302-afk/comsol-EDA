@@ -1,0 +1,10 @@
+{
+  "id": "acoustic_structure_cantilever_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "rectangular_cantilever_in_acoustic_domain", "dimension": "2D or 3D", "length_m": 0.03, "width_m": 0.005, "thickness_m": 0.0005},
+  "physics": ["Solid Mechanics", "Pressure Acoustics", "Acoustic-Structure Boundary"],
+  "parameters_si": {"youngs_modulus_pa": 1.69e11, "density_kg_m3": 2330.0},
+  "boundary_conditions": {"structure": "fixed constraint at root", "acoustic_outer_boundary": "radiation or perfectly matched layer after domain-size study", "interface": "Acoustic-Structure Boundary at the wetted beam surface"},
+  "reference_checks": {"first_mode_equation": "f1=(1.875104^2/(2*pi*L^2))*sqrt(E*I/(rho*A))", "coupled_interpretation": "Acoustic loading can shift resonance and introduce radiation damping relative to the in-vacuo structural reference"},
+  "acceptance": ["The structural-only first eigenfrequency agrees with the beam reference before coupling", "The coupled model reports structural displacement and acoustic pressure at a shared frequency", "The acoustic-domain truncation or PML selection is documented"]
+}

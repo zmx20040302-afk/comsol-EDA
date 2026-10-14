@@ -1,0 +1,93 @@
+{
+  "schema": "comsol-p5-final-independent-evaluation",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T02:45:31.791501+00:00",
+  "training_rows": 220,
+  "calibration_method": "normalized_one_sided",
+  "counts": {
+    "domain_holdout": 60,
+    "out_of_domain": 20,
+    "released_safe_upper_95": 10,
+    "false_safe_upper_95": 0,
+    "released_safe_mean_gate": 21,
+    "false_safe_mean_gate": 2
+  },
+  "execution_checks": {
+    "sealed_and_frozen_hashes_verified_before_opening": true,
+    "all_60_domain_cases_solved": true,
+    "all_20_ood_cases_solved": true,
+    "terminal_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true
+  },
+  "execution_passed": true,
+  "release_checks": {
+    "ood_auroc_at_least_0_95": true,
+    "ood_detection_rate_at_least_0_95": true,
+    "domain_false_alarm_at_most_0_05": true,
+    "false_safe_rate_at_most_0_05": true,
+    "safe_release_coverage_at_least_0_10": true,
+    "all_constraint_upper_coverages_at_least_0_90": true,
+    "tmax_rmse_at_most_15_K": true,
+    "power_relative_rmse_at_most_15_percent": true,
+    "mass_relative_rmse_at_most_10_percent": true
+  },
+  "surrogate_release_passed": true,
+  "holdout_metrics": {
+    "Tmax_K": {
+      "rmse": 11.80693240742163,
+      "mae": 8.132629104956289,
+      "r2": 0.91655358848062,
+      "maximum_absolute_error": 45.1284915860486,
+      "upper_95_coverage": 1.0,
+      "mean_upper_margin": 19.484073225058083
+    },
+    "Jmax_A_m2": {
+      "rmse": 581398.2542051623,
+      "mae": 422970.7066445209,
+      "r2": 0.9529235399087155,
+      "maximum_absolute_error": 2249037.2264335863,
+      "upper_95_coverage": 0.95,
+      "mean_upper_margin": 1069462.0162486928
+    },
+    "normalized_voltage_at_160A_mV": {
+      "rmse": 0.5534183729330534,
+      "mae": 0.42966543401889357,
+      "r2": 0.9954768042481476,
+      "maximum_absolute_error": 1.367908072927932,
+      "upper_95_coverage": 1.0,
+      "mean_upper_margin": 1.2925491596815966
+    },
+    "joule_power_W": {
+      "rmse": 0.4236931815778543,
+      "mae": 0.32176412515660135,
+      "r2": 0.9739180908372636,
+      "maximum_absolute_error": 1.328417772367878
+    },
+    "copper_mass_kg": {
+      "rmse": 0.0076873122620183445,
+      "mae": 0.00640575974949895,
+      "r2": 0.9946546489973279,
+      "maximum_absolute_error": 0.01842857600350084
+    }
+  },
+  "ood": {
+    "auroc": 1.0,
+    "detection_rate": 1.0,
+    "domain_false_alarm_rate": 0.0
+  },
+  "safe_release_coverage": 0.16666666666666666,
+  "false_safe_rate": 0.0,
+  "mean_gate_diagnostic": {
+    "released_safe": 21,
+    "false_safe": 2,
+    "false_safe_rate": 0.09523809523809523
+  },
+  "wall_seconds": 458.1480790999922,
+  "artifacts": {
+    "evaluated_results": "generated\\p5\\final_evaluation\\p5_final_evaluation_evaluated.csv",
+    "model": "generated\\p5\\p5_one_sided_surrogate.joblib",
+    "calibration_report": "generated\\p5\\calibration_selection_report.json",
+    "final_mph": "generated\\p5\\final_evaluation\\p5_final_evaluation_final.mph"
+  },
+  "policy": "The P5 set was opened once after the selected calibration, frozen model hashes and thresholds were recorded. It is now retired from independent use."
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "dac2027-p1-post-freeze-experiment-manifest",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-13T10:31:45+08:00",
+  "policy": "All points, constraints and pass criteria were fixed before the post-P1 COMSOL runs. Failed runs remain evidence and thresholds must not be changed after results are observed.",
+  "experiments": [
+    {
+      "scenario_id": "busbar_power_delivery_design",
+      "source_mph": "generated/p3/current_drive_baseline/busbar_current_drive_baseline.mph",
+      "points": [
+        {
+          "case_id": "p1_busbar_low_power",
+          "L_mm": 72.2917561195366,
+          "wbb_mm": 42.2513017610347,
+          "tbb_mm": 3.68453674442314,
+          "bolt_radius_mm": 7.83573652542976,
+          "I_load_A": 160.0,
+          "htc_W_m2K": 5.0,
+          "T_amb_K": 293.15
+        },
+        {
+          "case_id": "p1_busbar_low_mass",
+          "L_mm": 78.4224332804839,
+          "wbb_mm": 41.049443236107,
+          "tbb_mm": 3.50974025892496,
+          "bolt_radius_mm": 7.69156620901971,
+          "I_load_A": 160.0,
+          "htc_W_m2K": 5.0,
+          "T_amb_K": 293.15
+        }
+      ],
+      "selection_rule": "If both points pass all physical and design gates, select the lower Joule-power point as the detailed-design recommendation and retain the other as the minimum-mass tradeoff.",
+      "thresholds": {
+        "terminal_current_relative_error_max": 0.01,
+        "energy_imbalance_percent_max": 0.1,
+        "Tmax_K_max": 373.15,
+        "normalized_voltage_at_160A_mV_max": 20.0,
+        "Jmax_ratio_to_baseline_max": 1.1,
+        "bolt_radius_to_width_max": 0.2
+      },
+      "required_artifacts": ["input_csv", "result_csv", "mph", "matlab_log", "report"]
+    },
+    {
+      "scenario_id": "mems_thermal_actuator_operating_design",
+      "source_mph_candidates": [
+        "generated/dac2027/p1/sources/thermal_actuator_simplified.mph",
+        "D:/桌面/codex/案例下载/COMSOL/热微执行器的简化模型/thermal_actuator_simplified.mph"
+      ],
+      "points": [
+        {"case_id": "p1_mems_01", "DV_V": 4.75, "htc_s_W_m2K": 17500.0, "htc_us_W_m2K": 400.0},
+        {"case_id": "p1_mems_02", "DV_V": 4.75, "htc_s_W_m2K": 22500.0, "htc_us_W_m2K": 400.0},
+        {"case_id": "p1_mems_03", "DV_V": 5.25, "htc_s_W_m2K": 17500.0, "htc_us_W_m2K": 400.0},
+        {"case_id": "p1_mems_04", "DV_V": 5.25, "htc_s_W_m2K": 22500.0, "htc_us_W_m2K": 400.0}
+      ],
+      "selection_rule": "Among points passing every constraint, select maximum displacement; break ties by lower Joule power and then lower drive voltage.",
+      "thresholds": {
+        "Tmax_K_max": 550.0,
+        "umax_m_min": 9e-7,
+        "joule_power_W_max": 0.016
+      },
+      "required_artifacts": ["input_csv", "result_csv", "mph", "matlab_log", "report"]
+    }
+  ]
+}

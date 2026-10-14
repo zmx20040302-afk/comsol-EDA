@@ -1,0 +1,556 @@
+{
+  "schema": "dac-problem1-frozen-evaluation",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.0.0",
+  "split": "final",
+  "post_freeze": true,
+  "independently_authored_or_blinded": false,
+  "task_file_sha256": "4b21a9f945b4e8d2394acd1a6b61f753bcf1d7d008450cb210068c0bda557a8a",
+  "device_families": [
+    "bga_solder_array",
+    "led_luminaire",
+    "mems_microphone",
+    "microfluidic_biosensor",
+    "pcb_via_array",
+    "power_mosfet_module",
+    "quartz_resonator",
+    "rf_microstrip_filter"
+  ],
+  "methods": {
+    "existing_selector": {
+      "task_count": 24,
+      "physics_and_coupling_exact_count": 17,
+      "physics_and_coupling_exact_accuracy": 0.7083,
+      "physics_and_coupling_exact_wilson95": [
+        0.5083,
+        0.8509
+      ],
+      "study_exact_count": 23,
+      "study_exact_accuracy": 0.9583,
+      "study_exact_wilson95": [
+        0.7976,
+        0.9926
+      ]
+    },
+    "dependency_graph": {
+      "task_count": 24,
+      "physics_and_coupling_exact_count": 19,
+      "physics_and_coupling_exact_accuracy": 0.7917,
+      "physics_and_coupling_exact_wilson95": [
+        0.5953,
+        0.9076
+      ],
+      "study_exact_count": 23,
+      "study_exact_accuracy": 0.9583,
+      "study_exact_wilson95": [
+        0.7976,
+        0.9926
+      ]
+    }
+  },
+  "gating": {
+    "blocked_task_count": 16,
+    "complete_task_count": 8,
+    "ungated_false_safe_count": 16,
+    "ungated_false_safe_rate": 1.0,
+    "full_method_false_safe_count": 6,
+    "full_method_false_safe_rate": 0.375,
+    "full_method_false_safe_wilson95": [
+      0.1848,
+      0.6136
+    ],
+    "full_method_false_block_count": 2,
+    "full_method_false_block_rate": 0.25,
+    "full_method_false_block_wilson95": [
+      0.0715,
+      0.5907
+    ]
+  },
+  "details": [
+    {
+      "id": "final-mosfet-complete",
+      "family": "power_mosfet_module",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-mosfet-missing",
+      "family": "power_mosfet_module",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-mosfet-conflict",
+      "family": "power_mosfet_module",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": [
+        "请补充热边界或环境散热条件。"
+      ]
+    },
+    {
+      "id": "final-led-complete",
+      "family": "led_luminaire",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-led-missing",
+      "family": "led_luminaire",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-led-conflict",
+      "family": "led_luminaire",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-bga-complete",
+      "family": "bga_solder_array",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": [
+        "请补充热边界或环境散热条件。"
+      ]
+    },
+    {
+      "id": "final-bga-missing",
+      "family": "bga_solder_array",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-bga-conflict",
+      "family": "bga_solder_array",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-rf-complete",
+      "family": "rf_microstrip_filter",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-rf-missing",
+      "family": "rf_microstrip_filter",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": [
+        "请补充热边界或环境散热条件。"
+      ]
+    },
+    {
+      "id": "final-rf-conflict",
+      "family": "rf_microstrip_filter",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-mic-complete",
+      "family": "mems_microphone",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": false,
+      "reason_codes": [
+        "UNVERIFIED_COUPLING"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-mic-missing",
+      "family": "mems_microphone",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": false
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": false
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": [
+        "请补充结构约束及载荷或热驱动条件。"
+      ]
+    },
+    {
+      "id": "final-mic-conflict",
+      "family": "mems_microphone",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-via-complete",
+      "family": "pcb_via_array",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-via-missing",
+      "family": "pcb_via_array",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-via-conflict",
+      "family": "pcb_via_array",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-sensor-complete",
+      "family": "microfluidic_biosensor",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-sensor-missing",
+      "family": "microfluidic_biosensor",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-sensor-conflict",
+      "family": "microfluidic_biosensor",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-quartz-complete",
+      "family": "quartz_resonator",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-quartz-missing",
+      "family": "quartz_resonator",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "final-quartz-conflict",
+      "family": "quartz_resonator",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": [
+        "请补充结构约束及载荷或热驱动条件。"
+      ]
+    }
+  ],
+  "interpretation_limit": "Prospective post-freeze and device-family-disjoint from development by declared labels; tasks were authored within this project and were not blinded or independently adjudicated."
+}

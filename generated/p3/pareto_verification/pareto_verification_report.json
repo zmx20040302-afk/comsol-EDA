@@ -1,0 +1,43 @@
+{
+  "schema": "comsol-p3-fresh-pareto-verification",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T09:48:21.303271+00:00",
+  "candidate_count": 5,
+  "feasible_count": 5,
+  "verified_pareto_count": 3,
+  "dual_objective_improvement_count": 5,
+  "checks": {
+    "all_five_candidates_solved": true,
+    "fresh_candidates_do_not_overlap_training": true,
+    "terminal_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true,
+    "at_least_one_feasible_verified_candidate": true,
+    "at_least_one_feasible_dual_objective_improvement": true
+  },
+  "passed": true,
+  "prediction_errors": {
+    "Tmax_K": {
+      "mae": 8.70223761652601,
+      "max_absolute_error": 10.91103270432609
+    },
+    "Jmax_A_m2": {
+      "mae": 608163.2064484961,
+      "max_absolute_error": 1123404.1207457618
+    },
+    "joule_power_W": {
+      "mae": 0.5111105154268613,
+      "max_absolute_error": 0.5743840587217239
+    },
+    "copper_mass_kg": {
+      "mae": 0.06972430517505024,
+      "max_absolute_error": 0.08052905176971009
+    }
+  },
+  "wall_seconds": 36.3372326,
+  "artifacts": {
+    "evaluated": "generated\\p3\\pareto_verification\\fresh_pareto_verification_evaluated.csv",
+    "verified_pareto": "generated\\p3\\pareto_verification\\verified_pareto.csv",
+    "mph": "generated\\p3\\pareto_verification\\fresh_pareto_verification_final.mph"
+  },
+  "scope": "Fresh COMSOL verification closes the candidate loop for five nominal-condition proposals. The reserved 60-point final domain test remains untouched."
+}

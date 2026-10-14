@@ -1,0 +1,96 @@
+{
+  "kind": "comsol_model_spec_review",
+  "status": "approved_for_baseline_modeling",
+  "benchmark": "busbar_joule_heating",
+  "source_case": {
+    "directory": "D:\\桌面\\codex\\案例下载\\COMSOL\\母线板焦耳热",
+    "primary_matlab": "busbar.m",
+    "primary_java": "busbar.java",
+    "variants": ["busbar_geom", "busbar_box"]
+  },
+  "objective": "建立三维母线板稳态焦耳热基准模型，获得电势、电场、电流密度和最高温度，并为参数扫描与代理模型数据导出建立可复用结构。",
+  "approved": true,
+  "user_decisions": {
+    "parameter_source": "保持案例原始参数",
+    "electrical_drive": "保持案例的 Vtot=20[mV] 电势驱动与接地配置",
+    "data_training": "deferred_until_modeling_function_is_verified",
+    "mechanical_extension": "记录热-结构扩展知识，但不在基准求解中启用"
+  },
+  "physics": {
+    "interfaces": ["Electric Currents (ec)", "Heat Transfer in Solids (ht)"],
+    "multiphysics": "Joule Heating / Electromagnetic Heating (emh1)",
+    "reason": "导体内电流产生焦耳热，热源耦合进入固体传热方程；案例代码明确创建 ConductiveMedia、HeatTransfer 和 ElectromagneticHeating。"
+  },
+  "geometry": {
+    "dimension": "3D",
+    "description": "由二维母线板轮廓拉伸形成主体，并在端部/连接位置创建圆柱螺栓几何。",
+    "parameters": {
+      "L": "9[cm]",
+      "wbb": "5[cm]",
+      "tbb": "5[mm]",
+      "rad_1": "6[mm]",
+      "mh": "3[mm]"
+    },
+    "source_evidence": "busbar.m:36-48, 56-126"
+  },
+  "materials": [
+    {
+      "name": "Copper",
+      "selection": "母线主体（案例未显式限定时为默认域）",
+      "electric_conductivity": "5.998e7[S/m]",
+      "thermal_conductivity": "400[W/(m*K)]",
+      "density": "8960[kg/m^3]",
+      "heat_capacity": "385[J/(kg*K)]",
+      "temperature_dependent_resistivity": {
+        "rho0": "1.72e-8[ohm*m]",
+        "alpha": "0.0039[1/K]",
+        "Tref": "298[K]"
+      }
+    },
+    {
+      "name": "Titanium beta-21S",
+      "selection": "Ti bolts，域 2-7",
+      "electric_conductivity": "7.407e5[S/m]",
+      "thermal_conductivity": "7.5[W/(m*K)]",
+      "density": "4940[kg/m^3]",
+      "heat_capacity": "710[J/(kg*K)]"
+    }
+  ],
+  "boundary_conditions": {
+    "electric_potential": {
+      "boundary": [43],
+      "value": "Vtot = 20[mV]"
+    },
+    "ground": {
+      "boundaries": [8, 15]
+    },
+    "convection": {
+      "boundaries": "1-7, 9-14, 16-42",
+      "h": "htc = 5[W/(m^2*K)]",
+      "ambient_temperature": "未在导出代码中显式设置，需确认使用 COMSOL 默认环境温度还是指定工程值。"
+    }
+  },
+  "mesh_and_study": {
+    "mesh": "Free Tetrahedral；hmax=mh，hmin=mh-mh/3，曲率因子=0.2",
+    "study": "Stationary，同时求解 ec、ht 与 emh1",
+    "required_check": "基准求解后至少进行一次网格加密比较。"
+  },
+  "optional_mechanical_extension": {
+    "status": "not_enabled_in_baseline",
+    "interfaces": ["Solid Mechanics", "Thermal Expansion"],
+    "activation_condition": "当需要评价热膨胀、热应力、螺栓预紧或结构位移，并已定义固定/滑移/接触等机械边界时启用。",
+    "required_additional_inputs": ["结构约束位置", "接触或螺栓预紧定义", "参考温度", "热应力或位移验收指标"],
+    "reason": "焦耳热基准的首要验证量是电流分布和温升；缺少机械约束时直接加入力学场会得到缺乏工程意义的刚体位移或应力结果。"
+  },
+  "outputs": {
+    "plots": ["Electric Potential", "Electric Field", "Temperature", "Current Density"],
+    "derived_values": ["全域最高温度 Tmax"],
+    "recommended_csv_columns": ["Vtot", "htc", "Tmax", "Tavg", "max_ec_normJ", "terminal_current", "total_joule_loss"]
+  },
+  "deferred_items": [
+    "环境温度沿用案例/COMSOL 默认设置，后续接入试验条件后显式参数化。",
+    "接触电阻、辐射散热和热-结构耦合暂不启用。",
+    "Tmax 验收阈值、试验对比数据和参数扫描范围在建模功能验证后补充。",
+    "CSV 参数扫描与代理模型训练在基准模型真实求解验证后进行。"
+  ]
+}

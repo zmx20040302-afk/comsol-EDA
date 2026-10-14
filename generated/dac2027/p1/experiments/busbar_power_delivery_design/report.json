@@ -1,0 +1,135 @@
+{
+  "schema": "dac2027-p1-post-freeze-comsol-experiment",
+  "schemaVersion": "1.0.0",
+  "scenario_id": "busbar_power_delivery_design",
+  "manifest_frozen_at": "2026-10-13T10:31:45+08:00",
+  "generated_at": "2026-10-13T02:57:00.676266+00:00",
+  "experiment_type": "fresh_post_p1_freeze_comsol",
+  "point_count": 2,
+  "feasible_count": 2,
+  "selection_rule": "If both points pass all physical and design gates, select the lower Joule-power point as the detailed-design recommendation and retain the other as the minimum-mass tradeoff.",
+  "selected_design": {
+    "case_id": "p1_busbar_low_power",
+    "L_mm": 72.2917561195366,
+    "wbb_mm": 42.2513017610347,
+    "tbb_mm": 3.68453674442314,
+    "bolt_radius_mm": 7.83573652542976,
+    "I_load_A": 160,
+    "htc_W_m2K": 5,
+    "T_amb_K": 293.15,
+    "Tmax_K": 318.387953510906,
+    "Tavg_K": 316.266884016617,
+    "Jmax_A_m2": 3841746.26819791,
+    "terminal_current_A": 160.095032409175,
+    "voltage_drop_mV": 11.6982698951187,
+    "joule_power_W": 1.87160339294034,
+    "convection_power_W": 1.87073004071525,
+    "energy_imbalance_percent": 0.0466633170459522,
+    "copper_volume_m3": 2.48939884796709e-05,
+    "copper_mass_kg": 0.223050136777851,
+    "solve_seconds": 6.1862544,
+    "solver_status": "solved",
+    "error_message": null,
+    "normalized_voltage_at_160A_mV": 11.6982698951187,
+    "terminal_current_relative_error": 0.000593952557343691,
+    "terminal_current_passed": true,
+    "energy_balance_passed": true,
+    "temperature_passed": true,
+    "voltage_passed": true,
+    "current_density_passed": true,
+    "geometry_passed": true,
+    "all_gates_passed": true
+  },
+  "minimum_mass_tradeoff": {
+    "case_id": "p1_busbar_low_mass",
+    "L_mm": 78.4224332804839,
+    "wbb_mm": 41.049443236107,
+    "tbb_mm": 3.50974025892496,
+    "bolt_radius_mm": 7.69156620901971,
+    "I_load_A": 160,
+    "htc_W_m2K": 5,
+    "T_amb_K": 293.15,
+    "Tmax_K": 318.972652858546,
+    "Tavg_K": 316.810711191808,
+    "Jmax_A_m2": 4034522.09814138,
+    "terminal_current_A": 160.170276894897,
+    "voltage_drop_mV": 11.992899853934,
+    "joule_power_W": 1.91874116933609,
+    "convection_power_W": 1.91785031334604,
+    "energy_imbalance_percent": 0.0464291903610506,
+    "copper_volume_m3": 2.39290462220475e-05,
+    "copper_mass_kg": 0.214404254149546,
+    "solve_seconds": 3.8731483,
+    "solver_status": "solved",
+    "error_message": null,
+    "normalized_voltage_at_160A_mV": 11.992899853934,
+    "terminal_current_relative_error": 0.0010642305931062523,
+    "terminal_current_passed": true,
+    "energy_balance_passed": true,
+    "temperature_passed": true,
+    "voltage_passed": true,
+    "current_density_passed": true,
+    "geometry_passed": true,
+    "all_gates_passed": true
+  },
+  "checks": {
+    "manifest_frozen_before_run": true,
+    "all_declared_points_recorded": true,
+    "all_comsol_solves_succeeded": true,
+    "all_physical_validation_passed": true,
+    "at_least_one_design_feasible": true,
+    "decision_selected_by_frozen_rule": true,
+    "fresh_mph_created": true
+  },
+  "passed": true,
+  "wall_seconds": 52.030884200008586,
+  "artifacts": {
+    "manifest": {
+      "path": "configs/dac2027_p1_experiment_manifest.json",
+      "exists": true,
+      "size_bytes": 2804,
+      "sha256": "6b49f89dc3721706ed69fce50caebef57f80e7a2034578151565bd80ab9adea1"
+    },
+    "input_csv": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/input_points.csv",
+      "exists": true,
+      "size_bytes": 280,
+      "sha256": "d3209c22fe7f8b646d8313578751b5c9fb09574f9fd40266fb3f79ede7bad09f"
+    },
+    "result_csv": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/results.csv",
+      "exists": true,
+      "size_bytes": 852,
+      "sha256": "8527369478d1471bd970fad6fe9597aa70f636161246f9748c111cbe15f855ef"
+    },
+    "evaluated_csv": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/evaluated_results.csv",
+      "exists": true,
+      "size_bytes": 1196,
+      "sha256": "270eddae43275caaf4a4f0fbead7e3808c5b990ad012a4539201481cc150c701"
+    },
+    "mph": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/busbar_p1_post_freeze_final.mph",
+      "exists": true,
+      "size_bytes": 13821220,
+      "sha256": "6214286f150f8968890a676af76cabe766385fb994f27e8d882037689f0ce678"
+    },
+    "matlab_runner": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/run_busbar_p1_post_freeze.m",
+      "exists": true,
+      "size_bytes": 4207,
+      "sha256": "97467599c08e7aac068c39133a95ed805429fbf645959b4e67dff57aeb274f0a"
+    },
+    "matlab_log": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/matlab_stdout.log",
+      "exists": true,
+      "size_bytes": 380,
+      "sha256": "5ba1c5d1b55bbe3976042dcb2d7c1df6a9d39dc45104fbee9629c56a64eba01b"
+    },
+    "report": {
+      "path": "generated/dac2027/p1/experiments/busbar_power_delivery_design/report.json",
+      "exists": true
+    }
+  },
+  "claim_boundary": "This run verifies two frozen nominal-condition design candidates. It is not a product qualification or robustness test over the full operating range."
+}

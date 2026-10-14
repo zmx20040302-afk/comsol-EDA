@@ -1,0 +1,37 @@
+{
+  "kind": "heat_radiation_1d_independent_comsol_validation",
+  "created_at": "2026-08-25T09:12:23.906473+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_radiation_1d_emissivity_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\heat_radiation_1d_emissivity_holdout.csv",
+  "training_rows": 5,
+  "holdout_rows": 2,
+  "candidate_reports": [
+    {
+      "name": "linear",
+      "max_relative_error_percent": 0.050802881170149375,
+      "mean_relative_error_percent": 0.02678015363320868
+    },
+    {
+      "name": "polynomial_degree2",
+      "max_relative_error_percent": 0.011691116042131923,
+      "mean_relative_error_percent": 0.01159008614363705
+    },
+    {
+      "name": "polynomial_degree3",
+      "max_relative_error_percent": 0.0033180185145549905,
+      "mean_relative_error_percent": 0.001981020763980936
+    }
+  ],
+  "selected_model": "polynomial_degree3",
+  "per_output_relative_validation": {
+    "radiating_end_temperature_K": {
+      "max_relative_error_percent": 0.0033180185145549905,
+      "mean_relative_error_percent": 0.001981020763980936,
+      "threshold_relative_error_percent": 1.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "一维稳态传热模型；左端固定 1000 K、右端向 300 K 环境表面对环境辐射，仅改变右端发射率 epsilon=0.2-0.98。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_radiation_1d_emissivity_surrogate.holdout_validation.json"
+}

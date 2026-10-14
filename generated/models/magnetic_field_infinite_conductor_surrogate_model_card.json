@@ -1,0 +1,62 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T10:53:19.866691+00:00",
+  "name": "无限导体磁场电流代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\magnetic_field_infinite_conductor_training.csv",
+    "rows": 9,
+    "inputs": [
+      "current_A"
+    ],
+    "outputs": [
+      "magnetic_flux_density_at_5cm_T"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\magnetic_field_infinite_conductor_holdout.csv",
+    "rows": 3
+  },
+  "physical_scope": "无限长圆导体二维轴对称静磁场；导体半径 ri=1 cm、外计算域半径 ro=10 cm、测点距中心 5 cm，固定几何、网格和磁场边界，仅改变电流 I0=0.25-5 A。",
+  "validated_input_ranges": {
+    "current_A": {
+      "min": 0.25,
+      "max": 5.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "infinite_conductor_magnetic_field_independent_comsol_validation",
+    "created_at": "2026-08-25T10:53:19.861993+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\magnetic_field_infinite_conductor_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\magnetic_field_infinite_conductor_holdout.csv",
+    "training_rows": 9,
+    "holdout_rows": 3,
+    "candidate_metrics": {
+      "linear_regression": {
+        "max_relative_error_percent": 2.2497039357855205e-13,
+        "mean_relative_error_percent": 1.7622680830319922e-13
+      },
+      "distance_weighted_local_interpolation": {
+        "max_relative_error_percent": 2.812129919731901e-13,
+        "mean_relative_error_percent": 2.062228607803395e-13
+      }
+    },
+    "selected_model": "linear_regression",
+    "selection_reason": "Selected by independent COMSOL holdout error for the magnetostatic current sweep.",
+    "per_output_relative_validation": {
+      "magnetic_flux_density_at_5cm_T": {
+        "max_relative_error_percent": 2.2497039357855205e-13,
+        "mean_relative_error_percent": 1.7622680830319922e-13,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "无限长圆导体二维轴对称静磁场；导体半径 ri=1 cm、外计算域半径 ro=10 cm、测点距中心 5 cm，固定几何、网格和磁场边界，仅改变电流 I0=0.25-5 A。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

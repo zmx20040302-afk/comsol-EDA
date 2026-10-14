@@ -1,0 +1,62 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T11:14:57.372952+00:00",
+  "name": "平行载流导线电磁力代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\parallel_wires_force_training.csv",
+    "rows": 9,
+    "inputs": [
+      "current_A"
+    ],
+    "outputs": [
+      "force_x_wire2_N"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\parallel_wires_force_holdout.csv",
+    "rows": 3
+  },
+  "physical_scope": "二维平行圆导线静磁场模型；导线半径 r_wire=0.2 m、间距、方向、外域、网格和力计算区域固定，两个导线由同一同向电流 I0=0.25-3 A 驱动，输出第二导线 x 向电磁力。",
+  "validated_input_ranges": {
+    "current_A": {
+      "min": 0.25,
+      "max": 3.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "parallel_wires_force_independent_comsol_validation",
+    "created_at": "2026-08-25T11:14:57.366205+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\parallel_wires_force_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\parallel_wires_force_holdout.csv",
+    "training_rows": 9,
+    "holdout_rows": 3,
+    "candidate_metrics": {
+      "linear_regression": {
+        "max_relative_error_percent": 62.43686868686847,
+        "mean_relative_error_percent": 31.284369106789526
+      },
+      "quadratic_regression": {
+        "max_relative_error_percent": 5.177539258599506e-13,
+        "mean_relative_error_percent": 2.114417502798703e-13
+      }
+    },
+    "selected_model": "quadratic_regression",
+    "selection_reason": "Selected by independent COMSOL holdout error for the force calculation node.",
+    "per_output_relative_validation": {
+      "force_x_wire2_N": {
+        "max_relative_error_percent": 5.177539258599506e-13,
+        "mean_relative_error_percent": 2.114417502798703e-13,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "二维平行圆导线静磁场模型；导线半径 r_wire=0.2 m、间距、方向、外域、网格和力计算区域固定，两个导线由同一同向电流 I0=0.25-3 A 驱动，输出第二导线 x 向电磁力。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

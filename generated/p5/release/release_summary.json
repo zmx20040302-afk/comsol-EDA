@@ -1,0 +1,16 @@
+{
+  "archive": "generated\\p5\\release\\comsol_auto_modeling_p5_release.zip",
+  "size_bytes": 19437377,
+  "sha256": "b61a9b8a144ca7191a9b8ec09fd8e1dd137ac308d76e25af69efcc8555fb6559",
+  "file_count": 36,
+  "large_mph_files_excluded": true,
+  "comsol_execution_passed": true,
+  "calibration_method": "normalized_one_sided",
+  "domain_holdout_cases": 60,
+  "out_of_domain_cases": 20,
+  "released_safe_count": 10,
+  "false_safe_count": 0,
+  "safe_release_coverage": 0.16666666666666666,
+  "surrogate_release_passed": true,
+  "policy": "Controlled prediction is permitted only inside the declared seven-variable domain and fixed physical assumptions. Out-of-domain or changed-physics requests require COMSOL."
+}

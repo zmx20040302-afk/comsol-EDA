@@ -1,0 +1,33 @@
+D:\桌面\codex\案例下载\电气\薄膜谐振器中的残余应力 - 三维\residual_stress_resonator_2d_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\薄膜谐振器中的残余应力 - 三维\residual_stress_resonator_2d.mph
+D:\桌面\codex\案例下载\电气\薄膜谐振器中的残余应力 - 三维\residual_stress_resonator_3d_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\薄膜谐振器中的残余应力 - 三维\residual_stress_resonator_3d.mph
+D:\桌面\codex\案例下载\电气\氮化铝兰姆波谐振器 - 三维\aln_lamb_wave_resonator_3d.mph
+D:\桌面\codex\案例下载\电气\等离子体脉冲电弧\plasma_pulsed_arc.mph
+D:\桌面\codex\案例下载\电气\点-面结构大气直流电晕放电\point_to_plane_dc_corona.mph
+D:\桌面\codex\案例下载\电气\电感器的小信号分析\small_signal_analysis_of_inductor.mph
+D:\桌面\codex\案例下载\电气\电感器三维建模\inductor_3d.mph
+D:\桌面\codex\案例下载\电气\电力线的电场\power_line_electric_field.mph
+D:\桌面\codex\案例下载\电气\分布式布拉格反射镜的时域到频域 FFT 分析\time_to_frequency_fft_distributed_bragg_reflector.mph
+D:\桌面\codex\案例下载\电气\光学各向异性波导\optically_anisotropic_waveguide.mph
+D:\桌面\codex\案例下载\电气\轨道角动量光束\orbital_angular_momentum.mph
+D:\桌面\codex\案例下载\电气\平衡电枢换能器 - 频域分析\balanced_armature_transducer_63_cleared.mph
+D:\桌面\codex\案例下载\电气\平衡电枢换能器 - 频域分析\balanced_armature_transducer_63.mph
+D:\桌面\codex\案例下载\电气\砷化镓 P-N 结红外发光二极管\gaas_pn_junction_infrared_led_diode.mph
+D:\桌面\codex\案例下载\电气\石墨烯对圆柱散射体的隐身作用 (RF)\cylinder_graphene_cloak.mph
+D:\桌面\codex\案例下载\电气\梳驱动音叉式微速率陀螺仪\comb_drive_tuning_fork_gyroscope.mph
+D:\桌面\codex\案例下载\电气\双极晶体管的热分析\bipolar_transistor_thermal.mph
+D:\桌面\codex\案例下载\电气\四极滤质器\quadrupole_mass_filter.mph
+D:\桌面\codex\案例下载\电气\同轴低通滤波器的时频快速傅里叶变换\coaxial_low_pass_filter_transient.mph
+D:\桌面\codex\案例下载\电气\铜柱的感应加热\inductive_heating.mph
+D:\桌面\codex\案例下载\电气\弯曲的阶跃折射率光纤\step_index_fiber_bend.mph
+D:\桌面\codex\案例下载\电气\衍射光栅\diffraction_grating.mph
+D:\桌面\codex\案例下载\电气\以 Brewster 角入射的高斯光束\brewster_interface.mph
+D:\桌面\codex\案例下载\电气\B-H 曲线检查器\bh_curve_checker_embedded.mph
+D:\桌面\codex\案例下载\电气\B-H 曲线检查器\bh_curve_checker.mph
+D:\桌面\codex\案例下载\电气\Czerny-Turner 单色器\czerny_turner_monochromator_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\Czerny-Turner 单色器\czerny_turner_monochromator.mph
+D:\桌面\codex\案例下载\电气\ICP 反应器，氩化学 - 三维\argon_3d_icp.mph
+D:\桌面\codex\案例下载\电气\P-N 二极管电路\pn_diode_circuit.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜几何调制传递函数\petzval_lens_geometric_modulation_transfer_function.mph
+D:\桌面\codex\案例下载\电气\Wi-Fi 增强八木-宇田天线\yagi_uda_antenna.mph

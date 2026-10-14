@@ -1,0 +1,85 @@
+{
+  "schema": "dac2027-p1-post-freeze-comsol-experiment",
+  "schemaVersion": "1.0.0",
+  "scenario_id": "mems_thermal_actuator_operating_design",
+  "manifest_frozen_at": "2026-10-13T10:31:45+08:00",
+  "generated_at": "2026-10-13T02:57:01.104416+00:00",
+  "experiment_type": "fresh_post_p1_freeze_comsol",
+  "point_count": 4,
+  "feasible_count": 3,
+  "selection_rule": "Among points passing every constraint, select maximum displacement; break ties by lower Joule power and then lower drive voltage.",
+  "selected_design": {
+    "case_id": "p1_mems_04",
+    "DV_V": 5.25,
+    "htc_s_W_m2K": 22500,
+    "htc_us_W_m2K": 400,
+    "Tmax_K": 507.376527896092,
+    "umax_m": 1.1197447963966e-06,
+    "joule_power_W": 0.0156044322604733,
+    "solve_seconds": 10.3145559,
+    "solver_status": "solved",
+    "error_message": null,
+    "temperature_passed": true,
+    "displacement_passed": true,
+    "power_passed": true,
+    "all_gates_passed": true
+  },
+  "checks": {
+    "all_declared_points_recorded": true,
+    "all_comsol_solves_succeeded": true,
+    "at_least_one_design_feasible": true,
+    "decision_selected_by_frozen_rule": true,
+    "fresh_mph_created": true
+  },
+  "passed": true,
+  "wall_seconds": 64.20823300001211,
+  "artifacts": {
+    "manifest": {
+      "path": "configs/dac2027_p1_experiment_manifest.json",
+      "exists": true,
+      "size_bytes": 2804,
+      "sha256": "6b49f89dc3721706ed69fce50caebef57f80e7a2034578151565bd80ab9adea1"
+    },
+    "input_csv": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/input_points.csv",
+      "exists": true,
+      "size_bytes": 163,
+      "sha256": "c9ddf6dd667d4166f39badfaf86e3337ef81347998e2e8d7d0213250ea0e8225"
+    },
+    "result_csv": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/results.csv",
+      "exists": true,
+      "size_bytes": 520,
+      "sha256": "778327aebf5493e145b36b330f376f540d384d4dd6fcfbe1007d08ab201a1c9e"
+    },
+    "evaluated_csv": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/evaluated_results.csv",
+      "exists": true,
+      "size_bytes": 671,
+      "sha256": "4cf93b0055e304e588090d1873c67d2509043a75dad6d4e67ff68f63e7e84782"
+    },
+    "mph": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/mems_p1_post_freeze_final.mph",
+      "exists": true,
+      "size_bytes": 36297695,
+      "sha256": "acda6d770b8d0653d89b0e60a4b5644c7ddf1facccfd9aa4c9ce0df25a92be16"
+    },
+    "matlab_runner": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/run_mems_p1_post_freeze.m",
+      "exists": true,
+      "size_bytes": 2510,
+      "sha256": "1a46456fe3a5a45b782f0c235ea7bb98f813c7b89e32fd1eff6f56dc06909ceb"
+    },
+    "matlab_log": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/matlab_stdout.log",
+      "exists": true,
+      "size_bytes": 501,
+      "sha256": "22f131b3dea99326365e756f8c3c5494140afa1477f4a89287bb37e13eb2fb41"
+    },
+    "report": {
+      "path": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/report.json",
+      "exists": true
+    }
+  },
+  "claim_boundary": "This four-point frozen grid verifies operating-point selection for one preserved MEMS model; it does not establish process-corner or fabricated-device reliability."
+}

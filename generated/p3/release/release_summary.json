@@ -1,0 +1,10 @@
+{
+  "archive": "generated\\p3\\release\\comsol_auto_modeling_p3_release.zip",
+  "size_bytes": 7080756,
+  "sha256": "f2b445f7945b5faa35e48e69302213f9b58ebfbdd6a1fb622c81ca3590974a2a",
+  "file_count": 54,
+  "large_mph_files_excluded": true,
+  "comsol_execution_passed": true,
+  "verified_pareto_count": 3,
+  "surrogate_release_passed": false
+}

@@ -1,0 +1,2 @@
+sample_id,record_status,L_m,W_m,k_W_mK,T_hot_K,T_cold_K,measured_Tmax_K,measurement_u95_Tmax_K,comsol_Tmax_K,measured_Tavg_K,measurement_u95_Tavg_K,comsol_Tavg_K,sensor_id,measured_at,notes
+EXP-001,template,0.06,0.0225,35,353.15,283.15,,,,,,,sensor-or-camera-id,2026-10-09T09:00:00+08:00,将 template 改为 measured 并填写真实测量和同工况 COMSOL 值

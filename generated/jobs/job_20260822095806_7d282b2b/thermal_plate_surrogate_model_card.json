@@ -1,0 +1,166 @@
+{
+  "kind": "comsol_surrogate_model_card",
+  "created_at": "2026-08-22T10:18:14.565753+00:00",
+  "name": "二维稳态导热板代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\jobs\\job_20260822095806_7d282b2b\\thermal_plate_surrogate_comsol_validated.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\jobs\\job_20260822095806_7d282b2b\\thermal_sweep_training.csv",
+    "rows": 48,
+    "inputs": [
+      "L_m",
+      "W_m",
+      "k_W_mK",
+      "T_hot_K",
+      "T_cold_K"
+    ],
+    "outputs": [
+      "Tmax_K",
+      "Tavg_K"
+    ]
+  },
+  "physical_model": {
+    "comsol_interface": "Heat Transfer in Solids (2D, stationary)",
+    "governing_equation": "∇·(k∇T)=0",
+    "geometry": "二维矩形板，长度 L_m、宽度 W_m",
+    "material": "各向同性常数导热系数 k_W_mK",
+    "boundary_conditions": [
+      "左侧边界：恒温 T_hot_K",
+      "右侧边界：恒温 T_cold_K",
+      "其余边界：默认绝热"
+    ],
+    "outputs": [
+      "Tmax_K：域内最高温度",
+      "Tavg_K：域内平均温度"
+    ]
+  },
+  "validated_input_ranges": {
+    "L_m": {
+      "min": 0.04,
+      "max": 0.08,
+      "unit": "m"
+    },
+    "W_m": {
+      "min": 0.015,
+      "max": 0.03,
+      "unit": "m"
+    },
+    "k_W_mK": {
+      "min": 10.0,
+      "max": 60.0,
+      "unit": "W/(m·K)"
+    },
+    "T_hot_K": {
+      "min": 333.15,
+      "max": 373.15,
+      "unit": "K"
+    },
+    "T_cold_K": {
+      "min": 273.15,
+      "max": 293.15,
+      "unit": "K"
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "comsol_surrogate_holdout_validation",
+    "created_at": "2026-08-22T10:18:14.563749+00:00",
+    "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\jobs\\job_20260822095806_7d282b2b\\thermal_plate_surrogate_comsol_validated.joblib",
+    "csv_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\jobs\\job_20260822095806_7d282b2b\\thermal_sweep_holdout.csv",
+    "rows": [
+      {
+        "inputs": {
+          "L_m": 0.06,
+          "W_m": 0.0225,
+          "k_W_mK": 40.0,
+          "T_hot_K": 343.15,
+          "T_cold_K": 278.15
+        },
+        "actual": {
+          "Tmax_K": 343.15,
+          "Tavg_K": 291.373443335409
+        },
+        "predicted": {
+          "Tmax_K": 343.35408163265305,
+          "Tavg_K": 292.96723354582775
+        },
+        "absolute_error": {
+          "Tmax_K": 0.20408163265307167,
+          "Tavg_K": 1.5937902104187742
+        }
+      },
+      {
+        "inputs": {
+          "L_m": 0.06,
+          "W_m": 0.0225,
+          "k_W_mK": 40.0,
+          "T_hot_K": 343.15,
+          "T_cold_K": 288.15
+        },
+        "actual": {
+          "Tmax_K": 343.15,
+          "Tavg_K": 299.339067437656
+        },
+        "predicted": {
+          "Tmax_K": 343.35408163265305,
+          "Tavg_K": 300.54895363412857
+        },
+        "absolute_error": {
+          "Tmax_K": 0.20408163265307167,
+          "Tavg_K": 1.209886196472553
+        }
+      },
+      {
+        "inputs": {
+          "L_m": 0.06,
+          "W_m": 0.0225,
+          "k_W_mK": 40.0,
+          "T_hot_K": 363.15,
+          "T_cold_K": 278.15
+        },
+        "actual": {
+          "Tmax_K": 363.15,
+          "Tavg_K": 295.44219513092
+        },
+        "predicted": {
+          "Tmax_K": 362.9459183673469,
+          "Tavg_K": 297.3956301039238
+        },
+        "absolute_error": {
+          "Tmax_K": 0.20408163265307167,
+          "Tavg_K": 1.9534349730037661
+        }
+      },
+      {
+        "inputs": {
+          "L_m": 0.06,
+          "W_m": 0.0225,
+          "k_W_mK": 40.0,
+          "T_hot_K": 363.15,
+          "T_cold_K": 288.15
+        },
+        "actual": {
+          "Tmax_K": 363.15,
+          "Tavg_K": 303.407819233167
+        },
+        "predicted": {
+          "Tmax_K": 362.9459183673469,
+          "Tavg_K": 304.9773501922246
+        },
+        "absolute_error": {
+          "Tmax_K": 0.20408163265307167,
+          "Tavg_K": 1.5695309590576016
+        }
+      }
+    ],
+    "max_absolute_error": {
+      "Tmax_K": 0.20408163265307167,
+      "Tavg_K": 1.9534349730037661
+    },
+    "passed": true,
+    "criterion": "Each fresh-COMSOL holdout output must have absolute error below 5 K.",
+    "path": "generated\\jobs\\job_20260822095806_7d282b2b\\thermal_sweep_holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅用于上述物理模型、几何拓扑、材料假设和输入范围内的快速比较。",
+    "requires_comsol": "输入越界、材料随温度变化、边界类型改变、几何拓扑改变或最终设计定稿。"
+  }
+}

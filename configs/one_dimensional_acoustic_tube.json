@@ -1,0 +1,15 @@
+{
+  "model_name": "one_dimensional_acoustic_open_tube",
+  "physics": "acoustic_pressure_1d",
+  "geometry": {"type": "interval_1d", "parameters": {"L": {"value": 0.5, "unit": "m", "min": 0.05, "max": 5.0}}},
+  "materials": {
+    "c_air": {"value": 343, "unit": "m/s", "min": 200, "max": 1600},
+    "rho_air": {"value": 1.225, "unit": "kg/m^3", "min": 0.1, "max": 1500}
+  },
+  "boundary_conditions": {"p_release": {"value": 0, "unit": "Pa", "min": 0, "max": 0}},
+  "mesh": {"hmax": {"value": 0.05, "unit": "m", "min": 0.001, "max": 0.5}},
+  "study": {"type": "eigenfrequency", "neigs": 3, "shift": "c_air/(2*L)"},
+  "outputs": {"f1_reference": "c_air/(2*L)", "eigenfrequency": "freq"},
+  "sweep": {"hmax": [0.1, 0.05, 0.025]},
+  "verification": {"reference": "f1=c/(2L)", "mesh_guidance": "For frequency-domain work, use at least about 6 elements per wavelength; compare eigenfrequency across hmax sweep."}
+}

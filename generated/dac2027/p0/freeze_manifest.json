@@ -1,0 +1,20 @@
+{
+  "schema": "dac2027-p0-freeze-manifest",
+  "schemaVersion": "1.0.0",
+  "created_at_utc": "2026-10-13T01:58:59.726584+00:00",
+  "scope": "Evaluator, acquisition schemas, local runners, and frozen prompt generator. Measured blind data are deliberately excluded until acquisition.",
+  "files_sha256": {
+    "configs/dac2027_p0_protocol.json": "46c03f3103af1aa840a5f3ded4ad562c81d12e27161cb299f50836bb5b3cef88",
+    "src/comsol_small_model/dac2027_p0_evaluation.py": "903060252175f92b4c3459c940e88bdc9c6426a244107facd0bf26dea719bf8b",
+    "scripts/prepare_dac2027_p0.py": "61e74364e722c11ffb066a67d451ff05f2de7b9a834f83401a4bddf6db44c21a",
+    "scripts/evaluate_dac2027_p0.py": "31e53fdd012d9a175c7d3910d8e3218da8b5dd50900379060c1e73fbcc3ed213",
+    "scripts/run_dac2027_p0_internal_pilot.py": "4152f5712d25975128c2488481ff0a05d0b8c4fc615bbb19b6762e14e494a336",
+    "scripts/run_dac2027_p0_local_methods.py": "0497edbc5713acd54dcfd2bfc4b76302858d0c3dd2a2a075964398c7e174d8ac",
+    "scripts/prepare_dac2027_p0_llm_prompts.py": "47afcab475b99119d3e7a91b7d2371a52db37ae20a8b708828a26e2cb8835d35",
+    "scripts/start_dac2027_p0_blind_campaign.py": "59c26b3f8c779281c4d028fd076707c0a706b814078a347027c9044710907b01",
+    "scripts/dac2027_p0_intake_server.py": "e06b5c03996857ba481c553ec6097a8bfbb9062790dea53eefb6cc789d0e82de",
+    "benchmarks/dac2027_p0/blind_tasks.template.jsonl": "39f4d05c9c40470dd7f57ff28cce14c7de5bcae0dad884b6aef503e8f0eba320",
+    "benchmarks/dac2027_p0/method_response_schema.json": "78d8f2bf04cd24091408e9c3f227db099be2c33ccaf55422786f5dfba4bb15b4"
+  },
+  "publication_evidence_included": false
+}

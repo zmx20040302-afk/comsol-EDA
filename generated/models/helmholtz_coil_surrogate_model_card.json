@@ -1,0 +1,62 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-25T11:07:40.038102+00:00",
+  "name": "亥姆霍兹线圈中心磁场代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\helmholtz_coil_training.csv",
+    "rows": 9,
+    "inputs": [
+      "coil_current_mA"
+    ],
+    "outputs": [
+      "center_By_T"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\helmholtz_coil_holdout.csv",
+    "rows": 3
+  },
+  "physical_scope": "三维亥姆霍兹双圆线圈磁场模型；两个线圈同向等电流、几何、材料、网格、无限元域与中心测点固定，仅改变线圈电流 I0=0.05-0.6 mA，输出中心带符号 By。",
+  "validated_input_ranges": {
+    "coil_current_mA": {
+      "min": 0.05,
+      "max": 0.6
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "helmholtz_coil_center_field_independent_comsol_validation",
+    "created_at": "2026-08-25T11:07:40.030524+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\helmholtz_coil_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\helmholtz_coil_holdout.csv",
+    "training_rows": 9,
+    "holdout_rows": 3,
+    "candidate_metrics": {
+      "linear_regression": {
+        "max_relative_error_percent": 4.666103740518336e-09,
+        "mean_relative_error_percent": 1.6223928241830594e-09
+      },
+      "distance_weighted_local_interpolation": {
+        "max_relative_error_percent": 5.981593777851721e-09,
+        "mean_relative_error_percent": 2.864812341781075e-09
+      }
+    },
+    "selected_model": "linear_regression",
+    "selection_reason": "Selected by independent COMSOL holdout error for the signed center magnetic field.",
+    "per_output_relative_validation": {
+      "center_By_T": {
+        "max_relative_error_percent": 4.666103740518336e-09,
+        "mean_relative_error_percent": 1.6223928241830594e-09,
+        "threshold_relative_error_percent": 1.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "三维亥姆霍兹双圆线圈磁场模型；两个线圈同向等电流、几何、材料、网格、无限元域与中心测点固定，仅改变线圈电流 I0=0.05-0.6 mA，输出中心带符号 By。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

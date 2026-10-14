@@ -1,0 +1,142 @@
+{
+  "schema": "dac2027-p1-eda-scenario-contracts",
+  "schemaVersion": "1.0.0",
+  "frozen_at": "2026-10-13T10:10:00+08:00",
+  "purpose": "Freeze two executable EDA design tasks with explicit inputs, constraints, outputs, decisions, physics, evidence and stop conditions.",
+  "acceptance": {
+    "minimum_primary_scenarios": 2,
+    "minimum_eda_stages": 2,
+    "require_design_variables": true,
+    "require_constraints": true,
+    "require_outputs": true,
+    "require_engineering_decision": true,
+    "require_physics_plan": true,
+    "require_stop_conditions": true,
+    "require_traceable_numerical_evidence": true,
+    "minimum_fresh_post_freeze_scenarios_for_submission": 2
+  },
+  "scenarios": [
+    {
+      "id": "busbar_power_delivery_design",
+      "role": "primary",
+      "name_zh": "母排电热协同设计",
+      "eda_stage": "封装与供电互连设计",
+      "design_question": "在固定负载与环境范围内，选择母排几何，使铜质量和焦耳损耗尽量低，同时满足温升、电压降、电流密度和几何可制造性约束。",
+      "engineering_decision": {
+        "decision": "选择可进入详细设计的母排几何与额定工况，或因证据不足退回 COMSOL 复算。",
+        "value": "把热、电和材料用量的权衡转化为可审计的 Pareto 设计选择，并阻止不安全的代理预测直接放行。",
+        "decision_owner": "电源完整性、封装或热设计工程师"
+      },
+      "design_variables": [
+        {"name": "L_mm", "unit": "mm", "lower": 70.0, "upper": 110.0, "baseline": 90.0, "meaning": "母排长度"},
+        {"name": "wbb_mm", "unit": "mm", "lower": 40.0, "upper": 60.0, "baseline": 50.0, "meaning": "母排宽度"},
+        {"name": "tbb_mm", "unit": "mm", "lower": 3.5, "upper": 7.0, "baseline": 5.0, "meaning": "母排厚度"},
+        {"name": "bolt_radius_mm", "unit": "mm", "lower": 4.0, "upper": 8.0, "baseline": 6.0, "meaning": "圆形连接特征半径"}
+      ],
+      "operating_variables": [
+        {"name": "I_load_A", "unit": "A", "lower": 80.0, "upper": 240.0, "nominal": 160.0, "meaning": "端子负载电流"},
+        {"name": "htc_W_m2K", "unit": "W/(m^2*K)", "lower": 2.0, "upper": 10.0, "nominal": 5.0, "meaning": "对流换热系数"},
+        {"name": "T_amb_K", "unit": "K", "lower": 293.15, "upper": 313.15, "nominal": 293.15, "meaning": "环境温度"}
+      ],
+      "objectives": [
+        {"name": "copper_mass_kg", "direction": "minimize", "unit": "kg"},
+        {"name": "joule_power_W", "direction": "minimize", "unit": "W"}
+      ],
+      "constraints": [
+        {"name": "maximum_temperature", "expression": "Tmax_K <= 373.15", "unit": "K", "provenance": "冻结研究阈值；不是产品认证限值"},
+        {"name": "nominal_voltage_drop", "expression": "normalized_voltage_at_160A_mV <= 20", "unit": "mV", "provenance": "相对基准设计阈值"},
+        {"name": "maximum_current_density", "expression": "Jmax_A_m2 <= 1.10 * Jmax_baseline_A_m2", "unit": "A/m^2", "provenance": "相对基准设计阈值"},
+        {"name": "geometry_feasibility", "expression": "bolt_radius_mm <= 0.20 * wbb_mm", "unit": "1", "provenance": "硬几何规则"}
+      ],
+      "required_outputs": [
+        {"name": "Tmax_K", "unit": "K", "role": "constraint"},
+        {"name": "normalized_voltage_at_160A_mV", "unit": "mV", "role": "constraint"},
+        {"name": "Jmax_A_m2", "unit": "A/m^2", "role": "constraint"},
+        {"name": "joule_power_W", "unit": "W", "role": "objective"},
+        {"name": "copper_mass_kg", "unit": "kg", "role": "objective"},
+        {"name": "energy_imbalance_percent", "unit": "%", "role": "physical_validation"}
+      ],
+      "physics_plan": {
+        "interfaces": ["electric_currents", "heat_transfer_solids"],
+        "couplings": ["electromagnetic_heating"],
+        "study": "stationary",
+        "validation_rules": ["terminal current error <= 1%", "energy imbalance <= 0.1%", "all hard constraints evaluated"]
+      },
+      "automatic_stop_conditions": [
+        "任何关键输入缺失、单位冲突或超出冻结范围",
+        "几何重建后实体选择失效",
+        "COMSOL 构建、网格、求解或结果导出失败",
+        "能量不平衡超过 0.1%",
+        "代理输入越界或 95% 单侧上界不满足约束"
+      ],
+      "evidence": {
+        "linked_p7_case": "busbar_electrothermal_design",
+        "tier": "fresh_current_project_comsol_closed_loop",
+        "fresh_experiment_report": "generated/dac2027/p1/experiments/busbar_power_delivery_design/report.json",
+        "artifacts": [
+          "configs/busbar_eda_design_problem.json",
+          "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+          "generated/p5/final_evaluation/p5_final_evaluation_evaluated.csv",
+          "generated/p5/final_evaluation/p5_final_evaluation_final.mph"
+        ]
+      }
+    },
+    {
+      "id": "mems_thermal_actuator_operating_design",
+      "role": "primary",
+      "name_zh": "MEMS 热微执行器工作点设计",
+      "eda_stage": "MEMS 多物理场协同设计",
+      "design_question": "在冻结几何与材料下，选择驱动电压和表面散热条件，在最高温度和焦耳功率受限时获得足够的执行器位移。",
+      "engineering_decision": {
+        "decision": "选择驱动电压与最低散热能力，或在目标位移与热约束无法同时满足时拒绝该工作点。",
+        "value": "把电驱动、焦耳热和热膨胀位移放入同一工程判定，支持驱动电路与封装散热协同选择。",
+        "decision_owner": "MEMS、驱动电路或封装热设计工程师"
+      },
+      "design_variables": [
+        {"name": "DV_V", "unit": "V", "lower": 4.5, "upper": 5.5, "baseline": 5.0, "meaning": "驱动电压"},
+        {"name": "htc_s_W_m2K", "unit": "W/(m^2*K)", "lower": 15000.0, "upper": 25000.0, "baseline": 20000.0, "meaning": "表面等效换热系数"}
+      ],
+      "operating_variables": [
+        {"name": "htc_us_W_m2K", "unit": "W/(m^2*K)", "lower": 400.0, "upper": 400.0, "nominal": 400.0, "meaning": "下表面冻结换热系数"}
+      ],
+      "objectives": [
+        {"name": "umax_m", "direction": "maximize", "unit": "m"},
+        {"name": "joule_power_W", "direction": "minimize", "unit": "W"}
+      ],
+      "constraints": [
+        {"name": "maximum_temperature", "expression": "Tmax_K <= 550", "unit": "K", "provenance": "P1 冻结研究阈值；不是产品可靠性认证限值"},
+        {"name": "minimum_displacement", "expression": "umax_m >= 0.9e-6", "unit": "m", "provenance": "P1 冻结功能目标"},
+        {"name": "maximum_joule_power", "expression": "joule_power_W <= 0.016", "unit": "W", "provenance": "P1 冻结功耗预算"}
+      ],
+      "required_outputs": [
+        {"name": "Tmax_K", "unit": "K", "role": "constraint"},
+        {"name": "umax_m", "unit": "m", "role": "objective_and_constraint"},
+        {"name": "joule_power_W", "unit": "W", "role": "objective_and_constraint"}
+      ],
+      "physics_plan": {
+        "interfaces": ["electric_currents", "heat_transfer_solids", "solid_mechanics"],
+        "couplings": ["electromagnetic_heating", "thermal_expansion"],
+        "study": "stationary",
+        "validation_rules": ["temperature relative error <= 7%", "displacement relative error <= 10%", "Joule power relative error <= 7%"]
+      },
+      "automatic_stop_conditions": [
+        "驱动电压或换热条件超出冻结范围",
+        "材料、几何、边界或耦合与历史证据不一致",
+        "COMSOL 构建、网格、求解或结果导出失败",
+        "温度、位移或功率验证门未通过",
+        "没有工作点同时满足位移、温度和功耗约束"
+      ],
+      "evidence": {
+        "linked_p7_case": "mems_thermal_actuator",
+        "tier": "historical_independent_comsol_holdout",
+        "fresh_experiment_report": "generated/dac2027/p1/experiments/mems_thermal_actuator_operating_design/report.json",
+        "artifacts": [
+          "generated/training_runs/thermal_actuator_simplified_training.csv",
+          "generated/training_runs/thermal_actuator_simplified_holdout.csv",
+          "generated/models/thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+          "generated/training_runs/thermal_actuator_simplified_attach.log"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "kind": "comsol_physics_selection_knowledge",
+  "created_at": "2026-07-04T06:30:30.195725+00:00",
+  "source_memory_case_count": 107,
+  "summary": "COMSOL 物理场选择应从主变量和控制方程出发，再用案例 PDF、MATLAB/Java 脚本和模型树证据校验。",
+  "selection_steps": [
+    "先用一句话写清楚要观察或预测的主变量，例如温度、应力、速度、浓度、电势、声压或自定义变量。",
+    "根据主变量选择主物理场：温度选传热，应力/位移选固体力学，速度/压力选流体，浓度选物质传递，电势/电流选电学，声压选声学。",
+    "如果需求出现两个以上主变量，先确定驱动关系，再选择多物理场耦合，例如电流产生焦耳热，再导致温升或热变形。",
+    "如果 PDF 或需求给出的是自定义方程，而不是标准物理接口，优先考虑 PDE 接口，并把方程系数、变量和边界条件列出来。",
+    "再选择研究类型：稳态看最终平衡，瞬态看随时间变化，特征频率/特征值看模态或能级，频域看谐波响应，参数扫描看变量影响。",
+    "最后用 MATLAB/Java 中的 physics.create 或 COMSOL 模型树证据校验物理场名称，避免只凭案例标题猜测。"
+  ],
+  "physics_types": [
+    {
+      "name": "Heat Transfer",
+      "chinese": "传热",
+      "when_to_choose": "需求关注温度、热通量、导热、对流、辐射、冷却、热源、热失控或瞬态加热。",
+      "signals": [
+        "温度",
+        "热通量",
+        "导热",
+        "对流换热",
+        "辐射传热",
+        "热源",
+        "冷却",
+        "热失控"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Time Dependent",
+        "Parametric Sweep"
+      ],
+      "case_examples": [
+        "使用网格划分序列",
+        "借助变形几何接口修改导入的 CAD 几何",
+        "受载弹簧 - 使用全局方程满足约束条件",
+        "含载荷突变的瞬时加热6.2",
+        "在轨航天器",
+        "多孔材料的有效扩散系数",
+        "如何生成随机非均匀材料数据6.2",
+        "安装验证"
+      ]
+    },
+    {
+      "name": "Solid Mechanics",
+      "chinese": "固体力学",
+      "when_to_choose": "需求关注应力、应变、位移、载荷、固定约束、刚度、模态或结构安全。",
+      "signals": [
+        "应力",
+        "应变",
+        "位移",
+        "载荷",
+        "固定约束",
+        "模态",
+        "刚度",
+        "变形"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Time Dependent",
+        "Eigenfrequency",
+        "Eigenvalue"
+      ],
+      "case_examples": [
+        "App 中用户定义的许可协议",
+        "两种载荷工况下的锥形悬臂梁",
+        "传输线参数计算器",
+        "变形曲面的泽尼克多项式拟合",
+        "心脏电信号",
+        "扳手的应力和应变",
+        "承受动载荷的梁",
+        "支架几何的扫掠网格"
+      ]
+    },
+    {
+      "name": "Laminar Flow",
+      "chinese": "层流",
+      "when_to_choose": "需求关注低雷诺数流动、入口速度、出口压力、压力降、通道流、绕流或速度场。",
+      "signals": [
+        "速度",
+        "压力",
+        "入口",
+        "出口",
+        "层流",
+        "不可压缩流",
+        "Navier-Stokes",
+        "绕流"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Time Dependent"
+      ],
+      "case_examples": [
+        "Blasius 边界层",
+        "传递和吸附",
+        "使用 PID 控制器的过程控制",
+        "化学蚀刻",
+        "圆柱绕流",
+        "如何在求解后自动导出图像仅6.3",
+        "岩石裂隙流",
+        "带非等温冷却夹套的管式反应器"
+      ]
+    },
+    {
+      "name": "Electric Currents / Electrostatics",
+      "chinese": "电流 / 静电",
+      "when_to_choose": "需求关注电势、电流、电极、接地、端子、电场分布、电阻、电传感或焦耳热来源。",
+      "signals": [
+        "电压",
+        "电流",
+        "电势",
+        "电极",
+        "接地",
+        "端子",
+        "电阻",
+        "电场"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Frequency Domain",
+        "Parametric Sweep"
+      ],
+      "case_examples": [
+        "四极透镜",
+        "电传感器",
+        "电传感器批处理扫描"
+      ]
+    },
+    {
+      "name": "Transport of Diluted Species",
+      "chinese": "稀物质传递",
+      "when_to_choose": "需求关注浓度、扩散、吸附、反应、通量、化学蚀刻或与流场耦合的物质输运。",
+      "signals": [
+        "浓度",
+        "扩散",
+        "吸附",
+        "反应速率",
+        "通量",
+        "物质传递",
+        "化学蚀刻"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Time Dependent"
+      ],
+      "case_examples": []
+    },
+    {
+      "name": "Pressure Acoustics",
+      "chinese": "压力声学",
+      "when_to_choose": "需求关注声压、声场、共振、房间模态、消声器、频域声学响应或瞬态声压级。",
+      "signals": [
+        "声压",
+        "声场",
+        "声学",
+        "共振",
+        "特征模态",
+        "频域",
+        "消声器"
+      ],
+      "typical_studies": [
+        "Frequency Domain",
+        "Eigenfrequency",
+        "Time Dependent"
+      ],
+      "case_examples": [
+        "房间的特征模态",
+        "瞬态声压级6.3",
+        "集群设置验证"
+      ]
+    },
+    {
+      "name": "Coefficient Form PDE / General Form PDE",
+      "chinese": "系数形式 PDE / 通用 PDE",
+      "when_to_choose": "需求核心是自定义控制方程，或 COMSOL 没有直接对应的专用接口，例如量子能级、Black-Scholes、KdV、浅水方程、延迟方程或积分方程。",
+      "signals": [
+        "自定义方程",
+        "偏微分方程",
+        "系数形式",
+        "弱形式",
+        "特征值",
+        "波函数",
+        "能级",
+        "Black-Scholes",
+        "KdV"
+      ],
+      "typical_studies": [
+        "Stationary",
+        "Time Dependent",
+        "Eigenvalue"
+      ],
+      "case_examples": [
+        "Black-Scholes 方程",
+        "KdV 方程和孤子",
+        "同频鼓",
+        "基于扫描数据生成可供仿真的网格",
+        "真空干燥",
+        "衍射图样",
+        "钢罐中的壳扩散",
+        "锥形量子点"
+      ]
+    },
+    {
+      "name": "Optimization",
+      "chinese": "优化",
+      "when_to_choose": "需求关注目标函数、约束、灵敏度、参数最优解、几何优化、材料优化或工况优化。",
+      "signals": [
+        "目标函数",
+        "约束",
+        "优化",
+        "灵敏度",
+        "参数扫描",
+        "最优"
+      ],
+      "typical_studies": [
+        "Optimization",
+        "Parametric Sweep",
+        "Stationary"
+      ],
+      "case_examples": [
+        "STL导入教程"
+      ]
+    }
+  ],
+  "pitfalls": [
+    "不要只看到“方程”就选 PDE；如果方程描述的是普通流体、传热或结构问题，优先用专用物理场接口。",
+    "不要只看到“热”就只选传热；焦耳热案例通常需要 Electric Currents 与 Heat Transfer 耦合。",
+    "几何教程、网格教程和导入教程可能没有真正的主物理场，应标记为 geometry/mesh workflow，而不是硬套物理场。",
+    "边界编号会随几何改变而变化，自动生成代码前必须复核选择集和边界 ID。",
+    "没有 CSV 的案例只能学习建模逻辑，不能说明数值代理模型已经训练完成。"
+  ],
+  "physics_frequency": [
+    {
+      "name": "Heat Transfer",
+      "count": 37
+    },
+    {
+      "name": "Solid Mechanics",
+      "count": 19
+    },
+    {
+      "name": "Laminar Flow",
+      "count": 19
+    },
+    {
+      "name": "Coefficient Form PDE",
+      "count": 8
+    },
+    {
+      "name": "Pressure Acoustics",
+      "count": 3
+    },
+    {
+      "name": "Electric Currents",
+      "count": 2
+    },
+    {
+      "name": "GlobalEquations",
+      "count": 2
+    },
+    {
+      "name": "Optimization",
+      "count": 1
+    },
+    {
+      "name": "LaplaceEquation",
+      "count": 1
+    },
+    {
+      "name": "Electrostatics",
+      "count": 1
+    },
+    {
+      "name": "ConductiveMedia",
+      "count": 1
+    }
+  ],
+  "study_frequency": [
+    {
+      "name": "Stationary",
+      "count": 46
+    },
+    {
+      "name": "Time Dependent",
+      "count": 15
+    },
+    {
+      "name": "Transient",
+      "count": 10
+    },
+    {
+      "name": "Eigenvalue",
+      "count": 5
+    },
+    {
+      "name": "Eigenfrequency",
+      "count": 4
+    },
+    {
+      "name": "Parametric Sweep",
+      "count": 2
+    },
+    {
+      "name": "Frequency Domain",
+      "count": 2
+    },
+    {
+      "name": "Optimization",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "comsol_scalar_output_sweep_plan",
+  "created_at": "2026-08-24T11:24:23.3653033Z",
+  "case_title": "电阻 FEM 场路耦合",
+  "case_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\circuit_fem_resistor.case.json",
+  "model_path": "D:\\桌面\\codex\\案例下载\\电气\\电阻 FEM 场路耦合\\circuit_fem_resistor.mph",
+  "purpose": "在固定几何、端子、电路连接和稳态研究下，学习导电率对场路耦合等效电阻与节点电压的影响。",
+  "input_parameters": [
+    {
+      "name": "sigma_S_m",
+      "comsol_parameter": "sigma",
+      "unit": "S/m",
+      "training_values": [
+        800,
+        900,
+        1000,
+        1100,
+        1200
+      ],
+      "holdout_values": [
+        850,
+        1150
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "resistance_circuit_ohm",
+      "expression": "((cir.v_2-cir.v_1)/cir.R1.v)*R1",
+      "unit": "ohm"
+    },
+    {
+      "name": "resistance_analytic_ohm",
+      "expression": "L/(pi*r^2*sigma)",
+      "unit": "ohm"
+    }
+  ],
+  "baseline": {
+    "resistance_circuit_ohm": 1.59163984167614,
+    "resistance_analytic_ohm": 1.59154943091895,
+    "sigma_S_m": 1000
+  },
+  "execution_policy": [
+    "每个 sigma 单独设置并运行 Stationary 研究。",
+    "训练集和留出集分别导出 CSV，留出点不得参与模型选择。",
+    "每行记录输入、输出、单位、COMSOL 版本和模型路径。",
+    "只有独立留出集通过后，才允许登记为 validated_for_declared_scope。"
+  ],
+  "declared_scope": "仅适用于该电阻 FEM 场路耦合模型；固定圆柱几何、材料模型、R1/R2、端子和电路拓扑，sigma=800-1200 S/m。"
+}

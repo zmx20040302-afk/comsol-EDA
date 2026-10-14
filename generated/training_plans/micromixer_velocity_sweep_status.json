@@ -1,0 +1,16 @@
+{
+  "case": "微混合器",
+  "status": "deferred_due_to_solver_cost",
+  "stopped_at": "2026-08-25T03:30:23.7745091Z",
+  "observed": {
+    "elapsed_note": "No completed checkpoint after extended 3D stationary recomputation",
+    "peak_working_set_note": "approximately 6.9 GB COMSOL server working set",
+    "output_csv_generated": false
+  },
+  "preserved_assets": [
+    "generated/training_runs/micromixer_preflight.csv",
+    "generated/training_plans/micromixer_velocity_sweep.json",
+    "matlab/run_micromixer_velocity_sweep.m"
+  ],
+  "next_recommendation": "Create a coarser-mesh pilot model and first validate its S_outlet deviation against the saved fine-mesh baseline before using it for automated velocity sweeps."
+}

@@ -1,0 +1,110 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-09-03T11:59:52.604102+00:00",
+  "name": "功率电感器频率响应代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_training_combined.csv",
+    "rows": 6,
+    "inputs": [
+      "frequency_Hz"
+    ],
+    "outputs": [
+      "inductance_H",
+      "conductance_S"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_holdout_combined.csv",
+    "rows": 5
+  },
+  "physical_scope": "功率电感器频率响应模型；几何、材料、端口、网格与研究设置固定，仅改变频率，输出 real(1/mef.Y11/mef.iomega) 电感和 real(mef.Y11) 等效电导。仅适用于 COMSOL 已验证的 500-20000 Hz 范围。",
+  "validated_input_ranges": {
+    "frequency_Hz": {
+      "min": 500.0,
+      "max": 20000.0
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "power_inductor_frequency_independent_comsol_validation",
+    "created_at": "2026-09-03T11:59:52.596891+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_training_combined.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\power_inductor_frequency_holdout_combined.csv",
+    "training_rows": 6,
+    "holdout_rows": 5,
+    "candidate_reports": {
+      "linear_regression": {
+        "max_relative_error_percent": 351.5447027175442,
+        "mean_relative_error_percent": 60.762053278365116,
+        "per_output": {
+          "inductance_H": {
+            "max_relative_error_percent": 0.009245506665781117,
+            "mean_relative_error_percent": 0.005535972519139325
+          },
+          "conductance_S": {
+            "max_relative_error_percent": 351.5447027175442,
+            "mean_relative_error_percent": 121.51857058421108
+          }
+        }
+      },
+      "polynomial_ridge_degree2": {
+        "max_relative_error_percent": 585.5440174115683,
+        "mean_relative_error_percent": 88.1154222929858,
+        "per_output": {
+          "inductance_H": {
+            "max_relative_error_percent": 0.007463655213415433,
+            "mean_relative_error_percent": 0.004866438473656143
+          },
+          "conductance_S": {
+            "max_relative_error_percent": 585.5440174115683,
+            "mean_relative_error_percent": 176.22597814749793
+          }
+        }
+      },
+      "random_forest": {
+        "max_relative_error_percent": 88.85158384566583,
+        "mean_relative_error_percent": 26.231901779056614,
+        "per_output": {
+          "inductance_H": {
+            "max_relative_error_percent": 0.00641310133548967,
+            "mean_relative_error_percent": 0.003749118713068233
+          },
+          "conductance_S": {
+            "max_relative_error_percent": 88.85158384566583,
+            "mean_relative_error_percent": 52.46005443940017
+          }
+        }
+      },
+      "log_frequency_log_output": {
+        "max_relative_error_percent": 1.4136800433979615,
+        "mean_relative_error_percent": 0.4119737838216951,
+        "per_output": {
+          "inductance_H": {
+            "max_relative_error_percent": 0.0042014140490197,
+            "mean_relative_error_percent": 0.0022529892469868628
+          },
+          "conductance_S": {
+            "max_relative_error_percent": 1.4136800433979615,
+            "mean_relative_error_percent": 0.8216945783964033
+          }
+        }
+      }
+    },
+    "selected_model": "log_frequency_log_output",
+    "selection_reason": "Selected by independent COMSOL holdout maximum relative error for both outputs.",
+    "validated_input_ranges": {
+      "frequency_Hz": {
+        "min": 500.0,
+        "max": 20000.0
+      }
+    },
+    "threshold_relative_error_percent": 5.0,
+    "passed": true,
+    "scope": "功率电感器频率响应模型；几何、材料、端口、网格与研究设置固定，仅改变频率，输出 real(1/mef.Y11/mef.iomega) 电感和 real(mef.Y11) 等效电导。仅适用于 COMSOL 已验证的 500-20000 Hz 范围。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

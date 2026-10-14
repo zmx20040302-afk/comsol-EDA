@@ -1,0 +1,544 @@
+{
+  "schema": "comsol-modeling-contract",
+  "schemaVersion": "1.0.0",
+  "contract_id": "100_mm_300_k_350_k_81d8e2a6ea",
+  "created_at": "2026-10-09T13:15:57.077740+00:00",
+  "updated_at": "2026-10-09T13:15:57.080747+00:00",
+  "status": "ready_for_review",
+  "evidence_level": "proposed",
+  "raw_requirement": "建立一维铜棒稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K，输出最高温度和热流",
+  "task": {
+    "name": "建立一维铜棒稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K，输出最高温度和热流",
+    "goal": "建立一维铜棒稳态传热模型，长度100 mm，左端固定温度300 K，右端固定温度350 K，输出最高温度和热流",
+    "completion_criteria": [
+      "COMSOL 模型成功构建、网格划分和求解",
+      "生成可打开的 MPH、结果数据和预览",
+      "关键结果通过合同中定义的物理验证规则"
+    ],
+    "language": "zh-CN"
+  },
+  "geometry": {
+    "dimension": "1D",
+    "source": "natural_language_requirement",
+    "objects": [
+      {
+        "description": "矩形/块体热传导域",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "description": "热源区域",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "description": "冷却或对流边界",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "description": "温度监测点或输出边界",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "length",
+        "value": 100.0,
+        "unit": "mm",
+        "description": "长度",
+        "evidence_level": "user_confirmed",
+        "source": "user_requirement"
+      }
+    ],
+    "named_selections": [
+      {
+        "name": "sel_1",
+        "purpose": "命名热源域",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "name": "sel_2",
+        "purpose": "命名固定温度边界",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "name": "sel_3",
+        "purpose": "命名对流边界",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      },
+      {
+        "name": "sel_4",
+        "purpose": "命名输出点/面",
+        "evidence_level": "proposed",
+        "source": "geometry_knowledge"
+      }
+    ]
+  },
+  "materials": [
+    {
+      "name": "Copper",
+      "tag": "mat1",
+      "selection": "template_defined_domain",
+      "properties": [
+        {
+          "name": "density",
+          "value": 8960.0,
+          "unit": "kg/m^3",
+          "description": "density",
+          "evidence_level": "source_supported",
+          "source": "local_material_profile"
+        },
+        {
+          "name": "thermalconductivity",
+          "value": 400.0,
+          "unit": "W/(m*K)",
+          "description": "thermalconductivity",
+          "evidence_level": "source_supported",
+          "source": "local_material_profile"
+        },
+        {
+          "name": "heatcapacity",
+          "value": 385.0,
+          "unit": "J/(kg*K)",
+          "description": "heatcapacity",
+          "evidence_level": "source_supported",
+          "source": "local_material_profile"
+        },
+        {
+          "name": "electricconductivity",
+          "value": 59980000.0,
+          "unit": "S/m",
+          "description": "electricconductivity",
+          "evidence_level": "source_supported",
+          "source": "local_material_profile"
+        }
+      ],
+      "evidence_level": "source_supported",
+      "source": "local_material_profile"
+    }
+  ],
+  "physics": {
+    "interfaces": [
+      {
+        "name": "Heat Transfer",
+        "tag": "ht",
+        "evidence_level": "proposed",
+        "source": "requirement_parser"
+      }
+    ],
+    "couplings": [
+      {
+        "name": "Thermal Expansion",
+        "tag": "multiphysics_1",
+        "evidence_level": "proposed",
+        "source": "coupled_physics_knowledge"
+      },
+      {
+        "name": "Nonisothermal Flow",
+        "tag": "multiphysics_2",
+        "evidence_level": "proposed",
+        "source": "coupled_physics_knowledge"
+      },
+      {
+        "name": "Joule Heating / Electromagnetic Heating",
+        "tag": "multiphysics_3",
+        "evidence_level": "proposed",
+        "source": "coupled_physics_knowledge"
+      }
+    ],
+    "dependent_variables": [
+      "T"
+    ],
+    "selection_summary": {
+      "result": "传热",
+      "interfaces": "Heat Transfer in Solids；若有流体参与，改用 Heat Transfer in Fluids 或 Nonisothermal Flow",
+      "theory": "主要物理量/未知量是温度，控制方程是能量守恒；热源、导热、对流或辐射决定温度场。",
+      "boundaries": "需要给定温度、热通量、绝热、对流换热系数或辐射边界。",
+      "checks": "确认固体/流体区域、材料热参数、稳态或瞬态、是否存在热源耦合。"
+    }
+  },
+  "boundary_conditions": [
+    {
+      "name": "固定温度/给定温度",
+      "tag": "bc1",
+      "type": "固定温度/给定温度",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    },
+    {
+      "name": "热通量或热源",
+      "tag": "bc2",
+      "type": "热通量或热源",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    },
+    {
+      "name": "绝热/对称",
+      "tag": "bc3",
+      "type": "绝热/对称",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    },
+    {
+      "name": "对流换热",
+      "tag": "bc4",
+      "type": "对流换热",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    },
+    {
+      "name": "表面对表面或环境辐射",
+      "tag": "bc5",
+      "type": "表面对表面或环境辐射",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    },
+    {
+      "name": "固定温度",
+      "tag": "bc6",
+      "type": "固定温度",
+      "target": "template_defined_selection",
+      "values": [],
+      "evidence_level": "source_supported",
+      "source": "user_requirement"
+    }
+  ],
+  "initial_conditions": [
+    {
+      "name": "初始温度",
+      "tag": "init1",
+      "type": "初始温度",
+      "target": "unresolved_selection",
+      "values": [],
+      "evidence_level": "proposed",
+      "source": "boundary_knowledge_proposal"
+    },
+    {
+      "name": "初始热源状态",
+      "tag": "init2",
+      "type": "初始热源状态",
+      "target": "unresolved_selection",
+      "values": [],
+      "evidence_level": "proposed",
+      "source": "boundary_knowledge_proposal"
+    },
+    {
+      "name": "环境温度",
+      "tag": "init3",
+      "type": "环境温度",
+      "target": "unresolved_selection",
+      "values": [],
+      "evidence_level": "proposed",
+      "source": "boundary_knowledge_proposal"
+    }
+  ],
+  "mesh": {
+    "strategy": [
+      "先使用可控的全局网格尺寸，再对结果梯度大的区域局部加密",
+      "热源、材料界面和温度梯度大的区域局部加密"
+    ],
+    "local_refinements": [
+      "热源/材料界面"
+    ],
+    "parameter": "hmax",
+    "independence_check": [
+      "至少进行一次网格加密对比，确认关键输出基本收敛",
+      "检查最高温度和热流密度在网格加密后的变化"
+    ],
+    "evidence_level": "proposed"
+  },
+  "study": {
+    "types": [
+      "Stationary"
+    ],
+    "steps": [
+      {
+        "type": "Stationary",
+        "order": 1
+      }
+    ],
+    "evidence_level": "source_supported"
+  },
+  "solver": {
+    "strategy": [
+      "baseline_solve_before_sweep"
+    ],
+    "checks": [
+      "先完成一次基准求解并记录收敛状态",
+      "检查残差、相对误差和关键输出是否稳定",
+      "参数扫描或代理模型训练必须在基准求解通过后进行"
+    ],
+    "evidence_level": "proposed"
+  },
+  "outputs": [
+    {
+      "name": "T_max",
+      "expression": "unresolved_expression",
+      "unit": "",
+      "aggregation": "field_or_derived_value_to_confirm",
+      "evidence_level": "source_supported",
+      "source": "result_knowledge"
+    },
+    {
+      "name": "heat_flux",
+      "expression": "unresolved_expression",
+      "unit": "",
+      "aggregation": "field_or_derived_value_to_confirm",
+      "evidence_level": "source_supported",
+      "source": "result_knowledge"
+    },
+    {
+      "name": "temperature_profile",
+      "expression": "unresolved_expression",
+      "unit": "",
+      "aggregation": "field_or_derived_value_to_confirm",
+      "evidence_level": "source_supported",
+      "source": "result_knowledge"
+    }
+  ],
+  "validation": [
+    {
+      "name": "validation_1",
+      "rule": "先确认输出量、单位和积分/最大值定义",
+      "severity": "critical",
+      "evidence_level": "proposed",
+      "source": "result_knowledge"
+    },
+    {
+      "name": "validation_2",
+      "rule": "对关键输出进行网格加密和基准工况对比",
+      "severity": "warning",
+      "evidence_level": "proposed",
+      "source": "result_knowledge"
+    },
+    {
+      "name": "validation_3",
+      "rule": "导出 CSV 前检查结果是否有限、无 NaN 且与边界条件一致",
+      "severity": "warning",
+      "evidence_level": "proposed",
+      "source": "result_knowledge"
+    }
+  ],
+  "evidence": [
+    {
+      "field": "raw_requirement",
+      "level": "user_confirmed",
+      "source": "user_requirement",
+      "timestamp": "2026-10-09T13:15:57.080747+00:00"
+    },
+    {
+      "field": "physics.interfaces",
+      "level": "source_supported",
+      "source": "local_physics_rules",
+      "timestamp": "2026-10-09T13:15:57.080747+00:00"
+    },
+    {
+      "field": "validated_template",
+      "level": "template_verified",
+      "source": "configs/one_dimensional_heat_conduction.json",
+      "timestamp": "2026-10-09T13:15:57.080747+00:00"
+    }
+  ],
+  "missing_information": [],
+  "execution_policy": {
+    "risk_level": "A",
+    "allow_automatic_generation": true,
+    "allow_automatic_solve": true,
+    "max_retries": 1,
+    "allowed_automatic_changes": [
+      "api_label_reference",
+      "result_dataset_reference",
+      "equivalent_named_selection"
+    ]
+  },
+  "decision_support": {
+    "physics_selection": {
+      "result": "传热",
+      "interfaces": "Heat Transfer in Solids；若有流体参与，改用 Heat Transfer in Fluids 或 Nonisothermal Flow",
+      "theory": "主要物理量/未知量是温度，控制方程是能量守恒；热源、导热、对流或辐射决定温度场。",
+      "boundaries": "需要给定温度、热通量、绝热、对流换热系数或辐射边界。",
+      "checks": "确认固体/流体区域、材料热参数、稳态或瞬态、是否存在热源耦合。"
+    },
+    "coupling": {
+      "is_coupled": true,
+      "summary": "该需求应按复合场判断，优先考虑：热-结构耦合 / 热应力 + 非等温流动 + 电-热耦合 / 焦耳热。",
+      "primary_physics": "Heat Transfer",
+      "coupled_physics": [
+        "Solid Mechanics",
+        "Heat Transfer in Fluids",
+        "Heat Transfer in Solids"
+      ],
+      "multiphysics_nodes": [
+        "Thermal Expansion",
+        "Nonisothermal Flow",
+        "Joule Heating / Electromagnetic Heating"
+      ],
+      "coupling_variables": [
+        "温度场",
+        "热膨胀应变",
+        "应力/位移",
+        "热膨胀系数",
+        "速度场",
+        "压力场",
+        "对流项",
+        "温度相关密度/黏度",
+        "电流密度",
+        "电损耗/焦耳热源",
+        "温度相关电导率"
+      ],
+      "reasoning": [
+        "温度梯度产生热膨胀应变，结构约束会把热应变转化为应力和位移。",
+        "流场携带热量形成对流换热，温度又可能通过密度、黏度或浮力影响流动。",
+        "电流守恒先给出电势和电流密度，电损耗作为热源进入能量方程；若电导率随温度变化，热场会反过来影响电场。"
+      ],
+      "checks": [
+        "确认热膨胀系数",
+        "确认结构约束是否过强",
+        "确认温度场是否来自稳态或瞬态传热",
+        "确认雷诺数",
+        "确认是否需要浮力/Boussinesq近似",
+        "确认入口温度和壁面对流/热通量",
+        "确认是否稳态或瞬态",
+        "确认电导率是否随温度变化",
+        "确认端子、接地、绝缘和散热边界"
+      ],
+      "matches": [
+        {
+          "id": "thermal_stress",
+          "label": "热-结构耦合 / 热应力"
+        },
+        {
+          "id": "nonisothermal_flow",
+          "label": "非等温流动"
+        },
+        {
+          "id": "joule_heating",
+          "label": "电-热耦合 / 焦耳热"
+        }
+      ]
+    },
+    "geometry_readiness": {
+      "ready_for_meshing": true,
+      "missing_geometry_evidence": [],
+      "dimension_evidence_found": true,
+      "matched_patterns": [
+        {
+          "id": "heat_transfer_domain",
+          "label": "传热几何与参数"
+        }
+      ],
+      "selection_advice": [
+        "命名热源域",
+        "命名固定温度边界",
+        "命名对流边界",
+        "命名输出点/面"
+      ]
+    },
+    "material_readiness": {
+      "ready_for_model_generation": true,
+      "missing_required_properties": [],
+      "risks": [],
+      "required_properties": [
+        {
+          "comsol_key": "density",
+          "symbol": "rho",
+          "name": "密度",
+          "unit": "kg/m^3",
+          "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+        },
+        {
+          "comsol_key": "thermalconductivity",
+          "symbol": "k",
+          "name": "导热系数",
+          "unit": "W/(m*K)",
+          "reason": "决定热传导能力，可为各向异性张量"
+        },
+        {
+          "comsol_key": "heatcapacity",
+          "symbol": "Cp",
+          "name": "比热容",
+          "unit": "J/(kg*K)",
+          "reason": "瞬态传热必须给出"
+        }
+      ],
+      "recognized_materials": [
+        {
+          "name": "Copper",
+          "properties": {
+            "density": "8960[kg/m^3]",
+            "thermalconductivity": "400[W/(m*K)]",
+            "heatcapacity": "385[J/(kg*K)]",
+            "electricconductivity": "5.998e7[S/m]"
+          },
+          "note": "Check temperature-dependent electrical conductivity for Joule heating."
+        }
+      ],
+      "assumptions": [
+        "Check temperature-dependent electrical conductivity for Joule heating."
+      ]
+    },
+    "boundary": {
+      "summary": "按当前需求，边界条件应优先按“传热”来判断。",
+      "boundary_types": [
+        "固定温度/给定温度",
+        "热通量或热源",
+        "绝热/对称",
+        "对流换热",
+        "表面对表面或环境辐射",
+        "固定温度"
+      ],
+      "initial_conditions": [
+        "初始温度",
+        "初始热源状态",
+        "环境温度"
+      ],
+      "theory": "传热边界条件由能量守恒决定；温度、热通量、绝热、对流和辐射分别代表不同的热交换方式。",
+      "checks": [
+        "确认稳态或瞬态",
+        "确认材料热导率、热容和密度",
+        "确认热源是否来自电流、化学反应或激光输入"
+      ],
+      "matches": [
+        {
+          "id": "heat_transfer",
+          "label": "传热"
+        }
+      ],
+      "matlab_snippet": "% Boundary and initial condition scaffold generated from COMSOL training knowledge.\n% Replace placeholder selections after checking geometry boundary/domain IDs.\nmodel.component('comp1').physics('solid').create('fix1', 'Fixed', 1);\n% model.component('comp1').physics('solid').feature('fix1').selection.set([boundary_ids]);\nmodel.component('comp1').physics('ht').create('hf1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hf1').set('q0', 'q0');\nmodel.component('comp1').physics('ht').create('hfconv1', 'HeatFluxBoundary', 1);\nmodel.component('comp1').physics('ht').feature('hfconv1').set('HeatFluxType', 'ConvectiveHeatFlux');\nmodel.component('comp1').physics('ht').feature('hfconv1').set('h', 'hconv');\nmodel.component('comp1').physics('ht').feature('init1').set('Tinit', 'T0');"
+    }
+  },
+  "validated_template": {
+    "matched": true,
+    "template_id": "heat_1d",
+    "template_name": "一维稳态传导传热",
+    "template_path": "configs/one_dimensional_heat_conduction.json",
+    "matched_keywords": [
+      "一维"
+    ],
+    "confidence": 0.65,
+    "required_information": [
+      "长度",
+      "导热系数",
+      "温度边界"
+    ],
+    "verification": "温度解析解、热流守恒和网格收敛通过",
+    "reason": "需求包含关键词：一维，优先复用一维稳态传导传热模板。验证状态：温度解析解、热流守恒和网格收敛通过。",
+    "compatible_with_contract": true
+  },
+  "clarifying_questions": []
+}

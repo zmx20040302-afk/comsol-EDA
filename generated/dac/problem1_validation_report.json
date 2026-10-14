@@ -1,0 +1,310 @@
+{
+  "schema": "dac-problem1-frozen-evaluation",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.0.0",
+  "split": "validation",
+  "post_freeze": true,
+  "independently_authored_or_blinded": false,
+  "task_file_sha256": "aea02652c8a28b94d8f217a3a388d27bd8a5fdef82781ef776d391a7c7e83af5",
+  "device_families": [
+    "chip_package",
+    "electromagnetic_relay",
+    "lab_on_chip",
+    "ultrasonic_transducer"
+  ],
+  "methods": {
+    "existing_selector": {
+      "task_count": 12,
+      "physics_and_coupling_exact_count": 6,
+      "physics_and_coupling_exact_accuracy": 0.5,
+      "physics_and_coupling_exact_wilson95": [
+        0.2538,
+        0.7462
+      ],
+      "study_exact_count": 12,
+      "study_exact_accuracy": 1.0,
+      "study_exact_wilson95": [
+        0.7575,
+        1.0
+      ]
+    },
+    "dependency_graph": {
+      "task_count": 12,
+      "physics_and_coupling_exact_count": 8,
+      "physics_and_coupling_exact_accuracy": 0.6667,
+      "physics_and_coupling_exact_wilson95": [
+        0.3906,
+        0.8619
+      ],
+      "study_exact_count": 12,
+      "study_exact_accuracy": 1.0,
+      "study_exact_wilson95": [
+        0.7575,
+        1.0
+      ]
+    }
+  },
+  "gating": {
+    "blocked_task_count": 8,
+    "complete_task_count": 4,
+    "ungated_false_safe_count": 8,
+    "ungated_false_safe_rate": 1.0,
+    "full_method_false_safe_count": 3,
+    "full_method_false_safe_rate": 0.375,
+    "full_method_false_safe_wilson95": [
+      0.1368,
+      0.6943
+    ],
+    "full_method_false_block_count": 1,
+    "full_method_false_block_rate": 0.25,
+    "full_method_false_block_wilson95": [
+      0.0456,
+      0.6994
+    ]
+  },
+  "details": [
+    {
+      "id": "val-chip-package-complete",
+      "family": "chip_package",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-chip-package-missing",
+      "family": "chip_package",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-chip-package-conflict",
+      "family": "chip_package",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": [
+        "请补充热边界或环境散热条件。"
+      ]
+    },
+    {
+      "id": "val-relay-complete",
+      "family": "electromagnetic_relay",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-relay-missing",
+      "family": "electromagnetic_relay",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-relay-conflict",
+      "family": "electromagnetic_relay",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-transducer-complete",
+      "family": "ultrasonic_transducer",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": false,
+      "reason_codes": [
+        "UNVERIFIED_COUPLING"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-transducer-missing",
+      "family": "ultrasonic_transducer",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": [
+        "请补充结构约束及载荷或热驱动条件。"
+      ]
+    },
+    {
+      "id": "val-transducer-conflict",
+      "family": "ultrasonic_transducer",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-lab-chip-complete",
+      "family": "lab_on_chip",
+      "status": "complete",
+      "expected_blocked": false,
+      "existing_selector": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": true,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-lab-chip-missing",
+      "family": "lab_on_chip",
+      "status": "missing",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": false,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": false,
+      "gate_ok": false,
+      "reason_codes": [],
+      "clarification_questions": []
+    },
+    {
+      "id": "val-lab-chip-conflict",
+      "family": "lab_on_chip",
+      "status": "conflict",
+      "expected_blocked": true,
+      "existing_selector": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "dependency_graph": {
+        "selection_ok": true,
+        "study_ok": true
+      },
+      "ungated_accepts": true,
+      "full_method_blocked": true,
+      "gate_ok": true,
+      "reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "clarification_questions": []
+    }
+  ],
+  "interpretation_limit": "Prospective post-freeze and device-family-disjoint from development by declared labels; tasks were authored within this project and were not blinded or independently adjudicated."
+}

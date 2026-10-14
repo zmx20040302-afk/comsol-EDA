@@ -1,0 +1,1 @@
+{"predicted_interfaces":["solid_mechanics"],"predicted_couplings":[],"predicted_study":"Stationary","predicted_blocked":true}

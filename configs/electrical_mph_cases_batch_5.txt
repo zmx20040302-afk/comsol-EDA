@@ -1,0 +1,21 @@
+D:\桌面\codex\案例下载\电气\快速高效的二维轴对称模型平面波散射分析\plane_wave_expansion_spheroid.mph
+D:\桌面\codex\案例下载\电气\特里切尔脉冲\trichel_pulses.mph
+D:\桌面\codex\案例下载\电气\用于红外波长的微结构抗反射涂层\pyramid_czt_infrared_ar_coating.mph
+D:\桌面\codex\案例下载\电气\用于红外波长的微结构抗反射涂层\rectangular_si_infrared_ar_coating_optimization.mph
+D:\桌面\codex\案例下载\电气\光纤中的受激布里渊散射增益\stimulated_brillouin_scattering_gain_in_optical_fibers_64.mph
+D:\桌面\codex\案例下载\电气\电动轴承\electrodynamic_bearing.mph
+D:\桌面\codex\案例下载\电气\非线性铁磁薄膜\magnetic_diaphragm.mph
+D:\桌面\codex\案例下载\电气\磁齿轮二维模型\magnetic_gear_2d.mph
+D:\桌面\codex\案例下载\电气\基板上的嵌入散射体\embedded_scatterer_on_substrate.mph
+D:\桌面\codex\案例下载\电气\SAW 基本单元的频域分析\SAW_Unit_Cell_Model_Frequency_Domain_Equivalent_Circuit_64.mph
+D:\桌面\codex\案例下载\电气\金属-绝缘体-金属 (MIM) 二极管\mim_diode.mph
+D:\桌面\codex\案例下载\电气\静电放电\esd.mph
+D:\桌面\codex\案例下载\电气\开关磁阻电机\switched_reluctance_motor.mph
+D:\桌面\codex\案例下载\电气\静电扬声器驱动器\electrostatic_speaker_driver_63_cleared.mph
+D:\桌面\codex\案例下载\电气\静电扬声器驱动器\electrostatic_speaker_driver_63.mph
+D:\桌面\codex\案例下载\电气\利用形状优化设计超表面光束偏转器\metasurface_beam_deflector_optimization.mph
+D:\桌面\codex\案例下载\电气\太赫兹光电导天线 (PCA)\photoconductive_antenna.mph
+D:\桌面\codex\案例下载\电气\周期性结构中的高斯光束\GaussianBeamOnPeriodicStructure_PlusValidation.mph
+D:\桌面\codex\案例下载\电气\周期性结构中的高斯光束\GaussianBeamOnPeriodicStructure.mph
+D:\桌面\codex\案例下载\电气\线对线电晕放电的电流-电压特性\corona_discharge_iv_curve.mph
+D:\桌面\codex\案例下载\电气\圆柱体中的涡流\coil_eddy_currents.mph

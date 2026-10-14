@@ -1,0 +1,17 @@
+{
+  "kind": "energy_balance_validation",
+  "model": "busbar_joule_heat_baseline",
+  "status": "passed",
+  "joule_power_W": 3.22864839296184,
+  "convection_power_W": 3.22712091859827,
+  "relative_imbalance_percent": 0.047311675860521,
+  "convection_expression": "ht.nteflux",
+  "convection_boundary_count": 25,
+  "boundary_selection_source": "hf1 (the actual Heat Flux feature selection in the solved MPH model)",
+  "conclusion": "Electrical input, volumetric Joule heating, and outward convection are balanced within 0.1%. The previous discrepancy was caused by stale boundary IDs after geometry rebuild, not by a physics coupling error.",
+  "verification": [
+    "Electrical input differs from volume Joule heating by 0.0722%.",
+    "Volume Joule heating differs from the normal total heat flux on hf1-selected boundaries by 0.0474%.",
+    "The explicit convection expression htc*(T-T_amb) differs from the normal total heat flux by 0.0065%."
+  ]
+}

@@ -1,0 +1,41 @@
+D:\桌面\codex\案例下载\电气\波导适配器\waveguide_adapter.mph
+D:\桌面\codex\案例下载\电气\磁铁在铜管中下落\falling_magnet.mph
+D:\桌面\codex\案例下载\电气\带粒子追踪的环形紫外反应器\annular_ultraviolet_reactor_particle.mph
+D:\桌面\codex\案例下载\电气\电波暗室吸收电磁波\anechoic_chamber.mph
+D:\桌面\codex\案例下载\电气\电磁波导模式分析\mode_analysis_coaxial_cable.mph
+D:\桌面\codex\案例下载\电气\电磁波导模式分析\mode_analysis_rib_waveguide_mode_tracking.mph
+D:\桌面\codex\案例下载\电气\电磁波导模式分析\mode_analysis_rib_waveguide.mph
+D:\桌面\codex\案例下载\电气\电感耦合等离子体 (ICP) 炬\icp_torch.mph
+D:\桌面\codex\案例下载\电气\电力线的磁场\power_line_magnetic_field (1).mph
+D:\桌面\codex\案例下载\电气\电力线的磁场\power_line_magnetic_field.mph
+D:\桌面\codex\案例下载\电气\菲涅尔方程（波动光学）\fresnel_equations.mph
+D:\桌面\codex\案例下载\电气\菲涅尔透镜\fresnel_lens.mph
+D:\桌面\codex\案例下载\电气\分支线耦合器\branch_line_coupler.mph
+D:\桌面\codex\案例下载\电气\钢坯感应加热\billet_induction_heating_embedded.mph
+D:\桌面\codex\案例下载\电气\钢坯感应加热\billet_induction_heating.mph
+D:\桌面\codex\案例下载\电气\功率电感器的电感\power_inductor.mph
+D:\桌面\codex\案例下载\电气\固态装配谐振器（二维）\solidly_mounted_resonator_2d.mph
+D:\桌面\codex\案例下载\电气\光子晶体的带隙分析\bandgap_photonic_crystal.mph
+D:\桌面\codex\案例下载\电气\计算电容\capacitor_dc.mph
+D:\桌面\codex\案例下载\电气\计算电容边缘场效应\capacitor_fringing_fields.mph
+D:\桌面\codex\案例下载\电气\检测嵌入到介电壳中的金属圆柱的方向\cylinder_orientation.mph
+D:\桌面\codex\案例下载\电气\接地共面波导上的 SMA 连接器\sma_connectorized_gcpw.mph
+D:\桌面\codex\案例下载\电气\偶极天线源的射线释放（二维轴对称）\ray_release_from_dipole_antenna_source_2daxi.mph
+D:\桌面\codex\案例下载\电气\频率选择表面模拟器\frequency_selective_surface_simulator (1).mph
+D:\桌面\codex\案例下载\电气\频率选择表面模拟器\frequency_selective_surface_simulator.mph
+D:\桌面\codex\案例下载\电气\使用不确定性量化研究固态装配谐振器（二维）\solidly_mounted_resonator_2d_uncertainty_quantification.mph
+D:\桌面\codex\案例下载\电气\双镜激光腔\two_mirror_laser_cavity.mph
+D:\桌面\codex\案例下载\电气\铁板在磁力作用下的变形\plate_deflected_by_magnet.mph
+D:\桌面\codex\案例下载\电气\微波腔等离子体反应器\microwave_cavity_plasma.mph
+D:\桌面\codex\案例下载\电气\微结构光纤中的漏模\microstructured_optical_fiber.mph
+D:\桌面\codex\案例下载\电气\涡流\eddy_currents.mph
+D:\桌面\codex\案例下载\电气\涡流无损检测\eddy_current_nde.mph
+D:\桌面\codex\案例下载\电气\移动磁铁在线圈中产生感应电压\induced_voltage_moving_magnet.mph
+D:\桌面\codex\案例下载\电气\永磁电机的稳定工况\pmm_steady_state_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\永磁电机的稳定工况\pmm_steady_state.mph
+D:\桌面\codex\案例下载\电气\锥形喇叭透镜天线的快速数值建模\conical_horn_lens_antenna.mph
+D:\桌面\codex\案例下载\电气\ICP 反应器的线圈优化\icp_coil_optimization.mph
+D:\桌面\codex\案例下载\电气\InSb p 沟道场效应晶体管的密度梯度分析\insb_pfet_density_gradient.mph
+D:\桌面\codex\案例下载\电气\MOS 晶体管 (MOSFET) 的直流特性\mosfet.mph
+D:\桌面\codex\案例下载\电气\P-N 结 - 一维\pn_junction_1d.mph
+D:\桌面\codex\案例下载\电气\SF6氩电感耦合等离子体反应器模型\icp_sf6_argon.mph

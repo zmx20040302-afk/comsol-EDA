@@ -1,0 +1,2 @@
+Tmax_K,Tavg_K,Jmax_A_m2,terminal_current_A,voltage_drop_mV,joule_power_W,convection_power_W,energy_imbalance_percent,copper_volume_m3,copper_mass_kg,solve_seconds,solver_status
+329.797551926714,322.24345474104,5141738.84968363,160.094954456957,19.8187306261752,3.17079395640271,3.16929385307633,0.0473100222532715,4.62488234956185e-05,0.414389458520742,5.9292481,solved

@@ -1,0 +1,42 @@
+{
+  "schema": "dac2027-p0-readiness",
+  "schemaVersion": "1.0.0",
+  "protocol_sha256": "46c03f3103af1aa840a5f3ded4ad562c81d12e27161cb299f50836bb5b3cef88",
+  "infrastructure": {
+    "protocol_frozen": true,
+    "task_template_ready": true,
+    "four_method_schema_ready": true,
+    "paired_statistics_ready": true,
+    "internal_pilot_ready": true
+  },
+  "publication_evidence": {
+    "blind_tasks_file_present": false,
+    "method_responses_file_present": false,
+    "external_blind_task_count": 0,
+    "measured_response_count": 0,
+    "measured_responses_by_method": {
+      "direct_llm": 0,
+      "retrieval_llm": 0,
+      "existing_selector": 0,
+      "contract_dependency_v11": 0
+    },
+    "external_blind_tasks_valid": false,
+    "all_four_methods_measured": false,
+    "p0_publication_gate_passed": false
+  },
+  "next_required_human_action": "Have external authors and separate adjudicators replace all template fields, set record_status=measured, and save blind_tasks.measured.jsonl. Then run prepare again to create the 96-row method response sheet.",
+  "evidence_boundary": "Templates and the project-authored internal pilot are infrastructure/debug evidence, not DAC main-result observations.",
+  "validation_error": "",
+  "acquisition_campaign": {
+    "schema": "dac2027-p0-acquisition-status",
+    "campaign_id": "dac2027-p0-blind-20261013",
+    "state": "collecting_external_authors",
+    "slots_started": 24,
+    "author_submissions": 0,
+    "adjudicator_submissions": 0,
+    "measured_blind_tasks": 0,
+    "intake_url": "http://127.0.0.1:8891/",
+    "publication_evidence": false,
+    "updated_at": "2026-10-13T09:58:02.811281+08:00"
+  }
+}

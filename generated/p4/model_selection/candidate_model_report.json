@@ -1,0 +1,258 @@
+{
+  "training_rows": 80,
+  "diagnostic_rows": 60,
+  "diagnostic_policy": "The P3 final domain set has been opened and is used only for P4 model selection. It is permanently retired as independent evidence.",
+  "selected_models": {
+    "Tmax_K": "extra_trees_leaf1",
+    "Jmax_A_m2": "extra_trees_leaf2",
+    "normalized_voltage_at_160A_mV": "extra_trees_leaf1",
+    "joule_power_W": "extra_trees_leaf1",
+    "copper_mass_kg": "extra_trees_leaf1"
+  },
+  "cross_validation": {
+    "Tmax_K": {
+      "rmse": 31.304130135475184,
+      "mae": 13.422017006940195,
+      "r2": 0.637560598934646,
+      "maximum_absolute_error": 199.79196964051414
+    },
+    "Jmax_A_m2": {
+      "rmse": 760932.4522684517,
+      "mae": 568362.1785068943,
+      "r2": 0.9232606575251112,
+      "maximum_absolute_error": 2160210.2551658116
+    },
+    "normalized_voltage_at_160A_mV": {
+      "rmse": 1.6227908579365904,
+      "mae": 1.1353220031900293,
+      "r2": 0.9524970862741685,
+      "maximum_absolute_error": 6.255271825402168
+    },
+    "joule_power_W": {
+      "rmse": 0.8813470163293293,
+      "mae": 0.5689985687541803,
+      "r2": 0.8886964474903234,
+      "maximum_absolute_error": 3.5751231166985526
+    },
+    "copper_mass_kg": {
+      "rmse": 0.016919847535632037,
+      "mae": 0.012671251529582612,
+      "r2": 0.9725122735103754,
+      "maximum_absolute_error": 0.05975113640475305
+    }
+  },
+  "retired_p3_diagnostic_metrics": {
+    "Tmax_K": {
+      "rmse": 17.55883477129721,
+      "mae": 10.49182910178895,
+      "r2": 0.7580285879472843,
+      "maximum_absolute_error": 91.59951110152628
+    },
+    "Jmax_A_m2": {
+      "rmse": 766459.1419918298,
+      "mae": 600732.187468921,
+      "r2": 0.9273078156940228,
+      "maximum_absolute_error": 1947184.7903662324
+    },
+    "normalized_voltage_at_160A_mV": {
+      "rmse": 1.3284798714496757,
+      "mae": 0.8622058686575618,
+      "r2": 0.9646280965378715,
+      "maximum_absolute_error": 6.650703980662719
+    },
+    "joule_power_W": {
+      "rmse": 0.7781663276191244,
+      "mae": 0.5176960012696455,
+      "r2": 0.9174470235169621,
+      "maximum_absolute_error": 3.8145615792881102
+    },
+    "copper_mass_kg": {
+      "rmse": 0.01644942713069983,
+      "mae": 0.010896706222306565,
+      "r2": 0.973951791793202,
+      "maximum_absolute_error": 0.06905231609252921
+    }
+  },
+  "candidate_comparison": {
+    "Tmax_K": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 31.304130135475184,
+        "mae": 13.422017006940195,
+        "r2": 0.637560598934646,
+        "maximum_absolute_error": 199.79196964051414
+      },
+      "conformal_absolute_error_95": 65.17078833670092,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 31.304130135475184,
+          "mae": 13.422017006940195,
+          "r2": 0.637560598934646,
+          "maximum_absolute_error": 199.79196964051414
+        },
+        "extra_trees_leaf2": {
+          "rmse": 31.358852353203403,
+          "mae": 13.392867049278383,
+          "r2": 0.6362923430831708,
+          "maximum_absolute_error": 199.5803276457226
+        },
+        "random_forest_leaf1": {
+          "rmse": 34.63127820810821,
+          "mae": 17.193611769240462,
+          "r2": 0.5564228503171719,
+          "maximum_absolute_error": 207.2014581100119
+        },
+        "random_forest_leaf2": {
+          "rmse": 34.790080566777505,
+          "mae": 17.42555459243898,
+          "r2": 0.5523454609891231,
+          "maximum_absolute_error": 207.59109893728595
+        }
+      }
+    },
+    "Jmax_A_m2": {
+      "selected": "extra_trees_leaf2",
+      "selected_cross_validation": {
+        "rmse": 760932.4522684517,
+        "mae": 568362.1785068943,
+        "r2": 0.9232606575251112,
+        "maximum_absolute_error": 2160210.2551658116
+      },
+      "conformal_absolute_error_95": 1697935.7821662342,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 762630.2611154803,
+          "mae": 561141.8292790201,
+          "r2": 0.9229178305483066,
+          "maximum_absolute_error": 2227380.047982922
+        },
+        "extra_trees_leaf2": {
+          "rmse": 760932.4522684517,
+          "mae": 568362.1785068943,
+          "r2": 0.9232606575251112,
+          "maximum_absolute_error": 2160210.2551658116
+        },
+        "random_forest_leaf1": {
+          "rmse": 917598.4667347583,
+          "mae": 677196.9336398713,
+          "r2": 0.888408473231887,
+          "maximum_absolute_error": 2655097.4810344484
+        },
+        "random_forest_leaf2": {
+          "rmse": 917894.3705682687,
+          "mae": 682563.7661044786,
+          "r2": 0.8883364903637841,
+          "maximum_absolute_error": 2596578.023219388
+        }
+      }
+    },
+    "normalized_voltage_at_160A_mV": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 1.6227908579365904,
+        "mae": 1.1353220031900293,
+        "r2": 0.9524970862741685,
+        "maximum_absolute_error": 6.255271825402168
+      },
+      "conformal_absolute_error_95": 3.9013642382184486,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 1.6227908579365904,
+          "mae": 1.1353220031900293,
+          "r2": 0.9524970862741685,
+          "maximum_absolute_error": 6.255271825402168
+        },
+        "extra_trees_leaf2": {
+          "rmse": 1.7858055185905073,
+          "mae": 1.2405456607964778,
+          "r2": 0.9424740942095683,
+          "maximum_absolute_error": 7.0643899915261485
+        },
+        "random_forest_leaf1": {
+          "rmse": 2.4374247581475528,
+          "mae": 1.8158774316463706,
+          "r2": 0.8928338618754541,
+          "maximum_absolute_error": 7.213936452334977
+        },
+        "random_forest_leaf2": {
+          "rmse": 2.4793021396300783,
+          "mae": 1.8266779521655454,
+          "r2": 0.8891197862004868,
+          "maximum_absolute_error": 7.443205806470736
+        }
+      }
+    },
+    "joule_power_W": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 0.8813470163293293,
+        "mae": 0.5689985687541803,
+        "r2": 0.8886964474903234,
+        "maximum_absolute_error": 3.5751231166985526
+      },
+      "conformal_absolute_error_95": 2.236806239730469,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 0.8813470163293293,
+          "mae": 0.5689985687541803,
+          "r2": 0.8886964474903234,
+          "maximum_absolute_error": 3.5751231166985526
+        },
+        "extra_trees_leaf2": {
+          "rmse": 0.9250555707405934,
+          "mae": 0.5934519258855372,
+          "r2": 0.8773829694410142,
+          "maximum_absolute_error": 3.6987676634947135
+        },
+        "random_forest_leaf1": {
+          "rmse": 1.0942635860488192,
+          "mae": 0.7451338762391236,
+          "r2": 0.8284230104111688,
+          "maximum_absolute_error": 3.569742054816136
+        },
+        "random_forest_leaf2": {
+          "rmse": 1.0949589455543587,
+          "mae": 0.7450499689785082,
+          "r2": 0.8282048808860172,
+          "maximum_absolute_error": 3.7347550892842634
+        }
+      }
+    },
+    "copper_mass_kg": {
+      "selected": "extra_trees_leaf1",
+      "selected_cross_validation": {
+        "rmse": 0.016919847535632037,
+        "mae": 0.012671251529582612,
+        "r2": 0.9725122735103754,
+        "maximum_absolute_error": 0.05975113640475305
+      },
+      "conformal_absolute_error_95": 0.03774546462409217,
+      "candidates": {
+        "extra_trees_leaf1": {
+          "rmse": 0.016919847535632037,
+          "mae": 0.012671251529582612,
+          "r2": 0.9725122735103754,
+          "maximum_absolute_error": 0.05975113640475305
+        },
+        "extra_trees_leaf2": {
+          "rmse": 0.016981158403911307,
+          "mae": 0.012514919903377955,
+          "r2": 0.9723127031773756,
+          "maximum_absolute_error": 0.06077784464067848
+        },
+        "random_forest_leaf1": {
+          "rmse": 0.02509261009986135,
+          "mae": 0.02013547065219129,
+          "r2": 0.9395442508743465,
+          "maximum_absolute_error": 0.07750319230320801
+        },
+        "random_forest_leaf2": {
+          "rmse": 0.02568049051332165,
+          "mae": 0.020362029271428914,
+          "r2": 0.9366783008904619,
+          "maximum_absolute_error": 0.08211826995027527
+        }
+      }
+    }
+  }
+}

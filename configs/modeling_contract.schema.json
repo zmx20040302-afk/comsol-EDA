@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.comsol/modeling_contract.schema.json",
+  "title": "COMSOL modeling task contract",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "contract_id",
+    "created_at",
+    "updated_at",
+    "status",
+    "evidence_level",
+    "raw_requirement",
+    "task",
+    "geometry",
+    "materials",
+    "physics",
+    "boundary_conditions",
+    "initial_conditions",
+    "mesh",
+    "study",
+    "solver",
+    "outputs",
+    "validation",
+    "evidence",
+    "missing_information",
+    "execution_policy"
+  ],
+  "properties": {
+    "schema": {"const": "comsol-modeling-contract"},
+    "schemaVersion": {"const": "1.0.0"},
+    "contract_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "updated_at": {"type": "string", "minLength": 1},
+    "status": {
+      "enum": ["draft", "missing_information", "ready_for_review", "approved_for_generation", "generated", "build_failed", "built", "mesh_failed", "solve_failed", "solved", "validation_failed", "completed"]
+    },
+    "evidence_level": {
+      "enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]
+    },
+    "raw_requirement": {"type": "string", "minLength": 1},
+    "task": {
+      "type": "object",
+      "required": ["name", "goal", "completion_criteria"],
+      "properties": {
+        "name": {"type": "string"},
+        "goal": {"type": "string"},
+        "completion_criteria": {"type": "array", "items": {"type": "string"}},
+        "language": {"type": "string"}
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["dimension", "source", "objects", "parameters", "named_selections"],
+      "properties": {
+        "dimension": {"enum": ["unknown", "0D", "1D", "2D", "2D_axisymmetric", "3D"]},
+        "source": {"type": "string"},
+        "objects": {"type": "array", "items": {"type": "object"}},
+        "parameters": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "named_selections": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "materials": {"type": "array", "items": {"$ref": "#/$defs/material"}},
+    "physics": {
+      "type": "object",
+      "required": ["interfaces", "couplings", "dependent_variables"],
+      "properties": {
+        "interfaces": {"type": "array", "items": {"$ref": "#/$defs/taggedItem"}},
+        "couplings": {"type": "array", "items": {"$ref": "#/$defs/taggedItem"}},
+        "dependent_variables": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "boundary_conditions": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+    "initial_conditions": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+    "mesh": {"type": "object"},
+    "study": {
+      "type": "object",
+      "required": ["types", "steps"],
+      "properties": {
+        "types": {"type": "array", "items": {"type": "string"}},
+        "steps": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "solver": {"type": "object"},
+    "outputs": {"type": "array", "items": {"type": "object"}},
+    "validation": {"type": "array", "items": {"type": "object"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "missing_information": {"type": "array", "items": {"$ref": "#/$defs/missing"}},
+    "execution_policy": {
+      "type": "object",
+      "required": ["risk_level", "allow_automatic_generation", "allow_automatic_solve", "max_retries", "allowed_automatic_changes"],
+      "properties": {
+        "risk_level": {"enum": ["A", "B", "C"]},
+        "allow_automatic_generation": {"type": "boolean"},
+        "allow_automatic_solve": {"type": "boolean"},
+        "max_retries": {"type": "integer", "minimum": 0},
+        "allowed_automatic_changes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "quantity": {
+      "type": "object",
+      "required": ["name", "value", "unit", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "value": {},
+        "unit": {"type": "string"},
+        "description": {"type": "string"},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "taggedItem": {
+      "type": "object",
+      "required": ["name", "tag", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "tag": {"type": "string", "minLength": 1},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "material": {
+      "type": "object",
+      "required": ["name", "tag", "selection", "properties", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string"},
+        "tag": {"type": "string"},
+        "selection": {"type": "string"},
+        "properties": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "condition": {
+      "type": "object",
+      "required": ["name", "tag", "type", "target", "values", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string"},
+        "tag": {"type": "string"},
+        "type": {"type": "string"},
+        "target": {"type": "string"},
+        "values": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["field", "level", "source", "timestamp"],
+      "properties": {
+        "field": {"type": "string"},
+        "level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"},
+        "timestamp": {"type": "string"}
+      }
+    },
+    "missing": {
+      "type": "object",
+      "required": ["category", "field", "severity", "question", "blocks_stage"],
+      "properties": {
+        "category": {"type": "string"},
+        "field": {"type": "string"},
+        "severity": {"enum": ["critical", "warning"]},
+        "question": {"type": "string"},
+        "blocks_stage": {"type": "string"}
+      }
+    }
+  }
+}

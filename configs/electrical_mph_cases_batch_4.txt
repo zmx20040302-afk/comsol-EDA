@@ -1,0 +1,25 @@
+D:\桌面\codex\案例下载\电气\使用 FEM-BEM 耦合验证弗里斯传输方程\friis_equation_verification_cleared.mph
+D:\桌面\codex\案例下载\电气\使用 FEM-BEM 耦合验证弗里斯传输方程\friis_equation_verification.mph
+D:\桌面\codex\案例下载\电气\微调电容器\trimmer_capacitor.mph
+D:\桌面\codex\案例下载\电气\生物组织的射频消融仿真\rf_ablation_62.mph
+D:\桌面\codex\案例下载\电气\圆偏振平面波的反射\circular_polarization.mph
+D:\桌面\codex\案例下载\电气\利用对称性简化射频与波动光学仿真\microstrip_antenna_full_vs_symmetry.mph
+D:\桌面\codex\案例下载\电气\利用对称性简化射频与波动光学仿真\Rectangular_waveguide_full_vs_symmetry.mph
+D:\桌面\codex\案例下载\电气\利用对称性简化射频与波动光学仿真\scattering_nanosphere_full_vs_symmetry.mph
+D:\桌面\codex\案例下载\电气\隧穿二极管\tunnel_diode.mph
+D:\桌面\codex\案例下载\电气\背景高斯光束定义：近轴近似 vs. 平面波展开\Gaussian_beam_2d_64_solved.mph
+D:\桌面\codex\案例下载\电气\锂在双壁纳米管电极中的扩散和塑性变形\double_walled_nanotube_silicon_electrode.mph
+D:\桌面\codex\案例下载\电气\CF4O2 等离子体反应器全局模型（用于硅刻蚀）\cf4_o2_si_etching_global_model.mph
+D:\桌面\codex\案例下载\电气\球形雷达罩的高效仿真\radome_spherical.mph
+D:\桌面\codex\案例下载\电气\CF4O2 电感耦合等离子体反应器模型\icp_cf4_o2.mph
+D:\桌面\codex\案例下载\电气\使用“磁场公式”接口实现系统激励\Background_Field.mph
+D:\桌面\codex\案例下载\电气\使用“磁场公式”接口实现系统激励\Coaxial_Cable_Excitations.mph
+D:\桌面\codex\案例下载\电气\使用“磁场公式”接口实现系统激励\Symmetric_Coil_Inductive_Heating.mph
+D:\桌面\codex\案例下载\电气\使用“磁场公式”接口实现系统激励\Three_Phase_Cable_Sub_Section.mph
+D:\桌面\codex\案例下载\电气\轴向磁轴承磁刚度三维模型\magnetic_bearing_stiffness_calculation.mph
+D:\桌面\codex\案例下载\电气\引力透镜\gravitational_lensing.mph
+D:\桌面\codex\案例下载\电气\空气中的介质阻挡放电\dbd.mph
+D:\桌面\codex\案例下载\电气\平行板电极中的双头流注\double_headed_streamer.mph
+D:\桌面\codex\案例下载\电气\使用不同 EEDF 计算的介质阻挡放电\argon_dbd_1d_EEFD_variants.mph
+D:\桌面\codex\案例下载\电气\热水器的形状优化\water_heater_optimization.mph
+D:\桌面\codex\案例下载\电气\通过自定义放电化学模拟放电\double_headed_streamer_discharge_chemistry.mph

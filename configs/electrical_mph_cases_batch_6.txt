@@ -1,0 +1,21 @@
+D:\桌面\codex\案例下载\电气\轴向单极感应轴承 - 三维\axial_homopolar_induction_bearing.mph
+D:\桌面\codex\案例下载\电气\漂移扩散教学模型\drift_diffusion_tutorial.mph
+D:\桌面\codex\案例下载\电气\角隅反射镜\corner_cube_retroreflector.mph
+D:\桌面\codex\案例下载\电气\弱电场中的正流注传播\streamer_in_weak_field.mph
+D:\桌面\codex\案例下载\电气\将电流-电压开关应用于模型\current_voltage_switch.mph
+D:\桌面\codex\案例下载\电气\微结构抗反射涂层的宽带优化\pyramid_czt_infrared_optimized_ar_coating.mph
+D:\桌面\codex\案例下载\电气\微结构抗反射涂层的宽带优化\rectangular_si_infrared_optimized_ar_coating.mph
+D:\桌面\codex\案例下载\电气\离子风\ionic_wind.mph
+D:\桌面\codex\案例下载\电气\玻色-爱因斯坦凝聚 Gross-Pitaevskii 方程\gross_pitaevskii_equation_for_bose_einstein_condensation.mph
+D:\桌面\codex\案例下载\电气\带制动器的电磁柱塞\electromagnetic_plunger_with_stopper.mph
+D:\桌面\codex\案例下载\电气\径向极化压电换能器\radially_polarized_piezo_63_cleared.mph
+D:\桌面\codex\案例下载\电气\径向极化压电换能器\radially_polarized_piezo_63.mph
+D:\桌面\codex\案例下载\电气\利用“电磁波，波束包络”接口为腔特征频率建模\electromagnetic_waves_beam_envelopes_cavity_eigenfrequencies.mph
+D:\桌面\codex\案例下载\电气\利用“电磁波，波束包络”接口为腔特征频率建模\electromagnetic_waves_beam_envelopes_cavity_eigenfrequencies2.mph
+D:\桌面\codex\案例下载\电气\LIDAR：使用“射线光学”模块进行激光探测和测距\LIDAR ranging and detection.mph
+D:\桌面\codex\案例下载\电气\光子晶体一维模型的三个案例\photonic_crystal_1d.mph
+D:\桌面\codex\案例下载\电气\固体电介质内的局部放电\partial_discharge.mph
+D:\桌面\codex\案例下载\电气\两个球体的电容矩阵\capacitance_matrix_2spheres.mph
+D:\桌面\codex\案例下载\电气\自由燃烧氩弧仿真\free_burning_argon_arc.mph
+D:\桌面\codex\案例下载\电气\电阻抗传感器\impedance_sensor.mph
+D:\桌面\codex\案例下载\电气\MESFET 的直流特性\mesfet.mph

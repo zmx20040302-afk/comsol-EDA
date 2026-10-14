@@ -1,0 +1,17 @@
+{
+  "schema": "dac-problem1-blind-task-validation",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-12T12:13:19.771615+00:00",
+  "status": "awaiting_external_contributors",
+  "passed": false,
+  "measured_task_count": 0,
+  "family_count": 0,
+  "minimum_tasks": 24,
+  "minimum_families": 8,
+  "errors": [
+    "真实盲测任务不足：0/24",
+    "器件族不足：0/8"
+  ],
+  "submission_sha256": "c799bb4904083e44e6b21b7b5173b219fba3173555dc91cb7d33c388132d0734",
+  "policy": "Project-authored, synthetic, template, or same-person authored-and-adjudicated tasks are rejected as independent blind evidence."
+}

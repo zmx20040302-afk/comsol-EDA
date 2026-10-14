@@ -1,0 +1,645 @@
+{
+  "kind": "complete_3d_busbar_multiphysics_dense49_sweep_benchmark",
+  "generated_at": "2026-10-09T16:55:18.336398+08:00",
+  "model": {
+    "name": "busbar_joule_heat_baseline",
+    "dimension": "3D",
+    "physics": [
+      "Electric Currents",
+      "Heat Transfer in Solids",
+      "Joule Heating multiphysics coupling"
+    ],
+    "source_mph": "generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_joule_heat_baseline.mph",
+    "source_mph_size_bytes": 17315694,
+    "parameter_grid": {
+      "Vtot_mV": [
+        10.0,
+        13.333333333333334,
+        16.666666666666668,
+        20.0,
+        23.333333333333336,
+        26.666666666666668,
+        30.0
+      ],
+      "htc_W_m2K": [
+        2.0,
+        3.333333333333333,
+        4.666666666666666,
+        6.0,
+        7.333333333333333,
+        8.666666666666666,
+        10.0
+      ]
+    }
+  },
+  "execution": {
+    "completed_cases": 49,
+    "wall_seconds": 188.03918159997556,
+    "sum_case_solve_seconds": 153.5659788,
+    "per_case_solve_seconds_median": 3.0477092,
+    "per_case_solve_seconds_mean": 3.133999567346939,
+    "per_case_solve_seconds_min": 2.8364607,
+    "per_case_solve_seconds_max": 6.1289463,
+    "per_case_solve_seconds_p95": 3.4249515999999995,
+    "matlab_process_cpu_seconds": 26.0,
+    "mphserver_process_cpu_seconds_during_sweep": 2691.84375,
+    "combined_matlab_mphserver_cpu_seconds": 2717.84375
+  },
+  "resources": {
+    "matlab_peak_working_set_mb": 1579.85546875,
+    "matlab_peak_private_memory_mb": 1625.44140625,
+    "mphserver_baseline_working_set_mb": 278.546875,
+    "mphserver_peak_working_set_mb": 2309.80078125,
+    "mphserver_working_set_increase_mb": 2031.25390625,
+    "mphserver_baseline_private_memory_mb": 326.296875,
+    "mphserver_peak_private_memory_mb": 3344.65234375,
+    "mphserver_private_memory_increase_mb": 3018.35546875,
+    "combined_peak_working_set_mb": 3871.01171875,
+    "combined_peak_private_memory_mb": 4915.91796875,
+    "combined_process_tree_peak_count": 5
+  },
+  "validation": {
+    "checks": {
+      "row_count_matches_expected": true,
+      "input_grid_complete": true,
+      "all_values_finite": true,
+      "temperature_current_and_power_increase_with_voltage": true,
+      "temperature_decreases_with_convection": true,
+      "energy_imbalance_below_0_1_percent": true
+    },
+    "all_passed": true,
+    "maximum_energy_imbalance_percent": 0.0473100258042324,
+    "minimum_Tmax_C": 25.6256881010756,
+    "maximum_Tmax_C": 203.812194200285,
+    "historical_dense_csv_comparison": {
+      "source_csv": "generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_dense_training_data.csv",
+      "matched_rows": 49,
+      "maximum_absolute_differences": {
+        "Tmax_K": 0.0003630799320148981,
+        "Tmax_C": 0.00036307993198647637,
+        "terminal_current_A": 0.0002692564829942512,
+        "joule_power_W": 1.4349543030256484e-05,
+        "convection_power_W": 1.4342741100570322e-05,
+        "energy_imbalance_percent": 8.480359955931327e-10
+      },
+      "checks": {
+        "all_49_historical_rows_matched": true,
+        "maximum_temperature_difference_below_0_001_K": true,
+        "maximum_energy_imbalance_difference_below_1e_6_percent": true
+      },
+      "all_passed": true
+    }
+  },
+  "artifacts": {
+    "csv": "generated\\benchmarks\\busbar_dense_multiphysics_sweep_20261009\\busbar_multiphysics_sweep.csv",
+    "final_mph": "generated\\benchmarks\\busbar_dense_multiphysics_sweep_20261009\\busbar_multiphysics_sweep_final.mph",
+    "runner": "generated\\benchmarks\\busbar_dense_multiphysics_sweep_20261009\\run_busbar_multiphysics_sweep.m",
+    "log": "generated\\benchmarks\\busbar_dense_multiphysics_sweep_20261009\\busbar_multiphysics_sweep.log"
+  },
+  "rows": [
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 313.573577133364,
+      "Tmax_C": 40.4235771333645,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240458,
+      "convection_power_W": 0.806780229647286,
+      "energy_imbalance_percent": 0.0473100253350201,
+      "solve_seconds": 6.1289463
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 306.178126138418,
+      "Tmax_C": 33.028126138418,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229645907,
+      "energy_imbalance_percent": 0.0473100255058528,
+      "solve_seconds": 3.7898019
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 303.007613473041,
+      "Tmax_C": 29.8576134730409,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229647781,
+      "energy_imbalance_percent": 0.0473100252737156,
+      "solve_seconds": 3.4544062
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 301.245449643089,
+      "Tmax_C": 28.095449643089,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229646998,
+      "energy_imbalance_percent": 0.0473100253707547,
+      "solve_seconds": 3.1655526
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 300.123434331078,
+      "Tmax_C": 26.9734343310779,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229643499,
+      "energy_imbalance_percent": 0.0473100258042324,
+      "solve_seconds": 3.2212093
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 299.346116179909,
+      "Tmax_C": 26.1961161799089,
+      "terminal_current_A": 80.7744478379991,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229649114,
+      "energy_imbalance_percent": 0.0473100251085911,
+      "solve_seconds": 3.1102675
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 298.775688101076,
+      "Tmax_C": 25.6256881010756,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229646759,
+      "energy_imbalance_percent": 0.0473100254003409,
+      "solve_seconds": 3.0135557
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 329.458400027746,
+      "Tmax_C": 56.3084000277456,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879244254,
+      "energy_imbalance_percent": 0.0473100256141211,
+      "solve_seconds": 3.0333603
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 316.310997329544,
+      "Tmax_C": 43.1609973295444,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879244752,
+      "energy_imbalance_percent": 0.0473100252668059,
+      "solve_seconds": 2.9975348
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 310.674558551173,
+      "Tmax_C": 37.5245585511734,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879243996,
+      "energy_imbalance_percent": 0.04731002579345,
+      "solve_seconds": 3.0250909
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 307.54183851714,
+      "Tmax_C": 34.3918385171402,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.4342687924433,
+      "energy_imbalance_percent": 0.0473100255611689,
+      "solve_seconds": 2.8756203
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 305.547154602578,
+      "Tmax_C": 32.3971546025776,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879244664,
+      "energy_imbalance_percent": 0.0473100253280213,
+      "solve_seconds": 3.2256048
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 304.165262576652,
+      "Tmax_C": 31.0152625766518,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879244366,
+      "energy_imbalance_percent": 0.0473100255357915,
+      "solve_seconds": 2.8683816
+    },
+    {
+      "Vtot_mV": 13.3333333333,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 303.151173284747,
+      "Tmax_C": 30.0011732847472,
+      "terminal_current_A": 107.698994535839,
+      "joule_power_W": 1.43494766655113,
+      "convection_power_W": 1.43426879244414,
+      "energy_imbalance_percent": 0.0473100255025996,
+      "solve_seconds": 3.0958903
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 349.882385632652,
+      "Tmax_C": 76.7323856326517,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769337,
+      "energy_imbalance_percent": 0.0473100255605642,
+      "solve_seconds": 2.9978623
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 329.339384030485,
+      "Tmax_C": 56.1893840304848,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769665,
+      "energy_imbalance_percent": 0.0473100254140547,
+      "solve_seconds": 2.9892964
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 320.532369176484,
+      "Tmax_C": 47.3823691764838,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769772,
+      "energy_imbalance_percent": 0.047310025366598,
+      "solve_seconds": 2.9130849
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 315.637450069222,
+      "Tmax_C": 42.487450069222,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769355,
+      "energy_imbalance_percent": 0.0473100255523444,
+      "solve_seconds": 2.9804769
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 312.520728402342,
+      "Tmax_C": 39.3707284023421,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769426,
+      "energy_imbalance_percent": 0.0473100255206539,
+      "solve_seconds": 2.857409
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 310.361502678884,
+      "Tmax_C": 37.2115026788843,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769543,
+      "energy_imbalance_percent": 0.0473100254686219,
+      "solve_seconds": 3.0646099
+    },
+    {
+      "Vtot_mV": 16.6666666667,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 308.776973899585,
+      "Tmax_C": 35.6269738995849,
+      "terminal_current_A": 134.624348978158,
+      "joule_power_W": 2.24212590803356,
+      "convection_power_W": 2.24106515769443,
+      "energy_imbalance_percent": 0.0473100255132264,
+      "solve_seconds": 2.8564077
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 374.844308533457,
+      "Tmax_C": 101.694308533457,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296184,
+      "convection_power_W": 3.22712091858504,
+      "energy_imbalance_percent": 0.0473100254623056,
+      "solve_seconds": 2.9269882
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 345.262504553671,
+      "Tmax_C": 72.1125045536715,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091857911,
+      "energy_imbalance_percent": 0.0473100256458201,
+      "solve_seconds": 2.8364607
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 332.580453892163,
+      "Tmax_C": 59.4304538921633,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091857954,
+      "energy_imbalance_percent": 0.0473100256326294,
+      "solve_seconds": 2.9220591
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 325.531798572356,
+      "Tmax_C": 52.3817985723559,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296184,
+      "convection_power_W": 3.22712091858272,
+      "energy_imbalance_percent": 0.0473100255339398,
+      "solve_seconds": 2.932795
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 321.043737324312,
+      "Tmax_C": 47.8937373243119,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091858192,
+      "energy_imbalance_percent": 0.0473100255587945,
+      "solve_seconds": 3.1157769
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 317.934464719635,
+      "Tmax_C": 44.7844647196354,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091858502,
+      "energy_imbalance_percent": 0.0473100254629383,
+      "solve_seconds": 2.9109457
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 315.652752404303,
+      "Tmax_C": 42.5027524043026,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091858065,
+      "energy_imbalance_percent": 0.0473100255982153,
+      "solve_seconds": 3.1146406
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 404.344713359567,
+      "Tmax_C": 131.194713359567,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.39245758927559,
+      "energy_imbalance_percent": 0.0473100255505031,
+      "solve_seconds": 3.0689617
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 364.080706316236,
+      "Tmax_C": 90.930706316236,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.3924575892792,
+      "energy_imbalance_percent": 0.0473100254684667,
+      "solve_seconds": 3.0546828
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 346.819075568234,
+      "Tmax_C": 73.6690755682338,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.39245758927377,
+      "energy_imbalance_percent": 0.0473100255919962,
+      "solve_seconds": 2.9991718
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 337.225099905469,
+      "Tmax_C": 64.0750999054688,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.3924575892782,
+      "energy_imbalance_percent": 0.0473100254912243,
+      "solve_seconds": 3.0768137
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 331.116367326968,
+      "Tmax_C": 57.9663673269678,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.39245758927477,
+      "energy_imbalance_percent": 0.0473100255692386,
+      "solve_seconds": 3.0552453
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 326.884313928877,
+      "Tmax_C": 53.7343139288765,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.39245758927807,
+      "energy_imbalance_percent": 0.0473100254940741,
+      "solve_seconds": 3.0221447
+    },
+    {
+      "Vtot_mV": 23.3333333333,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 323.778658817437,
+      "Tmax_C": 50.6286588174372,
+      "terminal_current_A": 188.473442373839,
+      "joule_power_W": 4.39453664568549,
+      "convection_power_W": 4.39245758927833,
+      "energy_imbalance_percent": 0.0473100254882937,
+      "solve_seconds": 2.9932976
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 438.384689367748,
+      "Tmax_C": 165.234689367748,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819802809,
+      "energy_imbalance_percent": 0.047310025510907,
+      "solve_seconds": 3.0100366
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 385.794684151137,
+      "Tmax_C": 112.644684151137,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819802773,
+      "energy_imbalance_percent": 0.0473100255172049,
+      "solve_seconds": 3.0630926
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 363.248759943751,
+      "Tmax_C": 90.0987599437508,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.7371181980208,
+      "energy_imbalance_percent": 0.047310025637979,
+      "solve_seconds": 3.181252
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 350.717785825605,
+      "Tmax_C": 77.5677858256052,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819803025,
+      "energy_imbalance_percent": 0.0473100254733208,
+      "solve_seconds": 3.3371224
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 342.738990326576,
+      "Tmax_C": 69.5889903265755,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819802656,
+      "energy_imbalance_percent": 0.0473100255376305,
+      "solve_seconds": 3.3701417
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 337.21138076593,
+      "Tmax_C": 64.0613807659305,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819802627,
+      "energy_imbalance_percent": 0.0473100255425667,
+      "solve_seconds": 3.3807697
+    },
+    {
+      "Vtot_mV": 26.6666666667,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 333.1549931755,
+      "Tmax_C": 60.0049931755,
+      "terminal_current_A": 215.398796816157,
+      "joule_power_W": 5.73983371482286,
+      "convection_power_W": 5.73711819802957,
+      "energy_imbalance_percent": 0.0473100254851739,
+      "solve_seconds": 3.0605438
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 476.962194200285,
+      "Tmax_C": 203.812194200285,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.2610220668125,
+      "energy_imbalance_percent": 0.0473100255150196,
+      "solve_seconds": 3.3306076
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 3.33333333333,
+      "Tmax_K": 410.403135245762,
+      "Tmax_C": 137.253135245762,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416412,
+      "convection_power_W": 7.26102206681431,
+      "energy_imbalance_percent": 0.0473100254901023,
+      "solve_seconds": 2.9891782
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 4.66666666667,
+      "Tmax_K": 381.868521257368,
+      "Tmax_C": 108.718521257368,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206681236,
+      "energy_imbalance_percent": 0.0473100255169636,
+      "solve_seconds": 3.1300456
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 6.0,
+      "Tmax_K": 366.009046787801,
+      "Tmax_C": 92.8590467878008,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206680544,
+      "energy_imbalance_percent": 0.0473100256122557,
+      "solve_seconds": 3.0598974
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 7.33333333333,
+      "Tmax_K": 355.910908979702,
+      "Tmax_C": 82.7609089797016,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206680934,
+      "energy_imbalance_percent": 0.0473100255585576,
+      "solve_seconds": 3.0055328
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 8.66666666667,
+      "Tmax_K": 348.91504561918,
+      "Tmax_C": 75.7650456191797,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206681031,
+      "energy_imbalance_percent": 0.0473100255452309,
+      "solve_seconds": 3.0477092
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 343.781192909681,
+      "Tmax_C": 70.6311929096807,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206681152,
+      "energy_imbalance_percent": 0.0473100255284441,
+      "solve_seconds": 2.9056958
+    }
+  ],
+  "limitations": [
+    "The benchmark covers a fixed 3D geometry, materials, mesh, boundary selections, and stationary solver on one workstation.",
+    "Resource counters include the launched MATLAB tree and persistent mphserver tree; unrelated operating-system processes are excluded.",
+    "This is the complete 49-point surrogate-training grid."
+  ]
+}

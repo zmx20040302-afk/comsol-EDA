@@ -1,0 +1,458 @@
+{
+  "schema": "dac-problem1-v11-frozen-evaluation",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.1.0",
+  "split": "final",
+  "post_freeze": true,
+  "independently_authored_or_blinded": false,
+  "task_file_sha256": "2ab9f1240c8abcc4724307b0a6573010c2fe816def7dd0e2f069948913af91d2",
+  "device_families": [
+    "acoustic_muffler",
+    "battery_interconnect",
+    "capacitive_accelerometer",
+    "ceramic_resonator",
+    "dialysis_membrane",
+    "laser_diode_submount",
+    "liquid_cooling_manifold",
+    "micro_gripper_flexure"
+  ],
+  "task_count": 24,
+  "v10_gate": {
+    "gate_accuracy": 0.6667,
+    "false_safe_count": 8,
+    "false_safe_rate": 0.5,
+    "false_safe_wilson95": [
+      0.28,
+      0.72
+    ],
+    "false_block_count": 0,
+    "false_block_rate": 0.0,
+    "false_block_wilson95": [
+      0.0,
+      0.3244
+    ]
+  },
+  "v11_gate": {
+    "gate_accuracy": 1.0,
+    "false_safe_count": 0,
+    "false_safe_rate": 0.0,
+    "false_safe_wilson95": [
+      0.0,
+      0.1936
+    ],
+    "false_block_count": 0,
+    "false_block_rate": 0.0,
+    "false_block_wilson95": [
+      0.0,
+      0.3244
+    ]
+  },
+  "v11_selection": {
+    "physics_and_coupling_exact_count": 22,
+    "physics_and_coupling_exact_accuracy": 0.9167,
+    "study_exact_count": 24,
+    "study_exact_accuracy": 1.0
+  },
+  "details": [
+    {
+      "id": "v11-final-laser-complete",
+      "family": "laser_diode_submount",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-laser-missing",
+      "family": "laser_diode_submount",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "OBJECTIVE_MISSING",
+        "OBJECTIVE_MISSING_OR_UNRESOLVED"
+      ],
+      "v11_missing_fields": [
+        "objective"
+      ],
+      "v11_selection_exact": false,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-laser-conflict",
+      "family": "laser_diode_submount",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT",
+        "MISSING_THERMAL_BOUNDARY",
+        "MISSING_ELECTRICAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary",
+        "electrical_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-battery-complete",
+      "family": "battery_interconnect",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-battery-missing",
+      "family": "battery_interconnect",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_ELECTRICAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "electrical_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-battery-conflict",
+      "family": "battery_interconnect",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-accelerometer-complete",
+      "family": "capacitive_accelerometer",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-accelerometer-missing",
+      "family": "capacitive_accelerometer",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-accelerometer-conflict",
+      "family": "capacitive_accelerometer",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT",
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-actuator-complete",
+      "family": "micro_gripper_flexure",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-actuator-missing",
+      "family": "micro_gripper_flexure",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-actuator-conflict",
+      "family": "micro_gripper_flexure",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-manifold-complete",
+      "family": "liquid_cooling_manifold",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-manifold-missing",
+      "family": "liquid_cooling_manifold",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_THERMAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary"
+      ],
+      "v11_selection_exact": false,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-manifold-conflict",
+      "family": "liquid_cooling_manifold",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-dialysis-complete",
+      "family": "dialysis_membrane",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-dialysis-missing",
+      "family": "dialysis_membrane",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_SPECIES_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "species_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-dialysis-conflict",
+      "family": "dialysis_membrane",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-muffler-complete",
+      "family": "acoustic_muffler",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-muffler-missing",
+      "family": "acoustic_muffler",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_ACOUSTIC_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "acoustic_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-muffler-conflict",
+      "family": "acoustic_muffler",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT",
+        "MISSING_ACOUSTIC_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "acoustic_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-crystal-complete",
+      "family": "ceramic_resonator",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-crystal-missing",
+      "family": "ceramic_resonator",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-final-crystal-conflict",
+      "family": "ceramic_resonator",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT",
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    }
+  ],
+  "interpretation_limit": "Post-freeze and family-disjoint by project labels; tasks were project-authored and were neither blinded nor independently adjudicated."
+}

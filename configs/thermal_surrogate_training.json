@@ -1,0 +1,9 @@
+{
+  "kind": "comsol_parameter_sweep_training_spec",
+  "source_template": "configs/thermal_constraints.json",
+  "inputs": ["L", "W", "k", "heat_flux", "hconv", "Text", "hmax"],
+  "outputs": ["Tmax", "Tavg"],
+  "sampling": {"method": "full_factorial_then_holdout", "holdout_fraction": 0.2},
+  "csv_columns": ["L_m", "W_m", "k_W_mK", "heat_flux_W_m2", "hconv_W_m2K", "Text_K", "hmax_m", "Tmax_K", "Tavg_K"],
+  "validation": ["mesh refinement check", "energy balance check", "holdout RMSE MAE R2"]
+}

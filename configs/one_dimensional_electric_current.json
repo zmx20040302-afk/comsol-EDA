@@ -1,0 +1,11 @@
+{
+  "model_name": "one_dimensional_electric_current",
+  "physics": "electric_current_1d",
+  "geometry": {"type": "interval_1d", "parameters": {"L": {"value": 0.1, "unit": "m", "min": 0.001, "max": 10.0}}},
+  "materials": {"sigma": {"value": 58000000, "unit": "S/m", "min": 1, "max": 100000000}},
+  "boundary_conditions": {"V_terminal": {"value": 1, "unit": "V", "min": 0.001, "max": 1000}},
+  "mesh": {"hmax": {"value": 0.005, "unit": "m", "min": 0.0001, "max": 0.05}},
+  "study": {"type": "stationary"},
+  "outputs": {"V_max": "maxop1(V)", "J_max": "maxop1(ec.normJ)"},
+  "verification": {"checks": ["最大电势等于端子电势", "电流密度为有限正值", "端子与接地完整"]}
+}

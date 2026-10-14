@@ -1,0 +1,18 @@
+{
+  "schema": "dac2027-p3-infrastructure-freeze",
+  "schemaVersion": "1.0.0",
+  "created_at": "2026-10-14T09:42:23.696845+08:00",
+  "files_sha256": {
+    "configs/dac2027_p3_protocol.json": "a71a9988376b3df80717c01d967dc8f590f6b40b6bbc67303a2ffaec5c4a7951",
+    "src/comsol_small_model/dac2027_p0_evaluation.py": "903060252175f92b4c3459c940e88bdc9c6426a244107facd0bf26dea719bf8b",
+    "src/comsol_small_model/dac2027_p2_comparison.py": "bab695510fca0f865e321cebf62c0a132a6e08c4db491f08813bdb235cec78bc",
+    "src/comsol_small_model/dac2027_p3_evaluation.py": "6e5866ff399fb9a7e7c137812ed04b368543e5e3907a1e5580bd5f5a3814a48b",
+    "scripts/prepare_dac2027_p3.py": "5515cb7d6deffa8fd318e5a762883c170f9fd6f30f399c9ea1208ae745556cdb",
+    "scripts/run_dac2027_p3.py": "e31af0f696a0430e467fcab7e8bfde836f10e99d30dee536aac9ebbf8d20b760",
+    "scripts/evaluate_dac2027_p3.py": "da8fb25486a743db4d11ae6dc1edfb9df964c2b3bb42c3433bb30c446ff1bceb",
+    "tests/test_dac2027_p3.py": "8a4e8329ebbbc2f6c38d0b2b8f71318107f39dc354bc626a8e0bf72283dda61b"
+  },
+  "external_task_data_included": false,
+  "main_result_available": false,
+  "evidence_boundary": "P3 main-result evidence exists only after the P0 external tasks are accepted, shown disjoint from every declared development family, sealed by SHA-256, and measured for every required method and repeat. Templates, synthetic rows, project-authored tasks, partial runs, and post-unseal method changes do not pass the gate."
+}

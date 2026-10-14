@@ -1,0 +1,14 @@
+{
+  "kind": "mesh_convergence_validation",
+  "model": "busbar_joule_heat_baseline",
+  "csv": "builders/busbar_mesh_convergence.csv",
+  "quantity": "maximum_temperature",
+  "results": [
+    {"mesh_size": "4[mm]", "Tmax_K": 330.634119700944, "Joule_power_W": 3.24654558949827},
+    {"mesh_size": "3[mm]", "Tmax_K": 330.466224640162, "Joule_power_W": 3.22864839296184},
+    {"mesh_size": "2[mm]", "Tmax_K": 330.216820425877, "Joule_power_W": 3.2020529449969}
+  ],
+  "relative_change_3mm_to_2mm_percent": 0.075527,
+  "conclusion": "For Tmax, the 3 mm to 2 mm change is below 0.1%, so the current baseline mesh is sufficiently stable for the next verification stage.",
+  "next_check": "Verify electrical input power and convective heat loss using explicitly defined integration operators before claiming full energy balance."
+}

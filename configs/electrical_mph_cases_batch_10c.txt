@@ -1,0 +1,32 @@
+D:\桌面\codex\案例下载\电气\表面等离激元线光栅 (RF)\plasmonic_wire_grating.mph
+D:\桌面\codex\案例下载\电气\超导线\superconducting_wire.mph
+D:\桌面\codex\案例下载\电气\穿孔板压膜阻尼\squeeze_film_perforated_plates.mph
+D:\桌面\codex\案例下载\电气\带终端的母线板中的焦耳热\busbar_terminal_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\带终端的母线板中的焦耳热\busbar_terminal.mph
+D:\桌面\codex\案例下载\电气\单导线和均匀螺旋线圈的自感和互感\mutual_inductance_multiturn.mph
+D:\桌面\codex\案例下载\电气\电介质内嵌薄金属层中表面等离极化激元的色散\thin_metal_surface_plasmon_polariton.mph
+D:\桌面\codex\案例下载\电气\蝶形天线优化\bowtie_antenna_optimization.mph
+D:\桌面\codex\案例下载\电气\分布式布拉格反射镜\distributed_bragg_reflector.mph
+D:\桌面\codex\案例下载\电气\哈特曼边界层\hartmann_boundary_layer.mph
+D:\桌面\codex\案例下载\电气\互连结构中的空位电迁移\vacancy_electromigration_3D.mph
+D:\桌面\codex\案例下载\电气\静电驱动悬臂梁\electrostatically_actuated_cantilever.mph
+D:\桌面\codex\案例下载\电气\均匀磁场中的硅量子点\si_quantum_dot_in_uniform_magnetic_field.mph
+D:\桌面\codex\案例下载\电气\凯克望远镜\keck_telescope.mph
+D:\桌面\codex\案例下载\电气\离子敏场效应晶体管 (ISFET) 仿真\isfet.mph
+D:\桌面\codex\案例下载\电气\氯放电全局模型\chlorine_global_model.mph
+D:\桌面\codex\案例下载\电气\罗兰圆光谱仪\rowland_circle_spectrometer.mph
+D:\桌面\codex\案例下载\电气\确定平行传输线的阻抗\parallel_wires_impedance.mph
+D:\桌面\codex\案例下载\电气\热等离子体\thermal_plasma.mph
+D:\桌面\codex\案例下载\电气\实体多层壳比较\solid_multilayer_shell_comparison.mph
+D:\桌面\codex\案例下载\电气\使用电磁带隙超材料实现天线解耦\antenna_ebg_without.mph
+D:\桌面\codex\案例下载\电气\使用电磁带隙超材料实现天线解耦\antenna_ebg.mph
+D:\桌面\codex\案例下载\电气\四极透镜\quadrupole_lens.mph
+D:\桌面\codex\案例下载\电气\通过两项玻尔兹曼方程耦合模拟 GEC ICP 反应器\argon_gec_icp_boltzmann.mph
+D:\桌面\codex\案例下载\电气\压磁驱动的细胞漫游者\piezomagnetic_cell_rover.mph
+D:\桌面\codex\案例下载\电气\忆阻器\memristor.mph
+D:\桌面\codex\案例下载\电气\优化焊球阵列以最小化芯片翘曲\welding_ball_layout_optimization_thinlayer.mph
+D:\桌面\codex\案例下载\电气\MEMS 扫描镜\MEMS Scanning Mirror_Electromechanical.mph
+D:\桌面\codex\案例下载\电气\MEMS 扫描镜\MEMS Scanning Mirror_ray tracing.mph
+D:\桌面\codex\案例下载\电气\MEMS 扫描镜\MEMS Scanning Mirror_stationary.mph
+D:\桌面\codex\案例下载\电气\MOSCAP 一维模型\moscap_1d.mph
+D:\桌面\codex\案例下载\电气\MOSFET 迁移率模型\mosfet_mobility.mph

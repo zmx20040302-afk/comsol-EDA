@@ -1,0 +1,14 @@
+{
+  "model_name": "one_dimensional_axial_bar",
+  "physics": "axial_bar_1d",
+  "geometry": {"type": "interval_1d", "parameters": {"L": {"value": 0.1, "unit": "m", "min": 0.01, "max": 2.0}}},
+  "materials": {
+    "E_mod": {"value": 210000000000.0, "unit": "Pa", "min": 1000000.0, "max": 1000000000000.0},
+    "nu_mat": {"value": 0.3, "unit": "1", "min": 0.0, "max": 0.49},
+    "rho_mat": {"value": 7850.0, "unit": "kg/m^3", "min": 100.0, "max": 20000.0}
+  },
+  "boundary_conditions": {"p_load": {"value": 1000000.0, "unit": "Pa", "min": 1.0, "max": 1000000000.0}},
+  "mesh": {"hmax": {"value": 0.002, "unit": "m", "min": 0.0001, "max": 0.02}},
+  "study": {"type": "stationary"},
+  "outputs": {"u_max": "maxop1(solid.disp)", "mises_max": "maxop1(solid.mises)"}
+}

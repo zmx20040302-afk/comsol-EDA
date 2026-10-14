@@ -1,0 +1,12 @@
+{
+  "kind": "thermal_actuator_voltage_extension_independent_holdout",
+  "purpose": "Independent COMSOL holdout for the 2-6.6 V micro-actuator surrogate extension. These conditions must not be merged into the training CSV.",
+  "inputs": ["DV_V", "htc_s_W_m2K", "htc_us_W_m2K"],
+  "outputs": ["Tmax_K", "joule_power_W"],
+  "recommended_comsol_samples": [
+    {"DV_V": 5.7, "htc_s_W_m2K": 17500, "htc_us_W_m2K": 350},
+    {"DV_V": 5.7, "htc_s_W_m2K": 22500, "htc_us_W_m2K": 450},
+    {"DV_V": 6.3, "htc_s_W_m2K": 17500, "htc_us_W_m2K": 450},
+    {"DV_V": 6.3, "htc_s_W_m2K": 22500, "htc_us_W_m2K": 350}
+  ]
+}

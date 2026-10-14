@@ -1,0 +1,15 @@
+{
+  "kind": "comsol_case_csv_training_plan",
+  "case_title": "母线板装配的焦耳热",
+  "source_matlab": "D:/桌面/codex/案例下载/COMSOL/母线板装配的焦耳热/busbar_assembly.m",
+  "physics": ["Electric Currents", "Heat Transfer"],
+  "multiphysics": ["Joule Heating"],
+  "study": "Stationary parametric sweep",
+  "inputs": {
+    "r_d_mm": [16, 18, 20],
+    "a_c_w_mm": [60, 70, 80, 90]
+  },
+  "outputs": ["Tmax_K"],
+  "validation": ["all rows finite", "Tmax_K above ambient temperature", "row count matches parameter grid"],
+  "status": "generated_from_case_evidence"
+}

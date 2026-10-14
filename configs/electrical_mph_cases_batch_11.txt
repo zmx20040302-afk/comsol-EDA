@@ -1,0 +1,51 @@
+D:\桌面\codex\案例下载\电气\波导膜片带通滤波器的优化 - 变换版本\waveguide_filter_optimization_transformation_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\波导膜片带通滤波器的优化 - 变换版本\waveguide_filter_optimization_transformation.mph
+D:\桌面\codex\案例下载\电气\超表面光束偏转器\metasurface_beam_deflector.mph
+D:\桌面\codex\案例下载\电气\带过孔的微带线建模\microstrip_line_tem_via.mph
+D:\桌面\codex\案例下载\电气\电解质栅极有机场效应晶体管\egofet.mph
+D:\桌面\codex\案例下载\电气\电容式微机械超声换能器\capacitive_micromachined_ultrasonic_transducer.mph
+D:\桌面\codex\案例下载\电气\电致伸缩盘\electrostrictive_disc.mph
+D:\桌面\codex\案例下载\电气\碟式太阳能接收器设计器\solar_dish_receiver_designer (1).mph
+D:\桌面\codex\案例下载\电气\碟式太阳能接收器设计器\solar_dish_receiver_designer_embedded.mph
+D:\桌面\codex\案例下载\电气\碟式太阳能接收器设计器\solar_dish_receiver_designer.mph
+D:\桌面\codex\案例下载\电气\菲涅尔方程 (RF)\fresnel_equations.mph
+D:\桌面\codex\案例下载\电气\光子晶体\photonic_crystal.mph
+D:\桌面\codex\案例下载\电气\会议扬声器虚拟测试模型\conference_speaker_virtual_test_setup_63_cleared.mph
+D:\桌面\codex\案例下载\电气\会议扬声器虚拟测试模型\conference_speaker_virtual_test_setup_63.mph
+D:\桌面\codex\案例下载\电气\介质阻挡放电\argon_dbd_1d.mph
+D:\桌面\codex\案例下载\电气\均压环的位置优化\grading_ring_optimization.mph
+D:\桌面\codex\案例下载\电气\均压环的位置优化\high_voltage_insulator_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\潜艇的磁信号\magnetic_signature_submarine_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\潜艇的磁信号\magnetic_signature_submarine.mph
+D:\桌面\codex\案例下载\电气\求解氢原子\solving_hydrogen_atom.mph
+D:\桌面\codex\案例下载\电气\球体之间的电击穿\breakdown_between_spheres.mph
+D:\桌面\codex\案例下载\电气\全内反射\total_internal_reflection.mph
+D:\桌面\codex\案例下载\电气\热电冷却器，集总热系统\lumped_thermoelectric_cooler.mph
+D:\桌面\codex\案例下载\电气\三维电感器模型的轴对称近似分析\axisymmetric_approximation_of_inductor_3d.mph
+D:\桌面\codex\案例下载\电气\三相电机的频域研究\three_phase_motor_frequency_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\三相电机的频域研究\three_phase_motor_frequency.mph
+D:\桌面\codex\案例下载\电气\砷化镓纳米线的自洽薛定谔-泊松结果\schrodinger_poisson_nanowire.mph
+D:\桌面\codex\案例下载\电气\使用数值 TEM 端口对 CPW 建模\cpw_numeric_tem_port.mph
+D:\桌面\codex\案例下载\电气\使用数值 TEM 端口对接地 CPW 建模\gcpw_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\使用数值 TEM 端口对接地 CPW 建模\gcpw_numeric_tem_port.mph
+D:\桌面\codex\案例下载\电气\使用永磁体的轴向磁轴承\axial_magnetic_bearing.mph
+D:\桌面\codex\案例下载\电气\双锥形天线\biconical_antenna.mph
+D:\桌面\codex\案例下载\电气\铁矿床的磁法勘探\magnetic_prospecting_embedded.mph
+D:\桌面\codex\案例下载\电气\铁矿床的磁法勘探\magnetic_prospecting.mph
+D:\桌面\codex\案例下载\电气\微泵机理\micropump_mechanism.mph
+D:\桌面\codex\案例下载\电气\微波炉中的旋转加热及相变\rotating_microwave_oven.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线代理模型\microstrip_patch_antenna_surrogate.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线的网格自适应研究\microstrip_patch_antenna_mesh_adaptation.mph
+D:\桌面\codex\案例下载\电气\氩氧电容耦合等离子体反应器模型\ccp_argon_oxygen.mph
+D:\桌面\codex\案例下载\电气\液态金属包层中耦合传热的哈特曼流\hartmann_flow_in_liquid_metal_blanket.mph
+D:\桌面\codex\案例下载\电气\移动设备天线建模\pifa_handheld.mph
+D:\桌面\codex\案例下载\电气\异质结隧穿\heterojunction_tunneling.mph
+D:\桌面\codex\案例下载\电气\用于信号滤波的光子晶体的优化\photonic_crystal_filter_optimization.mph
+D:\桌面\codex\案例下载\电气\有损铁氧体三端口环行器的阻抗匹配\lossy_circulator_3d_geom.mph
+D:\桌面\codex\案例下载\电气\有损铁氧体三端口环行器的阻抗匹配\lossy_circulator_3d.mph
+D:\桌面\codex\案例下载\电气\植入物在 MRI 中的射频发热\mri_implant_heating_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\植入物在 MRI 中的射频发热\mri_implant_heating.mph
+D:\桌面\codex\案例下载\电气\植入物在 MRI 中的射频发热\polyaxial_screw_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\植入物在 MRI 中的射频发热\stl_2_combine_geom_mesh.mph
+D:\桌面\codex\案例下载\电气\MOSCAP 的界面陷阱效应\moscap_1d_interface_traps.mph
+D:\桌面\codex\案例下载\电气\PIN 二极管的反向恢复\pin_reverse_recovery.mph

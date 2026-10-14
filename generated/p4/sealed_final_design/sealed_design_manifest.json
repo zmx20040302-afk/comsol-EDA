@@ -1,0 +1,20 @@
+{
+  "schema": "comsol-p4-sealed-final-design",
+  "schemaVersion": "1.0.0",
+  "created_at": "2026-10-10T10:55:40.655082+00:00",
+  "domain_seed": 20261119,
+  "ood_seed": 20261129,
+  "domain_rows": 60,
+  "ood_rows": 20,
+  "files": {
+    "domain": {
+      "path": "generated\\p4\\sealed_final_design\\p4_independent_domain_inputs.csv",
+      "sha256": "db02ca03d7c9fc2e3de79d7c84bea2d93f0fd73cfca35f709f5b2108ac43f0b1"
+    },
+    "ood": {
+      "path": "generated\\p4\\sealed_final_design\\p4_out_of_domain_inputs.csv",
+      "sha256": "b636027c3a6825da344d41e957a13285784ad414d31214cd0c8c837f658bbb33"
+    }
+  },
+  "policy": "Inputs were generated before adaptive sampling. They are excluded from model fitting and candidate selection until the P4 model is frozen."
+}

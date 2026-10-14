@@ -1,0 +1,48 @@
+D:\桌面\codex\案例下载\电气\癌症肿瘤的微波热疗法\microwave_cancer_therapy_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\癌症肿瘤的微波热疗法\microwave_cancer_therapy.mph
+D:\桌面\codex\案例下载\电气\表面等离激元线光栅（波动光学）\plasmonic_wire_grating (1).mph
+D:\桌面\codex\案例下载\电气\表面等离激元线光栅（波动光学）\plasmonic_wire_grating_embedded.mph
+D:\桌面\codex\案例下载\电气\表面等离激元线光栅（波动光学）\plasmonic_wire_grating.mph
+D:\桌面\codex\案例下载\电气\波纹状圆形喇叭天线\corrugated_circular_horn_antenna (1).mph
+D:\桌面\codex\案例下载\电气\波纹状圆形喇叭天线\corrugated_circular_horn_antenna_embedded.mph
+D:\桌面\codex\案例下载\电气\波纹状圆形喇叭天线\corrugated_circular_horn_antenna.mph
+D:\桌面\codex\案例下载\电气\磁场中的铁球\iron_sphere_bfield_00_introduction.mph
+D:\桌面\codex\案例下载\电气\磁场中的铁球\iron_sphere_bfield_01_static.mph
+D:\桌面\codex\案例下载\电气\磁场中的铁球\iron_sphere_bfield_02_60hz.mph
+D:\桌面\codex\案例下载\电气\磁场中的铁球\iron_sphere_bfield_03_20khz.mph
+D:\桌面\codex\案例下载\电气\磁场中的铁球\iron_sphere_bfield_04_13mhz.mph
+D:\桌面\codex\案例下载\电气\磁路的拓扑优化\magnetic_circuit_topology_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\磁路的拓扑优化\magnetic_circuit_topology_optimization.mph
+D:\桌面\codex\案例下载\电气\发电机三维仿真\sector_generator_3d_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\发电机三维仿真\sector_generator_3d.mph
+D:\桌面\codex\案例下载\电气\法布里-珀罗谐振腔\fabry_perot_resonator.mph
+D:\桌面\codex\案例下载\电气\非线性磁致伸缩换能器\nonlinear_magnetostriction.mph
+D:\桌面\codex\案例下载\电气\共面波导带通滤波器\cpw_bandpass_filter.mph
+D:\桌面\codex\案例下载\电气\海上风电场的雷击浪涌分析\lightning_surge_wind_farm.mph
+D:\桌面\codex\案例下载\电气\亥姆霍兹线圈的磁场\helmholtz_coil.mph
+D:\桌面\codex\案例下载\电气\内置式永磁电机的电磁和机械分析\interior_pm_motor_stress_analysis.mph
+D:\桌面\codex\案例下载\电气\耦合线带通滤波器\coupled_line_filter.mph
+D:\桌面\codex\案例下载\电气\频率选择表面周期性互补开口谐振环\frequency_selective_surface_csrr.mph
+D:\桌面\codex\案例下载\电气\汽车挡风玻璃天线对线束的影响\car_emiemc.mph
+D:\桌面\codex\案例下载\电气\施密特-卡塞格林望远镜\schmidt_cassegrain_telescope_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\施密特-卡塞格林望远镜\schmidt_cassegrain_telescope.mph
+D:\桌面\codex\案例下载\电气\使用混合公式模拟微机械陀螺仪\gyroscope_mixed_formulation.mph
+D:\桌面\codex\案例下载\电气\使用时域仿真和 FFT 计算宽带 RCS\rcs_time_explicit.mph
+D:\桌面\codex\案例下载\电气\梳驱动音叉式微速率陀螺仪中制造偏差的影响\comb_drive_tuning_fork_gyroscope_manufacturing_variation.mph
+D:\桌面\codex\案例下载\电气\输电塔上的雷击浪涌\lightning_surge_tower.mph
+D:\桌面\codex\案例下载\电气\双脊喇叭天线\double_ridged_horn_antenna.mph
+D:\桌面\codex\案例下载\电气\相控阵天线建模\microstrip_patch_antenna_periodic.mph
+D:\桌面\codex\案例下载\电气\旋转机械三维建模教程\rotating_machinery_3d_tutorial_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\旋转机械三维建模教程\rotating_machinery_3d_tutorial.mph
+D:\桌面\codex\案例下载\电气\压电速率陀螺仪\piezoelectric_rate_gyroscope_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\压电速率陀螺仪\piezoelectric_rate_gyroscope.mph
+D:\桌面\codex\案例下载\电气\永磁电机二维模型\pm_motor_2d_introduction.mph
+D:\桌面\codex\案例下载\电气\永磁电机效率图\pm_motor_2d_efficiency_map.mph
+D:\桌面\codex\案例下载\电气\振动导电固体的磁阻尼\magnetic_damping.mph
+D:\桌面\codex\案例下载\电气\直流辉光放电\positive_column_1d.mph
+D:\桌面\codex\案例下载\电气\直流辉光放电\positive_column_2d.mph
+D:\桌面\codex\案例下载\电气\自聚焦\self_focusing.mph
+D:\桌面\codex\案例下载\电气\H 弯波导 - 三维\h_bend_waveguide_2d.mph
+D:\桌面\codex\案例下载\电气\H 弯波导 - 三维\h_bend_waveguide_3d.mph
+D:\桌面\codex\案例下载\电气\Halbach 转子的静磁场建模\static_field_halbach_rotor_3d.mph
+D:\桌面\codex\案例下载\电气\PCB 的静电放电 (ESD) 测试\esd_test_pcb.mph

@@ -1,0 +1,46 @@
+D:\桌面\codex\案例下载\电气\包含居里温度和运动的感应加热\induction_heating_curie_movement_1khz.mph
+D:\桌面\codex\案例下载\电气\包含居里温度和运动的感应加热\induction_heating_curie_movement_25khz.mph
+D:\桌面\codex\案例下载\电气\包含居里温度和运动的感应加热\induction_heating_curie_movement.mph
+D:\桌面\codex\案例下载\电气\垂直腔面发射激光器 (VCSEL) 的阈值增益计算\vertical_cavity_surface_emitting_laser_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\垂直腔面发射激光器 (VCSEL) 的阈值增益计算\vertical_cavity_surface_emitting_laser.mph
+D:\桌面\codex\案例下载\电气\带射频偏压的氩氯电感耦合等离子体反应器模型\icp_ccp_argon_chlorine.mph
+D:\桌面\codex\案例下载\电气\电路板的基本发射和抗干扰分析\circuit_emiemc.mph
+D:\桌面\codex\案例下载\电气\电路量子电动力学 CPW 谐振器\cpw_resonator.mph
+D:\桌面\codex\案例下载\电气\蝶形激光腔\bow_tie_laser_cavity.mph
+D:\桌面\codex\案例下载\电气\飞机机身上的天线串扰仿真\airplane_antenna_crosstalk.mph
+D:\桌面\codex\案例下载\电气\固态装配谐振器（三维）\solidly_mounted_resonator_3d.mph
+D:\桌面\codex\案例下载\电气\光导管\light_pipe_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\光导管\light_pipe.mph
+D:\桌面\codex\案例下载\电气\光学环形谐振腔陷波滤波器（三维）\optical_ring_resonator_3d.mph
+D:\桌面\codex\案例下载\电气\光子波导的应力–光学效应\stress_optical_generalized.mph
+D:\桌面\codex\案例下载\电气\光子波导的应力–光学效应\stress_optical.mph
+D:\桌面\codex\案例下载\电气\厚度剪切模式石英振荡器\thickness_shear_quartz_oscillator.mph
+D:\桌面\codex\案例下载\电气\回音壁模式谐振器\whispering_gallery_mode_resonator.mph
+D:\桌面\codex\案例下载\电气\机械多端口系统：弹性波在小铝板中的传播\mechanical_multiport_system.mph
+D:\桌面\codex\案例下载\电气\交叉光栅阶梯光栅光谱仪\cross_grating_echelle_spectrograph_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\交叉光栅阶梯光栅光谱仪\cross_grating_echelle_spectrograph.mph
+D:\桌面\codex\案例下载\电气\交叉光栅阶梯光栅光谱仪\petzval_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\静电吸盘\electrostatic_chuck.mph
+D:\桌面\codex\案例下载\电气\具有等效电路的薄膜体声波谐振器\thin_film_baw_resonator_3d_equivalent_circuit.mph
+D:\桌面\codex\案例下载\电气\空腔谐振器的 Q 因子和谐振频率计算\cavity_resonators.mph
+D:\桌面\codex\案例下载\电气\牛顿望远镜结构分析\newtonian_telescope_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\牛顿望远镜结构分析\newtonian_telescope_structural_analysis_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\牛顿望远镜结构分析\newtonian_telescope_structural_analysis.mph
+D:\桌面\codex\案例下载\电气\人脑的比吸收率 (SAR)\sar_in_human_head.mph
+D:\桌面\codex\案例下载\电气\双高斯透镜\double_gauss_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\双高斯透镜\double_gauss_lens.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线\microstrip_patch_antenna_inset.mph
+D:\桌面\codex\案例下载\电气\谐振螺旋线圈\resonant_spiral_coil_2daxi.mph
+D:\桌面\codex\案例下载\电气\谐振螺旋线圈\resonant_spiral_coil_3d_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\谐振螺旋线圈\resonant_spiral_coil_3d.mph
+D:\桌面\codex\案例下载\电气\压电陶瓷的滞回现象\piezoelectric_hysteresis_parametric_sweep.mph
+D:\桌面\codex\案例下载\电气\压电陶瓷的滞回现象\piezoelectric_hysteresis.mph
+D:\桌面\codex\案例下载\电气\压电微泵\piezoelectric_micropump.mph
+D:\桌面\codex\案例下载\电气\液晶单元的面内切换\in_plane_switching_liquid_crystal_cell.mph
+D:\桌面\codex\案例下载\电气\永磁体\permanent_magnet.mph
+D:\桌面\codex\案例下载\电气\用于多路分解的光子晶体的优化\photonic_crystal_demultiplexer_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\用于多路分解的光子晶体的优化\photonic_crystal_demultiplexer_optimization.mph
+D:\桌面\codex\案例下载\电气\预应力微镜振动：热黏性-热弹性力学耦合\micromirror_prestressed_vibration.mph
+D:\桌面\codex\案例下载\电气\主板的冲击响应\motherboard_shock_response.mph
+D:\桌面\codex\案例下载\电气\主板的随机振动试验\motherboard_random_vibration.mph
+D:\桌面\codex\案例下载\电气\PCB 线圈的电感矩阵计算\inductance_matrix_pcb_coils.mph

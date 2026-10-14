@@ -1,0 +1,87 @@
+{
+  "model_name": "thermal_stress_rectangle",
+  "physics": "thermal_stress_2d",
+  "geometry": {
+    "type": "rectangle_2d",
+    "parameters": {
+      "L": {
+        "value": 0.1,
+        "unit": "m",
+        "min": 0.01,
+        "max": 2
+      },
+      "W": {
+        "value": 0.02,
+        "unit": "m",
+        "min": 0.001,
+        "max": 1
+      }
+    }
+  },
+  "materials": {
+    "E": {
+      "value": 210000000000,
+      "unit": "Pa",
+      "min": 1000000,
+      "max": 1000000000000
+    },
+    "nu": {
+      "value": 0.3,
+      "unit": "1",
+      "min": 0,
+      "max": 0.49
+    },
+    "rho": {
+      "value": 7850,
+      "unit": "kg/m^3",
+      "min": 100,
+      "max": 20000
+    },
+    "k": {
+      "value": 45,
+      "unit": "W/(m*K)",
+      "min": 1,
+      "max": 500
+    },
+    "Cp": {
+      "value": 460,
+      "unit": "J/(kg*K)",
+      "min": 1,
+      "max": 5000
+    },
+    "alpha": {
+      "value": 1.2e-05,
+      "unit": "1/K",
+      "min": 1e-07,
+      "max": 0.001
+    }
+  },
+  "boundary_conditions": {
+    "T_hot": {
+      "value": 373.15,
+      "unit": "K",
+      "min": 250,
+      "max": 1000
+    },
+    "T_cold": {
+      "value": 293.15,
+      "unit": "K",
+      "min": 250,
+      "max": 1000
+    }
+  },
+  "mesh": {
+    "hmax": {
+      "value": 0.002,
+      "unit": "m",
+      "min": 0.0001,
+      "max": 0.02
+    }
+  },
+  "study": {
+    "type": "stationary"
+  },
+  "outputs": {
+    "stress": "solid.mises"
+  }
+}

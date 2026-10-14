@@ -1,0 +1,20 @@
+{
+  "kind": "capacitor_dc_permittivity_independent_comsol_validation",
+  "created_at": "2026-08-25T08:16:50.405391+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\capacitor_dc_permittivity_holdout.csv",
+  "training_rows": 5,
+  "holdout_rows": 2,
+  "selected_model": "linear_regression",
+  "per_output_relative_validation": {
+    "capacitance_F": {
+      "max_relative_error_percent": 0.002262589556872893,
+      "mean_relative_error_percent": 0.001975180093416065,
+      "threshold_relative_error_percent": 1.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "三维电容器静电模型；固定几何、金属端子、接地和网格，仅改变石英域相对介电常数 epsilon_r=2-8。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate.holdout_validation.json"
+}

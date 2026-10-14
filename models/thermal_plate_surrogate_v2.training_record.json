@@ -1,0 +1,289 @@
+{
+  "kind": "comsol_surrogate_training_record",
+  "model_path": "models/thermal_plate_surrogate_v2.joblib",
+  "csv_path": "generated/training_sweeps/thermal_plate_sweep.csv",
+  "inspection": {
+    "kind": "training_csv_inspection",
+    "path": "generated/training_sweeps/thermal_plate_sweep.csv",
+    "rows": 48,
+    "columns": [
+      "L_m",
+      "W_m",
+      "k_W_mK",
+      "T_hot_K",
+      "T_cold_K",
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "numeric_columns": [
+      "L_m",
+      "W_m",
+      "k_W_mK",
+      "T_hot_K",
+      "T_cold_K",
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "inferred_input_columns": [
+      "L_m",
+      "W_m",
+      "k_W_mK",
+      "T_hot_K",
+      "T_cold_K"
+    ],
+    "inferred_output_columns": [
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "ignored_columns": [],
+    "ready_for_training": true,
+    "warnings": [],
+    "limitations": [],
+    "automation_plan": [
+      "Use inferred inputs: L_m, W_m, k_W_mK, T_hot_K, T_cold_K.",
+      "Use inferred outputs: Tmax_K, Tavg_K.",
+      "Train baseline, Ridge, RandomForest, and MLP candidates.",
+      "Save the best model plus a .training_record.json file.",
+      "Validate the surrogate with fresh COMSOL runs before design use."
+    ]
+  },
+  "report": {
+    "best_model": "ridge_scaled",
+    "train_rmse": 2.117682494764481,
+    "test_rmse": 1.9181174427639627,
+    "test_mae": 1.3167597418633648,
+    "test_r2": 0.986796606268194,
+    "rows": 48,
+    "input_columns": [
+      "L_m",
+      "W_m",
+      "k_W_mK",
+      "T_hot_K",
+      "T_cold_K"
+    ],
+    "output_columns": [
+      "Tmax_K",
+      "Tavg_K"
+    ],
+    "train_rows": 38,
+    "test_rows": 10,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "train_rmse": 16.273301072903468,
+        "test_rmse": 17.222661098664144,
+        "test_mae": 15.539587450808147,
+        "test_r2": -0.06447556465036056,
+        "warnings": []
+      },
+      {
+        "name": "ridge_scaled",
+        "train_rmse": 2.117682494764481,
+        "test_rmse": 1.9181174427639627,
+        "test_mae": 1.3167597418633648,
+        "test_r2": 0.986796606268194,
+        "warnings": []
+      },
+      {
+        "name": "random_forest",
+        "train_rmse": 2.1773472857147516,
+        "test_rmse": 2.742210164648365,
+        "test_mae": 1.674625817011119,
+        "test_r2": 0.9730141154769711,
+        "warnings": []
+      },
+      {
+        "name": "mlp_scaled",
+        "train_rmse": 1.4028839426512336,
+        "test_rmse": 2.3559715915965387,
+        "test_mae": 1.9620851305153764,
+        "test_r2": 0.9800806444419299,
+        "warnings": []
+      }
+    ],
+    "per_output_metrics": {
+      "Tmax_K": {
+        "rmse": 0.5600809619407939,
+        "mae": 0.555185096135034,
+        "r2": 0.9991830971772695
+      },
+      "Tavg_K": {
+        "rmse": 2.654177530713084,
+        "mae": 2.0783343875916955,
+        "r2": 0.959351658882595
+      }
+    },
+    "data_quality": {
+      "rows": 48,
+      "columns": [
+        "L_m",
+        "W_m",
+        "k_W_mK",
+        "T_hot_K",
+        "T_cold_K",
+        "Tmax_K",
+        "Tavg_K"
+      ],
+      "selected_columns": [
+        "L_m",
+        "W_m",
+        "k_W_mK",
+        "T_hot_K",
+        "T_cold_K",
+        "Tmax_K",
+        "Tavg_K"
+      ],
+      "missing_values": {
+        "L_m": 0,
+        "W_m": 0,
+        "k_W_mK": 0,
+        "T_hot_K": 0,
+        "T_cold_K": 0,
+        "Tmax_K": 0,
+        "Tavg_K": 0
+      },
+      "duplicate_rows": 0,
+      "input_columns": [
+        "L_m",
+        "W_m",
+        "k_W_mK",
+        "T_hot_K",
+        "T_cold_K"
+      ],
+      "output_columns": [
+        "Tmax_K",
+        "Tavg_K"
+      ]
+    },
+    "feature_stats": {
+      "L_m": {
+        "min": 0.04,
+        "max": 0.08,
+        "mean": 0.060000000000000005,
+        "std": 0.02
+      },
+      "W_m": {
+        "min": 0.015,
+        "max": 0.03,
+        "mean": 0.022500000000000003,
+        "std": 0.0075
+      },
+      "k_W_mK": {
+        "min": 10.0,
+        "max": 60.0,
+        "mean": 31.666666666666668,
+        "std": 20.94967514996089
+      },
+      "T_hot_K": {
+        "min": 333.15,
+        "max": 373.15,
+        "mean": 353.15000000000003,
+        "std": 20.0
+      },
+      "T_cold_K": {
+        "min": 273.15,
+        "max": 293.15,
+        "mean": 283.15000000000003,
+        "std": 10.0
+      }
+    },
+    "output_stats": {
+      "Tmax_K": {
+        "min": 333.15,
+        "max": 373.15,
+        "mean": 353.15000000000003,
+        "std": 20.0
+      },
+      "Tavg_K": {
+        "min": 279.255924538172,
+        "max": 324.789230033901,
+        "mean": 298.97229186902615,
+        "std": 11.888269961650513
+      }
+    },
+    "sample_predictions": [
+      {
+        "actual": {
+          "Tmax_K": 373.15,
+          "Tavg_K": 301.291232717568
+        },
+        "predicted": {
+          "Tmax_K": 372.6521895490538,
+          "Tavg_K": 300.3253355912615
+        },
+        "absolute_error": {
+          "Tmax_K": 0.49781045094619003,
+          "Tavg_K": 0.9658971263065155
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 333.15,
+          "Tavg_K": 285.356255386528
+        },
+        "predicted": {
+          "Tmax_K": 333.76836044204424,
+          "Tavg_K": 287.0479575359879
+        },
+        "absolute_error": {
+          "Tmax_K": 0.6183604420442634,
+          "Tavg_K": 1.6917021494598998
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 373.15,
+          "Tavg_K": 283.326540896955
+        },
+        "predicted": {
+          "Tmax_K": 372.7589056891556,
+          "Tavg_K": 285.66909643796316
+        },
+        "absolute_error": {
+          "Tmax_K": 0.3910943108443803,
+          "Tavg_K": 2.342555541008153
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 373.15,
+          "Tavg_K": 309.425007182045
+        },
+        "predicted": {
+          "Tmax_K": 372.62091406708856,
+          "Tavg_K": 310.7003185976857
+        },
+        "absolute_error": {
+          "Tmax_K": 0.5290859329114141,
+          "Tavg_K": 1.2753114156406582
+        }
+      },
+      {
+        "actual": {
+          "Tmax_K": 333.15,
+          "Tavg_K": 279.255924538172
+        },
+        "predicted": {
+          "Tmax_K": 333.79963592400946,
+          "Tavg_K": 276.67297452956376
+        },
+        "absolute_error": {
+          "Tmax_K": 0.6496359240094876,
+          "Tavg_K": 2.582950008608236
+        }
+      }
+    ],
+    "training_summary": [
+      "Compared 4 candidate regressors on 48 COMSOL sweep rows.",
+      "Inputs: L_m, W_m, k_W_mK, T_hot_K, T_cold_K; outputs: Tmax_K, Tavg_K.",
+      "Selected ridge_scaled with test RMSE 1.91812, MAE 1.31676, R2 0.986797.",
+      "Best model improved RMSE over mean baseline by 88.9%."
+    ],
+    "recommendations": [
+      "Add more COMSOL parameter-sweep rows before relying on the surrogate for design decisions.",
+      "Validate the saved surrogate on fresh COMSOL runs that were not included in the CSV.",
+      "Keep the CSV, constraints JSON, generated script, and trained joblib together as one training record."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,52 @@
+D:\桌面\codex\案例下载\电气\白瞳阶梯光栅光谱仪\petzval_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\白瞳阶梯光栅光谱仪\white_pupil_echelle_spectrograph_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\白瞳阶梯光栅光谱仪\white_pupil_echelle_spectrograph.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_00_masterfile.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_01_anglesweep2dext2d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_02_anglesweepsym25dext25d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_03_anglesweepsym25dsym3d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_04_anglesweepmon25dfull3d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_06_fulltransientsym25dext25d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_09_fulltransient2d.mph
+D:\桌面\codex\案例下载\电气\电机系列教程\sync_edrive_v1.011_10_fulltransientsym25d.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_01_introduction.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_02_capacitive_effects.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_03_bonding_capacitive.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_04_inductive_effects (1).mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_04_inductive_effects.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_05_bonding_inductive.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_06_thermal_effects.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_07_a_geom_mesh_3d.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_07_b_geom_mesh_3d.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_07_c_geom_mesh_3d.mph
+D:\桌面\codex\案例下载\电气\电缆系列教程\submarine_cable_e_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\定向耦合器\directional_coupler.mph
+D:\桌面\codex\案例下载\电气\飞机上电线的雷电感应电压\lightning_induced_voltage_airplane.mph
+D:\桌面\codex\案例下载\电气\基板上的颗粒散射\scatterer_on_substrate.mph
+D:\桌面\codex\案例下载\电气\级联矩形腔滤波器\cascaded_cavity_filter.mph
+D:\桌面\codex\案例下载\电气\加热电路\heating_circuit.mph
+D:\桌面\codex\案例下载\电气\金纳米球的光散射\scattering_nanosphere.mph
+D:\桌面\codex\案例下载\电气\聚焦透镜\focusing_lens.mph
+D:\桌面\codex\案例下载\电气\马赫-曾德尔调制器\mach_zehnder_modulator.mph
+D:\桌面\codex\案例下载\电气\平衡电枢换能器 - 时域分析\balanced_armature_transducer_transient_64_1.2V_cuDSS.mph
+D:\桌面\codex\案例下载\电气\三维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_3d_basic.mph
+D:\桌面\codex\案例下载\电气\三维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_3d_freq.mph
+D:\桌面\codex\案例下载\电气\三维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_3d_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\三维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_3d_modes.mph
+D:\桌面\codex\案例下载\电气\三维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_3d_pull_in.mph
+D:\桌面\codex\案例下载\电气\微波炉\microwave_oven.mph
+D:\桌面\codex\案例下载\电气\微光刻透镜\microlithography_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\微光刻透镜\microlithography_lens.mph
+D:\桌面\codex\案例下载\电气\永磁电机三维模型\pm_motor_3d.mph
+D:\桌面\codex\案例下载\电气\E 磁芯变压器\ecore_transformer_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\E 磁芯变压器\ecore_transformer.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\petzval_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\petzval_lens_stop_analysis_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\petzval_lens_stop_analysis_isothermal_sweep.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\petzval_lens_stop_analysis_with_surface_to_surface_radiation.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\petzval_lens_stop_analysis.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\submarine_cable_07_geom_mesh_3d.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\submarine_cable_08_a_inductive_effects_3d.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\submarine_cable_08_c_inductive_effects_3d.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\submarine_cable_08_d_inductive_effects_3d.mph
+D:\桌面\codex\案例下载\电气\Petzval 透镜 STOP 分析\submarine_cable_08_inductive_effects_3d.mph

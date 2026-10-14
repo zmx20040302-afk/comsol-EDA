@@ -1,0 +1,63 @@
+{
+  "schema": "comsol-p3-geometry-smoke",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T09:34:56.530909+00:00",
+  "case_count": 9,
+  "decision_variables_checked": [
+    "L_mm",
+    "wbb_mm",
+    "tbb_mm",
+    "bolt_radius_mm"
+  ],
+  "checks": {
+    "all_nine_cases_exported": true,
+    "all_solver_status_solved": true,
+    "fixed_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true,
+    "geometry_rule_satisfied": true,
+    "outputs_are_finite": true,
+    "constraint_classification_has_feasible_and_infeasible_cases": true
+  },
+  "passed": true,
+  "ranges": {
+    "Tmax_K": {
+      "min": 314.778415825831,
+      "max": 382.949975626451
+    },
+    "Jmax_A_m2": {
+      "min": 4531166.06288707,
+      "max": 10855990.2579092
+    },
+    "voltage_drop_mV": {
+      "min": 12.7371532271849,
+      "max": 39.434613329882
+    },
+    "joule_power_W": {
+      "min": 2.03781408790054,
+      "max": 6.30913432234081
+    },
+    "copper_mass_kg": {
+      "min": 0.28923489177867,
+      "max": 0.582378964290931
+    },
+    "energy_imbalance_percent": {
+      "min": 0.0453104026550689,
+      "max": 0.0479005552009134
+    }
+  },
+  "constraint_summary": {
+    "feasible_cases": 5,
+    "infeasible_cases": 4,
+    "temperature_violations": 1,
+    "voltage_violations": 4,
+    "current_density_violations": 1
+  },
+  "wall_seconds": 56.2929173,
+  "artifacts": {
+    "csv": "generated\\p3\\geometry_smoke\\busbar_geometry_smoke.csv",
+    "evaluated_csv": "generated\\p3\\geometry_smoke\\busbar_geometry_smoke_evaluated.csv",
+    "mph": "generated\\p3\\geometry_smoke\\busbar_geometry_smoke_final.mph",
+    "runner": "generated\\p3\\geometry_smoke\\run_busbar_geometry_smoke.m"
+  },
+  "scope": "One-factor low/high geometry smoke tests verify topology stability. They do not replace the 80-case multivariable design or independent holdout."
+}

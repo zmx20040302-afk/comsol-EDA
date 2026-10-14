@@ -1,0 +1,14 @@
+# One COMSOL model per line. The batch exporter processes these sequentially.
+D:\桌面\codex\案例下载\电气\Frequency Response of a Typical Surface Acoustic Wave Delay Line\SAW_Delay_Line_with_validation_64.mph
+D:\桌面\codex\案例下载\电气\SOI 锥形波导的相位延迟\tapered_waveguide_phase_delay.mph
+D:\桌面\codex\案例下载\电气\Vaporization During Electrosurgery\vaporization_during_electrosurgery.mph
+D:\桌面\codex\案例下载\电气\磁泳分离三维模型\3D_magnetophoretic_separation.mph
+D:\桌面\codex\案例下载\电气\全息页面数据存储仿真\page_hologram.mph
+D:\桌面\codex\案例下载\电气\无法全屋照亮的彭罗斯房间\penrose_unilluminable_room.mph
+D:\桌面\codex\案例下载\电气\光在具有频率相关折射率的介质中的传播\rays_in_dispersive_prism.mph
+D:\桌面\codex\案例下载\电气\扫地机器人的激光雷达空间映射\vacuum_robot_lidar.mph
+D:\桌面\codex\案例下载\电气\绝缘体上硅调制器\silicon_on_insulator_modulator.mph
+D:\桌面\codex\案例下载\电气\相场法模拟点蚀与力学辅助腐蚀\Phase_Field_Modeling_of_Pitting_and_Mechanically_Assisted_Corrosion_Cleared_Solution.mph
+D:\桌面\codex\案例下载\电气\计算拦截通量\intercepted_flux_v62.mph
+D:\桌面\codex\案例下载\电气\信号传播的瞬态模型\long_wires_short_signal_brainteaser_v62.mph
+D:\桌面\codex\案例下载\电气\汽车座舱声学 - 使用三阶单元和建议的迭代求解器\car_cabin_acoustics_cubic_solver_63_cleared.mph

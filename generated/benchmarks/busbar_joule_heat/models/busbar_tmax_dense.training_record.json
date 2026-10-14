@@ -1,0 +1,228 @@
+{
+  "kind": "comsol_surrogate_training_record",
+  "model_path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\models\\busbar_tmax_dense.joblib",
+  "csv_path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_dense_training_data.csv",
+  "inspection": {
+    "kind": "training_csv_inspection",
+    "path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_dense_training_data.csv",
+    "rows": 49,
+    "columns": [
+      "Vtot_mV",
+      "htc_W_m2K",
+      "Tmax_K",
+      "Tmax_C",
+      "terminal_current_A",
+      "joule_power_W",
+      "convection_power_W",
+      "energy_imbalance_percent"
+    ],
+    "numeric_columns": [
+      "Vtot_mV",
+      "htc_W_m2K",
+      "Tmax_K",
+      "Tmax_C",
+      "terminal_current_A",
+      "joule_power_W",
+      "convection_power_W",
+      "energy_imbalance_percent"
+    ],
+    "inferred_input_columns": [
+      "Vtot_mV",
+      "htc_W_m2K"
+    ],
+    "inferred_output_columns": [
+      "Tmax_C"
+    ],
+    "ignored_columns": [],
+    "ready_for_training": true,
+    "warnings": [],
+    "limitations": [],
+    "automation_plan": [
+      "Use inferred inputs: Vtot_mV, htc_W_m2K.",
+      "Use inferred outputs: Tmax_C.",
+      "Train baseline, Ridge, RandomForest, and MLP candidates.",
+      "Save the best model plus a .training_record.json file.",
+      "Validate the surrogate with fresh COMSOL runs before design use."
+    ]
+  },
+  "report": {
+    "best_model": "mlp_scaled",
+    "train_rmse": 5.0702505745051445,
+    "test_rmse": 2.3146541550254804,
+    "test_mae": 1.6582041774222227,
+    "test_r2": 0.9912310321739125,
+    "rows": 49,
+    "input_columns": [
+      "Vtot_mV",
+      "htc_W_m2K"
+    ],
+    "output_columns": [
+      "Tmax_C"
+    ],
+    "train_rows": 39,
+    "test_rows": 10,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "train_rmse": 39.31256670859767,
+        "test_rmse": 25.82056985055444,
+        "test_mae": 23.276607866303397,
+        "test_r2": -0.09120890711269027,
+        "warnings": []
+      },
+      {
+        "name": "ridge_scaled",
+        "train_rmse": 17.690541426244952,
+        "test_rmse": 11.454882877110633,
+        "test_mae": 9.979718753381187,
+        "test_r2": 0.7852379391373888,
+        "warnings": []
+      },
+      {
+        "name": "random_forest",
+        "train_rmse": 9.38774545403278,
+        "test_rmse": 6.840342129727044,
+        "test_mae": 5.4262460440365015,
+        "test_r2": 0.9234170828753115,
+        "warnings": []
+      },
+      {
+        "name": "mlp_scaled",
+        "train_rmse": 5.0702505745051445,
+        "test_rmse": 2.3146541550254804,
+        "test_mae": 1.6582041774222227,
+        "test_r2": 0.9912310321739125,
+        "warnings": []
+      }
+    ],
+    "per_output_metrics": {
+      "Tmax_C": {
+        "rmse": 2.3146541550254804,
+        "mae": 1.6582041774222227,
+        "r2": 0.9912310321739125
+      }
+    },
+    "data_quality": {
+      "rows": 49,
+      "columns": [
+        "Vtot_mV",
+        "htc_W_m2K",
+        "Tmax_K",
+        "Tmax_C",
+        "terminal_current_A",
+        "joule_power_W",
+        "convection_power_W",
+        "energy_imbalance_percent"
+      ],
+      "selected_columns": [
+        "Vtot_mV",
+        "htc_W_m2K",
+        "Tmax_C"
+      ],
+      "missing_values": {
+        "Vtot_mV": 0,
+        "htc_W_m2K": 0,
+        "Tmax_C": 0
+      },
+      "duplicate_rows": 0,
+      "input_columns": [
+        "Vtot_mV",
+        "htc_W_m2K"
+      ],
+      "output_columns": [
+        "Tmax_C"
+      ]
+    },
+    "feature_stats": {
+      "Vtot_mV": {
+        "min": 10.0,
+        "max": 30.0,
+        "mean": 20.0,
+        "std": 6.666666666666672
+      },
+      "htc_W_m2K": {
+        "min": 2.0,
+        "max": 10.0,
+        "mean": 6.0,
+        "std": 2.666666666666667
+      }
+    },
+    "output_stats": {
+      "Tmax_C": {
+        "min": 25.6256881018733,
+        "max": 203.812194207561,
+        "mean": 64.57142788730143,
+        "std": 36.92986432463241
+      }
+    },
+    "sample_predictions": [
+      {
+        "actual": {
+          "Tmax_C": 30.001223292169
+        },
+        "predicted": {
+          "Tmax_C": 30.089962171775873
+        },
+        "absolute_error": {
+          "Tmax_C": 0.08873887960687199
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 92.8590467950601
+        },
+        "predicted": {
+          "Tmax_C": 94.21965748444393
+        },
+        "absolute_error": {
+          "Tmax_C": 1.360610689383833
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 75.7650604298135
+        },
+        "predicted": {
+          "Tmax_C": 77.53668662826627
+        },
+        "absolute_error": {
+          "Tmax_C": 1.7716261984527648
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 108.718572230285
+        },
+        "predicted": {
+          "Tmax_C": 114.70282723516462
+        },
+        "absolute_error": {
+          "Tmax_C": 5.984255004879614
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 42.4873601220222
+        },
+        "predicted": {
+          "Tmax_C": 42.96203886792854
+        },
+        "absolute_error": {
+          "Tmax_C": 0.4746787459063384
+        }
+      }
+    ],
+    "training_summary": [
+      "Compared 4 candidate regressors on 49 COMSOL sweep rows.",
+      "Inputs: Vtot_mV, htc_W_m2K; outputs: Tmax_C.",
+      "Selected mlp_scaled with test RMSE 2.31465, MAE 1.6582, R2 0.991231.",
+      "Best model improved RMSE over mean baseline by 91.0%."
+    ],
+    "recommendations": [
+      "Add more COMSOL parameter-sweep rows before relying on the surrogate for design decisions.",
+      "Validate the saved surrogate on fresh COMSOL runs that were not included in the CSV.",
+      "Keep the CSV, constraints JSON, generated script, and trained joblib together as one training record."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "comsol-reference-case-spec",
+  "schemaVersion": "1.0.0",
+  "title": "二维轴对称圆管层流：泊肃叶基准",
+  "execution_status": "reference_only_requires_livelink_review",
+  "comsol_target": {"interface": "Laminar Flow", "geometry": "2D axisymmetric rectangle: axial length L, radial extent d/2", "study": "stationary"},
+  "parameters_si": {"L_m": 1.0, "d_m": 0.01, "Q_m3_s": 1e-5, "mu_Pa_s": 0.001, "rho_kg_m3": 1000.0},
+  "boundary_conditions": ["入口：指定体积流量或平均速度", "出口：压力 0 Pa", "壁面：无滑移", "轴线：轴对称"],
+  "reference_equations": {"pressure_drop": "Delta_p=128*mu*L*Q/(pi*d^4)", "mean_velocity": "U=4Q/(pi*d^2)", "reynolds": "Re=rho*U*d/mu"},
+  "acceptance": ["Re<2300", "L/d>=20 建议用于充分发展流", "COMSOL 压降与解析值比较", "速度剖面中心线约为平均速度两倍，壁面为零"],
+  "limitations": ["不适用于湍流、可压缩流、弯管、显著入口效应或非牛顿流体", "本文件是可审查的训练规范，不是已验证的自动 LiveLink 构建脚本"]
+}

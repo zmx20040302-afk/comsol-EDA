@@ -1,0 +1,58 @@
+D:\桌面\codex\案例下载\电气\薄膜体声波结构的色散图\thin_film_baw_resonator_dispersion_diagram.mph
+D:\桌面\codex\案例下载\电气\差分微带线建模\microstrip_line_tem_differential.mph
+D:\桌面\codex\案例下载\电气\磁透镜\magnetic_lens_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\磁透镜\magnetic_lens.mph
+D:\桌面\codex\案例下载\电气\氮化铝兰姆波谐振器 - 多层壳版本\aln_lamb_wave_resonator_layered.mph
+D:\桌面\codex\案例下载\电气\电动悬浮装置\electrodynamic_levitation_device.mph
+D:\桌面\codex\案例下载\电气\电容耦合等离子体反应器中的离子能量分布函数\ccp_ion_energy_distribution_function.mph
+D:\桌面\codex\案例下载\电气\电容式微机械超声换能器集总模型\capacitive_micromachined_ultrasonic_transducer_lumped_model.mph
+D:\桌面\codex\案例下载\电气\电容式位置传感器的有限元建模\capacitive_position_sensor.mph
+D:\桌面\codex\案例下载\电气\电源开关的电动力学 - 多体版本\power_switch_multibody.mph
+D:\桌面\codex\案例下载\电气\对数周期天线\log_periodic_antenna.mph
+D:\桌面\codex\案例下载\电气\多层板的热应力\layered_plate.mph
+D:\桌面\codex\案例下载\电气\二维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_2d_basic.mph
+D:\桌面\codex\案例下载\电气\二维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_2d_freq.mph
+D:\桌面\codex\案例下载\电气\二维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_2d_modes.mph
+D:\桌面\codex\案例下载\电气\二维偏压谐振器：稳态，特征频率，频域和吸合分析\biased_resonator_2d_pull_in.mph
+D:\桌面\codex\案例下载\电气\复合薄膜体声波谐振器\thin_film_baw_resonator.mph
+D:\桌面\codex\案例下载\电气\高压绝缘子\high_voltage_insulator_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\高压绝缘子\high_voltage_insulator.mph
+D:\桌面\codex\案例下载\电气\沟槽栅 IGBT 三维模型\trench_gate_igbt_3d.mph
+D:\桌面\codex\案例下载\电气\含压电材料的多层壳\piezoelectric_layered.mph
+D:\桌面\codex\案例下载\电气\环形紫外反应器\annular_ultraviolet_reactor.mph
+D:\桌面\codex\案例下载\电气\混合模式 S 参数分析\microstrip_line_mixed_mode.mph
+D:\桌面\codex\案例下载\电气\金属-空气表面等离极化激元传播和色散仿真\rcs_sphere_bem.mph
+D:\桌面\codex\案例下载\电气\静电除尘器\electrostatic_precipitator.mph
+D:\桌面\codex\案例下载\电气\偶极天线源的射线释放（三维）\ray_release_from_dipole_antenna_source_3d.mph
+D:\桌面\codex\案例下载\电气\平面 PCB 线圈\planar_pcb_coil.mph
+D:\桌面\codex\案例下载\电气\热释电探测器\pyroelectric_detector.mph
+D:\桌面\codex\案例下载\电气\三相电力变压器损耗的计算\three_phase_power_transformer_2daxi.mph
+D:\桌面\codex\案例下载\电气\三相电力变压器损耗的计算\three_phase_power_transformer_3d.mph
+D:\桌面\codex\案例下载\电气\射频线圈\rf_coil.mph
+D:\桌面\codex\案例下载\电气\矢量滞回建模\vector_hysteresis_modeling.mph
+D:\桌面\codex\案例下载\电气\使用边界元法计算金属球的 RCS（波动光学）\rcs_sphere_bem.mph
+D:\桌面\codex\案例下载\电气\双极晶体管\bipolar_transistor.mph
+D:\桌面\codex\案例下载\电气\四分之一波长同轴平衡-不平衡转换器的偶极天线\dipole_antenna_balun.mph
+D:\桌面\codex\案例下载\电气\四极质谱仪\quadrupole_mass_spectrometer.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\1D_Case_with_Export.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\1D_Case.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\1D_Circular_Case.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\2d_test_random_roughness.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\3d_test_random_roughness.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\imported_random_sphere_high_fidelity_mesh.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\imported_random_sphere_low_fidelity_mesh.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\periodic_surface_no_physics.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_flat_surface_roughness.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_sphere_by_slices_deformation_high_fidelity.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_sphere_by_slices_deformation_low_fidelity.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_sphere_by_slices_deformation_lowest_fidelity.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_tube_geometry_4_patches (1).mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_tube_geometry_4_patches_hollowed_with_cylinder.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\random_tube_geometry_4_patches.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\randomized_surface_structural.mph
+D:\桌面\codex\案例下载\电气\随机表面生成\spherical_harmonic_stl.mph
+D:\桌面\codex\案例下载\电气\提取跨桥开尔文电阻器的比接触电阻率\cross_bridge_kelvin_resistor_contact_resistivity.mph
+D:\桌面\codex\案例下载\电气\相对论发散电子束\electron_beam_divergence_relativistic.mph
+D:\桌面\codex\案例下载\电气\永磁电机的磁-结构相互作用\pm_motor_2d_structure_interaction.mph
+D:\桌面\codex\案例下载\电气\正负电晕放电\positive_and_negative_corona_discharges.mph
+D:\桌面\codex\案例下载\电气\锥形波导\tapered_waveguide.mph

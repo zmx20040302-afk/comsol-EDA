@@ -1,0 +1,384 @@
+{
+  "schema": "comsol-p7-eda-multicase-report",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T18:12:12.559566+08:00",
+  "phase": "P7",
+  "title": "多 EDA 案例与可扩展性验证",
+  "status": "completed",
+  "p7_completed": true,
+  "main_case_count": 4,
+  "passed_main_case_count": 4,
+  "extension_case_count": 1,
+  "passed_extension_case_count": 1,
+  "physics_family_count": 4,
+  "physics_families": [
+    "electric_circuit_field_coupling",
+    "electrothermal_design_optimization",
+    "electrothermal_structural_multiphysics",
+    "magnetic_frequency_domain"
+  ],
+  "gates": {
+    "minimum_main_cases": true,
+    "minimum_physics_families": true,
+    "all_main_cases_passed": true,
+    "all_main_holdouts_independent": true
+  },
+  "cases": [
+    {
+      "id": "busbar_electrothermal_design",
+      "name_zh": "母排电热设计优化",
+      "role": "main",
+      "physics_family": "electrothermal_design_optimization",
+      "evidence_tier": "fresh_current_project_comsol_closed_loop",
+      "passed": true,
+      "checks": {
+        "required_files_present": true,
+        "row_requirements_passed": true,
+        "independent_holdout_passed": true,
+        "validation_passed": true
+      },
+      "dataset": {
+        "training_rows": 220,
+        "minimum_training_rows": 200,
+        "training_rows_passed": true,
+        "holdout_rows": 80,
+        "minimum_holdout_rows": 60,
+        "holdout_rows_passed": true,
+        "input_columns_present": true,
+        "input_overlap_count": 0,
+        "independent_holdout_passed": true
+      },
+      "validation": {
+        "mode": "p5_release_gate",
+        "checks": {
+          "comsol_execution_passed": true,
+          "surrogate_release_passed": true,
+          "false_safe_zero": true,
+          "safe_release_coverage_at_least_0_10": true
+        }
+      },
+      "artifacts": {
+        "training_csv": {
+          "path": "generated/p4/p4_training_220.csv",
+          "exists": true,
+          "size_bytes": 107550,
+          "sha256": "2b8025afde44e9629baf6a81055fa398c43bbd085fa31697809ff06db7cbbfdb"
+        },
+        "holdout_csv": {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_inputs.csv",
+          "exists": true,
+          "size_bytes": 13938,
+          "sha256": "8779cd139d2d06af4495056b82fa19d28b6c7ccc6c257295b382b74cf63edc3d"
+        },
+        "validation_report": {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_report.json",
+          "exists": true,
+          "size_bytes": 3268,
+          "sha256": "facda0e1bf31d1e44755dedaed9c3aa67743fa3aae7e26cf12ffbdcc60629ded"
+        },
+        "model_artifact": {
+          "path": "generated/p5/p5_one_sided_surrogate.joblib",
+          "exists": true,
+          "size_bytes": 76616227,
+          "sha256": "8839e8fbfe2b3846540d515057138e1b1b3f3f2e6b0fd54aa68238078b094df6"
+        },
+        "comsol_artifact": {
+          "path": "generated/p5/final_evaluation/p5_final_evaluation_final.mph",
+          "exists": true,
+          "size_bytes": 19707596,
+          "sha256": "309d51b26261fdf4cd86a06a023ceddbe17ce4fce614a139b0c1173f67e4216d"
+        }
+      }
+    },
+    {
+      "id": "mems_thermal_actuator",
+      "name_zh": "MEMS 热微执行器多物理场",
+      "role": "main",
+      "physics_family": "electrothermal_structural_multiphysics",
+      "evidence_tier": "historical_independent_comsol_holdout",
+      "passed": true,
+      "checks": {
+        "required_files_present": true,
+        "row_requirements_passed": true,
+        "independent_holdout_passed": true,
+        "validation_passed": true
+      },
+      "dataset": {
+        "training_rows": 9,
+        "minimum_training_rows": 9,
+        "training_rows_passed": true,
+        "holdout_rows": 4,
+        "minimum_holdout_rows": 4,
+        "holdout_rows_passed": true,
+        "input_columns_present": true,
+        "input_overlap_count": 0,
+        "independent_holdout_passed": true
+      },
+      "validation": {
+        "mode": "relative_error_gate",
+        "checks": {
+          "Tmax_K": {
+            "max_relative_error_percent": 1.407389748548021,
+            "threshold_relative_error_percent": 7.0,
+            "passed": true
+          },
+          "umax_m": {
+            "max_relative_error_percent": 2.4945810448482937,
+            "threshold_relative_error_percent": 10.0,
+            "passed": true
+          },
+          "joule_power_W": {
+            "max_relative_error_percent": 0.5573220462822325,
+            "threshold_relative_error_percent": 7.0,
+            "passed": true
+          }
+        }
+      },
+      "artifacts": {
+        "training_csv": {
+          "path": "generated/training_runs/thermal_actuator_simplified_training.csv",
+          "exists": true,
+          "size_bytes": 700,
+          "sha256": "f5699fad8560a804e25451040ea7cf8ca7e863955ae9820773ba6292e09129ac"
+        },
+        "holdout_csv": {
+          "path": "generated/training_runs/thermal_actuator_simplified_holdout.csv",
+          "exists": true,
+          "size_bytes": 350,
+          "sha256": "8789fb18da27e42eef4da21c2e35507c5edd301fe61293de2ab19533f8e2c825"
+        },
+        "validation_report": {
+          "path": "generated/models/thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+          "exists": true,
+          "size_bytes": 4705,
+          "sha256": "ca6ae698d110c328e9abcf9bc80651583e221d99b823bf6a20950e1a2e3f700b"
+        },
+        "model_artifact": {
+          "path": "generated/models/thermal_actuator_simplified_multioutput_surrogate.joblib",
+          "exists": true,
+          "size_bytes": 3075,
+          "sha256": "4a4d22aa7cd9965a98eaf822170973de8dc4cc869041c7072d47f0b6677cd7f2"
+        },
+        "comsol_artifact": {
+          "path": "generated/training_runs/thermal_actuator_simplified_attach.log",
+          "exists": true,
+          "size_bytes": 235371,
+          "sha256": "7027b81d89b28ea1ae84733dcf01e58c454e4c830314b737bafb527392e8d264"
+        }
+      }
+    },
+    {
+      "id": "circuit_fem_resistor",
+      "name_zh": "电阻 FEM 场路耦合",
+      "role": "main",
+      "physics_family": "electric_circuit_field_coupling",
+      "evidence_tier": "historical_independent_comsol_holdout",
+      "passed": true,
+      "checks": {
+        "required_files_present": true,
+        "row_requirements_passed": true,
+        "independent_holdout_passed": true,
+        "validation_passed": true
+      },
+      "dataset": {
+        "training_rows": 5,
+        "minimum_training_rows": 5,
+        "training_rows_passed": true,
+        "holdout_rows": 2,
+        "minimum_holdout_rows": 2,
+        "holdout_rows_passed": true,
+        "input_columns_present": true,
+        "input_overlap_count": 0,
+        "independent_holdout_passed": true
+      },
+      "validation": {
+        "mode": "relative_error_gate",
+        "checks": {
+          "resistance_circuit_ohm": {
+            "max_relative_error_percent": 0.3703939194200111,
+            "threshold_relative_error_percent": 1.0,
+            "passed": true
+          },
+          "resistance_analytic_ohm": {
+            "max_relative_error_percent": 0.33398047074950316,
+            "threshold_relative_error_percent": 1.0,
+            "passed": true
+          }
+        }
+      },
+      "artifacts": {
+        "training_csv": {
+          "path": "generated/training_runs/circuit_fem_resistor_training.csv",
+          "exists": true,
+          "size_bytes": 255,
+          "sha256": "0b93597a170bf2e66d1edd0752898d1c8aecf52f97d9154a1bc70c1d3a5a6c50"
+        },
+        "holdout_csv": {
+          "path": "generated/training_runs/circuit_fem_resistor_holdout.csv",
+          "exists": true,
+          "size_bytes": 136,
+          "sha256": "1d4e79db9fe13e6feb6d0dd461e7c2f4f9262d97e4baa1b7aa59a8812322e907"
+        },
+        "validation_report": {
+          "path": "generated/models/circuit_fem_resistor_multioutput_surrogate.holdout_validation.json",
+          "exists": true,
+          "size_bytes": 3844,
+          "sha256": "88a516cc212c93fa5bb1acaf36bba22155098ea8398a7b6408f8a11f032ed315"
+        },
+        "model_artifact": {
+          "path": "generated/models/circuit_fem_resistor_multioutput_surrogate.joblib",
+          "exists": true,
+          "size_bytes": 35307,
+          "sha256": "28d849ea02e76080762d52eb6156bd7cb7d95cbdd2d214148df393d669c1f52e"
+        },
+        "comsol_artifact": {
+          "path": "generated/training_runs/circuit_fem_resistor_attach.log",
+          "exists": true,
+          "size_bytes": 217419,
+          "sha256": "94d05cea298ea0cbe0b0bd6657c0584cafba071f78589a479038528be76156fe"
+        }
+      }
+    },
+    {
+      "id": "power_inductor_frequency",
+      "name_zh": "功率电感器频域响应",
+      "role": "main",
+      "physics_family": "magnetic_frequency_domain",
+      "evidence_tier": "historical_independent_comsol_holdout",
+      "passed": true,
+      "checks": {
+        "required_files_present": true,
+        "row_requirements_passed": true,
+        "independent_holdout_passed": true,
+        "validation_passed": true
+      },
+      "dataset": {
+        "training_rows": 13,
+        "minimum_training_rows": 13,
+        "training_rows_passed": true,
+        "holdout_rows": 12,
+        "minimum_holdout_rows": 12,
+        "holdout_rows_passed": true,
+        "input_columns_present": true,
+        "input_overlap_count": 0,
+        "independent_holdout_passed": true
+      },
+      "validation": {
+        "mode": "relative_error_gate",
+        "checks": {
+          "all_outputs": {
+            "max_relative_error_percent": 1.23794557817607,
+            "threshold_relative_error_percent": 5.0,
+            "passed": true
+          }
+        }
+      },
+      "artifacts": {
+        "training_csv": {
+          "path": "generated/training_runs/power_inductor_frequency_training_dense.csv",
+          "exists": true,
+          "size_bytes": 613,
+          "sha256": "7d3953da6c64c301cdf7aa36fe67ee3b65200ae4e14d0a51fbdd9b4f456b1397"
+        },
+        "holdout_csv": {
+          "path": "generated/training_runs/power_inductor_frequency_holdout_dense.csv",
+          "exists": true,
+          "size_bytes": 563,
+          "sha256": "8a20b741df3d222a6305f3b72dd2a63f802026bf380ba2f34687550da5843a07"
+        },
+        "validation_report": {
+          "path": "generated/models/power_inductor_frequency_dense_surrogate.holdout_validation.json",
+          "exists": true,
+          "size_bytes": 3376,
+          "sha256": "5a044189b7d15337f671c27ed295644affdc02edf3ec1606231405b72ae63225"
+        },
+        "model_artifact": {
+          "path": "generated/models/power_inductor_frequency_dense_surrogate.joblib",
+          "exists": true,
+          "size_bytes": 1872,
+          "sha256": "cb4d0e670fdb21e62a1afbe72d1acd428e6e7233a9f3cbb314a57ed23f4856ec"
+        },
+        "comsol_artifact": {
+          "path": "generated/working_models/power_inductor_working.mph",
+          "exists": true,
+          "size_bytes": 24669380,
+          "sha256": "4d1efba38669996ec7841338852910373829503e391f85cd62d5279263ee0089"
+        }
+      }
+    },
+    {
+      "id": "capacitor_dc_permittivity",
+      "name_zh": "三维电容器静电响应",
+      "role": "extension",
+      "physics_family": "electrostatics",
+      "evidence_tier": "historical_independent_comsol_holdout",
+      "passed": true,
+      "checks": {
+        "required_files_present": true,
+        "row_requirements_passed": true,
+        "independent_holdout_passed": true,
+        "validation_passed": true
+      },
+      "dataset": {
+        "training_rows": 5,
+        "minimum_training_rows": 5,
+        "training_rows_passed": true,
+        "holdout_rows": 2,
+        "minimum_holdout_rows": 2,
+        "holdout_rows_passed": true,
+        "input_columns_present": true,
+        "input_overlap_count": 0,
+        "independent_holdout_passed": true
+      },
+      "validation": {
+        "mode": "relative_error_gate",
+        "checks": {
+          "capacitance_F": {
+            "max_relative_error_percent": 0.002262589556872893,
+            "threshold_relative_error_percent": 1.0,
+            "passed": true
+          }
+        }
+      },
+      "artifacts": {
+        "training_csv": {
+          "path": "generated/training_runs/capacitor_dc_permittivity_training.csv",
+          "exists": true,
+          "size_bytes": 161,
+          "sha256": "147248ae6a496eac26b4758b7694e577e6fb04f7b23e4a69cf54a299662932cd"
+        },
+        "holdout_csv": {
+          "path": "generated/training_runs/capacitor_dc_permittivity_holdout.csv",
+          "exists": true,
+          "size_bytes": 89,
+          "sha256": "50677e39980b2b70052e642b809600c36de54d474a87a8e04113e964070430fe"
+        },
+        "validation_report": {
+          "path": "generated/models/capacitor_dc_permittivity_surrogate.holdout_validation.json",
+          "exists": true,
+          "size_bytes": 1080,
+          "sha256": "23de8c3e2977115d8553658f328ad54a5c3a276585520368991efdb3b4b0b279"
+        },
+        "model_artifact": {
+          "path": "generated/models/capacitor_dc_permittivity_surrogate.joblib",
+          "exists": true,
+          "size_bytes": 1392,
+          "sha256": "469c061d4e9d30e1fa332d2f01a7512dd40ce4aa0555166b97e11e7a8900c224"
+        },
+        "comsol_artifact": {
+          "path": "generated/mph_exports/capacitor_dc/capacitor_dc.java",
+          "exists": true,
+          "size_bytes": 16014,
+          "sha256": "7c56cc63456cd00800c18f31b0067ca1da4551071dc0d27ae616ddfed3cc9fc7"
+        }
+      }
+    }
+  ],
+  "config": {
+    "path": "configs/p7_eda_multicase_benchmark.json",
+    "exists": true,
+    "size_bytes": 4377,
+    "sha256": "cebf2cf396ce67eb805d08d8eaa9ee31c200146af385e1007e7d31634854b38b"
+  },
+  "claim_boundary": "P7 demonstrates a repeatable evidence and validation contract across several EDA physics families. Only the busbar case is a fresh current-project COMSOL closed loop; the other cases use preserved independent COMSOL holdouts and are reported as historical evidence. P6 external experiment and human-baseline gates remain separate."
+}

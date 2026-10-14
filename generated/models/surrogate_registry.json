@@ -1,0 +1,630 @@
+{
+  "schema": "comsol-surrogate-registry",
+  "schemaVersion": "1.0.0",
+  "models": [
+    {
+      "id": "joule_rectangle_validated_surrogate",
+      "name": "二维铜矩形焦耳热温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-15T15:41:46.19134+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_rectangle_validated_surrogate.holdout_validation.json",
+      "physical_scope": "2D copper rectangle Joule-heating model, 100 mm by 50 mm, fixed material and convection assumptions, Vtot 0.1-1 mV only.",
+      "validated_input_ranges": {
+        "Vtot_V": {
+          "min": 0.0001,
+          "max": 0.001
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "thermal_actuator_safe_tmax_surrogate",
+      "name": "微执行器焦耳热最高温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-23T13:46:01.353881+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_safe_tmax_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_safe_tmax_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_safe_tmax_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_safe_tmax_surrogate.holdout_validation.json",
+      "physical_scope": "微执行器焦耳热分布参数案例；DV=2-5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至高温失控区。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 2.0,
+          "max": 5.0
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 300.0,
+          "max": 500.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "thermal_actuator_voltage_extended_tmax_surrogate",
+      "name": "微执行器焦耳热最高温度代理模型",
+      "status": "needs_more_comsol_evidence",
+      "registered_at": "2026-08-23T20:09:40.40409+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_extended_tmax_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_extended_tmax_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_extended_tmax_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_extended_tmax_surrogate.holdout_validation.json",
+      "physical_scope": "微执行器焦耳热分布参数案例；DV=2-5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至高温失控区。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 2.0,
+          "max": 6.6
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 300.0,
+          "max": 500.0
+        }
+      },
+      "validation_passed": false,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification.",
+      "lifecycle_status": "superseded",
+      "superseded_by": "thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate",
+      "superseded_at": "2026-09-12T11:14:17.064557+00:00",
+      "supersession_reason": "同一微执行器扩展范围的二次多项式版本使用相同 63 个训练工况和 4 个独立 COMSOL 留出工况，通过 RMSE 8 K 门槛；旧版本分别为 20.43 K 和 14.07 K，仅保留为历史训练记录。"
+    },
+    {
+      "id": "thermal_actuator_voltage_dense_extended_tmax_surrogate",
+      "name": "微执行器焦耳热最高温度代理模型",
+      "status": "needs_more_comsol_evidence",
+      "registered_at": "2026-08-23T20:13:59.645583+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_extended_tmax_surrogate.holdout_validation.json",
+      "physical_scope": "微执行器焦耳热分布参数案例；DV=2-6.6 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至更高电压或改变后的几何、材料与边界条件。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 2.0,
+          "max": 6.6
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 300.0,
+          "max": 500.0
+        }
+      },
+      "validation_passed": false,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification.",
+      "lifecycle_status": "superseded",
+      "superseded_by": "thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate",
+      "superseded_at": "2026-09-12T11:14:17.064557+00:00",
+      "supersession_reason": "同一微执行器扩展范围的二次多项式版本使用相同 63 个训练工况和 4 个独立 COMSOL 留出工况，通过 RMSE 8 K 门槛；旧版本分别为 20.43 K 和 14.07 K，仅保留为历史训练记录。"
+    },
+    {
+      "id": "thermal_actuator_voltage_dense_poly_tmax_surrogate",
+      "name": "微执行器焦耳热最高温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-23T20:15:07.493242+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_tmax_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_tmax_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_tmax_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_tmax_surrogate.holdout_validation.json",
+      "physical_scope": "微执行器焦耳热分布参数案例；DV=2-6.6 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测，不外推至更高电压或改变后的几何、材料与边界条件。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 2.0,
+          "max": 6.6
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 300.0,
+          "max": 500.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate",
+      "name": "微执行器焦耳热最高温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-23T20:30:35.496447+08:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_voltage_dense_poly_warningfree_tmax_surrogate.holdout_validation.json",
+      "physical_scope": "微执行器焦耳热分布参数案例；DV=2-6.6 V，htc_s=15000-25000 W/(m^2*K)，htc_us=300-500 W/(m^2*K)。模型只用于该已验证工作区内的最高温度预测。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 2.0,
+          "max": 6.6
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 300.0,
+          "max": 500.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification.",
+      "lifecycle_status": "active",
+      "supersedes": [
+        "thermal_actuator_voltage_dense_extended_tmax_surrogate",
+        "thermal_actuator_voltage_extended_tmax_surrogate"
+      ]
+    },
+    {
+      "id": "thermal_actuator_simplified_multioutput_surrogate",
+      "name": "热微执行器简化模型多输出代理",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-24T11:03:15.562255+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermal_actuator_simplified_multioutput_surrogate.holdout_validation.json",
+      "physical_scope": "热微执行器简化模型；固定几何、材料、电流-传热-结构耦合和边界条件；DV=4.5-5.5 V，htc_s=15000-25000 W/(m^2*K)，htc_us=400 W/(m^2*K)。",
+      "validated_input_ranges": {
+        "DV_V": {
+          "min": 4.5,
+          "max": 5.5
+        },
+        "htc_s_W_m2K": {
+          "min": 15000.0,
+          "max": 25000.0
+        },
+        "htc_us_W_m2K": {
+          "min": 400.0,
+          "max": 400.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "circuit_fem_resistor_multioutput_surrogate",
+      "name": "电阻 FEM 场路耦合多输出代理",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-24T11:28:47.122958+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\circuit_fem_resistor_multioutput_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\circuit_fem_resistor_multioutput_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\circuit_fem_resistor_multioutput_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\circuit_fem_resistor_multioutput_surrogate.holdout_validation.json",
+      "physical_scope": "电阻 FEM 场路耦合模型；固定圆柱几何、端子、电路拓扑、R1/R2 和稳态研究；仅改变材料电导率 sigma=800-1200 S/m。",
+      "validated_input_ranges": {
+        "sigma_S_m": {
+          "min": 800.0,
+          "max": 1200.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "mast_diagonal_mounting_stiffness_surrogate",
+      "name": "通信塔桅刚度比代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T02:51:15.703169+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\mast_diagonal_mounting_stiffness_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\mast_diagonal_mounting_stiffness_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\mast_diagonal_mounting_stiffness_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\mast_diagonal_mounting_stiffness_surrogate.holdout_validation.json",
+      "physical_scope": "通信塔桅零件的灵敏度分析；固定结构钢材料、安装拓扑、约束、载荷定义和稳态固体力学研究；仅改变板厚 t_p=10-12 mm 与安装厚度 t_m=10-15 mm。",
+      "validated_input_ranges": {
+        "t_p_mm": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "t_m_mm": {
+          "min": 10.0,
+          "max": 15.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "heat_convection_2d_surrogate",
+      "name": "二维传导-对流温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T03:52:24.691750+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_convection_2d_surrogate.holdout_validation.json",
+      "physical_scope": "二维稳态传导传热；固定矩形几何、导热系数 52 W/(m*K)、左边界 100 degC、环境温度 0 degC、网格与稳态研究；仅改变另外两边的对流换热系数 h=500-1000 W/(m^2*K)。",
+      "validated_input_ranges": {
+        "convection_coefficient_W_m2_K": {
+          "min": 500.0,
+          "max": 1000.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "electric_field_concentric_cylinders_surrogate",
+      "name": "同心圆柱静电场代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T08:03:26.667943+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\electric_field_concentric_cylinders_surrogate.holdout_validation.json",
+      "physical_scope": "同心圆柱一维轴对称静电模型；ri=0.1 m、ro=1 m、外圆柱接地，仅改变内圆柱 V0=50-150 V。",
+      "validated_input_ranges": {
+        "voltage_V": {
+          "min": 50.0,
+          "max": 150.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "capacitor_dc_permittivity_surrogate",
+      "name": "三维电容介电常数代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T08:16:50.413759+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\capacitor_dc_permittivity_surrogate.holdout_validation.json",
+      "physical_scope": "三维电容器静电模型；固定几何、金属端子、接地和网格，仅改变石英域相对介电常数 epsilon_r=2-8。",
+      "validated_input_ranges": {
+        "relative_permittivity": {
+          "min": 2.0,
+          "max": 8.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "simple_resistor_conductivity_surrogate",
+      "name": "三维导线电阻电导率代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T08:28:45.954474+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\simple_resistor_conductivity_surrogate.holdout_validation.json",
+      "physical_scope": "三维铜导线 Conductive Media 模型；固定几何、1 A 端子、接地和网格，仅改变各向同性电导率 sigma=3e7-7e7 S/m。",
+      "validated_input_ranges": {
+        "conductivity_S_m": {
+          "min": 30000000.0,
+          "max": 70000000.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "heat_radiation_1d_emissivity_surrogate",
+      "name": "一维稳态辐射传热代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T09:12:23.914825+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_radiation_1d_emissivity_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_radiation_1d_emissivity_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_radiation_1d_emissivity_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\heat_radiation_1d_emissivity_surrogate.holdout_validation.json",
+      "physical_scope": "一维稳态传热模型；左端固定 1000 K、右端向 300 K 环境表面对环境辐射，仅改变右端发射率 epsilon=0.2-0.98。",
+      "validated_input_ranges": {
+        "emissivity": {
+          "min": 0.2,
+          "max": 0.98
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "tapered_cantilever_force_surrogate",
+      "name": "锥形悬臂梁边界力位移代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T09:26:22.350546+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\tapered_cantilever_force_surrogate.holdout_validation.json",
+      "physical_scope": "二维锥形悬臂梁小变形线弹性静力学；固定几何、E=210 GPa、nu=0.3、重力工况、约束和网格，仅改变边界力工况 5e6-1.5e7 N/m。",
+      "validated_input_ranges": {
+        "boundary_force_N_m": {
+          "min": 5000000.0,
+          "max": 15000000.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "lid_driven_cavity_reynolds_surrogate",
+      "name": "顶盖驱动方腔流 Reynolds 数速度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T09:45:12.305708+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\lid_driven_cavity_reynolds_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\lid_driven_cavity_reynolds_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\lid_driven_cavity_reynolds_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\lid_driven_cavity_reynolds_surrogate.holdout_validation.json",
+      "physical_scope": "二维单位方腔稳态层流；顶盖单位滑移速度、密度 1、黏度 1/Re、固定网格和压力点约束，仅改变 Reynolds 数 Re=50-800，输出 (0.5,0.75) 的速度模。",
+      "validated_input_ranges": {
+        "Re": {
+          "min": 50.0,
+          "max": 800.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "room_acoustic_target_mode_surrogate",
+      "name": "房间声学目标模态频率代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T10:00:02.236597+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\room_acoustic_target_mode_surrogate.holdout_validation.json",
+      "physical_scope": "固定房间几何、空气密度、网格和压力声学特征频率研究；仅改变声速 300-380 m/s，追踪基准声速 343 m/s 时靠近 90 Hz 的同一目标模态。",
+      "validated_input_ranges": {
+        "sound_speed_m_s": {
+          "min": 300.0,
+          "max": 380.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "effective_diffusivity_1d_surrogate",
+      "name": "一维等效多孔扩散浓度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T10:18:12.007333+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\effective_diffusivity_1d_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\effective_diffusivity_1d_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\effective_diffusivity_1d_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\effective_diffusivity_1d_surrogate.holdout_validation.json",
+      "physical_scope": "一维等效多孔扩散瞬态模型；固定孔隙率 epsilon=0.383、传质系数、初始浓度、几何、网格和 100 ms 观测时刻，仅改变等效扩散系数 D1=1e-6-4e-6 m^2/s，输出 x=0.2 mm 的浓度。",
+      "validated_input_ranges": {
+        "D1_m2_s": {
+          "min": 1e-06,
+          "max": 4e-06
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "fresnel_equations_rf_surrogate",
+      "name": "菲涅尔方程 TE/TM 反射率代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T10:37:02.568271+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\fresnel_equations_rf_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\fresnel_equations_rf_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\fresnel_equations_rf_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\fresnel_equations_rf_surrogate.holdout_validation.json",
+      "physical_scope": "菲涅尔方程 RF 模型；空气 n=1 与无损介质 n=1.5 的平面界面，频率固定为 f0，入射角 0-75 deg，分别输出 COMSOL 频域计算的 TE 与 TM 功率反射率。",
+      "validated_input_ranges": {
+        "incident_angle_deg": {
+          "min": 0.0,
+          "max": 75.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "magnetic_field_infinite_conductor_surrogate",
+      "name": "无限导体磁场电流代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T10:53:19.866691+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\magnetic_field_infinite_conductor_surrogate.holdout_validation.json",
+      "physical_scope": "无限长圆导体二维轴对称静磁场；导体半径 ri=1 cm、外计算域半径 ro=10 cm、测点距中心 5 cm，固定几何、网格和磁场边界，仅改变电流 I0=0.25-5 A。",
+      "validated_input_ranges": {
+        "current_A": {
+          "min": 0.25,
+          "max": 5.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "helmholtz_coil_surrogate",
+      "name": "亥姆霍兹线圈中心磁场代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T11:07:40.041340+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\helmholtz_coil_surrogate.holdout_validation.json",
+      "physical_scope": "三维亥姆霍兹双圆线圈磁场模型；两个线圈同向等电流、几何、材料、网格、无限元域与中心测点固定，仅改变线圈电流 I0=0.05-0.6 mA，输出中心带符号 By。",
+      "validated_input_ranges": {
+        "coil_current_mA": {
+          "min": 0.05,
+          "max": 0.6
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "parallel_wires_force_surrogate",
+      "name": "平行载流导线电磁力代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-25T11:14:57.375952+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\parallel_wires_force_surrogate.holdout_validation.json",
+      "physical_scope": "二维平行圆导线静磁场模型；导线半径 r_wire=0.2 m、间距、方向、外域、网格和力计算区域固定，两个导线由同一同向电流 I0=0.25-3 A 驱动，输出第二导线 x 向电磁力。",
+      "validated_input_ranges": {
+        "current_A": {
+          "min": 0.25,
+          "max": 3.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "thermoelectric_generator_surrogate",
+      "name": "热电发电机开路电压代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-26T11:35:18.711775+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermoelectric_generator_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermoelectric_generator_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermoelectric_generator_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermoelectric_generator_surrogate.holdout_validation.json",
+      "physical_scope": "三维热电发电机稳态耦合模型；冷端 0 degC、热端温度 T0=100-200 degC，铜和 Bi-Sb-Te 材料、温度相关 Seebeck 系数/电导率/导热率、几何、网格、接地和浮动端子固定，输出浮动端开路电压。",
+      "validated_input_ranges": {
+        "hot_temperature_degC": {
+          "min": 100.0,
+          "max": 200.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "pn_junction_carrier_surrogate",
+      "name": "一维 P-N 结结区载流子浓度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-26T12:29:08.227679+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate.holdout_validation.json",
+      "physical_scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定，仅改变正向偏压 0-0.5 V，输出结区 x=0 的电子和空穴浓度。",
+      "validated_input_ranges": {
+        "bias_V": {
+          "min": 0.0,
+          "max": 0.5
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "pn_junction_current_density_surrogate",
+      "name": "一维 P-N 结截面电流密度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-08-26T12:41:51.869618+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_current_density_surrogate.holdout_validation.json",
+      "physical_scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定；仅改变正向偏压 0.05-0.5 V，输出 x=2.5 um 截面的 x 向总电流密度 semi.JX。",
+      "validated_input_ranges": {
+        "bias_V": {
+          "min": 0.05,
+          "max": 0.5
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "joule_first_batch_validated_surrogate",
+      "name": "二维铜矩形焦耳热温度代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-09-03T11:04:24.854312+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_first_batch_validated_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_first_batch_validated_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_first_batch_validated_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\joule_first_batch_validated_surrogate.holdout_validation.json",
+      "physical_scope": "2D copper rectangle Joule-heating model, 100 mm by 50 mm, fixed material and convection assumptions, Vtot 0.1-1 mV only.",
+      "validated_input_ranges": {
+        "Vtot_V": {
+          "min": 0.0001,
+          "max": 0.001
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "power_inductor_frequency_surrogate",
+      "name": "功率电感器频率响应代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-09-03T11:59:52.607289+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_surrogate.holdout_validation.json",
+      "physical_scope": "功率电感器频率响应模型；几何、材料、端口、网格与研究设置固定，仅改变频率，输出 real(1/mef.Y11/mef.iomega) 电感和 real(mef.Y11) 等效电导。仅适用于 COMSOL 已验证的 500-20000 Hz 范围。",
+      "validated_input_ranges": {
+        "frequency_Hz": {
+          "min": 500.0,
+          "max": 20000.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "power_inductor_frequency_dense_surrogate",
+      "name": "功率电感器频率响应代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-09-03T13:03:06.317866+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_dense_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_dense_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_dense_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\power_inductor_frequency_dense_surrogate.holdout_validation.json",
+      "physical_scope": "功率电感器频率响应模型；几何、材料、端口、网格与研究设置固定，仅改变频率，输出 real(1/mef.Y11/mef.iomega) 电感和 real(mef.Y11) 等效电导。仅适用于 COMSOL 已验证的 500-20000 Hz 范围。",
+      "validated_input_ranges": {
+        "frequency_Hz": {
+          "min": 500.0,
+          "max": 20000.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    },
+    {
+      "id": "gecko_foot_surrogate",
+      "name": "壁虎足载荷与角度响应代理模型",
+      "status": "validated_for_declared_scope",
+      "registered_at": "2026-09-12T10:18:17.011166+00:00",
+      "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\gecko_foot_surrogate.joblib",
+      "model_card": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\gecko_foot_surrogate_model_card.md",
+      "model_card_json": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\gecko_foot_surrogate_model_card.json",
+      "validation_report": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\gecko_foot_surrogate.holdout_validation.json",
+      "physical_scope": "壁虎足三维固体力学静态模型；几何、材料、网格、约束和边界载荷定义固定，仅在 Fc_uN、Ff_uN、theta_deg 的已采样范围内预测 max_v_Mises_Pa、max_disp_m 和 max_ep1。该代理模型用于快速筛选，最终设计仍须回到 COMSOL。",
+      "validated_input_ranges": {
+        "Fc_uN": {
+          "min": 0.2,
+          "max": 0.6
+        },
+        "Ff_uN": {
+          "min": 0.1,
+          "max": 0.3
+        },
+        "theta_deg": {
+          "min": 30.0,
+          "max": 90.0
+        }
+      },
+      "validation_passed": true,
+      "release_note": "Data-validated only within the declared scope; this is not experimental or engineering certification."
+    }
+  ]
+}

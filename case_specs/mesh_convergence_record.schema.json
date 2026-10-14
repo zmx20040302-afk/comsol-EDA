@@ -1,0 +1,7 @@
+{
+  "kind": "mesh-convergence-record",
+  "required": ["hmax_m", "dofs", "output"],
+  "sequence_rules": ["at least three records", "hmax_m decreases at each refinement", "dofs increases at each refinement"],
+  "recommended_metadata": ["mesh_type", "element_order", "study", "output_name", "unit", "solver_tolerance", "comsol_version"],
+  "acceptance": "final relative change is below the declared threshold for the named quantity of interest"
+}

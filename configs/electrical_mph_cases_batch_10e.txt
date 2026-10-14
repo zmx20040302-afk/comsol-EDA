@@ -1,0 +1,12 @@
+D:\桌面\codex\案例下载\电气\氮气中的双头流注\streamer_2d.mph
+D:\桌面\codex\案例下载\电气\分束器\beam_splitter.mph
+D:\桌面\codex\案例下载\电气\高功率 IGBT 模块的热分析\igbt_joule_heating_introduction.mph
+D:\桌面\codex\案例下载\电气\高功率 IGBT 模块的热分析\igbt_joule_heating.mph
+D:\桌面\codex\案例下载\电气\计算理想导体球的雷达散射截面\rcs_sphere.mph
+D:\桌面\codex\案例下载\电气\介质平板波导\dielectric_slab_waveguide.mph
+D:\桌面\codex\案例下载\电气\全内反射薄膜无色散移相器 (TIRTF APS)\achromatic_phase_shifter.mph
+D:\桌面\codex\案例下载\电气\声表面波气体传感器\saw_gas_sensor.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线的 FEM-BEM 耦合\microstrip_patch_antenna_fem_bem.mph
+D:\桌面\codex\案例下载\电气\压电能量采集器\piezoelectric_energy_harvester.mph
+D:\桌面\codex\案例下载\电气\Caughey-Thomas 迁移率\caughey_thomas_mobility.mph
+D:\桌面\codex\案例下载\电气\Lombardi 表面迁移率\lombardi_surface_mobility.mph

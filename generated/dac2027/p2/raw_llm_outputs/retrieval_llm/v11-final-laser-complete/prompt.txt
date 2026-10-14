@@ -1,0 +1,211 @@
+你是一个受控 COMSOL 建模意图编译器。本次运行禁止调用工具、读取文件、搜索网络或询问用户，只能使用本提示中提供的工程需求和检索资料。
+
+工程需求：
+建立激光二极管底座稳态焦耳热模型，一端施加4 A电流，另一端接地，外表面对流到298 K，输出电压降、焦耳损耗和结温。
+
+只输出一个 JSON 对象，不要输出 Markdown、解释或额外文字。必须严格包含：
+{"predicted_interfaces":["接口ID"],"predicted_couplings":["耦合ID"],"predicted_study":"Stationary|TimeDependent|Frequency|Eigenfrequency","predicted_blocked":true或false}
+允许的接口 ID：heat_transfer_solids, electric_currents, solid_mechanics, laminar_flow, heat_transfer_fluids, pressure_acoustics, transport_diluted_species。
+允许的耦合 ID：electromagnetic_heating, nonisothermal_flow, thermal_expansion, acoustic_structure_boundary。没有耦合时返回空数组。
+如果关键信息缺失、需求有明确冲突或无法安全形成模型，predicted_blocked 必须为 true。不得补造用户没有提供的关键边界、激励、材料、单位或工况。
+
+冻结检索资料如下。只把它作为接口与合同词典，不要复制其中无关内容：
+### template_catalog.json
+{
+  "schema": "comsol-validated-template-catalog",
+  "schemaVersion": "1.0.0",
+  "templates": [
+    {"id": "heat_1d", "name": "一维稳态传导传热", "path": "configs/one_dimensional_heat_conduction.json", "physics": ["Heat Transfer in Solids"], "geometry": "interval_1d", "boundary_conditions": ["两端恒温"], "outputs": ["T_max", "热通量"], "keywords": ["一维", "导热", "两端温度", "热传导", "1d heat", "heat conduction"], "required": ["长度", "导热系数", "温度边界"], "verification": "温度解析解、热流守恒和网格收敛通过"},
+    {"id": "electric_current_1d", "name": "一维稳态电流", "path": "configs/one_dimensional_electric_current.json", "physics": ["Electric Currents"], "geometry": "interval_1d", "boundary_conditions": ["端子", "接地"], "outputs": ["V_max", "J_max"], "keywords": ["电流", "电势", "端子", "接地", "导体", "electric current"], "required": ["长度", "电导率", "端子电压", "接地"], "verification": "2026-10-10 当前电脑 COMSOL 6.4 实机通过；端子电压匹配且电流密度为正"},
+    {"id": "diffusion_1d", "name": "一维稳态扩散", "path": "configs/one_dimensional_diffusion.json", "physics": ["Transport of Diluted Species"], "geometry": "interval_1d", "boundary_conditions": ["两端浓度"], "outputs": ["c_max", "扩散通量"], "keywords": ["扩散", "浓度", "传质", "溶质"], "required": ["扩散系数", "浓度边界"], "verification": "浓度分布与 Fick 稳态解析解一致"},
+    {"id": "electrothermal_1d", "name": "一维电热焦耳热", "path": "configs/one_dimensional_electrothermal.json", "physics": ["Electric Currents", "Heat Transfer in Solids", "Joule Heating"], "geometry": "interval_1d", "boundary_conditions": ["端子", "接地", "两端温度"], "outputs": ["T_max", "Q_joule_max"], "keywords": ["焦耳热", "电热", "电压", "电流", "导线"], "required": ["电导率", "电压", "两端温度边界"], "verification": "电流连续、焦耳热为正且温升检查通过"},
+    {"id": "solid_2d", "name": "二维固体力学受载", "path": "configs/solid_mechanics_rectangle.json", "physics": ["Solid Mechanics"], "geometry": "rectangle_2d", "boundary_conditions": ["固定约束", "面载荷"], "outputs": ["最大位移", "等效应力"], "keywords": ["应力", "应变", "位移", "载荷", "固定约束"], "required": ["弹性模量", "泊松比", "约束", "载荷"], "verification": "最大位移与等效应力均为有限正值"},
+    {"id": "axial_bar_1d", "name": "一维轴向受力杆件", "path": "configs/one_dimensional_cantilever_beam.json", "physics": ["Solid Mechanics"], "geometry": "interval_1d", "boundary_conditions": ["固定端", "轴向面力"], "outputs": ["端位移", "轴向应力", "反力"], "keywords": ["轴向", "杆件", "拉伸", "压缩", "一维结构", "axial bar", "axial load"], "required": ["长度", "弹性模量", "泊松比", "轴向面力", "固定端"], "verification": "位移、应力和反力与理论一致"},
+    {"id": "thermal_stress_2d", "name": "二维热应力", "path": "configs/thermal_stress_rectangle.json", "physics": ["Heat Transfer in Solids", "Solid Mechanics", "Thermal Expansion"], "geometry": "rectangle_2d", "boundary_conditions": ["温度边界", "位移约束"], "outputs": ["温度", "热位移", "热应力"], "keywords": ["热应力", "热膨胀", "温差变形", "温度应力", "thermal stress", "thermal expansion"], "required": ["热膨胀系数", "弹性模量", "温度边界", "约束"], "verification": "温度范围、热位移与热应力检查通过"},
+    {"id": "thermal_surrogate_2d", "name": "二维传热参数扫描", "path": "configs/thermal_constraints.json", "physics": ["Heat Transfer in Solids"], "geometry": "rectangle_2d", "boundary_conditions": ["热流", "对流换热"], "outputs": ["Tmax", "Tavg"], "keywords": ["二维传热", "热流", "对流", "参数扫描", "代理模型"], "required": ["导热系数", "热流", "对流系数", "环境温度"], "verification": "独立 COMSOL 留出集验证后可用于代理模型"},
+    {"id": "acoustic_open_tube_1d", "name": "一维开开声学管", "path": "configs/one_dimensional_acoustic_tube.json", "physics": ["Pressure Acoustics"], "geometry": "interval_1d", "boundary_conditions": ["两端压力释放"], "outputs": ["f1_reference", "eigenfrequency"], "keywords": ["声学", "声压", "开开管", "共振", "驻波", "acoustic tube"], "required": ["管长", "声速", "介质密度", "端部边界"], "verification": "2026-10-10 当前电脑 COMSOL 6.4 实机通过；343.0023 Hz 对理论 343 Hz，相对误差 0.000673%"}
+    ,{"id": "thermoacoustic_open_tube", "name": "Thermoacoustic open tube reference", "path": "case_specs/thermoacoustic_open_tube_reference.json", "physics": ["Heat Transfer in Fluids", "Pressure Acoustics"], "geometry": "tube_1d_axial_reference", "boundary_conditions": ["uniform background temperature", "pressure release at both ends"], "outputs": ["sound_speed", "fundamental_frequency", "viscous_boundary_layer"], "keywords": ["thermoacoustic", "temperature sound speed", "acoustic", "thermal acoustic"], "required": ["tube length", "background temperature", "gas constant", "heat capacity ratio", "viscosity", "density"], "verification": "c=sqrt(gamma*R*T); the fundamental frequency follows sqrt(T). This is a reference-only template pending COMSOL execution."}
+    ,{"id": "flow_heat_channel", "name": "二维层流流道传热", "path": "configs/flow_heat_channel_2d.json", "physics": ["Laminar Flow", "Heat Transfer in Fluids"], "coupling": "one-way velocity field transfer from spf to ht with constant properties", "geometry": "rectangle_2d", "boundary_conditions": ["velocity inlet", "pressure outlet", "no-slip isothermal wall"], "outputs": ["T_out", "u_max", "pressure_drop", "mass_flow_in", "mass_flow_out", "heat_to_fluid"], "keywords": ["流热", "层流", "流道冷却", "流体传热", "flow heat", "channel cooling"], "required": ["密度", "动力黏度", "导热系数", "热容", "入口速度", "入口温度", "壁温", "出口压力"], "verification": "2026-10-10 当前电脑 COMSOL 6.4 实机通过；质量流量残差 1.36%，压降 0.2401 Pa，出口温度范围和换热量符号检查通过。"}
+    ,{"id": "acoustic_structure_cantilever", "name": "Acoustic-structure cantilever reference", "path": "case_specs/acoustic_structure_cantilever_reference.json", "physics": ["Solid Mechanics", "Pressure Acoustics", "Acoustic-Structure Boundary"], "geometry": "cantilever_2d_or_3d_reference", "boundary_conditions": ["fixed root", "acoustic-structure interface", "radiation or PML outer boundary"], "outputs": ["first_bending_frequency", "structural_displacement", "acoustic_pressure"], "keywords": ["acoustic structure", "cantilever", "vibration", "pressure acoustics"], "required": ["beam length", "section dimensions", "Youngs modulus", "density", "acoustic outer boundary"], "verification": "Structural-only f1 follows the Euler-Bernoulli reference before coupling; coupled frequency shifts must be reported separately. This is a reference-only template pending COMSOL execution."}
+    ,{"id": "electrochemical_nernst", "name": "Electrochemical Nernst equilibrium reference", "path": "case_specs/electrochemical_nernst_reference.json", "physics": ["Electrochemistry", "Secondary Current Distribution or Electroanalysis"], "geometry": "well_mixed_0d_reference", "boundary_conditions": ["zero net Faradaic current", "stated reference electrode"], "outputs": ["equilibrium_potential", "Nernst_correction"], "keywords": ["electrochemistry", "Nernst", "equilibrium potential", "activity"], "required": ["standard potential", "temperature", "electron count", "oxidized activity", "reduced activity"], "verification": "Equilibrium potential follows E=E0+RT/(nF) ln(a_ox/a_red). This is a reference-only template pending COMSOL execution."}
+    ,{"id": "particle_stokes_settling", "name": "Particle Stokes settling reference", "path": "case_specs/particle_stokes_settling_reference.json", "physics": ["Particle Tracing for Fluid Flow", "Creeping Flow"], "geometry": "fluid_column_2d_axisymmetric_or_3d", "boundary_conditions": ["quiescent fluid", "gravity", "Stokes drag"], "outputs": ["terminal_velocity", "particle_reynolds_number"], "keywords": ["particle tracing", "Stokes settling", "terminal velocity", "drag"], "required": ["particle diameter", "particle density", "fluid density", "viscosity", "gravity"], "verification": "Terminal velocity follows vt=(rho_p-rho_f)g d^2/(18 mu) only in the Stokes regime. This is a reference-only template pending COMSOL execution."}
+    ,{"id": "rf_half_wave_resonator", "name": "RF half-wave resonator reference", "path": "case_specs/rf_half_wave_resonator_reference.json", "physics": ["Electromagnetic Waves, Frequency Domain", "Eigenfrequency"], "geometry": "half_wave_resonator_1d_or_3d", "boundary_conditions": ["ideal cavity end conditions", "PEC wall baseline"], "outputs": ["fundamental_frequency", "phase_velocity"], "keywords": ["RF", "half wave", "resonator", "eigenfrequency", "dielectric"], "required": ["resonator length", "relative permittivity", "relative permeability", "boundary convention"], "verification": "f1=c/(2 L sqrt(epsilon_r mu_r)) for the ideal lossless baseline. This is a reference-only template pending COMSOL execution."}
+    ,{"id": "acoustic_rectangular_cavity", "name": "2D acoustic rectangular cavity reference", "path": "case_specs/acoustic_rectangular_cavity_reference.json", "physics": ["Pressure Acoustics", "Eigenfrequency"], "geometry": "rectangle_2d", "boundary_conditions": ["sound-hard walls"], "outputs": ["eigenfrequency", "pressure mode shape"], "keywords": ["acoustic cavity", "rectangular cavity", "pressure acoustics", "eigenfrequency"], "required": ["cavity dimensions", "sound speed", "mode indices", "wall condition"], "verification": "f_mn=(c/2)sqrt((m/Lx)^2+(n/Ly)^2) for rigid walls. This is a reference-only template pending COMSOL execution."}
+  ]
+}
+
+
+### configs/modeling_contract.schema.json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.comsol/modeling_contract.schema.json",
+  "title": "COMSOL modeling task contract",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "contract_id",
+    "created_at",
+    "updated_at",
+    "status",
+    "evidence_level",
+    "raw_requirement",
+    "task",
+    "geometry",
+    "materials",
+    "physics",
+    "boundary_conditions",
+    "initial_conditions",
+    "mesh",
+    "study",
+    "solver",
+    "outputs",
+    "validation",
+    "evidence",
+    "missing_information",
+    "execution_policy"
+  ],
+  "properties": {
+    "schema": {"const": "comsol-modeling-contract"},
+    "schemaVersion": {"const": "1.0.0"},
+    "contract_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "updated_at": {"type": "string", "minLength": 1},
+    "status": {
+      "enum": ["draft", "missing_information", "ready_for_review", "approved_for_generation", "generated", "build_failed", "built", "mesh_failed", "solve_failed", "solved", "validation_failed", "completed"]
+    },
+    "evidence_level": {
+      "enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]
+    },
+    "raw_requirement": {"type": "string", "minLength": 1},
+    "task": {
+      "type": "object",
+      "required": ["name", "goal", "completion_criteria"],
+      "properties": {
+        "name": {"type": "string"},
+        "goal": {"type": "string"},
+        "completion_criteria": {"type": "array", "items": {"type": "string"}},
+        "language": {"type": "string"}
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["dimension", "source", "objects", "parameters", "named_selections"],
+      "properties": {
+        "dimension": {"enum": ["unknown", "0D", "1D", "2D", "2D_axisymmetric", "3D"]},
+        "source": {"type": "string"},
+        "objects": {"type": "array", "items": {"type": "object"}},
+        "parameters": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "named_selections": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "materials": {"type": "array", "items": {"$ref": "#/$defs/material"}},
+    "physics": {
+      "type": "object",
+      "required": ["interfaces", "couplings", "dependent_variables"],
+      "properties": {
+        "interfaces": {"type": "array", "items": {"$ref": "#/$defs/taggedItem"}},
+        "couplings": {"type": "array", "items": {"$ref": "#/$defs/taggedItem"}},
+        "dependent_variables": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "boundary_conditions": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+    "initial_conditions": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+    "mesh": {"type": "object"},
+    "study": {
+      "type": "object",
+      "required": ["types", "steps"],
+      "properties": {
+        "types": {"type": "array", "items": {"type": "string"}},
+        "steps": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "solver": {"type": "object"},
+    "outputs": {"type": "array", "items": {"type": "object"}},
+    "validation": {"type": "array", "items": {"type": "object"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "missing_information": {"type": "array", "items": {"$ref": "#/$defs/missing"}},
+    "execution_policy": {
+      "type": "object",
+      "required": ["risk_level", "allow_automatic_generation", "allow_automatic_solve", "max_retries", "allowed_automatic_changes"],
+      "properties": {
+        "risk_level": {"enum": ["A", "B", "C"]},
+        "allow_automatic_generation": {"type": "boolean"},
+        "allow_automatic_solve": {"type": "boolean"},
+        "max_retries": {"type": "integer", "minimum": 0},
+        "allowed_automatic_changes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "quantity": {
+      "type": "object",
+      "required": ["name", "value", "unit", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "value": {},
+        "unit": {"type": "string"},
+        "description": {"type": "string"},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "taggedItem": {
+      "type": "object",
+      "required": ["name", "tag", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "tag": {"type": "string", "minLength": 1},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "material": {
+      "type": "object",
+      "required": ["name", "tag", "selection", "properties", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string"},
+        "tag": {"type": "string"},
+        "selection": {"type": "string"},
+        "properties": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "condition": {
+      "type": "object",
+      "required": ["name", "tag", "type", "target", "values", "evidence_level", "source"],
+      "properties": {
+        "name": {"type": "string"},
+        "tag": {"type": "string"},
+        "type": {"type": "string"},
+        "target": {"type": "string"},
+        "values": {"type": "array", "items": {"$ref": "#/$defs/quantity"}},
+        "evidence_level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["field", "level", "source", "timestamp"],
+      "properties": {
+        "field": {"type": "string"},
+        "level": {"enum": ["missing", "proposed", "source_supported", "user_confirmed", "template_verified", "comsol_verified"]},
+        "source": {"type": "string"},
+        "timestamp": {"type": "string"}
+      }
+    },
+    "missing": {
+      "type": "object",
+      "required": ["category", "field", "severity", "question", "blocks_stage"],
+      "properties": {
+        "category": {"type": "string"},
+        "field": {"type": "string"},
+        "severity": {"enum": ["critical", "warning"]},
+        "question": {"type": "string"},
+        "blocks_stage": {"type": "string"}
+      }
+    }
+  }
+}
+

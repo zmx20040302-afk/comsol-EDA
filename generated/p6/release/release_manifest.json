@@ -1,0 +1,260 @@
+{
+  "schema": "comsol-p6-evidence-release-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T04:47:11.814336+00:00",
+  "local_readiness_passed": true,
+  "publication_external_gate_passed": false,
+  "remaining_actions": [
+    "temperature_experiment",
+    "fixed_task_external_comparison",
+    "destination_host_acceptance"
+  ],
+  "policy": "This package proves local P6 readiness and preserves pending external gates; it does not claim missing measurements or destination-host execution.",
+  "files": [
+    {
+      "path": "AUTO_MODELING_IMPLEMENTATION_PLAN.md",
+      "size_bytes": 28010,
+      "sha256": "38bca8487140d211f159a810f1a0071e7d3420412dbb57d812cf6ffc1b7b3f6b"
+    },
+    {
+      "path": "P6_COMPLETION_REPORT.md",
+      "size_bytes": 4468,
+      "sha256": "b18abc1906e2efc5001b81d10ced58007620d9bf6cb61c6392a10ad2293813f2"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 37068,
+      "sha256": "1031fbcbe1ffaa912727ff385f76026bb470574e58a46a1e38e5127ec89a726e"
+    },
+    {
+      "path": "configs/experimental_temperature_measurements.schema.json",
+      "size_bytes": 1299,
+      "sha256": "90bdb2336cd884452b116243bc3e48b87eed46fe5e118d668f7256078e286fda"
+    },
+    {
+      "path": "configs/experimental_temperature_validation.json",
+      "size_bytes": 334,
+      "sha256": "dbb30e9182268ca508a586105ed718076af9c615f9ecda105f62475bf118e070"
+    },
+    {
+      "path": "configs/p6_external_evidence.json",
+      "size_bytes": 536,
+      "sha256": "1bec7b3449b6f2b8cb0fbd35db301a589ead2c9690659a0816f9841d3afa042e"
+    },
+    {
+      "path": "examples/experimental_temperature_measurements_template.csv",
+      "size_bytes": 362,
+      "sha256": "cd928147d67f4dab8392ec958997fc2f51f8ccf8f9f8b2b30f57d04ac8edb23a"
+    },
+    {
+      "path": "examples/p6_fixed_task_baseline_template.csv",
+      "size_bytes": 26132,
+      "sha256": "6aa4d0caf345cbada7561b27e785693949b3ee77d91d7f3c109487b3aa80f137"
+    },
+    {
+      "path": "generated/experimental_validation/temperature_validation_report.json",
+      "size_bytes": 1270,
+      "sha256": "adaaf99cdb18d52e649f133828fca32e198253cd3ea4a28bef644ab4fc7a41fd"
+    },
+    {
+      "path": "generated/p1/template_maturity.json",
+      "size_bytes": 27667,
+      "sha256": "aba9b9e53d7953ac62035eebc769e8ab3f6cc988573104b747a3248a5337272d"
+    },
+    {
+      "path": "generated/p1/template_maturity.md",
+      "size_bytes": 968,
+      "sha256": "6d4d4c179eb62e3edc77004f7521b7af6dade78b186d124c0c51d44276e82c2e"
+    },
+    {
+      "path": "generated/p2/end_to_end_benchmark.json",
+      "size_bytes": 49006,
+      "sha256": "a77c44bf74683a8b5fff0bdbba1e131f909cde2d129e2f75dc1b355db384f284"
+    },
+    {
+      "path": "generated/p2/migration_acceptance.json",
+      "size_bytes": 4337,
+      "sha256": "8868f4408b52c1dd77fa89aec504c6034df63bc47e70937d91ec91a7aa63140c"
+    },
+    {
+      "path": "generated/p6/baseline_evaluation/baseline_evaluation_report.json",
+      "size_bytes": 583,
+      "sha256": "f32570407914009333421d2ac4009eea361ce59071b2b52827669f3434c64046"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electric_current/P6ElectricCurrentRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "87ed3b542e16997dcddcb270b2a5206b6eefe081af1ab169a340e997bce8d3e9"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electric_current/P6ElectricCurrentRunner.java",
+      "size_bytes": 1614,
+      "sha256": "66c6d3c2b906dbaaa718793b4e439a98704e5d93a22cae8441618c71f340e41c"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electric_current/electric_current_backup.java",
+      "size_bytes": 3532,
+      "sha256": "442f7390f931381817a4e687b3d8df897c82f1f3a12cda0b64e4eb40c6f684a9"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electrothermal/P6ElectrothermalRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "a8d546d27da7451a6571e20122cb4cd2c60686fec483c0f43f01217afadc3434"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electrothermal/P6ElectrothermalRunner.java",
+      "size_bytes": 1603,
+      "sha256": "e0232e79e553de7681bd8f73096f97a1088d93c9c9d362a3569929984ea96421"
+    },
+    {
+      "path": "generated/p6/java_dual_path/electrothermal/electrothermal_backup.java",
+      "size_bytes": 4987,
+      "sha256": "ddf134345614aecde12b8f22a23d7ee743a18de1b258ff2183b63c6465a694f1"
+    },
+    {
+      "path": "generated/p6/java_dual_path/export_six_template_java_backups.m",
+      "size_bytes": 2798,
+      "sha256": "8d2635283e0036bc0a0395538ee16aaebdee3d15102c8014a84e5327aa59c82f"
+    },
+    {
+      "path": "generated/p6/java_dual_path/flow_heat/P6FlowHeatRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "f8948154feb070d9f38e0538755f3fe6a48593451074cf517f83af6b192510d4"
+    },
+    {
+      "path": "generated/p6/java_dual_path/flow_heat/P6FlowHeatRunner.java",
+      "size_bytes": 1572,
+      "sha256": "98051354b7476c346a18807c8bba791d98259ac7612c6d214ac644069e1bf341"
+    },
+    {
+      "path": "generated/p6/java_dual_path/flow_heat/flow_heat_backup.java",
+      "size_bytes": 7249,
+      "sha256": "66420d491e6f419201436df473d9d5d5dfdfd3afe0cc016bd4b4ff060678f5a2"
+    },
+    {
+      "path": "generated/p6/java_dual_path/java_dual_path_report.json",
+      "size_bytes": 44953,
+      "sha256": "45fc3c72fb4e3d718c33fcd0f51fa73da45689124c4e468de26700717eb0378c"
+    },
+    {
+      "path": "generated/p6/java_dual_path/pressure_acoustics/P6PressureAcousticsRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "1e4f30bc0f6a20a7ad61932591d024f3f2a68bf2ed1715edb24bbf9d81899dc6"
+    },
+    {
+      "path": "generated/p6/java_dual_path/pressure_acoustics/P6PressureAcousticsRunner.java",
+      "size_bytes": 1626,
+      "sha256": "7b949aae5f5be71502afba79b8a9c57217a5fdda87a6987a056758cf6a8a0a13"
+    },
+    {
+      "path": "generated/p6/java_dual_path/pressure_acoustics/pressure_acoustics_backup.java",
+      "size_bytes": 3566,
+      "sha256": "45e430cf56202495f69224fcebd3b25adbe5ae0d66b24c8d1df76d4180887790"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_heat/P6SolidHeatRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "9c312aec3221f48fd4b74b47fa62e8e63c24427de6a6fbbd01d64bd6779e57b4"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_heat/P6SolidHeatRunner.java",
+      "size_bytes": 1578,
+      "sha256": "03ccccec3d8b05cce8a03c4ec3947dc455d8cffa800004e28c1c4c5c2271206d"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_heat/solid_heat_backup.java",
+      "size_bytes": 3519,
+      "sha256": "aa20b16a92f49b740f1efb4bcafc8e7c9df50cdcadfc49192e77c935d1c09cb8"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_mechanics/P6SolidMechanicsRunner.class.status",
+      "size_bytes": 20,
+      "sha256": "780becac7018df4c919440f47846664b706c7ef833806517ff3dd90c7192783e"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_mechanics/P6SolidMechanicsRunner.java",
+      "size_bytes": 1608,
+      "sha256": "10980d08fe28ae741023bce2ee56839d2f71ecc5ad2d5f09e67425145193c317"
+    },
+    {
+      "path": "generated/p6/java_dual_path/solid_mechanics/solid_mechanics_backup.java",
+      "size_bytes": 4478,
+      "sha256": "68b7d9f71dffc765e2314bf640911bc368e8e3f8046796f25b096433d9440506"
+    },
+    {
+      "path": "generated/p6/p6_status.json",
+      "size_bytes": 1352,
+      "sha256": "8ea76d6cecc8c294b6156d40428264c953d86bc8ad32cce67d243c39fde94d4e"
+    },
+    {
+      "path": "paper_draft/build_english_paper.py",
+      "size_bytes": 99435,
+      "sha256": "259a6e47498d91045eaaeeccd236701dec8dd78bdef8b51154436ca9d0151e05"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx",
+      "size_bytes": 326318,
+      "sha256": "a709312307457869c9deeaf25bc45c78cc32b54a369a60403c882715a256de7a"
+    },
+    {
+      "path": "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf",
+      "size_bytes": 877892,
+      "sha256": "1a9b7cffe4aaef8c4669248821d29a4567a1a423df50e2a61aa2bb10ede7a90c"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "size_bytes": 420,
+      "sha256": "dc426c66871c54bb80f7f38a47569777f0d6abce432a07ecf7b046c60fb0334b"
+    },
+    {
+      "path": "scripts/build_p6_release_package.py",
+      "size_bytes": 5610,
+      "sha256": "3c5a6030f4c82f3fdc0da7a6d1c02b78605a31c377ee269cb31026b05258ab83"
+    },
+    {
+      "path": "scripts/build_p6_status.py",
+      "size_bytes": 3660,
+      "sha256": "97da0ad6d7619366201fa605e7ab5d2dbb97621470233eb1b37327efcf01b888"
+    },
+    {
+      "path": "scripts/prepare_p6_external_evidence.py",
+      "size_bytes": 871,
+      "sha256": "1b1ea82f72b8f9ed6bec760c54ed14aefc3f3078122d9e5950ba9039166a460e"
+    },
+    {
+      "path": "scripts/run_p2_migration_acceptance.py",
+      "size_bytes": 5603,
+      "sha256": "721f24748d948c8da7c79d895d326505b036c92b799d834d4fb49ad749b78a0c"
+    },
+    {
+      "path": "scripts/run_p6_java_dual_path.py",
+      "size_bytes": 12995,
+      "sha256": "72fad0cd9d84e506d4e9e040104364c45bcdf18da5de0698e335da51b17e511e"
+    },
+    {
+      "path": "src/comsol_small_model/experimental_validation.py",
+      "size_bytes": 11455,
+      "sha256": "e5cba9283c73bf295089ed269f3dfde14297c2d97a16e1a47dc571de4ed0947b"
+    },
+    {
+      "path": "src/comsol_small_model/p6_baseline_evaluation.py",
+      "size_bytes": 7795,
+      "sha256": "d7870fb1a6cd9ec4918d51cb15168e8eb0d57bfe013d3d319d9e4cf55efff1af"
+    },
+    {
+      "path": "tests/test_p6_baseline_evaluation.py",
+      "size_bytes": 3353,
+      "sha256": "24f28972c85399fd01638ec0903faab4a0e14f63594811d5c4891a0caa0699ce"
+    },
+    {
+      "path": "tests/test_p6_external_evidence.py",
+      "size_bytes": 2861,
+      "sha256": "8cb2cec872af9fbb390ef1e1f90c534e6e2e2a0d62b10d1861ce79c938a2fe71"
+    },
+    {
+      "path": "web_app.py",
+      "size_bytes": 419461,
+      "sha256": "0fb13f64ccfe9e28994a3170c8591dffe7dee018ee22704e44b986d918278e66"
+    }
+  ]
+}

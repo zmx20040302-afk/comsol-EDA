@@ -1,0 +1,315 @@
+{
+  "kind": "case_library_canonical_rebuild_report",
+  "source_root": "D:\\桌面\\codex\\案例下载\\COMSOL",
+  "source_dir_count": 107,
+  "canonical_case_count": 107,
+  "memory_case_count": 107,
+  "memory_cases_with_content": 107,
+  "cases_with_content_items": 93,
+  "cases_without_content_items": 14,
+  "total_content_items": 2632,
+  "stale_or_duplicate_files": 21,
+  "stale_examples": [
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\blasius_boundary_layer.case.json",
+      "title": "blasius_boundary_layer",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\Blasius 边界层",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\kdv_equation_soliton.case.json",
+      "title": "kdv_equation_soliton",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\KdV 方程和孤子",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\stl_import_tutorial.case.json",
+      "title": "stl_import_tutorial",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\STL导入教程",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\transmission_line_calculator.case.json",
+      "title": "transmission_line_calculator",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\传输线参数计算器",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\transport_and_adsorption.case.json",
+      "title": "transport_and_adsorption",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\传递和吸附",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\random_geometry.case.json",
+      "title": "random_geometry",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\创建随机几何",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\zernike_deformed_surface_fitting.case.json",
+      "title": "zernike_deformed_surface_fitting",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\变形曲面的泽尼克多项式拟合",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\installation_verification.case.json",
+      "title": "installation_verification",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\安装验证",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\pulley_stress.case.json",
+      "title": "pulley_stress",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\带轮应力",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\nonisothermal_jacket_tubular_reactor.case.json",
+      "title": "nonisothermal_jacket_tubular_reactor",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\带非等温冷却夹套的管式反应器",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\wrench_stress_strain.case.json",
+      "title": "wrench_stress_strain",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\扳手的应力和应变",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\dynamic_loaded_beam.case.json",
+      "title": "dynamic_loaded_beam",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\承受动载荷的梁",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\busbar_assembly_geometry.case.json",
+      "title": "busbar_assembly_geometry",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\母线板装配几何系列教程",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\sedimentation_app_particle_size_distribution.case.json",
+      "title": "sedimentation_app_particle_size_distribution",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\沉降 App（考虑颗粒大小分布）",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\light_bulb_geometry.case.json",
+      "title": "light_bulb_geometry",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\灯泡几何",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\point_source_implementation.case.json",
+      "title": "point_source_implementation",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\点源实现",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\phase_transition_hysteresis.case.json",
+      "title": "phase_transition_hysteresis",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\磁滞作用下的相变建模",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\koch_snowflake_geometry.case.json",
+      "title": "koch_snowflake_geometry",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\科赫雪花建模",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\thin_film_resistor.case.json",
+      "title": "thin_film_resistor",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\薄膜电阻",
+      "reason": "older_duplicate"
+    },
+    {
+      "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_knowledge\\boundary_mesh_tutorial.case.json",
+      "title": "boundary_mesh_tutorial",
+      "case_dir": "D:\\桌面\\codex\\案例下载\\COMSOL\\边界网格划分教程",
+      "reason": "older_duplicate"
+    }
+  ],
+  "top_content_cases": [
+    {
+      "title": "使用 PID 控制器的过程控制",
+      "content_items": 74,
+      "files": 10,
+      "parameters": 10,
+      "physics": [
+        "spf / LaminarFlow",
+        "tds / DilutedSpecies",
+        "ge1 / GlobalEquations"
+      ]
+    },
+    {
+      "title": "音叉",
+      "content_items": 69,
+      "files": 20,
+      "parameters": 7,
+      "physics": [
+        "solid / SolidMechanics"
+      ]
+    },
+    {
+      "title": "母线板装配的焦耳热",
+      "content_items": 68,
+      "files": 20,
+      "parameters": 31,
+      "physics": [
+        "ec / ConductiveMedia",
+        "ht / HeatTransfer"
+      ]
+    },
+    {
+      "title": "热烧蚀除料建模6.2",
+      "content_items": 65,
+      "files": 6,
+      "parameters": 8,
+      "physics": [
+        "ht / HeatTransfer",
+        "dg / DeformedGeometry"
+      ]
+    },
+    {
+      "title": "起搏器电极",
+      "content_items": 56,
+      "files": 10,
+      "parameters": 0,
+      "physics": [
+        "ec / ConductiveMedia"
+      ]
+    },
+    {
+      "title": "App 中用户定义的许可协议",
+      "content_items": 54,
+      "files": 2,
+      "parameters": 4,
+      "physics": [
+        "solid / SolidMechanics"
+      ]
+    },
+    {
+      "title": "母线板装配几何系列教程",
+      "content_items": 54,
+      "files": 16,
+      "parameters": 26,
+      "physics": []
+    },
+    {
+      "title": "限时和硬件锁定的 App",
+      "content_items": 54,
+      "files": 3,
+      "parameters": 4,
+      "physics": [
+        "solid / SolidMechanics"
+      ]
+    },
+    {
+      "title": "使用网格划分序列",
+      "content_items": 50,
+      "files": 10,
+      "parameters": 16,
+      "physics": []
+    },
+    {
+      "title": "汽车消声器",
+      "content_items": 50,
+      "files": 12,
+      "parameters": 1,
+      "physics": [
+        "acpr / PressureAcoustics"
+      ]
+    },
+    {
+      "title": "钢罐中的壳扩散",
+      "content_items": 48,
+      "files": 10,
+      "parameters": 2,
+      "physics": [
+        "cb / CoefficientFormBoundaryPDE"
+      ]
+    },
+    {
+      "title": "四极透镜",
+      "content_items": 44,
+      "files": 6,
+      "parameters": 9,
+      "physics": [
+        "mf / InductionCurrents"
+      ]
+    },
+    {
+      "title": "通信塔桅斜撑支架的刚度分析",
+      "content_items": 44,
+      "files": 9,
+      "parameters": 13,
+      "physics": [
+        "solid / SolidMechanics"
+      ]
+    },
+    {
+      "title": "多孔材料的有效扩散系数",
+      "content_items": 42,
+      "files": 10,
+      "parameters": 4,
+      "physics": [
+        "tds / DilutedSpecies"
+      ]
+    },
+    {
+      "title": "微混合器",
+      "content_items": 38,
+      "files": 10,
+      "parameters": 6,
+      "physics": [
+        "spf / LaminarFlow",
+        "tds / DilutedSpecies"
+      ]
+    },
+    {
+      "title": "碳纤维编织结构的各向异性传热",
+      "content_items": 38,
+      "files": 14,
+      "parameters": 6,
+      "physics": []
+    },
+    {
+      "title": "衍射图样",
+      "content_items": 38,
+      "files": 6,
+      "parameters": 3,
+      "physics": [
+        "c / CoefficientFormPDE"
+      ]
+    },
+    {
+      "title": "如何生成随机非均匀材料数据6.2",
+      "content_items": 37,
+      "files": 16,
+      "parameters": 3,
+      "physics": [
+        "ht / HeatTransfer",
+        "solid / SolidMechanics"
+      ]
+    },
+    {
+      "title": "曼德勃罗集和柏林噪声",
+      "content_items": 37,
+      "files": 6,
+      "parameters": 5,
+      "physics": []
+    },
+    {
+      "title": "自由流体中的浮力流",
+      "content_items": 37,
+      "files": 6,
+      "parameters": 5,
+      "physics": [
+        "spf / LaminarFlow",
+        "ht / HeatTransferInFluids"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "thermoacoustic_open_tube_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "straight_circular_tube", "dimension": "1D acoustic axial approximation", "length_m": 0.5},
+  "physics_workflow": [
+    "Heat Transfer in Fluids: establish a uniform or imported background temperature",
+    "Pressure Acoustics: use c(T)=sqrt(gamma*R*T) and solve the eigenfrequency response",
+    "Use Thermoviscous Acoustics only when boundary-layer losses are part of the question"
+  ],
+  "parameters_si": {"temperature_k": 293.15, "gamma": 1.4, "gas_constant_j_kg_k": 287.05, "dynamic_viscosity_pa_s": 1.846e-05, "density_kg_m3": 1.204},
+  "boundaries": {"acoustic_ends": "pressure release at both ends", "thermal_condition": "uniform background temperature for the reference case"},
+  "reference_checks": {"sound_speed_equation": "c=sqrt(gamma*R*T)", "fundamental_frequency_equation": "f1=c/(2*L)", "frequency_trend": "f1 increases with sqrt(T)", "viscous_boundary_layer_equation": "delta_v=sqrt(2*mu/(rho*omega))"},
+  "acceptance": [
+    "Eigenfrequency follows the c(T)/(2L) trend for uniform-temperature sweeps",
+    "A report distinguishes pressure-acoustics results from thermoviscous or feedback-inclusive thermoacoustics",
+    "Boundary-layer thickness is compared with tube radius before selecting a loss model"
+  ]
+}

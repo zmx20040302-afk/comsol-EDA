@@ -1,0 +1,54 @@
+{
+  "kind": "comsol_geometry_sensitive_surrogate_plan",
+  "created_at": "2026-08-25T02:39:46.2160849Z",
+  "case_title": "通信塔桅零件的灵敏度分析",
+  "model_path": "D:\\桌面\\codex\\案例下载\\COMSOL\\通信塔桅零件的灵敏度分析\\mast_diagonal_mounting_sensitivity.mph",
+  "input_parameters": [
+    {
+      "name": "t_p_mm",
+      "unit": "mm",
+      "training_values": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "name": "t_m_mm",
+      "unit": "mm",
+      "training_values": [
+        10,
+        12.5,
+        15
+      ]
+    }
+  ],
+  "training_design": "3x3 Cartesian grid, 9 geometry-dependent COMSOL solves",
+  "independent_holdout": [
+    {
+      "t_p_mm": 10.5,
+      "t_m_mm": 11
+    },
+    {
+      "t_p_mm": 11.5,
+      "t_m_mm": 14
+    }
+  ],
+  "output": {
+    "expression": "S_R",
+    "unit": "1",
+    "name": "stiffness_ratio_1"
+  },
+  "validated_geometry_point": {
+    "t_m_mm": 15,
+    "t_p_mm": 12,
+    "stiffness_ratio_1": 0.530994844516146
+  },
+  "constraints": [
+    "Do not sweep F as the only input because S_R is load-degenerate in the linear-elastic regime.",
+    "For each point set t_p and t_m, rebuild geom1, rebuild mesh1, disable existing parametric feature, then run std1 stationary study.",
+    "Start or verify mphserver immediately before the MATLAB job because the local server may exit after a client disconnect.",
+    "Use independent geometry points only for validation, not model selection."
+  ],
+  "declared_scope": "Fixed structural steel material, mount topology, constraints, load definition and stationary Solid Mechanics study; t_p=10-12 mm, t_m=10-15 mm."
+}

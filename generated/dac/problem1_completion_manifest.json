@@ -1,0 +1,26 @@
+{
+  "schema": "dac-problem1-completion-manifest",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.0.0",
+  "completed_at": "2026-10-12T12:25:06+08:00",
+  "final_evaluation_executions": 1,
+  "artifacts_sha256": {
+    "generated/dac/problem1_validation_report.json": "d8da84f40e824aa76d52ddd074968154e96dac6d31052ba5eca3da3bbf49e7d9",
+    "generated/dac/problem1_final_report.json": "aea1062a912b602a84d6e18f9790d36ce86b4bb14118e655723cf0bfd5e149d7",
+    "generated/dac/problem1_repair_report.json": "d73a01ebf42e6587a5a754a6b81cb771d9ede9f2084ccfce61623136d95724f1",
+    "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.docx": "514a01925904aeff79175397c88c9dd429530d808fa29951daa4a6b1ef5fcc6d",
+    "paper_draft/comsol_trustworthy_surrogate_paper_draft_en.pdf": "338b8c1669d01eab38c4f2179d97cd8d026d2774bdf9e0b8ef062a48a8a9b505"
+  },
+  "verification": {
+    "python_environment": ".venv Python 3.12",
+    "tests_passed": 179,
+    "tests_failed": 0,
+    "paper_pages": 23,
+    "paper_pages_visually_inspected": 23
+  },
+  "claim_status": {
+    "H2": "partially supported; false-safe rate improved from 100% ungated to 37.5% but remains unsafe",
+    "H3": "bounded locality and contract preservation supported on six injected faults; real external-model regeneration comparison remains open",
+    "H4": "limited support; dependency exact accuracy 79.17% versus 70.83% on prospective family-disjoint tasks, without blind independent authorship"
+  }
+}

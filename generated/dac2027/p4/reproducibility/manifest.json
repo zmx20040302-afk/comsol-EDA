@@ -1,0 +1,145 @@
+{
+  "schema": "dac2027-p4-anonymous-reproducibility-manifest",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-14T14:45:57.446892+08:00",
+  "anonymous": true,
+  "evidence_boundary": "P1 and P2 are local development evidence. P3 remains pending until 24 external tasks, eight disjoint families, and 192 measured observations pass the frozen protocol.",
+  "excluded": [
+    "credentials and API keys",
+    "personal paths and external participant identities",
+    "large MPH binaries",
+    "unreviewed logs and synthetic replacement evidence"
+  ],
+  "files": [
+    {
+      "path": "configs/dac2027_p4_submission.json",
+      "sha256": "b5404834d6caf498dc05854bb1e91a32ddb548f57717c389367fce12baae09d2",
+      "size_bytes": 1959
+    },
+    {
+      "path": "configs/dac2027_p3_protocol.json",
+      "sha256": "a71a9988376b3df80717c01d967dc8f590f6b40b6bbc67303a2ffaec5c4a7951",
+      "size_bytes": 3890
+    },
+    {
+      "path": "DAC2027_RELATED_WORK_MATRIX.md",
+      "sha256": "eb6988e3a40247737e5f26dd37e825e197320f07f3d1c7c4609fcb8ce042adb3",
+      "size_bytes": 4120
+    },
+    {
+      "path": "DAC2027_SUBMISSION_CHECKLIST.md",
+      "sha256": "899986862954dac46d6b506b25260c87154377b26699dced0f8be3a340ba3108",
+      "size_bytes": 2445
+    },
+    {
+      "path": "DAC2027_P1_STATUS.md",
+      "sha256": "9840501318c4d5aaea9dffc36eebf0696d57985a6c9ebec76440f3c45853d99a",
+      "size_bytes": 4185
+    },
+    {
+      "path": "DAC2027_P2_STATUS.md",
+      "sha256": "75b3a3e5eeada701faa7f7bd366b7be87fad6d5ba49d581e8b0ca10446564934",
+      "size_bytes": 4701
+    },
+    {
+      "path": "DAC2027_P3_STATUS.md",
+      "sha256": "bd79bb90131b06a867d4f4c91fe6fa8a0abefa6b939c3eb9894df007b34d4176",
+      "size_bytes": 4108
+    },
+    {
+      "path": "DAC2027_P4_STATUS.md",
+      "sha256": "af9c2638db1939be3b0d6e54c88ac9ca2cc37d9ac3dd2f5255dfd56f9867fc62",
+      "size_bytes": 2189
+    },
+    {
+      "path": "paper_draft/build_dac2027_submission.py",
+      "sha256": "6a4612164b53de090fac38b67806fe39f7dfc77d0ace7510ea4aae85174c400e",
+      "size_bytes": 41925
+    },
+    {
+      "path": "paper_draft/dac2027_contract_guided_comsol_submission.docx",
+      "sha256": "bcca679c838211298f72687e6d04003582aa35d1fe45e3f663aa822174d3a890",
+      "size_bytes": 123194
+    },
+    {
+      "path": "paper_draft/dac2027_contract_guided_comsol_submission.pdf",
+      "sha256": "df2ab4ee35f6f43c5428586504eb9cedfaf23f16f9d940355e8cdd0f00beece3",
+      "size_bytes": 365941
+    },
+    {
+      "path": "generated/dac2027/p1/readiness_status.json",
+      "sha256": "c2086e8a7bf01a61ebec583d721f984992a914024421cf61ea57a01fc570a88b",
+      "size_bytes": 9721
+    },
+    {
+      "path": "generated/dac2027/p2/readiness_status.json",
+      "sha256": "8c3bb8a157d044c786651c068b9bd33aa00cb3e9031e6cd6a5acf3e841af14d7",
+      "size_bytes": 1546
+    },
+    {
+      "path": "generated/dac2027/p2/controlled_comparison_report.json",
+      "sha256": "294e1e9ca990384b6cd085a392957dcc2c5827223028872f95825538084ace72",
+      "size_bytes": 157607
+    },
+    {
+      "path": "generated/dac2027/p2/ablation_report.json",
+      "sha256": "147267d44ccb44e77ce68205948592ac7f1ff67467d061987e01b9778a0a55f7",
+      "size_bytes": 22323
+    },
+    {
+      "path": "generated/dac2027/p3/readiness_status.json",
+      "sha256": "a8c3b4a35f0a1745262b74320902205abbd7085a2c9065e179d4ce704405131a",
+      "size_bytes": 1620
+    },
+    {
+      "path": "generated/dac2027/p3/infrastructure_freeze_manifest.json",
+      "sha256": "608c56791c821836fec0c1b54de3db9eb7fdb7103a33eb33422850239e1bb405",
+      "size_bytes": 1483
+    },
+    {
+      "path": "scripts/prepare_dac2027_p3.py",
+      "sha256": "5515cb7d6deffa8fd318e5a762883c170f9fd6f30f399c9ea1208ae745556cdb",
+      "size_bytes": 9766
+    },
+    {
+      "path": "scripts/run_dac2027_p3.py",
+      "sha256": "e31af0f696a0430e467fcab7e8bfde836f10e99d30dee536aac9ebbf8d20b760",
+      "size_bytes": 14228
+    },
+    {
+      "path": "scripts/evaluate_dac2027_p3.py",
+      "sha256": "da8fb25486a743db4d11ae6dc1edfb9df964c2b3bb42c3433bb30c446ff1bceb",
+      "size_bytes": 2349
+    },
+    {
+      "path": "scripts/prepare_dac2027_p4.py",
+      "sha256": "1e543e99389076d554978b4494da5862b855108b450dd20bd7ed77660cc70f80",
+      "size_bytes": 10972
+    },
+    {
+      "path": "scripts/build_dac2027_p4_package.py",
+      "sha256": "1b1df9a3cae634bf10c5e67414ab567aa22941a65fce3602e13c6dab3ea4ef02",
+      "size_bytes": 3788
+    },
+    {
+      "path": "tests/test_dac2027_p3.py",
+      "sha256": "8a4e8329ebbbc2f6c38d0b2b8f71318107f39dc354bc626a8e0bf72283dda61b",
+      "size_bytes": 4897
+    },
+    {
+      "path": "tests/test_dac2027_p4.py",
+      "sha256": "80b815eec393d5a0f0b7c6a25249643ee76032269ea6697a93a5d78b0b61140d",
+      "size_bytes": 2057
+    },
+    {
+      "path": "src/comsol_small_model/dac2027_p3_evaluation.py",
+      "sha256": "6e5866ff399fb9a7e7c137812ed04b368543e5e3907a1e5580bd5f5a3814a48b",
+      "size_bytes": 14321
+    }
+  ],
+  "archive": {
+    "path": "generated/dac2027/p4/reproducibility/dac2027_p4_anonymous_reproducibility.zip",
+    "sha256": "09e755706eb96d75cea138f4d22d94dc5f2d08e66c78e89da34e89a6d796a577",
+    "size_bytes": 527475
+  }
+}

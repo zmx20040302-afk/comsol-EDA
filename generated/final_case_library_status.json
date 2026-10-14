@@ -1,0 +1,115 @@
+{
+  "kind": "final_case_library_status",
+  "updated_at": "2026-06-29T08:57:16.030975+00:00",
+  "canonical_case_count": 107,
+  "memory_case_count": 107,
+  "memory_cases_with_content": 107,
+  "cases_with_content_items": 93,
+  "cases_without_content_items": 14,
+  "total_content_items": 2632,
+  "stale_or_duplicate_files": 21,
+  "reports": {
+    "content_refresh": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_library_content_refresh_report.json",
+    "canonical_rebuild": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\case_library_canonical_rebuild_report.json"
+  },
+  "retrieval_validation": [
+    {
+      "label": "母线板焦耳热耦合建模",
+      "query": "根据母线板焦耳热案例生成电流和传热耦合模型",
+      "top_matches": [
+        {
+          "title": "母线板焦耳热",
+          "score": 32.124,
+          "content_items": 24,
+          "physics": [
+            "ec / ConductiveMedia",
+            "ht / HeatTransfer"
+          ]
+        },
+        {
+          "title": "母线板装配的焦耳热",
+          "score": 19.43,
+          "content_items": 68,
+          "physics": [
+            "ec / ConductiveMedia",
+            "ht / HeatTransfer"
+          ]
+        },
+        {
+          "title": "微执行器焦耳热 - 分布式参数版本",
+          "score": 11.837,
+          "content_items": 17,
+          "physics": [
+            "ec / ConductiveMedia",
+            "ht / HeatTransfer"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "微混合器流体建模",
+      "query": "根据微混合器案例构建层流和稀物质传递模型",
+      "top_matches": [
+        {
+          "title": "微混合器",
+          "score": 17.836,
+          "content_items": 38,
+          "physics": [
+            "spf / LaminarFlow",
+            "tds / DilutedSpecies"
+          ]
+        },
+        {
+          "title": "微混合器 - 批处理和集群版本",
+          "score": 12.839,
+          "content_items": 12,
+          "physics": [
+            "spf / LaminarFlow",
+            "tds / DilutedSpecies"
+          ]
+        },
+        {
+          "title": "螺旋静态混合器",
+          "score": 7.731,
+          "content_items": 37,
+          "physics": [
+            "spf / LaminarFlow",
+            "tds / DilutedSpecies"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "音叉固体力学建模",
+      "query": "根据音叉案例构建固体力学特征频率模型",
+      "top_matches": [
+        {
+          "title": "音叉",
+          "score": 7.642,
+          "content_items": 69,
+          "physics": [
+            "solid / SolidMechanics"
+          ]
+        },
+        {
+          "title": "热执行器代理模型 App",
+          "score": 2.652,
+          "content_items": 7,
+          "physics": [
+            "ec / ConductiveMedia",
+            "ht / HeatTransfer",
+            "solid / SolidMechanics"
+          ]
+        },
+        {
+          "title": "房间的特征模态",
+          "score": 2.649,
+          "content_items": 30,
+          "physics": [
+            "acpr / PressureAcoustics"
+          ]
+        }
+      ]
+    }
+  ]
+}

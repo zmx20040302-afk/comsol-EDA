@@ -1,0 +1,10 @@
+{
+  "id": "particle_stokes_settling_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "tall_quiescent_fluid_column", "dimension": "2D axisymmetric or 3D"},
+  "physics": ["Particle Tracing for Fluid Flow", "Creeping Flow or prescribed quiescent fluid"],
+  "parameters_si": {"particle_diameter_m": 1e-05, "particle_density_kg_m3": 2500.0, "fluid_density_kg_m3": 1000.0, "dynamic_viscosity_pa_s": 0.001, "gravity_m_s2": 9.80665},
+  "boundary_conditions": {"fluid": "quiescent", "particle": "released away from walls with gravity and Stokes drag"},
+  "reference_checks": {"terminal_velocity_equation": "vt=(rho_p-rho_f)*g*d^2/(18*mu)", "regime": "Re_p=rho_f*abs(vt)*d/mu must be much smaller than one"},
+  "acceptance": ["Particle velocity approaches the predicted terminal velocity before reaching a wall", "Particle Reynolds number is reported", "A nonlinear drag model is selected if the Stokes regime check fails"]
+}

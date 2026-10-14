@@ -1,0 +1,51 @@
+D:\桌面\codex\案例下载\电气\粗糙金属涂层表面的光散射计算\rough_glass_with_coating_v62.mph
+D:\桌面\codex\案例下载\电气\粗糙金属涂层表面的光散射计算\single_ripple_with_coating_v62.mph
+D:\桌面\codex\案例下载\电气\粗糙金属涂层表面的光散射计算\smooth_glass_with_coating_v62.mph
+D:\桌面\codex\案例下载\电气\通过用户定义的集总端口建模\IBC_and_Lumped_Elements_v62.mph
+D:\桌面\codex\案例下载\电气\通过用户定义的集总端口建模\TBC_and_Lumped_Elements_v62.mph
+D:\桌面\codex\案例下载\电气\通过用户定义的集总端口建模\Volume_Conductor_and_Lumped_Elements_v62.mph
+D:\桌面\codex\案例下载\电气\巴特勒矩阵波束形成网络的快速原型设计\transmission_line_butler.mph
+D:\桌面\codex\案例下载\电气\缠绕在铁磁体上的多匝线圈绕组\multiturn_winding_around_ferromagnet.mph
+D:\桌面\codex\案例下载\电气\基于 MZI 网络的光学酉矩阵乘法装置\four_by_four_mzi_optical_matrix_multiplication.mph
+D:\桌面\codex\案例下载\电气\基于 MZI 网络的光学酉矩阵乘法装置\free_space_mzi.mph
+D:\桌面\codex\案例下载\电气\在 AlGaAsGaAs 量子阱中嵌入 InAs 量子点太阳能电池\dot_in_well_solar_cell.mph
+D:\桌面\codex\案例下载\电气\阻抗匹配\impedance_matching.mph
+D:\桌面\codex\案例下载\电气\定义材料的映射介电分布 (RF)\mapped_dielectric_distribution.mph
+D:\桌面\codex\案例下载\电气\使用深度神经网络代理模型模拟空间相关等离子体\argon_gec_icp_DNNS.mph
+D:\桌面\codex\案例下载\电气\使用基于边界元的静电接口模拟导线、曲面和实体\be_capacitor_tunable_dielectric.mph
+D:\桌面\codex\案例下载\电气\使用基于边界元的静电接口模拟导线、曲面和实体\be_capacitor_tunable_piezo.mph
+D:\桌面\codex\案例下载\电气\使用基于边界元的静电接口模拟导线、曲面和实体\be_electrostatic_precipitation_filter.mph
+D:\桌面\codex\案例下载\电气\表面介质阻挡放电\sdbd.mph
+D:\桌面\codex\案例下载\电气\单比特全息图\single_bit_hologram.mph
+D:\桌面\codex\案例下载\电气\圆柱形铝镍钴磁铁的自动消磁\alnico_self_demagnetization.mph
+D:\桌面\codex\案例下载\电气\传输线 Wilkinson 功分器的快速建模\transmission_line_wpd.mph
+D:\桌面\codex\案例下载\电气\LED 中键合线的热膨胀\bond_wire_led_cmph_kernel.mph
+D:\桌面\codex\案例下载\电气\LED 中键合线的热膨胀\bond_wire_led_design.mph
+D:\桌面\codex\案例下载\电气\刀具差速淬火\CCT_katana.mph
+D:\桌面\codex\案例下载\电气\刀具差速淬火\katana.mph
+D:\桌面\codex\案例下载\电气\刀具差速淬火\TTT_katana.mph
+D:\桌面\codex\案例下载\电气\调用由外部函数定义 HBBH 曲线的材料\ssa_inductor_external_material.mph
+D:\桌面\codex\案例下载\电气\二维瞬态电弧放电仿真\transient_arc_2d.mph
+D:\桌面\codex\案例下载\电气\线偏振波延迟器\linear_wave_retarder.mph
+D:\桌面\codex\案例下载\电气\聚乙烯中的电荷传输动力学\charge_transport_in_polyethylene.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\Busbar_AC_Analysis_62.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\Busbar_AC_Analysis_HigherCurrents_62.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\Busbar_AC_Analysis_mfCoil_62.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\Busbar_DC_Analysis_62.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\busbar_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\母线板交流分析\busbar_joule_heating.mph
+D:\桌面\codex\案例下载\电气\对称激光腔的横模\symmetric_laser_cavity.mph
+D:\桌面\codex\案例下载\电气\微波等离子体炬\microwave_plasma_torch.mph
+D:\桌面\codex\案例下载\电气\海底电缆分析仪\submarine_cable_analyzer.mph
+D:\桌面\codex\案例下载\电气\使用形状优化设计 5G 移动网络的波导双工器\waveguide_diplexer_optimization_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\使用形状优化设计 5G 移动网络的波导双工器\waveguide_diplexer_optimization.mph
+D:\桌面\codex\案例下载\电气\螺栓连接处的交流电接触电阻\bolted_AC_electrical_contact.mph
+D:\桌面\codex\案例下载\电气\铜导轨中的瞬态电弧放电\transient_arc_3d.mph
+D:\桌面\codex\案例下载\电气\触摸屏模拟器\touchscreen_simulator_embedded.mph
+D:\桌面\codex\案例下载\电气\传输线低通滤波器的快速建模\transmission_line_lpf.mph
+D:\桌面\codex\案例下载\电气\肋和槽构型的硅波导中的波传播三维模型\rib_waveguide_3d_propagation.mph
+D:\桌面\codex\案例下载\电气\肋和槽构型的硅波导中的波传播三维模型\slot_waveguide_3d_propagation.mph
+D:\桌面\codex\案例下载\电气\电动机和发电机的设计分析\electric_motor_introduction_63_clear.mph
+D:\桌面\codex\案例下载\电气\电动机和发电机的设计分析\electric_motor_introduction_63.mph
+D:\桌面\codex\案例下载\电气\微波腔体滤波器的热漂移\cavity_filter_thermal_expansion.mph
+D:\桌面\codex\案例下载\电气\Alvarez 透镜\alvarez_lens.mph

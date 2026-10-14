@@ -1,0 +1,179 @@
+{
+  "kind": "complete_3d_busbar_multiphysics_sweep_benchmark",
+  "generated_at": "2026-10-09T14:49:00.878675+08:00",
+  "model": {
+    "name": "busbar_joule_heat_baseline",
+    "dimension": "3D",
+    "physics": [
+      "Electric Currents",
+      "Heat Transfer in Solids",
+      "Joule Heating multiphysics coupling"
+    ],
+    "source_mph": "generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_joule_heat_baseline.mph",
+    "source_mph_size_bytes": 17315694,
+    "parameter_grid": {
+      "Vtot_mV": [
+        10,
+        20,
+        30
+      ],
+      "htc_W_m2K": [
+        2,
+        5,
+        10
+      ]
+    }
+  },
+  "execution": {
+    "completed_cases": 9,
+    "wall_seconds": 51.59146580006927,
+    "sum_case_solve_seconds": 30.3625785,
+    "per_case_solve_seconds_median": 3.2537937,
+    "per_case_solve_seconds_mean": 3.3736198333333336,
+    "per_case_solve_seconds_min": 3.1395322,
+    "per_case_solve_seconds_max": 4.1306963,
+    "per_case_solve_seconds_p95": 3.9012581,
+    "matlab_process_cpu_seconds": 19.65625,
+    "mphserver_process_cpu_seconds_during_sweep": 513.5,
+    "combined_matlab_mphserver_cpu_seconds": 533.15625
+  },
+  "resources": {
+    "matlab_peak_working_set_mb": 1574.75390625,
+    "matlab_peak_private_memory_mb": 1618.828125,
+    "mphserver_baseline_working_set_mb": 994.9375,
+    "mphserver_peak_working_set_mb": 2228.93359375,
+    "mphserver_working_set_increase_mb": 1233.99609375,
+    "mphserver_baseline_private_memory_mb": 1205.5703125,
+    "mphserver_peak_private_memory_mb": 3403.87109375,
+    "mphserver_private_memory_increase_mb": 2198.30078125,
+    "combined_peak_working_set_mb": 3799.953125,
+    "combined_peak_private_memory_mb": 5017.96875,
+    "combined_process_tree_peak_count": 3
+  },
+  "validation": {
+    "checks": {
+      "row_count_is_9": true,
+      "input_grid_complete": true,
+      "all_values_finite": true,
+      "temperature_current_and_power_increase_with_voltage": true,
+      "temperature_decreases_with_convection": true,
+      "energy_imbalance_below_0_1_percent": true
+    },
+    "all_passed": true,
+    "maximum_energy_imbalance_percent": 0.0473100256149272,
+    "minimum_Tmax_C": 25.6256881010756,
+    "maximum_Tmax_C": 203.812194200284
+  },
+  "artifacts": {
+    "csv": "generated\\benchmarks\\busbar_multiphysics_sweep_20261009\\busbar_multiphysics_sweep.csv",
+    "final_mph": "generated\\benchmarks\\busbar_multiphysics_sweep_20261009\\busbar_multiphysics_sweep_final.mph",
+    "runner": "generated\\benchmarks\\busbar_multiphysics_sweep_20261009\\run_busbar_multiphysics_sweep.m",
+    "log": "generated\\benchmarks\\busbar_multiphysics_sweep_20261009\\busbar_multiphysics_sweep.log"
+  },
+  "rows": [
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 313.573577133365,
+      "Tmax_C": 40.4235771333646,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229645027,
+      "energy_imbalance_percent": 0.0473100256149272,
+      "solve_seconds": 4.1306963
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 5.0,
+      "Tmax_K": 302.479056159233,
+      "Tmax_C": 29.3290561592333,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229645823,
+      "energy_imbalance_percent": 0.0473100255163614,
+      "solve_seconds": 3.5571008
+    },
+    {
+      "Vtot_mV": 10.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 298.775688101076,
+      "Tmax_C": 25.6256881010756,
+      "terminal_current_A": 80.7744478379992,
+      "joule_power_W": 0.807162098240459,
+      "convection_power_W": 0.806780229647144,
+      "energy_imbalance_percent": 0.0473100253527223,
+      "solve_seconds": 3.5024778
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 374.844308533458,
+      "Tmax_C": 101.694308533458,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296183,
+      "convection_power_W": 3.22712091858434,
+      "energy_imbalance_percent": 0.0473100254840242,
+      "solve_seconds": 3.265336
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 5.0,
+      "Tmax_K": 330.466224636934,
+      "Tmax_C": 57.3162246369337,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296184,
+      "convection_power_W": 3.22712091858773,
+      "energy_imbalance_percent": 0.0473100253788562,
+      "solve_seconds": 3.2537937
+    },
+    {
+      "Vtot_mV": 20.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 315.652752404303,
+      "Tmax_C": 42.5027524043026,
+      "terminal_current_A": 161.548895675998,
+      "joule_power_W": 3.22864839296184,
+      "convection_power_W": 3.22712091858107,
+      "energy_imbalance_percent": 0.0473100255850383,
+      "solve_seconds": 3.1783064
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 2.0,
+      "Tmax_K": 476.962194200284,
+      "Tmax_C": 203.812194200284,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206680922,
+      "energy_imbalance_percent": 0.0473100255601715,
+      "solve_seconds": 3.1925726
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 5.0,
+      "Tmax_K": 377.1115054331,
+      "Tmax_C": 103.9615054331,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206681079,
+      "energy_imbalance_percent": 0.047310025538592,
+      "solve_seconds": 3.1395322
+    },
+    {
+      "Vtot_mV": 30.0,
+      "htc_W_m2K": 10.0,
+      "Tmax_K": 343.781192909681,
+      "Tmax_C": 70.6311929096807,
+      "terminal_current_A": 242.323343513998,
+      "joule_power_W": 7.26445888416413,
+      "convection_power_W": 7.26102206681184,
+      "energy_imbalance_percent": 0.0473100255240671,
+      "solve_seconds": 3.1427627
+    }
+  ],
+  "limitations": [
+    "The benchmark covers a fixed 3D geometry, materials, mesh, boundary selections, and stationary solver on one workstation.",
+    "Resource counters include the launched MATLAB tree and persistent mphserver tree; unrelated operating-system processes are excluded.",
+    "The nine-point grid is a complete verification sweep but is smaller than the separate 49-point surrogate-training data set."
+  ]
+}

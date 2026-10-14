@@ -1,0 +1,28 @@
+{
+  "model_name": "flow_heat_channel_2d",
+  "physics": "flow_heat_2d",
+  "geometry": {"type": "rectangle_2d", "parameters": {"L": {"value": 0.2, "unit": "m", "min": 0.02, "max": 2.0}, "H": {"value": 0.01, "unit": "m", "min": 0.001, "max": 0.1}}},
+  "materials": {
+    "rho": {"value": 998.2, "unit": "kg/m^3", "min": 100, "max": 2000},
+    "mu": {"value": 0.001002, "unit": "Pa*s", "min": 0.00001, "max": 1},
+    "k": {"value": 0.598, "unit": "W/(m*K)", "min": 0.01, "max": 10},
+    "Cp": {"value": 4182, "unit": "J/(kg*K)", "min": 100, "max": 10000}
+  },
+  "boundary_conditions": {
+    "u_in": {"value": 0.01, "unit": "m/s", "min": 0.0001, "max": 1},
+    "T_in": {"value": 293.15, "unit": "K", "min": 250, "max": 350},
+    "T_wall": {"value": 313.15, "unit": "K", "min": 250, "max": 500},
+    "p_out": {"value": 0, "unit": "Pa", "min": -100000, "max": 100000}
+  },
+  "mesh": {"hmax": {"value": 0.002, "unit": "m", "min": 0.0001, "max": 0.02}},
+  "study": {"type": "stationary"},
+  "outputs": {
+    "T_out": "aveout(T)",
+    "u_max": "maxop1(spf.U)",
+    "pressure_drop": "avein(p)-aveout(p)",
+    "mass_flow_in": "abs(rho_fluid*intin(u))",
+    "mass_flow_out": "abs(rho_fluid*intout(u))",
+    "heat_to_fluid": "abs(rho_fluid*intout(u))*Cp_fluid*(aveout(T)-T_in)"
+  },
+  "verification": {"checks": ["质量守恒", "压降为正", "出口温度位于入口与壁温之间", "换热量为正"]}
+}

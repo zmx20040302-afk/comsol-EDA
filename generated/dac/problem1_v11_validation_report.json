@@ -1,0 +1,252 @@
+{
+  "schema": "dac-problem1-v11-frozen-evaluation",
+  "schemaVersion": "1.0.0",
+  "method_version": "problem1-v1.1.0",
+  "split": "validation",
+  "post_freeze": true,
+  "independently_authored_or_blinded": false,
+  "task_file_sha256": "1530195db2e6ca45cde98412aad3afc44318314afd9c31356658ca3322cad7d3",
+  "device_families": [
+    "gas_diffusion_sensor",
+    "inkjet_microchannel",
+    "magnetic_sensor_flexure",
+    "optoelectronic_receiver"
+  ],
+  "task_count": 12,
+  "v10_gate": {
+    "gate_accuracy": 0.6667,
+    "false_safe_count": 4,
+    "false_safe_rate": 0.5,
+    "false_safe_wilson95": [
+      0.2152,
+      0.7848
+    ],
+    "false_block_count": 0,
+    "false_block_rate": 0.0,
+    "false_block_wilson95": [
+      0.0,
+      0.4899
+    ]
+  },
+  "v11_gate": {
+    "gate_accuracy": 1.0,
+    "false_safe_count": 0,
+    "false_safe_rate": 0.0,
+    "false_safe_wilson95": [
+      0.0,
+      0.3244
+    ],
+    "false_block_count": 0,
+    "false_block_rate": 0.0,
+    "false_block_wilson95": [
+      0.0,
+      0.4899
+    ]
+  },
+  "v11_selection": {
+    "physics_and_coupling_exact_count": 12,
+    "physics_and_coupling_exact_accuracy": 1.0,
+    "study_exact_count": 12,
+    "study_exact_accuracy": 1.0
+  },
+  "details": [
+    {
+      "id": "v11-val-receiver-complete",
+      "family": "optoelectronic_receiver",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-receiver-missing",
+      "family": "optoelectronic_receiver",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_THERMAL_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-receiver-conflict",
+      "family": "optoelectronic_receiver",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-flexure-complete",
+      "family": "magnetic_sensor_flexure",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-flexure-missing",
+      "family": "magnetic_sensor_flexure",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-flexure-conflict",
+      "family": "magnetic_sensor_flexure",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT",
+        "MISSING_STRUCTURAL_CONSTRAINT_OR_LOAD"
+      ],
+      "v11_missing_fields": [
+        "structural_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-inkjet-complete",
+      "family": "inkjet_microchannel",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-inkjet-missing",
+      "family": "inkjet_microchannel",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_THERMAL_BOUNDARY",
+        "MISSING_FLOW_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "thermal_boundary",
+        "flow_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-inkjet-conflict",
+      "family": "inkjet_microchannel",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-gas-complete",
+      "family": "gas_diffusion_sensor",
+      "status": "complete",
+      "expected_blocked": false,
+      "v10_blocked": false,
+      "v11_blocked": false,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-gas-missing",
+      "family": "gas_diffusion_sensor",
+      "status": "missing",
+      "expected_blocked": true,
+      "v10_blocked": false,
+      "v11_blocked": true,
+      "v10_gate_ok": false,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "MISSING_SPECIES_BOUNDARY"
+      ],
+      "v11_missing_fields": [
+        "species_boundary"
+      ],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    },
+    {
+      "id": "v11-val-gas-conflict",
+      "family": "gas_diffusion_sensor",
+      "status": "conflict",
+      "expected_blocked": true,
+      "v10_blocked": true,
+      "v11_blocked": true,
+      "v10_gate_ok": true,
+      "v11_gate_ok": true,
+      "v11_reason_codes": [
+        "REQUIREMENT_CONFLICT"
+      ],
+      "v11_missing_fields": [],
+      "v11_selection_exact": true,
+      "v11_study_exact": true
+    }
+  ],
+  "interpretation_limit": "Post-freeze and family-disjoint by project labels; tasks were project-authored and were neither blinded nor independently adjudicated."
+}

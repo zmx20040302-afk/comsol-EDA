@@ -1,0 +1,61 @@
+{
+  "kind": "local_runtime_performance_benchmark",
+  "generated_at": "2026-10-08T11:33:44.827259+08:00",
+  "scope": "fixed validated two-dimensional thermal-plate surrogate on one Windows workstation",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 24,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "packages": {
+      "joblib": "1.6.0",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1",
+      "pypdf": "6.19.0"
+    }
+  },
+  "model_path": "generated\\execution_jobs\\expanded_validation_20261008\\thermal_plate_surrogate_expanded_validated.joblib",
+  "inputs": {
+    "L_m": 0.06,
+    "W_m": 0.0225,
+    "k_W_mK": 40.0,
+    "T_hot_K": 363.15,
+    "T_cold_K": 288.15
+  },
+  "prediction": {
+    "Tmax_K": 363.1443840732719,
+    "Tavg_K": 304.37266503450974
+  },
+  "direct_prediction": {
+    "iterations": 300,
+    "median_ms": 7.5630499923136085,
+    "mean_ms": 7.888240665391398,
+    "p95_ms": 13.43917000340298,
+    "min_ms": 3.5883000236935914,
+    "max_ms": 15.517199994064867,
+    "stdev_ms": 3.2217036087252056,
+    "process_cpu_seconds_for_batch": 2.3125,
+    "python_allocation_peak_mb": 0.43593406677246094
+  },
+  "http_prediction": {
+    "iterations": 60,
+    "median_ms": 35.379900014959276,
+    "mean_ms": 36.403351668074414,
+    "p95_ms": 48.02858000039123,
+    "min_ms": 18.454200006090105,
+    "max_ms": 53.19569999119267,
+    "stdev_ms": 8.5773949067521
+  },
+  "comsol_reference": {
+    "job_id": "job_20261008025812_2aaa3686",
+    "duration_seconds": 47.735,
+    "measurement_count": 1,
+    "limitation": "Single recorded queue solve; used as a local functional reference."
+  },
+  "speedup_vs_comsol": {
+    "direct_median_times": 6311.607096146857,
+    "http_median_times": 1349.2124053436205
+  }
+}

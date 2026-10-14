@@ -1,0 +1,46 @@
+{
+  "kind": "fresnel_equations_rf_independent_comsol_validation",
+  "created_at": "2026-08-25T10:37:02.560057+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\fresnel_equations_rf_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\fresnel_equations_rf_holdout.csv",
+  "training_rows": 13,
+  "holdout_rows": 3,
+  "candidate_metrics": {
+    "linear_regression": {
+      "max_relative_error_percent": 1382.2024816582993,
+      "mean_relative_error_percent": 249.708002089387,
+      "max_absolute_error": 0.0520172984011386
+    },
+    "polynomial_degree_4": {
+      "max_relative_error_percent": 263.0263218615489,
+      "mean_relative_error_percent": 53.197930411147524,
+      "max_absolute_error": 0.008152847433396868
+    },
+    "distance_weighted_local_interpolation": {
+      "max_relative_error_percent": 13.769220562615809,
+      "mean_relative_error_percent": 4.866266092808122,
+      "max_absolute_error": 0.0030234938587036034
+    }
+  },
+  "selected_model": "distance_weighted_local_interpolation",
+  "selection_reason": "Selected by independent COMSOL holdout error; absolute error is primary because TM reflectance approaches zero near Brewster angle.",
+  "per_output_absolute_validation": {
+    "TE_reflectance": {
+      "max_relative_error_percent": 13.769220562615809,
+      "mean_relative_error_percent": 4.866266092808122,
+      "max_absolute_error": 0.0030234938587036034,
+      "threshold_absolute_error": 0.02,
+      "passed": true
+    },
+    "TM_reflectance": {
+      "max_relative_error_percent": 13.769220562615809,
+      "mean_relative_error_percent": 4.866266092808122,
+      "max_absolute_error": 0.0030234938587036034,
+      "threshold_absolute_error": 0.02,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "菲涅尔方程 RF 模型；空气 n=1 与无损介质 n=1.5 的平面界面，频率固定为 f0，入射角 0-75 deg，分别输出 COMSOL 频域计算的 TE 与 TM 功率反射率。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\fresnel_equations_rf_surrogate.holdout_validation.json"
+}

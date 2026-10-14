@@ -1,0 +1,214 @@
+{
+  "kind": "comsol_surrogate_training_record",
+  "model_path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\models\\busbar_tmax_smoke.joblib",
+  "csv_path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_operating_conditions.csv",
+  "inspection": {
+    "kind": "training_csv_inspection",
+    "path": "comsol_training_small_model\\generated\\benchmarks\\busbar_joule_heat\\builders\\busbar_operating_conditions.csv",
+    "rows": 9,
+    "columns": [
+      "Vtot_mV",
+      "htc_W_m2K",
+      "Tmax_K",
+      "Tmax_C",
+      "terminal_current_A",
+      "joule_power_W",
+      "convection_power_W",
+      "energy_imbalance_percent"
+    ],
+    "numeric_columns": [
+      "Vtot_mV",
+      "htc_W_m2K",
+      "Tmax_K",
+      "Tmax_C",
+      "terminal_current_A",
+      "joule_power_W",
+      "convection_power_W",
+      "energy_imbalance_percent"
+    ],
+    "inferred_input_columns": [
+      "Vtot_mV",
+      "htc_W_m2K"
+    ],
+    "inferred_output_columns": [
+      "Tmax_C"
+    ],
+    "ignored_columns": [],
+    "ready_for_training": true,
+    "warnings": [
+      "Dataset has only 9 rows. This is enough for a smoke test, but not enough for a reliable surrogate model."
+    ],
+    "limitations": [
+      "Dataset is small; use this as a smoke test and add more COMSOL sweep rows."
+    ],
+    "automation_plan": [
+      "Use inferred inputs: Vtot_mV, htc_W_m2K.",
+      "Use inferred outputs: Tmax_C.",
+      "Train baseline, Ridge, RandomForest, and MLP candidates.",
+      "Save the best model plus a .training_record.json file.",
+      "Validate the surrogate with fresh COMSOL runs before design use."
+    ]
+  },
+  "report": {
+    "best_model": "ridge_scaled",
+    "train_rmse": 28.89114772297382,
+    "test_rmse": 16.12592600612644,
+    "test_mae": 13.947199086430603,
+    "test_r2": 0.7541774503509744,
+    "rows": 9,
+    "input_columns": [
+      "Vtot_mV",
+      "htc_W_m2K"
+    ],
+    "output_columns": [
+      "Tmax_C"
+    ],
+    "train_rows": 6,
+    "test_rows": 3,
+    "candidate_reports": [
+      {
+        "name": "dummy_mean_baseline",
+        "train_rmse": 58.965942149796554,
+        "test_rmse": 40.81197275311749,
+        "test_mae": 38.46007593190638,
+        "test_r2": -0.5745177810171647,
+        "warnings": []
+      },
+      {
+        "name": "ridge_scaled",
+        "train_rmse": 28.89114772297382,
+        "test_rmse": 16.12592600612644,
+        "test_mae": 13.947199086430603,
+        "test_r2": 0.7541774503509744,
+        "warnings": []
+      },
+      {
+        "name": "random_forest",
+        "train_rmse": 21.767715605545515,
+        "test_rmse": 28.903748069719143,
+        "test_mae": 26.16150070609766,
+        "test_r2": 0.21026621108398458,
+        "warnings": []
+      },
+      {
+        "name": "mlp_scaled",
+        "train_rmse": 1.7725270449921784,
+        "test_rmse": 27.067527414047373,
+        "test_mae": 21.795384704441773,
+        "test_r2": 0.30742060921641534,
+        "warnings": []
+      }
+    ],
+    "per_output_metrics": {
+      "Tmax_C": {
+        "rmse": 16.12592600612644,
+        "mae": 13.947199086430603,
+        "r2": 0.7541774503509744
+      }
+    },
+    "data_quality": {
+      "rows": 9,
+      "columns": [
+        "Vtot_mV",
+        "htc_W_m2K",
+        "Tmax_K",
+        "Tmax_C",
+        "terminal_current_A",
+        "joule_power_W",
+        "convection_power_W",
+        "energy_imbalance_percent"
+      ],
+      "selected_columns": [
+        "Vtot_mV",
+        "htc_W_m2K",
+        "Tmax_C"
+      ],
+      "missing_values": {
+        "Vtot_mV": 0,
+        "htc_W_m2K": 0,
+        "Tmax_C": 0
+      },
+      "duplicate_rows": 0,
+      "input_columns": [
+        "Vtot_mV",
+        "htc_W_m2K"
+      ],
+      "output_columns": [
+        "Tmax_C"
+      ]
+    },
+    "feature_stats": {
+      "Vtot_mV": {
+        "min": 10.0,
+        "max": 30.0,
+        "mean": 20.0,
+        "std": 8.16496580927726
+      },
+      "htc_W_m2K": {
+        "min": 2.0,
+        "max": 10.0,
+        "mean": 5.666666666666667,
+        "std": 3.2998316455372216
+      }
+    },
+    "output_stats": {
+      "Tmax_C": {
+        "min": 25.6256881018733,
+        "max": 203.812194207563,
+        "mean": 75.03294439391382,
+        "std": 52.9685302865264
+      }
+    },
+    "sample_predictions": [
+      {
+        "actual": {
+          "Tmax_C": 103.961505440365
+        },
+        "predicted": {
+          "Tmax_C": 129.09592090695918
+        },
+        "absolute_error": {
+          "Tmax_C": 25.134415466594177
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 29.3290561600406
+        },
+        "predicted": {
+          "Tmax_C": 39.784154383369625
+        },
+        "absolute_error": {
+          "Tmax_C": 10.455098223329024
+        }
+      },
+      {
+        "actual": {
+          "Tmax_C": 42.5027524074929
+        },
+        "predicted": {
+          "Tmax_C": 48.75483597686151
+        },
+        "absolute_error": {
+          "Tmax_C": 6.252083569368608
+        }
+      }
+    ],
+    "training_summary": [
+      "Compared 4 candidate regressors on 9 COMSOL sweep rows.",
+      "Inputs: Vtot_mV, htc_W_m2K; outputs: Tmax_C.",
+      "Selected ridge_scaled with test RMSE 16.1259, MAE 13.9472, R2 0.754177.",
+      "Best model improved RMSE over mean baseline by 60.5%."
+    ],
+    "recommendations": [
+      "Add more COMSOL parameter-sweep rows before relying on the surrogate for design decisions.",
+      "Inspect output nonlinearity and consider denser sweeps near sensitive parameter ranges.",
+      "Resolve data warnings, then retrain and compare the candidate reports again.",
+      "Validate the saved surrogate on fresh COMSOL runs that were not included in the CSV.",
+      "Keep the CSV, constraints JSON, generated script, and trained joblib together as one training record."
+    ],
+    "warnings": [
+      "Dataset has only 9 rows. This is enough for a smoke test, but not enough for a reliable surrogate model."
+    ]
+  }
+}

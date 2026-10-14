@@ -1,0 +1,113 @@
+{
+  "kind": "circuit_fem_resistor_independent_comsol_validation",
+  "created_at": "2026-08-24T11:28:47.117238+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\circuit_fem_resistor_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\circuit_fem_resistor_holdout.csv",
+  "training_rows": 5,
+  "holdout_rows": 2,
+  "candidate_reports": [
+    {
+      "name": "dummy_mean_baseline",
+      "holdout_rmse": 0.24426216223758737,
+      "holdout_mae": 0.24423447104309248,
+      "per_output": {
+        "resistance_circuit_ohm": {
+          "rmse": 0.24426909981229422,
+          "mae": 0.24424140792982496,
+          "r2": -0.00022677114863522974
+        },
+        "resistance_analytic_ohm": {
+          "rmse": 0.24425522446583275,
+          "mae": 0.24422753415636,
+          "r2": -0.00022677114863589587
+        }
+      }
+    },
+    {
+      "name": "ridge_scaled",
+      "holdout_rmse": 0.038427988903311436,
+      "holdout_mae": 0.03825157935054185,
+      "per_output": {
+        "resistance_circuit_ohm": {
+          "rmse": 0.03842908034145842,
+          "mae": 0.0382526657937049,
+          "r2": 0.9752439476086509
+        },
+        "resistance_analytic_ohm": {
+          "rmse": 0.03842689743416437,
+          "mae": 0.03825049290737881,
+          "r2": 0.9752439476086284
+        }
+      }
+    },
+    {
+      "name": "polynomial_ridge_degree2",
+      "holdout_rmse": 0.021025037954808395,
+      "holdout_mae": 0.020523628718864928,
+      "per_output": {
+        "resistance_circuit_ohm": {
+          "rmse": 0.021025635111436507,
+          "mae": 0.02052421164266327,
+          "r2": 0.9925892927597612
+        },
+        "resistance_analytic_ohm": {
+          "rmse": 0.02102444078121926,
+          "mae": 0.020523045795066586,
+          "r2": 0.9925892927597476
+        }
+      }
+    },
+    {
+      "name": "random_forest",
+      "holdout_rmse": 0.04184581098483947,
+      "holdout_mae": 0.04147504906524263,
+      "per_output": {
+        "resistance_circuit_ohm": {
+          "rmse": 0.04184699949655611,
+          "mae": 0.04147622706324816,
+          "r2": 0.9706444610644683
+        },
+        "resistance_analytic_ohm": {
+          "rmse": 0.04184462243936558,
+          "mae": 0.0414738710672371,
+          "r2": 0.9706444610644899
+        }
+      }
+    },
+    {
+      "name": "mlp_scaled",
+      "holdout_rmse": 0.005136262384063749,
+      "holdout_mae": 0.004810059353452911,
+      "per_output": {
+        "resistance_circuit_ohm": {
+          "rmse": 0.005333774621651866,
+          "mae": 0.004950621212279405,
+          "r2": 0.9995230962562303
+        },
+        "resistance_analytic_ohm": {
+          "rmse": 0.004930844840523675,
+          "mae": 0.004669497494626418,
+          "r2": 0.9995923819338519
+        }
+      }
+    }
+  ],
+  "selected_model": "mlp_scaled",
+  "per_output_relative_validation": {
+    "resistance_circuit_ohm": {
+      "max_relative_error_percent": 0.3703939194200111,
+      "mean_relative_error_percent": 0.2923312579931252,
+      "threshold_relative_error_percent": 1.0,
+      "passed": true
+    },
+    "resistance_analytic_ohm": {
+      "max_relative_error_percent": 0.33398047074950316,
+      "mean_relative_error_percent": 0.2784644274444432,
+      "threshold_relative_error_percent": 1.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "电阻 FEM 场路耦合模型；固定圆柱几何、端子、电路拓扑、R1/R2 和稳态研究；仅改变材料电导率 sigma=800-1200 S/m。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\circuit_fem_resistor_multioutput_surrogate.holdout_validation.json"
+}

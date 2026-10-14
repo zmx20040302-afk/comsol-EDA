@@ -1,0 +1,59 @@
+{
+  "kind": "comsol_general_surrogate_model_card",
+  "created_at": "2026-08-26T12:29:08.224350+00:00",
+  "name": "一维 P-N 结结区载流子浓度代理模型",
+  "model_path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate.joblib",
+  "training_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_carrier_training.csv",
+    "rows": 6,
+    "inputs": [
+      "bias_V"
+    ],
+    "outputs": [
+      "electron_density_at_junction_cm3",
+      "hole_density_at_junction_cm3"
+    ]
+  },
+  "holdout_data": {
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_carrier_holdout.csv",
+    "rows": 3
+  },
+  "physical_scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定，仅改变正向偏压 0-0.5 V，输出结区 x=0 的电子和空穴浓度。",
+  "validated_input_ranges": {
+    "bias_V": {
+      "min": 0.0,
+      "max": 0.5
+    }
+  },
+  "independent_comsol_validation": {
+    "kind": "pn_junction_carrier_independent_comsol_validation",
+    "created_at": "2026-08-26T12:29:08.220323+00:00",
+    "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_carrier_training.csv",
+    "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\pn_junction_carrier_holdout.csv",
+    "training_rows": 6,
+    "holdout_rows": 3,
+    "selected_model": "quadratic_regression_on_log10_carrier_densities",
+    "selection_reason": "Carrier injection varies exponentially with forward bias, so the model fits log10 concentrations and transforms predictions back to physical units.",
+    "per_output_relative_validation": {
+      "electron_density_at_junction_cm3": {
+        "max_relative_error_percent": 1.6044829994933019,
+        "mean_relative_error_percent": 0.6964620283242992,
+        "threshold_relative_error_percent": 5.0,
+        "passed": true
+      },
+      "hole_density_at_junction_cm3": {
+        "max_relative_error_percent": 1.6044829994933019,
+        "mean_relative_error_percent": 0.6964620283242992,
+        "threshold_relative_error_percent": 5.0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "一维硅 P-N 结稳态半导体模型；Tl=300 K、Na=Nd=1e15 1/cm^3、几何、材料、网格和金属接触固定，仅改变正向偏压 0-0.5 V，输出结区 x=0 的电子和空穴浓度。",
+    "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\pn_junction_carrier_surrogate.holdout_validation.json"
+  },
+  "use_policy": {
+    "allowed": "仅在模型卡所述物理范围、几何拓扑、边界条件和输入范围内用于快速比较。",
+    "requires_comsol": "输入越界、输出为零需绝对误差判据、物理范围不完整或最终设计定稿时必须回到 COMSOL。"
+  }
+}

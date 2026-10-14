@@ -1,0 +1,37 @@
+{
+  "model_name": "thermal_rectangle_surrogate",
+  "physics": "heat_transfer_solid",
+  "geometry": {
+    "type": "rectangle_2d",
+    "parameters": {
+      "L": {"value": 0.05, "unit": "m", "min": 0.01, "max": 0.2},
+      "W": {"value": 0.02, "unit": "m", "min": 0.005, "max": 0.1}
+    }
+  },
+  "materials": {
+    "k": {"value": 16.0, "unit": "W/(m*K)", "min": 1.0, "max": 400.0},
+    "rho": {"value": 7800.0, "unit": "kg/m^3", "min": 500.0, "max": 20000.0},
+    "Cp": {"value": 500.0, "unit": "J/(kg*K)", "min": 50.0, "max": 5000.0}
+  },
+  "boundary_conditions": {
+    "heat_flux": {"value": 8000.0, "unit": "W/m^2", "min": 0.0, "max": 100000.0},
+    "h": {"value": 35.0, "unit": "W/(m^2*K)", "min": 1.0, "max": 500.0},
+    "Text": {"value": 293.15, "unit": "K", "min": 250.0, "max": 400.0}
+  },
+  "mesh": {
+    "hmax": {"value": 0.004, "unit": "m", "min": 0.0005, "max": 0.02}
+  },
+  "study": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "k": [5.0, 10.0, 16.0, 25.0, 50.0],
+    "heat_flux": [2000.0, 5000.0, 8000.0, 12000.0],
+    "h": [10.0, 20.0, 35.0, 60.0],
+    "L": [0.02, 0.05, 0.08]
+  },
+  "outputs": {
+    "Tmax": "maxop1(T)",
+    "Tavg": "aveop1(T)"
+  }
+}

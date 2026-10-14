@@ -1,0 +1,37 @@
+D:\桌面\codex\案例下载\电气\磁流体动力学泵\magnetohydrodynamics_pump.mph
+D:\桌面\codex\案例下载\电气\带散射体的波导\waveguide_with_scatterer.mph
+D:\桌面\codex\案例下载\电气\单导线和螺旋线圈的自感和互感\mutual_inductance_coil_group.mph
+D:\桌面\codex\案例下载\电气\单面磁体和金属板\one_sided_magnet.mph
+D:\桌面\codex\案例下载\电气\电源开关的电动力学\power_switch.mph
+D:\桌面\codex\案例下载\电气\多层抗反射涂层\antireflective_coating_multilayer.mph
+D:\桌面\codex\案例下载\电气\菲涅尔透镜的射线追踪仿真\ray_optics_modeling_fresnel_lens.mph
+D:\桌面\codex\案例下载\电气\复合压电换能器\composite_transducer.mph
+D:\桌面\codex\案例下载\电气\光纤模拟器\fiber_simulator (1).mph
+D:\桌面\codex\案例下载\电气\光纤模拟器\fiber_simulator.mph
+D:\桌面\codex\案例下载\电气\硅太阳能电池 - 一维\si_solar_cell_1d.mph
+D:\桌面\codex\案例下载\电气\计算导线电阻\simple_resistor.mph
+D:\桌面\codex\案例下载\电气\介电屏蔽建模方法比较\dielectric_shielding_comparison.mph
+D:\桌面\codex\案例下载\电气\介质谐振天线\dielectric_resonator_antenna.mph
+D:\桌面\codex\案例下载\电气\龙勃透镜\luneburg_lens.mph
+D:\桌面\codex\案例下载\电气\纳米线 MOSFET 的密度梯度三维仿真\nanowire_density_gradient_3d.mph
+D:\桌面\codex\案例下载\电气\鸟盆式谐振陀螺仪\birdbath_resonator_gyroscope.mph
+D:\桌面\codex\案例下载\电气\抛物反射面天线\parabolic_reflector.mph
+D:\桌面\codex\案例下载\电气\偏压谐振器的固有模态 - 来自 GDS 文件的三维几何\biased_resonator_3d_ecad_design.mph
+D:\桌面\codex\案例下载\电气\使用边界元法计算金属球的 RCS (RF)\rcs_sphere_bem.mph
+D:\桌面\codex\案例下载\电气\使用边界元法模拟偶极天线阵列\dipole_antenna_array.mph
+D:\桌面\codex\案例下载\电气\铁电材料的滞回现象\ferroelectric_hysteresis.mph
+D:\桌面\codex\案例下载\电气\通过 Otto 和 Kretschmann 配置激发表面等离极化激元\spp_otto_kretschmann.mph
+D:\桌面\codex\案例下载\电气\同轴电缆到波导的耦合\coaxial_waveguide_coupling.mph
+D:\桌面\codex\案例下载\电气\微带贴片天线阵列设计的可行性研究\microstrip_patch_antenna_array.mph
+D:\桌面\codex\案例下载\电气\线圈优化\optimizing_coils_bfield_target.mph
+D:\桌面\codex\案例下载\电气\线圈优化\optimizing_coils_bfield.mph
+D:\桌面\codex\案例下载\电气\线圈优化\optimizing_coils_gradient.mph
+D:\桌面\codex\案例下载\电气\线圈优化\optimizing_coils_power.mph
+D:\桌面\codex\案例下载\电气\旋转玻色-爱因斯坦凝聚体中的涡格形成\vortex_lattice_formation_in_a_rotating_bose_einstein_condensate.mph
+D:\桌面\codex\案例下载\电气\氩气玻尔兹曼分析\boltzmann_argon.mph
+D:\桌面\codex\案例下载\电气\有效非线性磁曲线计算器\effective_nonlinear_magnetic_curves_embedded.mph
+D:\桌面\codex\案例下载\电气\有效非线性磁曲线计算器\effective_nonlinear_magnetic_curves.mph
+D:\桌面\codex\案例下载\电气\InAs 纳米线场效应晶体管中的表面陷阱诱导滞后 - 密度梯度分析\inas_nanowire_traps_hysteresis_density_gradient.mph
+D:\桌面\codex\案例下载\电气\MEMS 器件中的热膨胀\thermal_expansion_geom_sequence.mph
+D:\桌面\codex\案例下载\电气\MEMS 器件中的热膨胀\thermal_expansion.mph
+D:\桌面\codex\案例下载\电气\SAW 模型中的欧拉角旋转\saw_euler_angle_rotation.mph

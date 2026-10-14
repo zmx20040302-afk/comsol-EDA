@@ -1,0 +1,19 @@
+{
+  "benchmark": "busbar_joule_heat",
+  "status": "validated",
+  "physics": ["Electric Currents", "Heat Transfer in Solids", "Joule Heating"],
+  "comsol_model": "builders/busbar_joule_heat_baseline.mph",
+  "training_dataset": "builders/busbar_dense_training_data.csv",
+  "fast_estimator": {
+    "model": "models/busbar_tmax_dense.joblib",
+    "inputs": ["Vtot_mV", "htc_W_m2K"],
+    "output": "Tmax_C",
+    "validated_ranges": {
+      "Vtot_mV": [10, 30],
+      "htc_W_m2K": [2, 10]
+    },
+    "holdout_relative_error_percent": 0.51842500254158,
+    "use_policy": "Use for fast estimates inside this fixed benchmark only; request a fresh COMSOL solve when inputs are outside range or model geometry/material/boundaries change."
+  },
+  "next_extension": "Add geometry and material parameters as scan variables, then retrain and validate a broader surrogate."
+}

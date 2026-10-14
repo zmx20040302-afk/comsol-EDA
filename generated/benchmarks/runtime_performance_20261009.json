@@ -1,0 +1,73 @@
+{
+  "kind": "local_runtime_performance_benchmark",
+  "generated_at": "2026-10-09T14:38:47.591789+08:00",
+  "scope": "fixed validated two-dimensional thermal-plate surrogate on one Windows workstation",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 24,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "packages": {
+      "joblib": "1.6.0",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1",
+      "pypdf": "6.19.0"
+    }
+  },
+  "model_path": "generated\\execution_jobs\\expanded_validation_20261008\\thermal_plate_surrogate_expanded_validated.joblib",
+  "inputs": {
+    "L_m": 0.06,
+    "W_m": 0.0225,
+    "k_W_mK": 40.0,
+    "T_hot_K": 363.15,
+    "T_cold_K": 288.15
+  },
+  "prediction": {
+    "Tmax_K": 363.1443840732719,
+    "Tavg_K": 304.37266503450974
+  },
+  "direct_prediction": {
+    "iterations": 300,
+    "median_ms": 3.6508499761112034,
+    "mean_ms": 3.7538590006685504,
+    "p95_ms": 4.287119931541383,
+    "min_ms": 3.512199968099594,
+    "max_ms": 5.2495000418275595,
+    "stdev_ms": 0.2529590529387947,
+    "process_cpu_seconds_for_batch": 1.109375,
+    "python_allocation_peak_mb": 0.45439720153808594
+  },
+  "http_prediction": {
+    "iterations": 60,
+    "median_ms": 29.88990000449121,
+    "mean_ms": 27.6202283333987,
+    "p95_ms": 35.23333002231084,
+    "min_ms": 8.025699993595481,
+    "max_ms": 40.021799970418215,
+    "stdev_ms": 7.056617651683239
+  },
+  "comsol_reference": {
+    "kind": "repeated_queue_equivalent_livelink_solve",
+    "source_job_id": "job_20261008025812_2aaa3686",
+    "report_path": "generated\\benchmarks\\comsol_repeat_20261009\\repeated_comsol_performance.json",
+    "duration_seconds": 18.743882399983704,
+    "measurement_count": 3,
+    "minimum_seconds": 18.113465699949302,
+    "maximum_seconds": 24.96753969998099,
+    "p95_seconds": 24.34517396998126,
+    "matlab_peak_working_set_mb_max": 1808.29296875,
+    "matlab_peak_private_memory_mb_max": 1852.66796875,
+    "mphserver_peak_working_set_mb_max": 1011.703125,
+    "mphserver_peak_private_memory_mb_max": 1236.14453125,
+    "combined_peak_working_set_mb_max": 2803.40234375,
+    "combined_peak_private_memory_mb_max": 3056.19921875,
+    "combined_matlab_mphserver_cpu_seconds_median": 51.609375,
+    "limitation": "One small validated heat-transfer case on one workstation; operating-system processes outside MATLAB and mphserver are excluded."
+  },
+  "speedup_vs_comsol": {
+    "direct_median_times": 5134.114664429249,
+    "http_median_times": 627.097527832722
+  }
+}

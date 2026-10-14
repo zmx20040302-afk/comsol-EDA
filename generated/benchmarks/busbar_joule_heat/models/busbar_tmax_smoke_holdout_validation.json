@@ -1,0 +1,20 @@
+{
+  "kind": "surrogate_holdout_validation",
+  "model": "busbar_tmax_smoke.joblib",
+  "status": "not_ready_for_design_use",
+  "holdout_input": {
+    "Vtot_mV": 25,
+    "htc_W_m2K": 7
+  },
+  "surrogate_prediction_Tmax_C": 92.49389860874064,
+  "comsol_holdout_Tmax_C": 65.0870421605449,
+  "absolute_error_C": 27.40685644819574,
+  "relative_error_percent": 42.10800056154824,
+  "judgement": "The training and prediction pipeline works, but the 9-row dataset cannot represent the nonlinear electrothermal response accurately enough for design decisions.",
+  "next_data_requirement": {
+    "minimum_rows": 50,
+    "recommended_inputs": ["Vtot_mV", "htc_W_m2K"],
+    "recommended_sampling": "Use at least 7 voltage levels and 7 heat-transfer-coefficient levels, with denser points near high-voltage/high-temperature conditions.",
+    "validation": "Keep at least 20% of COMSOL runs as unseen holdout cases."
+  }
+}

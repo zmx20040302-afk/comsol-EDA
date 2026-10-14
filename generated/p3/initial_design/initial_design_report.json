@@ -1,0 +1,63 @@
+{
+  "schema": "comsol-p3-initial-design-execution",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-10T09:43:09.103067+00:00",
+  "design_rows": 80,
+  "solved_rows": 80,
+  "failed_rows": 0,
+  "checks": {
+    "all_80_cases_recorded": true,
+    "all_cases_solved": true,
+    "terminal_current_within_1_percent": true,
+    "energy_imbalance_below_0_1_percent": true,
+    "all_numeric_outputs_finite": true,
+    "independent_holdout_remains_unsolved": true
+  },
+  "passed": true,
+  "constraint_summary": {
+    "feasible_rows": 28,
+    "infeasible_rows": 52,
+    "temperature_violations": 17,
+    "normalized_voltage_violations": 45,
+    "current_density_violations": 39
+  },
+  "ranges": {
+    "Tmax_K": {
+      "min": 301.99943809989,
+      "max": 633.877170472461
+    },
+    "Jmax_A_m2": {
+      "min": 1893344.6698286,
+      "max": 12727531.6501351
+    },
+    "voltage_drop_mV": {
+      "min": 7.02719984435032,
+      "max": 54.2500253759201
+    },
+    "joule_power_W": {
+      "min": 0.596194713608597,
+      "max": 12.4549822781981
+    },
+    "copper_mass_kg": {
+      "min": 0.263549999173952,
+      "max": 0.674637494543646
+    },
+    "energy_imbalance_percent": {
+      "min": 0.0109262803080799,
+      "max": 0.0487671323941612
+    },
+    "solve_seconds": {
+      "min": 2.9188903,
+      "max": 4.8349607
+    }
+  },
+  "wall_seconds": 354.0390733,
+  "artifacts": {
+    "inputs": "generated\\p3\\designs\\initial_design_inputs.csv",
+    "results": "generated\\p3\\initial_design\\busbar_p3_initial_design_results.csv",
+    "evaluated_results": "generated\\p3\\initial_design\\busbar_p3_initial_design_evaluated.csv",
+    "final_mph": "generated\\p3\\initial_design\\busbar_p3_initial_design_final.mph"
+  },
+  "release_gate": "Use these rows for fitting only. The 60-point independent domain set and 20-point OOD set remain untouched until final evaluation.",
+  "provisional_constraint_note": "This is a study constraint, not a certification limit. It must be replaced or justified for a specific product and insulation class."
+}

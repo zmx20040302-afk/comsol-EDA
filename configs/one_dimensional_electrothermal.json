@@ -1,0 +1,10 @@
+{
+  "model_name": "one_dimensional_electrothermal_wire",
+  "physics": "electrothermal_1d",
+  "geometry": {"type": "interval_1d", "parameters": {"L": {"value": 0.1, "unit": "m", "min": 0.01, "max": 1.0}}},
+  "materials": {"k": {"value": 401, "unit": "W/(m*K)", "min": 1, "max": 500}, "rho": {"value": 8960, "unit": "kg/m^3", "min": 100, "max": 20000}, "Cp": {"value": 385, "unit": "J/(kg*K)", "min": 1, "max": 5000}, "sigma": {"value": 5.8e7, "unit": "S/m", "min": 1, "max": 1e9}},
+  "boundary_conditions": {"V_left": {"value": 0.01, "unit": "V", "min": 0.001, "max": 10}, "T_left": {"value": 293.15, "unit": "K", "min": 250, "max": 1000}, "T_right": {"value": 293.15, "unit": "K", "min": 250, "max": 1000}},
+  "mesh": {"hmax": {"value": 0.002, "unit": "m", "min": 0.0001, "max": 0.02}},
+  "study": {"type": "stationary"},
+  "outputs": {"T_max": "maxop1(T)", "Q_joule_max": "maxop1(ec.Qh)"}
+}

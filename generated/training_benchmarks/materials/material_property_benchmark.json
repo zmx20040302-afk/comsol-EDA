@@ -1,0 +1,1021 @@
+{
+  "kind": "material_property_benchmark",
+  "created_at": "2026-08-11T09:42:50.147181+00:00",
+  "case_count": 10,
+  "passed": 10,
+  "needs_review": 0,
+  "cases": [
+    {
+      "id": "MAT-01",
+      "prompt": "二维稳态传导传热，材料需要密度、导热系数和比热容。",
+      "expected": [
+        "密度",
+        "导热系数",
+        "比热容"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“传热材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "emissivity",
+            "symbol": "epsilon",
+            "name": "表面发射率",
+            "unit": "1",
+            "reason": "存在辐射换热时需要"
+          },
+          {
+            "comsol_key": "thermalexpansioncoefficient",
+            "symbol": "alpha_T",
+            "name": "热膨胀系数",
+            "unit": "1/K",
+            "reason": "热-结构耦合时需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "dependencies": [
+          "导热系数、比热和密度可随温度变化；复合材料导热系数可能随方向变化。"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer_material",
+            "label": "传热材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('Cp', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('epsilon', '1', '表面发射率 (1)');\nmodel.param.set('alpha_T', '1', '热膨胀系数 (1/K)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('emissivity', 'epsilon');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', 'alpha_T');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-02",
+      "prompt": "瞬态金属冷却，导热系数和比热容随温度变化。",
+      "expected": [
+        "导热系数",
+        "比热容",
+        "温度"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“传热材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "emissivity",
+            "symbol": "epsilon",
+            "name": "表面发射率",
+            "unit": "1",
+            "reason": "存在辐射换热时需要"
+          },
+          {
+            "comsol_key": "thermalexpansioncoefficient",
+            "symbol": "alpha_T",
+            "name": "热膨胀系数",
+            "unit": "1/K",
+            "reason": "热-结构耦合时需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "dependencies": [
+          "导热系数、比热和密度可随温度变化；复合材料导热系数可能随方向变化。"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer_material",
+            "label": "传热材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('Cp', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('epsilon', '1', '表面发射率 (1)');\nmodel.param.set('alpha_T', '1', '热膨胀系数 (1/K)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('emissivity', 'epsilon');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', 'alpha_T');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-03",
+      "prompt": "线弹性结构受载，材料需要弹性模量和泊松比。",
+      "expected": [
+        "弹性模量",
+        "泊松比"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“结构力学材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "重力、惯性、特征频率和瞬态结构分析需要"
+          },
+          {
+            "comsol_key": "youngsmodulus",
+            "symbol": "E",
+            "name": "弹性模量",
+            "unit": "Pa",
+            "reason": "决定线弹性刚度"
+          },
+          {
+            "comsol_key": "poissonsratio",
+            "symbol": "nu",
+            "name": "泊松比",
+            "unit": "1",
+            "reason": "决定横向变形和体积响应"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "tensilestrength",
+            "symbol": "ft",
+            "name": "抗拉强度",
+            "unit": "Pa",
+            "reason": "损伤、断裂、水力压裂需要"
+          },
+          {
+            "comsol_key": "compressivestrength",
+            "symbol": "fc",
+            "name": "抗压强度",
+            "unit": "Pa",
+            "reason": "岩土/煤岩破坏需要"
+          },
+          {
+            "comsol_key": "fractureenergy",
+            "symbol": "Gc",
+            "name": "断裂能",
+            "unit": "J/m^2",
+            "reason": "裂缝扩展、相场或黏聚区模型需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "重力、惯性、特征频率和瞬态结构分析需要"
+          },
+          {
+            "comsol_key": "youngsmodulus",
+            "symbol": "E",
+            "name": "弹性模量",
+            "unit": "Pa",
+            "reason": "决定线弹性刚度"
+          },
+          {
+            "comsol_key": "poissonsratio",
+            "symbol": "nu",
+            "name": "泊松比",
+            "unit": "1",
+            "reason": "决定横向变形和体积响应"
+          }
+        ],
+        "dependencies": [
+          "弹性模量和强度可为空间随机场；复合材料或层状材料需要方向相关弹性矩阵。"
+        ],
+        "matches": [
+          {
+            "id": "structural_material",
+            "label": "结构力学材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('E', '35[GPa]', '弹性模量 (Pa)');\nmodel.param.set('nu', '0.25', '泊松比 (1)');\nmodel.param.set('ft', '1', '抗拉强度 (Pa)');\nmodel.param.set('fc', '1', '抗压强度 (Pa)');\nmodel.param.set('Gc', '1', '断裂能 (J/m^2)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('youngsmodulus', 'E');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('poissonsratio', 'nu');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('tensilestrength', 'ft');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('compressivestrength', 'fc');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('fractureenergy', 'Gc');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-04",
+      "prompt": "水在微通道中流动，需要密度和动力黏度。",
+      "expected": [
+        "密度",
+        "动力黏度"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“流体材料”配置。 Recognized material: Water.",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho_f",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "动量方程、惯性和重力项需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "决定黏性阻力和雷诺数"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp_f",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "非等温流动需要"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k_f",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "流体传热需要"
+          },
+          {
+            "comsol_key": "diffusioncoefficient",
+            "symbol": "D",
+            "name": "扩散系数",
+            "unit": "m^2/s",
+            "reason": "稀物质传递需要"
+          }
+        ],
+        "covered_by_case_parameters": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho_f",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "动量方程、惯性和重力项需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "决定黏性阻力和雷诺数"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp_f",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "非等温流动需要"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k_f",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "流体传热需要"
+          }
+        ],
+        "missing_required_properties": [],
+        "dependencies": [
+          "黏度和密度可能随温度、浓度或压力变化；气体可压缩时需要状态方程。"
+        ],
+        "matches": [
+          {
+            "id": "fluid_material",
+            "label": "流体材料"
+          }
+        ],
+        "recognized_materials": [
+          {
+            "name": "Water",
+            "properties": {
+              "density": "998[kg/m^3]",
+              "dynamicviscosity": "1e-3[Pa*s]",
+              "thermalconductivity": "0.6[W/(m*K)]",
+              "heatcapacity": "4182[J/(kg*K)]"
+            },
+            "note": "Use temperature-dependent fluid properties for a wide temperature range."
+          }
+        ],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho_f', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('mu', '1e-3[Pa*s]', '动力黏度 (Pa*s)');\nmodel.param.set('Cp_f', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('k_f', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('D', '1', '扩散系数 (m^2/s)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('dynamicviscosity', 'mu');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('diffusioncoefficient', 'D');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-05",
+      "prompt": "油的黏度随温度变化，分析管内流动。",
+      "expected": [
+        "动力黏度",
+        "温度"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“流体材料 + 传热材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho_f",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "动量方程、惯性和重力项需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "决定黏性阻力和雷诺数"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp_f",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "非等温流动需要"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k_f",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "流体传热需要"
+          },
+          {
+            "comsol_key": "diffusioncoefficient",
+            "symbol": "D",
+            "name": "扩散系数",
+            "unit": "m^2/s",
+            "reason": "稀物质传递需要"
+          },
+          {
+            "comsol_key": "emissivity",
+            "symbol": "epsilon",
+            "name": "表面发射率",
+            "unit": "1",
+            "reason": "存在辐射换热时需要"
+          },
+          {
+            "comsol_key": "thermalexpansioncoefficient",
+            "symbol": "alpha_T",
+            "name": "热膨胀系数",
+            "unit": "1/K",
+            "reason": "热-结构耦合时需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho_f",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "动量方程、惯性和重力项需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "决定黏性阻力和雷诺数"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "dependencies": [
+          "黏度和密度可能随温度、浓度或压力变化；气体可压缩时需要状态方程。",
+          "导热系数、比热和密度可随温度变化；复合材料导热系数可能随方向变化。"
+        ],
+        "matches": [
+          {
+            "id": "fluid_material",
+            "label": "流体材料"
+          },
+          {
+            "id": "heat_transfer_material",
+            "label": "传热材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho_f', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('mu', '1e-3[Pa*s]', '动力黏度 (Pa*s)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('Cp', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('Cp_f', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('k_f', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('D', '1', '扩散系数 (m^2/s)');\nmodel.param.set('epsilon', '1', '表面发射率 (1)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('dynamicviscosity', 'mu');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k_f');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('diffusioncoefficient', 'D');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('emissivity', 'epsilon');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-06",
+      "prompt": "薄膜电阻通电发热，需要电导率、导热系数、密度和比热容。",
+      "expected": [
+        "电导率",
+        "导热系数",
+        "密度",
+        "比热容"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“传热材料 + 电学材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          },
+          {
+            "comsol_key": "electricconductivity",
+            "symbol": "sigma",
+            "name": "电导率",
+            "unit": "S/m",
+            "reason": "电流守恒和焦耳热计算需要"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "emissivity",
+            "symbol": "epsilon",
+            "name": "表面发射率",
+            "unit": "1",
+            "reason": "存在辐射换热时需要"
+          },
+          {
+            "comsol_key": "thermalexpansioncoefficient",
+            "symbol": "alpha_T",
+            "name": "热膨胀系数",
+            "unit": "1/K",
+            "reason": "热-结构耦合时需要"
+          },
+          {
+            "comsol_key": "relpermittivity",
+            "symbol": "epsr",
+            "name": "相对介电常数",
+            "unit": "1",
+            "reason": "静电、电容或频域电场需要"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "电-热耦合需要"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态焦耳热需要"
+          },
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "瞬态焦耳热需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          },
+          {
+            "comsol_key": "electricconductivity",
+            "symbol": "sigma",
+            "name": "电导率",
+            "unit": "S/m",
+            "reason": "电流守恒和焦耳热计算需要"
+          }
+        ],
+        "dependencies": [
+          "导热系数、比热和密度可随温度变化；复合材料导热系数可能随方向变化。",
+          "电导率常随温度变化；频域问题中介电常数和损耗因子可能随频率变化。"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer_material",
+            "label": "传热材料"
+          },
+          {
+            "id": "electric_material",
+            "label": "电学材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('Cp', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('sigma', '1[S/m]', '电导率 (S/m)');\nmodel.param.set('epsilon', '1', '表面发射率 (1)');\nmodel.param.set('alpha_T', '1', '热膨胀系数 (1/K)');\nmodel.param.set('epsr', '1', '相对介电常数 (1)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('electricconductivity', 'sigma');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('emissivity', 'epsilon');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', 'alpha_T');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('relpermittivity', 'epsr');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-07",
+      "prompt": "各向异性复合材料传热，导热系数随方向变化。",
+      "expected": [
+        "导热系数",
+        "方向"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“传热材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "emissivity",
+            "symbol": "epsilon",
+            "name": "表面发射率",
+            "unit": "1",
+            "reason": "存在辐射换热时需要"
+          },
+          {
+            "comsol_key": "thermalexpansioncoefficient",
+            "symbol": "alpha_T",
+            "name": "热膨胀系数",
+            "unit": "1/K",
+            "reason": "热-结构耦合时需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "参与瞬态热惯性；稳态也常作为材料完整性检查项"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "决定热传导能力，可为各向异性张量"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态传热必须给出"
+          }
+        ],
+        "dependencies": [
+          "导热系数、比热和密度可随温度变化；复合材料导热系数可能随方向变化。"
+        ],
+        "matches": [
+          {
+            "id": "heat_transfer_material",
+            "label": "传热材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('k', '1[W/(m*K)]', '导热系数 (W/(m*K))');\nmodel.param.set('Cp', '800[J/(kg*K)]', '比热容 (J/(kg*K))');\nmodel.param.set('epsilon', '1', '表面发射率 (1)');\nmodel.param.set('alpha_T', '1', '热膨胀系数 (1/K)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalconductivity', 'k');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('heatcapacity', 'Cp');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('emissivity', 'epsilon');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', 'alpha_T');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-08",
+      "prompt": "煤层水力压裂，材料需要弹性模量、泊松比、抗拉强度和断裂能。",
+      "expected": [
+        "弹性模量",
+        "泊松比",
+        "抗拉强度",
+        "断裂能"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“结构力学材料”配置。 Recognized material: Water.",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "重力、惯性、特征频率和瞬态结构分析需要"
+          },
+          {
+            "comsol_key": "youngsmodulus",
+            "symbol": "E",
+            "name": "弹性模量",
+            "unit": "Pa",
+            "reason": "决定线弹性刚度"
+          },
+          {
+            "comsol_key": "poissonsratio",
+            "symbol": "nu",
+            "name": "泊松比",
+            "unit": "1",
+            "reason": "决定横向变形和体积响应"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "tensilestrength",
+            "symbol": "ft",
+            "name": "抗拉强度",
+            "unit": "Pa",
+            "reason": "损伤、断裂、水力压裂需要"
+          },
+          {
+            "comsol_key": "compressivestrength",
+            "symbol": "fc",
+            "name": "抗压强度",
+            "unit": "Pa",
+            "reason": "岩土/煤岩破坏需要"
+          },
+          {
+            "comsol_key": "fractureenergy",
+            "symbol": "Gc",
+            "name": "断裂能",
+            "unit": "J/m^2",
+            "reason": "裂缝扩展、相场或黏聚区模型需要"
+          }
+        ],
+        "covered_by_case_parameters": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "重力、惯性、特征频率和瞬态结构分析需要"
+          }
+        ],
+        "missing_required_properties": [
+          {
+            "comsol_key": "youngsmodulus",
+            "symbol": "E",
+            "name": "弹性模量",
+            "unit": "Pa",
+            "reason": "决定线弹性刚度"
+          },
+          {
+            "comsol_key": "poissonsratio",
+            "symbol": "nu",
+            "name": "泊松比",
+            "unit": "1",
+            "reason": "决定横向变形和体积响应"
+          }
+        ],
+        "dependencies": [
+          "弹性模量和强度可为空间随机场；复合材料或层状材料需要方向相关弹性矩阵。"
+        ],
+        "matches": [
+          {
+            "id": "structural_material",
+            "label": "结构力学材料"
+          }
+        ],
+        "recognized_materials": [
+          {
+            "name": "Water",
+            "properties": {
+              "density": "998[kg/m^3]",
+              "dynamicviscosity": "1e-3[Pa*s]",
+              "thermalconductivity": "0.6[W/(m*K)]",
+              "heatcapacity": "4182[J/(kg*K)]"
+            },
+            "note": "Use temperature-dependent fluid properties for a wide temperature range."
+          }
+        ],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('E', '35[GPa]', '弹性模量 (Pa)');\nmodel.param.set('nu', '0.25', '泊松比 (1)');\nmodel.param.set('ft', '1', '抗拉强度 (Pa)');\nmodel.param.set('fc', '1', '抗压强度 (Pa)');\nmodel.param.set('Gc', '1', '断裂能 (J/m^2)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('youngsmodulus', 'E');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('poissonsratio', 'nu');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('tensilestrength', 'ft');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('compressivestrength', 'fc');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('fractureenergy', 'Gc');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-09",
+      "prompt": "电化学传质，溶液需要扩散系数和电导率。",
+      "expected": [
+        "扩散系数",
+        "电导率"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“传质与电化学材料 + 电学材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "diffusioncoefficient",
+            "symbol": "D",
+            "name": "扩散系数",
+            "unit": "m^2/s",
+            "reason": "稀物质传递和浓度场计算需要"
+          },
+          {
+            "comsol_key": "electricconductivity",
+            "symbol": "sigma",
+            "name": "电导率",
+            "unit": "S/m",
+            "reason": "电流守恒和焦耳热计算需要"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "electricconductivity",
+            "symbol": "sigma",
+            "name": "电导率",
+            "unit": "S/m",
+            "reason": "电化学电流和电解质导电需要"
+          },
+          {
+            "comsol_key": "density",
+            "symbol": "rho",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "流动、对流传质和重力项需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "流动传质需要"
+          },
+          {
+            "comsol_key": "relpermittivity",
+            "symbol": "epsr",
+            "name": "相对介电常数",
+            "unit": "1",
+            "reason": "静电、电容或频域电场需要"
+          },
+          {
+            "comsol_key": "thermalconductivity",
+            "symbol": "k",
+            "name": "导热系数",
+            "unit": "W/(m*K)",
+            "reason": "电-热耦合需要"
+          },
+          {
+            "comsol_key": "heatcapacity",
+            "symbol": "Cp",
+            "name": "比热容",
+            "unit": "J/(kg*K)",
+            "reason": "瞬态焦耳热需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "diffusioncoefficient",
+            "symbol": "D",
+            "name": "扩散系数",
+            "unit": "m^2/s",
+            "reason": "稀物质传递和浓度场计算需要"
+          },
+          {
+            "comsol_key": "electricconductivity",
+            "symbol": "sigma",
+            "name": "电导率",
+            "unit": "S/m",
+            "reason": "电流守恒和焦耳热计算需要"
+          }
+        ],
+        "dependencies": [
+          "扩散系数可能随温度、浓度和方向变化；电化学问题还需核对电导率与反应动力学参数。",
+          "电导率常随温度变化；频域问题中介电常数和损耗因子可能随频率变化。"
+        ],
+        "matches": [
+          {
+            "id": "species_transport_material",
+            "label": "传质与电化学材料"
+          },
+          {
+            "id": "electric_material",
+            "label": "电学材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('D', '1', '扩散系数 (m^2/s)');\nmodel.param.set('sigma', '1[S/m]', '电导率 (S/m)');\nmodel.param.set('sigma', '1[S/m]', '电导率 (S/m)');\nmodel.param.set('rho', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('mu', '1e-3[Pa*s]', '动力黏度 (Pa*s)');\nmodel.param.set('epsr', '1', '相对介电常数 (1)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('diffusioncoefficient', 'D');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('electricconductivity', 'sigma');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('electricconductivity', 'sigma');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('dynamicviscosity', 'mu');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('relpermittivity', 'epsr');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    },
+    {
+      "id": "MAT-10",
+      "prompt": "材料在频域电磁分析中，介电参数随频率变化。",
+      "expected": [
+        "频率"
+      ],
+      "status": "passed",
+      "missing_expected_labels": [],
+      "result": {
+        "summary": "材料与物性参数应优先按“声学材料”配置。",
+        "required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho0",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "声波方程需要"
+          },
+          {
+            "comsol_key": "soundspeed",
+            "symbol": "c",
+            "name": "声速",
+            "unit": "m/s",
+            "reason": "决定波长和共振频率"
+          }
+        ],
+        "optional_properties": [
+          {
+            "comsol_key": "bulkviscosity",
+            "symbol": "muB",
+            "name": "体黏度",
+            "unit": "Pa*s",
+            "reason": "热黏性声学或损耗模型需要"
+          },
+          {
+            "comsol_key": "dynamicviscosity",
+            "symbol": "mu",
+            "name": "动力黏度",
+            "unit": "Pa*s",
+            "reason": "热黏性边界层需要"
+          }
+        ],
+        "covered_by_case_parameters": [],
+        "missing_required_properties": [
+          {
+            "comsol_key": "density",
+            "symbol": "rho0",
+            "name": "密度",
+            "unit": "kg/m^3",
+            "reason": "声波方程需要"
+          },
+          {
+            "comsol_key": "soundspeed",
+            "symbol": "c",
+            "name": "声速",
+            "unit": "m/s",
+            "reason": "决定波长和共振频率"
+          }
+        ],
+        "dependencies": [
+          "声速和密度可随温度变化；吸声/阻抗边界常随频率变化。"
+        ],
+        "matches": [
+          {
+            "id": "acoustic_material",
+            "label": "声学材料"
+          }
+        ],
+        "recognized_materials": [],
+        "matlab_snippet": "% Material property scaffold generated from COMSOL training knowledge.\nmodel.component('comp1').material.create('mat1', 'Common');\nmodel.component('comp1').material('mat1').label('material_to_review');\nmodel.param.set('rho0', '2500[kg/m^3]', '密度 (kg/m^3)');\nmodel.param.set('c', '343[m/s]', '声速 (m/s)');\nmodel.param.set('muB', '1', '体黏度 (Pa*s)');\nmodel.param.set('mu', '1e-3[Pa*s]', '动力黏度 (Pa*s)');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('density', 'rho0');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('soundspeed', 'c');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('bulkviscosity', 'muB');\nmodel.component('comp1').material('mat1').propertyGroup('def').set('dynamicviscosity', 'mu');\n% If a property depends on temperature/frequency/direction, replace the scalar parameter with an interpolation, analytic function, or tensor expression."
+      }
+    }
+  ],
+  "interpretation": "该基准检查材料必需物性和依赖关系的提取，不替代具体材料牌号、实验数据和单位核验。"
+}

@@ -1,0 +1,197 @@
+{
+  "kind": "busbar_electrothermal_eda_design_problem",
+  "version": 1,
+  "status": "defined_pending_current_drive_and_geometry_parameterization",
+  "title": "Constrained electrothermal design space exploration of a three dimensional busbar",
+  "research_question": "How can uncertainty aware adaptive sampling reduce COMSOL evaluations while finding low mass and low loss busbar designs that satisfy electrothermal constraints?",
+  "source_model": "generated/benchmarks/busbar_joule_heat/builders/busbar_joule_heat_baseline.mph",
+  "baseline": {
+    "L_mm": 90.0,
+    "wbb_mm": 50.0,
+    "tbb_mm": 5.0,
+    "bolt_radius_mm": 6.0,
+    "htc_W_m2K": 5.0,
+    "T_amb_K": 293.15,
+    "Vtot_mV": 20.0,
+    "terminal_current_A": 161.548895675998,
+    "Tmax_K": 330.466224636934,
+    "joule_power_W": 3.22864839296184
+  },
+  "drive_definition": {
+    "optimization_mode": "fixed_terminal_current",
+    "nominal_current_A": 160.0,
+    "workload_range_A": [80.0, 240.0],
+    "current_model_mode": "fixed_electric_potential",
+    "required_model_change": "Replace or supplement the fixed potential boundary with a terminal current parameter so geometry candidates are compared at the same electrical load.",
+    "migration_check": "At the baseline geometry and approximately 160 A, the current driven model must reproduce the 20 mV baseline within declared numerical tolerances."
+  },
+  "decision_variables": [
+    {
+      "name": "L_mm",
+      "comsol_parameter": "L",
+      "role": "geometry",
+      "lower": 70.0,
+      "upper": 110.0,
+      "baseline": 90.0,
+      "unit": "mm"
+    },
+    {
+      "name": "wbb_mm",
+      "comsol_parameter": "wbb",
+      "role": "geometry",
+      "lower": 40.0,
+      "upper": 60.0,
+      "baseline": 50.0,
+      "unit": "mm"
+    },
+    {
+      "name": "tbb_mm",
+      "comsol_parameter": "tbb",
+      "role": "geometry",
+      "lower": 3.5,
+      "upper": 7.0,
+      "baseline": 5.0,
+      "unit": "mm"
+    },
+    {
+      "name": "bolt_radius_mm",
+      "comsol_parameter": "rad_1",
+      "role": "geometry",
+      "lower": 4.0,
+      "upper": 8.0,
+      "baseline": 6.0,
+      "unit": "mm"
+    }
+  ],
+  "operating_variables": [
+    {
+      "name": "I_load_A",
+      "role": "electrical_workload",
+      "lower": 80.0,
+      "upper": 240.0,
+      "nominal": 160.0,
+      "unit": "A"
+    },
+    {
+      "name": "htc_W_m2K",
+      "comsol_parameter": "htc",
+      "role": "thermal_environment",
+      "lower": 2.0,
+      "upper": 10.0,
+      "nominal": 5.0,
+      "unit": "W/(m^2*K)"
+    },
+    {
+      "name": "T_amb_K",
+      "comsol_parameter": "T_amb",
+      "role": "thermal_environment",
+      "lower": 293.15,
+      "upper": 313.15,
+      "nominal": 293.15,
+      "unit": "K"
+    }
+  ],
+  "objectives": [
+    {
+      "name": "copper_mass_kg",
+      "direction": "minimize",
+      "source": "COMSOL geometry volume multiplied by copper density"
+    },
+    {
+      "name": "joule_power_W",
+      "direction": "minimize",
+      "source": "Volume integral of ec.Qh"
+    }
+  ],
+  "constraints": [
+    {
+      "name": "maximum_temperature",
+      "expression": "Tmax_K <= 373.15",
+      "threshold": 373.15,
+      "unit": "K",
+      "status": "provisional_research_limit",
+      "note": "This is a study constraint, not a certification limit. It must be replaced or justified for a specific product and insulation class."
+    },
+    {
+      "name": "nominal_voltage_drop",
+      "expression": "voltage_drop_mV <= 20 at I_load_A = 160",
+      "threshold": 20.0,
+      "unit": "mV",
+      "status": "baseline_relative_limit"
+    },
+    {
+      "name": "maximum_current_density",
+      "expression": "Jmax <= 1.10 * Jmax_baseline at the same current",
+      "threshold_ratio_to_baseline": 1.1,
+      "status": "baseline_relative_limit",
+      "note": "An absolute product limit requires conductor, cooling, lifetime and standard-specific evidence."
+    },
+    {
+      "name": "geometry_feasibility",
+      "expression": "bolt_radius_mm <= 0.20 * wbb_mm",
+      "status": "hard_geometry_rule"
+    }
+  ],
+  "required_outputs": [
+    "Tmax_K",
+    "Tavg_K",
+    "Jmax_A_m2",
+    "terminal_current_A",
+    "voltage_drop_mV",
+    "joule_power_W",
+    "convection_power_W",
+    "energy_imbalance_percent",
+    "copper_volume_m3",
+    "copper_mass_kg",
+    "solve_seconds",
+    "solver_status"
+  ],
+  "evaluation_plan": {
+    "initial_design": {
+      "method": "latin_hypercube",
+      "cases": 80
+    },
+    "adaptive_design": {
+      "rounds": 4,
+      "cases_per_round": 20,
+      "maximum_added_cases": 80
+    },
+    "independent_domain_test_cases": 60,
+    "independent_out_of_domain_cases": 20,
+    "random_seeds": [20261009, 20261019, 20261029],
+    "comparison_methods": [
+      "random_sampling",
+      "latin_hypercube",
+      "sobol_sequence",
+      "uncertainty_sampling",
+      "constrained_bayesian_optimization"
+    ],
+    "release_metrics": [
+      "RMSE",
+      "MAE",
+      "maximum_absolute_error",
+      "PICP_95",
+      "MPIW_95",
+      "OOD_AUROC",
+      "false_safe_rate",
+      "constraint_violation_rate",
+      "Pareto_hypervolume",
+      "COMSOL_evaluation_count",
+      "total_wall_seconds"
+    ]
+  },
+  "fixed_assumptions": [
+    "Stationary direct current electrothermal analysis",
+    "Copper busbar body and titanium bolt material definitions remain unchanged in version 1",
+    "No radiation, contact resistance, bolt preload, structural mechanics or thermal expansion in version 1",
+    "Boundary roles remain electrically and thermally equivalent after geometry rebuild",
+    "All final Pareto candidates require fresh COMSOL verification"
+  ],
+  "completion_criteria": [
+    "The current driven baseline reproduces the original baseline electrical and thermal outputs within documented tolerances.",
+    "Every decision variable changes the rebuilt COMSOL geometry without invalid entity selections.",
+    "Every required output is exported with units and provenance.",
+    "At least one feasible Pareto improvement is confirmed by a fresh COMSOL solve.",
+    "Independent domain and out of domain test sets remain untouched until final evaluation."
+  ]
+}

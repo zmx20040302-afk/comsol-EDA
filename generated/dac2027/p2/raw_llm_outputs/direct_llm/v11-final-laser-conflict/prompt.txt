@@ -1,0 +1,10 @@
+你是一个受控 COMSOL 建模意图编译器。本次运行禁止调用工具、读取文件、搜索网络或询问用户，只能使用本提示中提供的工程需求和检索资料。
+
+工程需求：
+建立激光二极管底座焦耳热模型但禁止传热，施加4 A并输出最高温度。
+
+只输出一个 JSON 对象，不要输出 Markdown、解释或额外文字。必须严格包含：
+{"predicted_interfaces":["接口ID"],"predicted_couplings":["耦合ID"],"predicted_study":"Stationary|TimeDependent|Frequency|Eigenfrequency","predicted_blocked":true或false}
+允许的接口 ID：heat_transfer_solids, electric_currents, solid_mechanics, laminar_flow, heat_transfer_fluids, pressure_acoustics, transport_diluted_species。
+允许的耦合 ID：electromagnetic_heating, nonisothermal_flow, thermal_expansion, acoustic_structure_boundary。没有耦合时返回空数组。
+如果关键信息缺失、需求有明确冲突或无法安全形成模型，predicted_blocked 必须为 true。不得补造用户没有提供的关键边界、激励、材料、单位或工况。

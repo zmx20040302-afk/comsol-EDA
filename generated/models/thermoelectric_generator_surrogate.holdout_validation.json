@@ -1,0 +1,35 @@
+{
+  "kind": "thermoelectric_generator_independent_comsol_validation",
+  "created_at": "2026-08-26T11:35:18.696334+00:00",
+  "training_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermoelectric_generator_training.csv",
+  "holdout_csv": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\training_runs\\thermoelectric_generator_holdout.csv",
+  "training_rows": 6,
+  "holdout_rows": 3,
+  "candidate_metrics": {
+    "linear_regression": {
+      "max_relative_error_percent": 0.5286871794758415,
+      "mean_relative_error_percent": 0.3260454888805031
+    },
+    "polynomial_degree_2": {
+      "max_relative_error_percent": 0.03133012036788031,
+      "mean_relative_error_percent": 0.012705499347168863
+    },
+    "distance_weighted_local_interpolation": {
+      "max_relative_error_percent": 0.0460673319827377,
+      "mean_relative_error_percent": 0.03953774033412013
+    }
+  },
+  "selected_model": "polynomial_degree_2",
+  "selection_reason": "Selected by independent COMSOL holdout error for coupled thermoelectric response with temperature-dependent material properties.",
+  "per_output_relative_validation": {
+    "open_circuit_voltage_V": {
+      "max_relative_error_percent": 0.03133012036788031,
+      "mean_relative_error_percent": 0.012705499347168863,
+      "threshold_relative_error_percent": 2.0,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "三维热电发电机稳态耦合模型；冷端 0 degC、热端温度 T0=100-200 degC，铜和 Bi-Sb-Te 材料、温度相关 Seebeck 系数/电导率/导热率、几何、网格、接地和浮动端子固定，输出浮动端开路电压。",
+  "path": "D:\\桌面\\codex\\comsol1\\comsol_training_small_model\\generated\\models\\thermoelectric_generator_surrogate.holdout_validation.json"
+}

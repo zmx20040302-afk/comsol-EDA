@@ -1,0 +1,621 @@
+{
+  "kind": "comsol_article_modeling_card",
+  "title": "COMSOL不同围压条件下单孔水力压裂裂纹的拓展规律研究",
+  "source_path": "D:\\桌面\\COMSOL不同围压条件下单孔水力压裂裂纹的拓展规律研究.docx",
+  "created_at": "2026-08-03T11:20:48.700778+00:00",
+  "paragraph_count": 23,
+  "summary": "文章围绕煤层超高压水力压裂数值模拟，研究不同地应力条件、主应力方向、煤层非均匀性和天然裂缝对单孔裂纹起裂压力、扩展方向、损伤演化和裂缝长度的影响。",
+  "modeling_requirement": "Build a COMSOL hydraulic fracturing model for a single borehole under different confining stress conditions. 中文需求关键词：水力压裂 单孔 围压 主应力 天然裂缝 煤层 岩石裂隙流 多孔介质 裂缝拓展 损伤演化。 Use article parameters: square_side=300[mm] borehole_diameter=15[mm] stress_ratio_range=1.5~2.0 initial_pressure=0.1[MPa] mean_elastic_modulus=35.1[GPa] mean_compressive_strength=152[MPa] principal_stress_direction_135=135[deg] principal_stress_direction_180=180[deg] principal_stress_direction_90=90[deg]. Include features: 2D square domain central borehole natural fracture or weak-plane features coal/rock medium heterogeneous elastic modulus heterogeneous tensile/compressive strength Weibull random field distribution solid mechanics damage evolution pore/fluid pressure loading hydraulic fracture propagation outer boundary in-situ stress loading symmetric roller/fixed displacement support borehole injection pressure free triangular mesh local refinement near borehole and natural fractures time-dependent pressure/damage evolution parametric sweep over stress ratio and stress direction damage length vs time pressure field fracture path initiation pressure stress distribution fracture deflection and branching under natural fractures.",
+  "parameters": [
+    {
+      "name": "square_side",
+      "value": "300[mm]",
+      "role": "geometry length"
+    },
+    {
+      "name": "borehole_diameter",
+      "value": "15[mm]",
+      "role": "borehole diameter"
+    },
+    {
+      "name": "stress_ratio_range",
+      "value": "1.5~2.0",
+      "role": "principal stress ratio range"
+    },
+    {
+      "name": "initial_pressure",
+      "value": "0.1[MPa]",
+      "role": "initial pressure"
+    },
+    {
+      "name": "mean_elastic_modulus",
+      "value": "35.1[GPa]",
+      "role": "Weibull mean elastic modulus"
+    },
+    {
+      "name": "mean_compressive_strength",
+      "value": "152[MPa]",
+      "role": "Weibull mean compressive strength"
+    },
+    {
+      "name": "principal_stress_direction_135",
+      "value": "135[deg]",
+      "role": "stress direction case"
+    },
+    {
+      "name": "principal_stress_direction_180",
+      "value": "180[deg]",
+      "role": "stress direction case"
+    },
+    {
+      "name": "principal_stress_direction_90",
+      "value": "90[deg]",
+      "role": "stress direction case"
+    }
+  ],
+  "model_features": {
+    "geometry": [
+      "2D square domain",
+      "central borehole",
+      "natural fracture or weak-plane features"
+    ],
+    "materials": [
+      "coal/rock medium",
+      "heterogeneous elastic modulus",
+      "heterogeneous tensile/compressive strength",
+      "Weibull random field distribution"
+    ],
+    "physics": [
+      "solid mechanics damage evolution",
+      "pore/fluid pressure loading",
+      "hydraulic fracture propagation"
+    ],
+    "boundary_conditions": [
+      "outer boundary in-situ stress loading",
+      "symmetric roller/fixed displacement support",
+      "borehole injection pressure"
+    ],
+    "mesh": [
+      "free triangular mesh",
+      "local refinement near borehole and natural fractures"
+    ],
+    "studies": [
+      "time-dependent pressure/damage evolution",
+      "parametric sweep over stress ratio and stress direction"
+    ],
+    "outputs": [
+      "damage length vs time",
+      "pressure field",
+      "fracture path",
+      "initiation pressure",
+      "stress distribution",
+      "fracture deflection and branching under natural fractures"
+    ]
+  },
+  "correction_strategy": [
+    "优先使用文章参数作为基准约束，而不是套用通用热学或结构默认值。",
+    "Correct geometry to a 300 mm square domain with a 15 mm borehole and optional natural-fracture weak planes.",
+    "Correct loads by sweeping principal stress ratio from 1.5 to 2.0 and stress directions such as 90, 135, and 180 degrees.",
+    "Correct material definition by adding Weibull-distributed elastic modulus and strength rather than a single homogeneous material.",
+    "Correct mesh by refining near the borehole, expected crack tips, and natural fractures.",
+    "Correct validation outputs to compare damage length over time, pressure field, crack morphology, and initiation pressure against article/field observations.",
+    "Add a measurement-correction loop: compare simulated fracture/stress response with measured data and update fracture orientation, density, and weak-plane parameters."
+  ],
+  "learning_trace": [
+    {
+      "step": "1. 文章参数抽取",
+      "evidence": "提取到 9 个几何、压力、应力方向或材料分布参数。",
+      "judgement": "这些参数应进入约束 JSON，作为 COMSOL 自动建模和参数扫描的输入。"
+    },
+    {
+      "step": "2. 建模对象识别",
+      "evidence": "2D square domain, central borehole, natural fracture or weak-plane features",
+      "judgement": "模型应优先构建二维单孔水力压裂几何，而不是沿用默认热传导示例。"
+    },
+    {
+      "step": "3. 物理与材料修正",
+      "evidence": "solid mechanics damage evolution, pore/fluid pressure loading, hydraulic fracture propagation, coal/rock medium, heterogeneous elastic modulus, heterogeneous tensile/compressive strength, Weibull random field distribution",
+      "judgement": "需要将案例记忆中的结构/流体/多孔介质经验组合起来，并保留缺失参数为待校准项。"
+    },
+    {
+      "step": "4. 修正闭环",
+      "evidence": "7 条文章驱动修正建议。",
+      "judgement": "后续自动建模方案必须包含与文章或现场数据对比后的模型修正步骤。"
+    }
+  ],
+  "source_excerpt": [
+    "以试验工作面为研究对象，采用COMSOL Multiphysics 计算软件对煤层超高压水力压裂进行数值模拟，将模拟结果与现场试验结果进行对比。钻孔完成时，地应力条件和煤层条件是水力压裂的主要影响因素。本章采用数值模拟研究了不同地应力条件及不同煤层条件下水力压裂规律。",
+    "1.模拟模型构建及参数设定",
+    "数值模型中的几何尺寸、初始/边界条件和网格生成图如图5.1 所示，正方形的长度为300mm，钻孔直径为15mm。在外边界处，第四章节四个矿井的最大水平主应力σH和最小水平主应力σh的比值在1.5~2 .0 之间，所以本模拟主要研究应力比在1.5~2 .0 下的拓展状态，将固定的初始压力P =0 .1MPa（大气压力）、在对称边界处，设置固定位移约束辊支撑如图（a）所示。网格划分采用自由三角形来划分如图（b）所示。数值模型的计算参数来自地质调查资料和现场钻孔取样后的实验室测试结果，如表所示。",
+    "图 5.1 数值模型",
+    "为了清楚地描述现场测控岩性的非均匀性，分别将弹性模量及抗拉强度用maltab 生成韦伯分布如图5.2、5.3 所示，其COMSOL 的空间分布如图5.4、5.5 所示。其中单元体的平均弹性模量为35 .1GPa，平均抗压强度为152Mpa。均匀性指数越小，弹性模量及抗拉强度的分布跨度越大；否则，分布将更加集中。",
+    "图 5.2 弹性模量的韦伯分布         图 5.3 抗压强度的韦伯分布",
+    "2.应力比对裂缝拓展的影响",
+    "(a)应力比为1.5 损伤图",
+    "(b)应力比为1.5 压力图",
+    "图 5.7 不同主应力比裂缝损伤长度随时间的变化",
+    "3.主应力方向对裂缝拓展的影",
+    "图5.9 展示了三种不同加载条件（均布载荷、135°大主应力、180°大主应力）下，水力压裂过程中岩石损伤随时间的演化规律。",
+    "(a)均布载荷",
+    "(b)135 °主应力",
+    "(c)180 °主应力",
+    "图 5.9 不同主应力方向裂纹的拓展形态",
+    "4.孔壁内天然裂缝对裂缝拓展的影响",
+    "在水力压裂过程中，岩石中的天然裂缝对裂缝起裂压力和扩展方向具有显著影响。天然裂缝改变了岩石的应力分布和渗透性，使裂缝起裂压力降低。其具体表现为，注入压力集中于天然裂缝尖端或弱面附近，这些区域成为裂缝起裂的优先位置，导致起裂压力比完整岩石更低。裂缝的复杂性和密集程度也进一步影响起裂过程，高密度裂缝网络易导致裂缝扩展的非均匀性。在扩展方向上，天然裂缝的方位和连接性起主导作用。当天然裂缝的方向与最大主应力方向一致时，水力压裂容易沿天然裂缝扩展；而当二者不一致时，裂缝可能偏转或分叉，沿天然裂缝和最大主应力综合作用的路径扩展，从而形成复杂裂缝网络。实际工程中，利用天然裂缝可降低起裂压力并引导裂缝扩展，但需综合考虑其位置、密度和方位，避免因过度复杂的裂缝网络导致渗流效率下降或应力分布失衡，为优化压裂效果提供重要依据，所以下述模拟建立含裂缝的局部地质模型，模拟裂缝对地应力分布的影响，校正实测数据与数据修正，让测量结果更具实际意义。",
+    "图 5.10 天然裂缝模型建立",
+    "(a) 90 °主应力",
+    "(b) 135°主应力",
+    "(c) 180 °主应力",
+    "图 5.11 裂缝在对称天然裂缝影响下的拓展形态"
+  ],
+  "memory_assisted_model_plan": {
+    "kind": "article_memory_assisted_model_plan",
+    "matched_cases": [
+      {
+        "title": "COMSOL不同围压条件下单孔水力压裂裂纹的拓展规律研究",
+        "score": 67.81339611063653,
+        "quality": {
+          "score": 95,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": true,
+            "parameters": true,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "structural",
+          "fluid",
+          "optimization"
+        ]
+      },
+      {
+        "title": "岩石裂隙流",
+        "score": 26.01324490029408,
+        "quality": {
+          "score": 75,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": false,
+            "study": true,
+            "boundary_conditions": true,
+            "results": false,
+            "parameters": true,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少材料证据",
+            "缺少结果量证据",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "heat_transfer",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      },
+      {
+        "title": "带轮应力",
+        "score": 7.636994336101661,
+        "quality": {
+          "score": 85,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": false,
+            "parameters": true,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少结果量证据",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "heat_transfer",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      },
+      {
+        "title": "扳手的应力和应变",
+        "score": 6.437432590799961,
+        "quality": {
+          "score": 75,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": false,
+            "parameters": false,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少结果量证据",
+            "缺少参数证据",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      },
+      {
+        "title": "已验证：二维热应力矩形模板",
+        "score": 6.349389079621698,
+        "quality": {
+          "score": 90,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": true,
+            "parameters": true,
+            "source_files": false,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少来源文件记录",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": false,
+          "surrogate_ready": false
+        },
+        "training_stage": "execution_validated",
+        "domains": [
+          "heat_transfer",
+          "structural"
+        ]
+      },
+      {
+        "title": "如何生成随机非均匀材料数据6.2",
+        "score": 5.4692651680936,
+        "quality": {
+          "score": 95,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": true,
+            "parameters": true,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "heat_transfer",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      },
+      {
+        "title": "受载弹簧 - 使用全局方程满足约束条件",
+        "score": 5.0055731996703,
+        "quality": {
+          "score": 85,
+          "checks": {
+            "physics": true,
+            "geometry": true,
+            "materials": true,
+            "study": true,
+            "boundary_conditions": true,
+            "results": false,
+            "parameters": true,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少结果量证据",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": true,
+          "surrogate_ready": false
+        },
+        "training_stage": "modeling_logic_learning_ready",
+        "domains": [
+          "geometry",
+          "heat_transfer",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      },
+      {
+        "title": "COMSOL 物理场类型与选择指南",
+        "score": 4.912889112810202,
+        "quality": {
+          "score": 45,
+          "checks": {
+            "physics": true,
+            "geometry": false,
+            "materials": false,
+            "study": true,
+            "boundary_conditions": false,
+            "results": true,
+            "parameters": false,
+            "source_files": true,
+            "training_csv": false
+          },
+          "issues": [
+            "缺少几何证据",
+            "缺少材料证据",
+            "缺少边界条件证据",
+            "缺少参数证据",
+            "缺少参数扫描 CSV"
+          ],
+          "usable_for_modeling": false,
+          "surrogate_ready": false
+        },
+        "training_stage": "physics_selection_knowledge_ready",
+        "domains": [
+          "geometry",
+          "heat_transfer",
+          "structural",
+          "electromagnetics",
+          "fluid",
+          "acoustics",
+          "optimization"
+        ]
+      }
+    ],
+    "external_case_matches": [],
+    "official_doc_matches": [],
+    "recommended_modeling_steps": [
+      "Clarify model objective, dimensionality, input parameters, outputs, and validation targets.",
+      "查看检索到的相似案例，并复用其参数命名、几何序列和 LiveLink API 调用模式。",
+      "Choose geometry strategy: reuse similar case script, import CAD, or generate parametric geometry.",
+      "Define materials, units, selections, and reusable parameter groups.",
+      "Add physics interfaces and boundary/initial conditions.",
+      "Create mesh and study sequence, then solve a baseline model.",
+      "Export derived values and plots for validation."
+    ],
+    "candidate_parameters": [
+      {
+        "name": "square_side",
+        "value": "300[mm]",
+        "description": "geometry length",
+        "source_case": "article"
+      },
+      {
+        "name": "borehole_diameter",
+        "value": "15[mm]",
+        "description": "borehole diameter",
+        "source_case": "article"
+      },
+      {
+        "name": "stress_ratio_range",
+        "value": "1.5~2.0",
+        "description": "principal stress ratio range",
+        "source_case": "article"
+      },
+      {
+        "name": "initial_pressure",
+        "value": "0.1[MPa]",
+        "description": "initial pressure",
+        "source_case": "article"
+      },
+      {
+        "name": "mean_elastic_modulus",
+        "value": "35.1[GPa]",
+        "description": "Weibull mean elastic modulus",
+        "source_case": "article"
+      },
+      {
+        "name": "mean_compressive_strength",
+        "value": "152[MPa]",
+        "description": "Weibull mean compressive strength",
+        "source_case": "article"
+      },
+      {
+        "name": "principal_stress_direction_135",
+        "value": "135[deg]",
+        "description": "stress direction case",
+        "source_case": "article"
+      },
+      {
+        "name": "principal_stress_direction_180",
+        "value": "180[deg]",
+        "description": "stress direction case",
+        "source_case": "article"
+      },
+      {
+        "name": "principal_stress_direction_90",
+        "value": "90[deg]",
+        "description": "stress direction case",
+        "source_case": "article"
+      },
+      {
+        "name": "rho",
+        "value": "1000[kg/m^3]",
+        "description": "",
+        "source_case": "岩石裂隙流"
+      },
+      {
+        "name": "mu",
+        "value": "0.001[Pa*s]",
+        "description": "",
+        "source_case": "岩石裂隙流"
+      },
+      {
+        "name": "beta",
+        "value": "170[deg]",
+        "description": "Contact angle, pulley/belt",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "d",
+        "value": "5[cm]",
+        "description": "Pulley thickness",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "P",
+        "value": "185[kW]",
+        "description": "Power at pulley shaft",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "n",
+        "value": "1000",
+        "description": "Revolutions per minute",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "omega",
+        "value": "2*pi[rad]*n/1[min]",
+        "description": "Angular velocity",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "M",
+        "value": "P/omega",
+        "description": "Torque at pulley shaft",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "R",
+        "value": "125[mm]",
+        "description": "Outer radius",
+        "source_case": "带轮应力"
+      },
+      {
+        "name": "E",
+        "value": "210[GPa]",
+        "description": "杨氏模量",
+        "source_case": "已验证：二维热应力矩形模板"
+      },
+      {
+        "name": "alpha",
+        "value": "12e-6[1/K]",
+        "description": "热膨胀系数",
+        "source_case": "已验证：二维热应力矩形模板"
+      },
+      {
+        "name": "T_hot",
+        "value": "373.15[K]",
+        "description": "热端温度",
+        "source_case": "已验证：二维热应力矩形模板"
+      },
+      {
+        "name": "T_cold",
+        "value": "293.15[K]",
+        "description": "冷端温度",
+        "source_case": "已验证：二维热应力矩形模板"
+      },
+      {
+        "name": "N",
+        "value": "20",
+        "description": "Spatial frequency resolution",
+        "source_case": "如何生成随机非均匀材料数据6.2"
+      },
+      {
+        "name": "b",
+        "value": "1.8",
+        "description": "Spectral exponent",
+        "source_case": "如何生成随机非均匀材料数据6.2"
+      },
+      {
+        "name": "D",
+        "value": "2+(3-b)/2",
+        "description": "Fractal dimension",
+        "source_case": "如何生成随机非均匀材料数据6.2"
+      },
+      {
+        "name": "dh",
+        "value": "2[cm]",
+        "description": "",
+        "source_case": "受载弹簧 - 使用全局方程满足约束条件"
+      }
+    ],
+    "article_specific_modifications": [
+      "优先使用文章参数作为基准约束，而不是套用通用热学或结构默认值。",
+      "Correct geometry to a 300 mm square domain with a 15 mm borehole and optional natural-fracture weak planes.",
+      "Correct loads by sweeping principal stress ratio from 1.5 to 2.0 and stress directions such as 90, 135, and 180 degrees.",
+      "Correct material definition by adding Weibull-distributed elastic modulus and strength rather than a single homogeneous material.",
+      "Correct mesh by refining near the borehole, expected crack tips, and natural fractures.",
+      "Correct validation outputs to compare damage length over time, pressure field, crack morphology, and initiation pressure against article/field observations.",
+      "Add a measurement-correction loop: compare simulated fracture/stress response with measured data and update fracture orientation, density, and weak-plane parameters."
+    ],
+    "validation_outputs": [
+      "damage length vs time",
+      "pressure field",
+      "fracture path",
+      "initiation pressure",
+      "stress distribution",
+      "fracture deflection and branching under natural fractures"
+    ],
+    "training_path": [
+      "Generate a LiveLink MATLAB model builder from the article card and retrieved similar cases.",
+      "Run parameter sweeps over stress ratio, stress direction, injection pressure, and Weibull homogeneity index.",
+      "Export CSV columns for geometry/material/stress inputs and fracture/damage/pressure outputs.",
+      "Train the local surrogate only after COMSOL sweep CSV data exists."
+    ],
+    "limitations": [
+      "Retrieved cases mainly support modeling logic; numerical training still needs CSV sweep data.",
+      "No external master case match was found; rely on local case memory and review settings manually.",
+      "No official documentation match was found; API usage should be checked before execution.",
+      "Article text does not fully define a damage constitutive law; choose and validate the damage/fracture implementation in COMSOL.",
+      "Natural-fracture density, aperture, angle, and strength need explicit calibration data before final simulation."
+    ]
+  }
+}

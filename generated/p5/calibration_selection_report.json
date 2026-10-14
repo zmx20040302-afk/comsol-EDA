@@ -1,0 +1,96 @@
+{
+  "schema": "comsol-p5-calibration-selection",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-11T02:35:51.467978+00:00",
+  "training_rows": 220,
+  "diagnostic_rows": 60,
+  "diagnostic_policy": "The opened P4 final set is retired and is used only to select the P5 calibration method.",
+  "candidate_methods": {
+    "global_one_sided": {
+      "rows": 60,
+      "released_safe": 2,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_release_coverage": 0.03333333333333333,
+      "upper_coverage": {
+        "Tmax_K": 1.0,
+        "normalized_voltage_at_160A_mV": 1.0,
+        "Jmax_A_m2": 0.9833333333333333
+      },
+      "passes_diagnostic_safety": true
+    },
+    "normalized_one_sided": {
+      "rows": 60,
+      "released_safe": 17,
+      "false_safe": 0,
+      "false_safe_rate": 0.0,
+      "safe_release_coverage": 0.2833333333333333,
+      "upper_coverage": {
+        "Tmax_K": 1.0,
+        "normalized_voltage_at_160A_mV": 1.0,
+        "Jmax_A_m2": 0.9666666666666667
+      },
+      "passes_diagnostic_safety": true
+    }
+  },
+  "selected_method": "normalized_one_sided",
+  "calibration": {
+    "schema": "comsol-p5-one-sided-conformal-calibration",
+    "schemaVersion": "1.0.0",
+    "coverage": 0.95,
+    "folds": 5,
+    "seed": 20270110,
+    "targets": {
+      "Tmax_K": {
+        "estimator_kind": "extra_trees_leaf1",
+        "training_rows": 220,
+        "coverage": 0.95,
+        "global_one_sided_q": 42.96706197277666,
+        "normalized_one_sided_q": 0.9734941177397329,
+        "scale_floor": 2.2575198537049452,
+        "oof_upper_coverage_global": 0.9590909090909091,
+        "oof_upper_coverage_normalized": 0.9590909090909091
+      },
+      "normalized_voltage_at_160A_mV": {
+        "estimator_kind": "extra_trees_leaf1",
+        "training_rows": 220,
+        "coverage": 0.95,
+        "global_one_sided_q": 2.635507481830132,
+        "normalized_one_sided_q": 0.6459962064089884,
+        "scale_floor": 0.19935043761383037,
+        "oof_upper_coverage_global": 0.9590909090909091,
+        "oof_upper_coverage_normalized": 0.9590909090909091
+      },
+      "Jmax_A_m2": {
+        "estimator_kind": "extra_trees_leaf1",
+        "training_rows": 220,
+        "coverage": 0.95,
+        "global_one_sided_q": 1314883.3472713903,
+        "normalized_one_sided_q": 1.2392940181411998,
+        "scale_floor": 101755.61570002699,
+        "oof_upper_coverage_global": 0.9590909090909091,
+        "oof_upper_coverage_normalized": 0.9590909090909091
+      }
+    },
+    "candidate_methods": [
+      "global_one_sided",
+      "normalized_one_sided"
+    ],
+    "policy": "Only upper error bounds are calibrated because all three release constraints are upper limits.",
+    "selected_method": "normalized_one_sided"
+  },
+  "predeclared_final_release_thresholds": {
+    "ood_auroc_min": 0.95,
+    "ood_detection_rate_min": 0.95,
+    "domain_false_alarm_rate_max": 0.05,
+    "false_safe_rate_max": 0.05,
+    "safe_release_coverage_min": 0.1,
+    "constraint_upper_coverage_min": 0.9,
+    "tmax_rmse_max_K": 15.0,
+    "power_relative_rmse_max": 0.15,
+    "mass_relative_rmse_max": 0.1
+  },
+  "artifacts": {
+    "model": "generated\\p5\\p5_one_sided_surrogate.joblib"
+  }
+}

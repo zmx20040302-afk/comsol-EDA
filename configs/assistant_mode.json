@@ -1,0 +1,26 @@
+{
+  "mode": "api",
+  "active_provider": "codex_local",
+  "auto_fallback": false,
+  "timeout_seconds": 120,
+  "providers": {
+    "codex_local": {
+      "label": "本机 Codex（免密钥）",
+      "base_url": "local://codex",
+      "model": "default",
+      "reasoning_effort": "medium"
+    },
+    "openai": {
+      "label": "Codex / OpenAI",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-6-sol",
+      "reasoning_effort": "medium"
+    },
+    "deepseek": {
+      "label": "DeepSeek",
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "reasoning_effort": "medium"
+    }
+  }
+}

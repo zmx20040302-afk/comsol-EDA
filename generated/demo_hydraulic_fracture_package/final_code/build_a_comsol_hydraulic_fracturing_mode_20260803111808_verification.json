@@ -1,0 +1,52 @@
+{
+  "kind": "generated_comsol_code_verification",
+  "status": "review_required",
+  "ready_to_open": true,
+  "ready_to_solve": false,
+  "structural_checks": {
+    "matlab_has_model_creation": true,
+    "matlab_has_geometry": true,
+    "matlab_has_material": true,
+    "matlab_has_physics": true,
+    "matlab_has_mesh": true,
+    "matlab_has_study": true,
+    "java_has_model_creation": true,
+    "java_has_geometry": true,
+    "java_has_physics": true,
+    "matlab_has_expected_study": true,
+    "java_has_expected_study": true
+  },
+  "unresolved_requirements": [
+    "确认生成几何中的材料域和边界选择集。",
+    "在 COMSOL 中核对物理接口名称是否与已安装模块一致。",
+    "把已批准边界条件绑定到经过核对的命名选择集。",
+    "确认裂缝表示方法、断裂参数和裂纹起始区域。"
+  ],
+  "approved_domains": [
+    "geometry",
+    "heat_transfer",
+    "structural",
+    "fluid"
+  ],
+  "boundary_families": [
+    "外边界原位地应力、围压或位移约束",
+    "钻孔内壁注入压力或流量",
+    "煤层/岩体渗透率、孔隙率和初始孔隙压力",
+    "裂缝面压力、泄漏或损伤/相场边界",
+    "固定约束",
+    "位移约束",
+    "边界载荷/压力",
+    "接触边界",
+    "初始应力或体载荷",
+    "入口速度或体积流量",
+    "出口压力",
+    "壁面无滑移",
+    "对称/周期边界",
+    "初始压力或速度"
+  ],
+  "instructions": [
+    "先在 COMSOL with MATLAB 或 COMSOL Java 环境中运行到几何构建结束。",
+    "核对命名选择集、材料域、边界条件和单位。",
+    "清空 unresolved_requirements 后再启用基准求解。"
+  ]
+}

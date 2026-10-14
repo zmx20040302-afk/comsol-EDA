@@ -1,0 +1,12 @@
+{
+  "schema": "dac2027-p0-acquisition-status",
+  "campaign_id": "dac2027-p0-blind-20261013",
+  "state": "collecting_external_authors",
+  "slots_started": 24,
+  "author_submissions": 0,
+  "adjudicator_submissions": 0,
+  "measured_blind_tasks": 0,
+  "intake_url": "http://127.0.0.1:8891/",
+  "publication_evidence": false,
+  "updated_at": "2026-10-14T09:51:47.765247+08:00"
+}

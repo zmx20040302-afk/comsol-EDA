@@ -1,0 +1,10 @@
+{
+  "id": "flow_heat_channel_reference",
+  "execution_status": "reference_only_requires_livelink_review",
+  "geometry": {"type": "straight_channel", "dimension": "2D reference", "length_m": 0.2, "wetted_perimeter_m": 0.02},
+  "physics": ["Laminar Flow", "Heat Transfer in Fluids", "Nonisothermal Flow"],
+  "parameters_si": {"mass_flow_rate_kg_s": 0.001, "heat_capacity_j_kg_k": 4182.0, "inlet_temperature_k": 293.15, "wall_temperature_k": 333.15, "heat_transfer_coefficient_w_m2_k": 120.0},
+  "boundary_conditions": {"inlet": "mass flow rate and temperature", "outlet": "pressure outlet", "wall": "no slip and prescribed temperature"},
+  "reference_checks": {"outlet_temperature_equation": "Tout=Tw-(Tw-Tin)*exp(-h*P*L/(mdot*Cp))", "energy_balance": "Qdot=mdot*Cp*(Tout-Tin)"},
+  "acceptance": ["COMSOL outlet average temperature lies between inlet and wall temperatures", "Integrated wall heat flow matches fluid enthalpy rise within the declared discretization tolerance", "The report records whether h is an input correlation or inferred from the resolved flow field"]
+}

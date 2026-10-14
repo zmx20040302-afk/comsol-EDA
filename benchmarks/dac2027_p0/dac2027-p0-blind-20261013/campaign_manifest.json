@@ -1,0 +1,181 @@
+{
+  "schema": "dac2027-p0-blind-campaign",
+  "schemaVersion": "1.0.0",
+  "campaign_id": "dac2027-p0-blind-20261013",
+  "started_at": "2026-10-13T09:40:55.009051+08:00",
+  "state": "collecting_external_authors",
+  "task_count": 24,
+  "family_count": 8,
+  "slots": [
+    {
+      "task_id": "blind-f01-complete",
+      "family_slot": "f01",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f01-missing",
+      "family_slot": "f01",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f01-conflict",
+      "family_slot": "f01",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f02-complete",
+      "family_slot": "f02",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f02-missing",
+      "family_slot": "f02",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f02-conflict",
+      "family_slot": "f02",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f03-complete",
+      "family_slot": "f03",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f03-missing",
+      "family_slot": "f03",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f03-conflict",
+      "family_slot": "f03",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f04-complete",
+      "family_slot": "f04",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f04-missing",
+      "family_slot": "f04",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f04-conflict",
+      "family_slot": "f04",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f05-complete",
+      "family_slot": "f05",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f05-missing",
+      "family_slot": "f05",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f05-conflict",
+      "family_slot": "f05",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f06-complete",
+      "family_slot": "f06",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f06-missing",
+      "family_slot": "f06",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f06-conflict",
+      "family_slot": "f06",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f07-complete",
+      "family_slot": "f07",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f07-missing",
+      "family_slot": "f07",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f07-conflict",
+      "family_slot": "f07",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f08-complete",
+      "family_slot": "f08",
+      "status": "complete",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f08-missing",
+      "family_slot": "f08",
+      "status": "missing",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    },
+    {
+      "task_id": "blind-f08-conflict",
+      "family_slot": "f08",
+      "status": "conflict",
+      "author_state": "awaiting_external_author",
+      "adjudication_state": "locked_until_author_submission"
+    }
+  ],
+  "method_results_unsealed": false,
+  "evidence_policy": "Only externally authored and separately adjudicated measured rows can enter blind_tasks.measured.jsonl."
+}

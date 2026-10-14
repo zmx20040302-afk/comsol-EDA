@@ -1,0 +1,49 @@
+{
+  "kind": "comsol_surrogate_training_plan",
+  "title": "微混合器入口速度扫描",
+  "created_at": "2026-08-25T03:17:59.2619408Z",
+  "case_path": "D:\\桌面\\codex\\案例下载\\COMSOL\\微混合器\\micromixer.mph",
+  "physics": [
+    "Laminar Flow (spf)",
+    "Transport of Diluted Species (tds)"
+  ],
+  "workflow": [
+    "Stationary flow solution",
+    "Stationary species transport on solved flow field"
+  ],
+  "fixed_conditions": {
+    "geometry": "fixed three-dimensional micromixer geometry",
+    "inlet_concentration": "c0=27 mol/m^3",
+    "diffusion_coefficient": "D=4.5e-9 m^2/s",
+    "mesh": "saved case mesh, h_max=0.1 mm",
+    "output": "S_outlet, relative outlet concentration variance"
+  },
+  "input": {
+    "name": "U_mean",
+    "column": "mean_velocity_mm_s",
+    "unit": "mm/s",
+    "training_values": [
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "holdout_values": [
+      7,
+      13
+    ]
+  },
+  "output": {
+    "name": "S_outlet",
+    "column": "relative_concentration_variance_outlet",
+    "unit": "1",
+    "interpretation": "lower value indicates better outlet mixing"
+  },
+  "validation": {
+    "method": "independent COMSOL holdout points",
+    "max_relative_error_percent": 5,
+    "required": true
+  },
+  "applicability": "Only for the fixed micromixer configuration and velocity range 6-14 mm/s. Geometry, diffusivity, concentration, mesh, or boundary changes require new COMSOL sweeps."
+}
