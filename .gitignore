@@ -53,6 +53,7 @@ generated/training_candidates/
 generated/staged_workflows/
 generated/mph_exports/
 generated/p1_execution_jobs/
+generated/dac2027/p0/acquisition_status.json
 generated/**/*.m
 generated/**/*.java
 generated/**/*.inspect.ndjson
