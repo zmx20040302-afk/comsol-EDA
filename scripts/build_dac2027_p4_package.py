@@ -15,6 +15,8 @@ MANIFEST_PATH = OUTPUT_DIR / "manifest.json"
 
 INCLUDED_FILES = [
     "configs/dac2027_p4_submission.json",
+    "configs/dac2027_p4_human_approval.schema.json",
+    "configs/dac2027_p4_human_approval.template.json",
     "configs/dac2027_p3_protocol.json",
     "DAC2027_RELATED_WORK_MATRIX.md",
     "DAC2027_SUBMISSION_CHECKLIST.md",
@@ -35,6 +37,7 @@ INCLUDED_FILES = [
     "scripts/run_dac2027_p3.py",
     "scripts/evaluate_dac2027_p3.py",
     "scripts/prepare_dac2027_p4.py",
+    "scripts/finalize_dac2027_p4.py",
     "scripts/build_dac2027_p4_package.py",
     "tests/test_dac2027_p3.py",
     "tests/test_dac2027_p4.py",

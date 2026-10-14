@@ -1,7 +1,7 @@
 {
   "schema": "dac2027-p4-anonymous-reproducibility-manifest",
   "schemaVersion": "1.0.0",
-  "generated_at": "2026-10-14T14:45:57.446892+08:00",
+  "generated_at": "2026-10-14T15:37:46.389178+08:00",
   "anonymous": true,
   "evidence_boundary": "P1 and P2 are local development evidence. P3 remains pending until 24 external tasks, eight disjoint families, and 192 measured observations pass the frozen protocol.",
   "excluded": [
@@ -17,6 +17,16 @@
       "size_bytes": 1959
     },
     {
+      "path": "configs/dac2027_p4_human_approval.schema.json",
+      "sha256": "7df73bb2235cfe71526d59f7fc6d323e776aaef4265eb2c6472dfe901205b006",
+      "size_bytes": 1439
+    },
+    {
+      "path": "configs/dac2027_p4_human_approval.template.json",
+      "sha256": "746369f981d3d2fd93fe77ea466df1638ce3d59a25db1dc00604bbce6b8caef8",
+      "size_bytes": 553
+    },
+    {
       "path": "configs/dac2027_p3_protocol.json",
       "sha256": "a71a9988376b3df80717c01d967dc8f590f6b40b6bbc67303a2ffaec5c4a7951",
       "size_bytes": 3890
@@ -28,8 +38,8 @@
     },
     {
       "path": "DAC2027_SUBMISSION_CHECKLIST.md",
-      "sha256": "899986862954dac46d6b506b25260c87154377b26699dced0f8be3a340ba3108",
-      "size_bytes": 2445
+      "sha256": "122e665760e1edffa91665ee7a8391c0255f97c064d9109ef7c2c67d5fd1241d",
+      "size_bytes": 2678
     },
     {
       "path": "DAC2027_P1_STATUS.md",
@@ -48,23 +58,23 @@
     },
     {
       "path": "DAC2027_P4_STATUS.md",
-      "sha256": "af9c2638db1939be3b0d6e54c88ac9ca2cc37d9ac3dd2f5255dfd56f9867fc62",
-      "size_bytes": 2189
+      "sha256": "d69766a736dfe733b9db71b8dd176d7c983bc01ab5d7a0ba903ecda28317b6b9",
+      "size_bytes": 2700
     },
     {
       "path": "paper_draft/build_dac2027_submission.py",
-      "sha256": "6a4612164b53de090fac38b67806fe39f7dfc77d0ace7510ea4aae85174c400e",
-      "size_bytes": 41925
+      "sha256": "26d2b4082d50af6563d4c3babc6bdffdde590ee20b818b93db6a79fed75adbd0",
+      "size_bytes": 48039
     },
     {
       "path": "paper_draft/dac2027_contract_guided_comsol_submission.docx",
-      "sha256": "bcca679c838211298f72687e6d04003582aa35d1fe45e3f663aa822174d3a890",
-      "size_bytes": 123194
+      "sha256": "4cd00c7f847b8de72dde9d41266f9747230c0e1c266816da82f3a80966547f18",
+      "size_bytes": 123244
     },
     {
       "path": "paper_draft/dac2027_contract_guided_comsol_submission.pdf",
-      "sha256": "df2ab4ee35f6f43c5428586504eb9cedfaf23f16f9d940355e8cdd0f00beece3",
-      "size_bytes": 365941
+      "sha256": "b067123cccd800b357f9286da213bcf29b007ed4531280ced0c6046e0949c9c7",
+      "size_bytes": 365864
     },
     {
       "path": "generated/dac2027/p1/readiness_status.json",
@@ -113,13 +123,18 @@
     },
     {
       "path": "scripts/prepare_dac2027_p4.py",
-      "sha256": "1e543e99389076d554978b4494da5862b855108b450dd20bd7ed77660cc70f80",
-      "size_bytes": 10972
+      "sha256": "a0444b0d7fd13ad4499bff82598fd1bd19766bb196ff8def9c9e4fcab37fcf75",
+      "size_bytes": 12572
+    },
+    {
+      "path": "scripts/finalize_dac2027_p4.py",
+      "sha256": "0d2627a56736ec18b58218726ae76dd74b66f90eea4d419a53586858b8782247",
+      "size_bytes": 6621
     },
     {
       "path": "scripts/build_dac2027_p4_package.py",
-      "sha256": "1b1df9a3cae634bf10c5e67414ab567aa22941a65fce3602e13c6dab3ea4ef02",
-      "size_bytes": 3788
+      "sha256": "c04de7889b40c2fc572ce4c287d4aed9ddd89e6e38d3153c702a09050c65023a",
+      "size_bytes": 3934
     },
     {
       "path": "tests/test_dac2027_p3.py",
@@ -128,8 +143,8 @@
     },
     {
       "path": "tests/test_dac2027_p4.py",
-      "sha256": "80b815eec393d5a0f0b7c6a25249643ee76032269ea6697a93a5d78b0b61140d",
-      "size_bytes": 2057
+      "sha256": "5a289eca0c08d68cae037350171d224e61871b737f8753994700a50f0b34baae",
+      "size_bytes": 3712
     },
     {
       "path": "src/comsol_small_model/dac2027_p3_evaluation.py",
@@ -139,7 +154,7 @@
   ],
   "archive": {
     "path": "generated/dac2027/p4/reproducibility/dac2027_p4_anonymous_reproducibility.zip",
-    "sha256": "09e755706eb96d75cea138f4d22d94dc5f2d08e66c78e89da34e89a6d796a577",
-    "size_bytes": 527475
+    "sha256": "74bef0743ce3fa5b2e7c331fdc21961c332261a24c290e6a3c3d39f0051c96f2",
+    "size_bytes": 533906
   }
 }

@@ -563,6 +563,50 @@ def _prepare_dac2027_p3_payload() -> dict[str, object]:
     }
 
 
+def _finalize_dac2027_p4_payload() -> dict[str, object]:
+    """Check the finalization gate without signing on behalf of a human author."""
+    command = [sys.executable, str(ROOT / "scripts" / "finalize_dac2027_p4.py")]
+    try:
+        completed = subprocess.run(
+            command,
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=30,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return {"ok": False, "message": f"P4 最终化检查执行失败：{exc}", "status": _dac2027_p4_status_payload()}
+    finalization_path = DAC2027_P4_DIR / "finalization_status.json"
+    try:
+        finalization = json.loads(finalization_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        finalization = {"status": "error", "reason": str(exc), "finalization_ready": False}
+    if finalization.get("status") == "blocked_by_external_evidence":
+        message = (
+            "P4 最终化保持关闭：P3 仍为 "
+            f"{finalization.get('p3_task_count', 0)}/{finalization.get('p3_required_task_count', 24)} 条外部任务、"
+            f"{finalization.get('p3_observation_count', 0)}/{finalization.get('p3_required_observation_count', 192)} 条实测。"
+        )
+    elif finalization.get("status") == "awaiting_human_author_approval":
+        message = "P3 证据与当前 PDF 哈希已绑定；请由人类作者完成六项核对并签署批准记录。"
+    elif finalization.get("status") == "completed":
+        message = "P4 最终投稿门已经通过。"
+    else:
+        message = str(finalization.get("next_action") or finalization.get("reason") or "P4 最终化检查完成。")
+    return {
+        "ok": completed.returncode == 0,
+        "message": message,
+        "returncode": completed.returncode,
+        "stdout_tail": completed.stdout[-4000:],
+        "stderr_tail": completed.stderr[-4000:],
+        "finalization": finalization,
+        "status": _dac2027_p4_status_payload(),
+    }
+
+
 class AppHandler(BaseHTTPRequestHandler):
     server_version = "ComsolSmallModelWeb/0.1"
 
@@ -669,6 +713,8 @@ class AppHandler(BaseHTTPRequestHandler):
                 self._assistant_config(payload)
             elif parsed.path == "/api/dac2027/p3/prepare":
                 self._send_json(_prepare_dac2027_p3_payload())
+            elif parsed.path == "/api/dac2027/p4/finalize":
+                self._send_json(_finalize_dac2027_p4_payload())
             elif parsed.path == "/api/assistant/test":
                 self._assistant_test(payload)
             elif parsed.path == "/api/assistant/complete":
@@ -4743,12 +4789,14 @@ configs/thermal_constraints.json</textarea>
           <div class="progress-head"><span>相关工作与 AI 声明</span><strong id="dacP4WritingState">读取中</strong></div>
           <div class="progress-head"><span>匿名复现包</span><strong id="dacP4PackageState">读取中</strong></div>
           <div class="progress-head"><span>P3 外部主结果</span><strong id="dacP4ExternalState">读取中</strong></div>
+          <div class="progress-head"><span>作者人工批准</span><strong id="dacP4ApprovalState">读取中</strong></div>
           <div class="progress-head"><span>P4 本机基础设施门</span><strong id="dacP4InfrastructureState">读取中</strong></div>
           <div class="progress-head"><span>P4 最终投稿门</span><strong id="dacP4FinalState">读取中</strong></div>
           <div class="hint" id="dacP4EvidenceState">正在读取 P4 投稿准备状态。</div>
         </div>
         <div class="row">
           <button onclick="refreshDacP4Status(true)">刷新 P4 状态</button>
+          <button onclick="finalizeDacP4()">检查最终化条件</button>
           <button onclick="showDacP4Evidence()">查看投稿检查</button>
         </div>
         <div class="hint">本机稿件完成不会自动开放投稿；P3 独立结果和作者逐条人工核对仍是最终投稿门的必需条件。</div>
@@ -7630,6 +7678,7 @@ configs/thermal_constraints.json</textarea>
         document.getElementById("dacP4ExternalState").textContent = data.p3_external_main_result_gate_passed
           ? "通过"
           : `${Number(data.accepted_external_task_count || 0)}/${Number(data.required_external_task_count || 24)} 任务，${Number(data.measured_external_observation_count || 0)}/${Number(data.required_external_observation_count || 192)} 观测`;
+        document.getElementById("dacP4ApprovalState").textContent = data.human_author_approval_recorded ? "已签署并匹配哈希" : "未记录";
         document.getElementById("dacP4InfrastructureState").textContent = data.p4_infrastructure_gate_passed ? "通过" : "未通过";
         document.getElementById("dacP4FinalState").textContent = data.p4_final_submission_gate_passed ? "通过" : "等待 P3 与作者批准";
         document.getElementById("dacP4EvidenceState").textContent = data.next_action || "等待投稿证据。";
@@ -7649,6 +7698,24 @@ configs/thermal_constraints.json</textarea>
       const section = document.getElementById("tool-results");
       if (section) section.open = true;
       addMessage("assistant", "<h3>P4 投稿边界</h3><ol><li>稿件必须满足 Letter、双栏、6 页以内正文加 1 页参考文献，并通过匿名标题、元数据和个人路径扫描。</li><li>相关工作、AI 内容声明和匿名复现包均由机器状态单独验证。</li><li>P1 与 P2 只支持本机场景和开发集结论。</li><li>P3 达到 24 条外部任务、8 个隔离案例族和 192 条观测后，才可加入独立主结果。</li><li>最终 PDF 仍需作者逐条核对并记录人工批准。</li></ol>");
+    }
+
+    async function finalizeDacP4() {
+      const button = document.activeElement;
+      if (button instanceof HTMLButtonElement) button.disabled = true;
+      try {
+        const data = await request("/api/dac2027/p4/finalize", {});
+        raw.textContent = JSON.stringify(data, null, 2);
+        const section = document.getElementById("tool-results");
+        if (section) section.open = true;
+        const state = (data.finalization || {}).status || "unknown";
+        addMessage("assistant", `<h3>P4 最终化检查</h3><p>${escapeHtml(data.message || "检查完成。")}</p><p>状态：<strong>${escapeHtml(state)}</strong></p>`);
+        await refreshDacP4Status(false);
+      } catch (error) {
+        addMessage("assistant", `<p>P4 最终化检查失败：${escapeHtml(String(error))}</p>`);
+      } finally {
+        if (button instanceof HTMLButtonElement) button.disabled = false;
+      }
     }
 
     async function prepareDacP3() {

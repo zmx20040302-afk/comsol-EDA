@@ -1,0 +1,18 @@
+{
+  "schema": "dac2027-p4-human-author-approval",
+  "schemaVersion": "1.0.0",
+  "approved": false,
+  "approved_by": "",
+  "approved_at": "",
+  "manuscript_pdf_sha256": "",
+  "p3_report_sha256": "",
+  "checks": {
+    "claims_verified": false,
+    "citations_verified": false,
+    "double_blind_verified": false,
+    "conflicts_verified": false,
+    "ai_statement_verified": false,
+    "authorship_verified": false
+  },
+  "notes": "Complete only after the sealed P3 result has been inserted and every listed item has been checked by the human authors."
+}

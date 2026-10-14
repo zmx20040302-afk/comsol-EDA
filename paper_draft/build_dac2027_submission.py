@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import hashlib
+import json
 from pathlib import Path
 
 from docx import Document
@@ -14,6 +16,56 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "paper_draft" / "dac2027_contract_guided_comsol_submission.docx"
 WORKFLOW_FIGURE = ROOT / "paper_draft" / "assets" / "workflow.png"
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def load_json(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return value if isinstance(value, dict) else {}
+
+
+def load_verified_p3_result(root: Path = ROOT) -> dict | None:
+    """Return the sealed P3 report only when every publication gate is verifiable."""
+    readiness = load_json(root / "generated" / "dac2027" / "p3" / "readiness_status.json")
+    if not readiness.get("p3_main_result_gate_passed"):
+        return None
+    relative = str(readiness.get("report_path") or "").strip()
+    expected_hash = str(readiness.get("report_sha256") or "").strip().lower()
+    report_path = root / relative if relative else Path()
+    if not relative or not expected_hash or not report_path.is_file() or sha256(report_path) != expected_hash:
+        return None
+    report = load_json(report_path)
+    if not report.get("publication_main_result"):
+        return None
+    if (
+        int(report.get("task_count", 0) or 0) != 24
+        or int(report.get("family_count", 0) or 0) != 8
+        or int(report.get("measured_observation_count", 0) or 0) != 192
+        or int(report.get("expected_observation_count", 0) or 0) != 192
+    ):
+        return None
+    return report
+
+
+def method_label(method: str) -> str:
+    return {
+        "direct_llm": "Direct LLM",
+        "retrieval_llm": "Retrieval LLM",
+        "existing_selector": "Existing selector",
+        "contract_dependency_v11": "Contract dependency",
+    }.get(method, method.replace("_", " ").title())
 
 
 def set_columns(section, count: int = 2, space_twips: int = 300) -> None:
@@ -137,15 +189,24 @@ def add_title(doc: Document) -> None:
     set_font(r, 9.5)
 
 
-def add_abstract(doc: Document) -> None:
+def add_abstract(doc: Document, p3_result: dict | None = None) -> None:
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Inches(0.35)
     p.paragraph_format.right_indent = Inches(0.35)
     p.paragraph_format.space_after = Pt(2)
     lead = p.add_run("Abstract—")
     set_font(lead, 8.7, bold=True, italic=True)
+    external_sentence = "We release a frozen protocol for a 24 task, eight family external evaluation; its independent results are intentionally withheld until collection is complete."
+    if p3_result:
+        full = p3_result.get("methods", {}).get("contract_dependency_v11", {})
+        external_sentence = (
+            "A sealed 24 task, eight family external evaluation produced "
+            f"{int(full.get('gate_correct_count', 0))}/24 correct gate decisions and "
+            f"{int(full.get('physics_and_coupling_exact_count', 0))}/24 exact physics and coupling selections for the complete method."
+        )
     text = (
-        "Engineering intent does not directly specify the physics interfaces, couplings, boundaries, and validation evidence needed for an executable multiphysics model. We present a contract guided compiler that maps requested observables to COMSOL dependencies, blocks missing or contradictory requests, and permits execution only after reviewable static and physical gates. On 24 project authored development tasks, the complete method made 24/24 correct gate decisions and 22/24 exact physics and coupling selections; direct and retrieval language model baselines each made 16/24 correct gate decisions. Two frozen EDA scenarios then completed fresh post freeze COMSOL solves. We release a frozen protocol for a 24 task, eight family external evaluation; its independent results are intentionally withheld until collection is complete."
+        "Engineering intent does not directly specify the physics interfaces, couplings, boundaries, and validation evidence needed for an executable multiphysics model. We present a contract guided compiler that maps requested observables to COMSOL dependencies, blocks missing or contradictory requests, and permits execution only after reviewable static and physical gates. On 24 project authored development tasks, the complete method made 24/24 correct gate decisions and 22/24 exact physics and coupling selections; direct and retrieval language model baselines each made 16/24 correct gate decisions. Two frozen EDA scenarios then completed fresh post freeze COMSOL solves. "
+        + external_sentence
     )
     r = p.add_run(text)
     set_font(r, 8.7, italic=True)
@@ -196,6 +257,8 @@ def add_table(doc: Document, headers: list[str], rows: list[list[str]], widths: 
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
     set_table_borders(table)
+    header_pr = table.rows[0]._tr.get_or_add_trPr()
+    header_pr.append(OxmlElement("w:cantSplit"))
     for index, header in enumerate(headers):
         cell = table.rows[0].cells[index]
         cell.width = Inches(widths[index])
@@ -205,10 +268,13 @@ def add_table(doc: Document, headers: list[str], rows: list[list[str]], widths: 
         p = cell.paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_after = Pt(0)
+        p.paragraph_format.keep_with_next = True
         r = p.add_run(header)
         set_font(r, 7.4, bold=True)
     for row_index, values in enumerate(rows):
         cells = table.add_row().cells
+        row_pr = table.rows[-1]._tr.get_or_add_trPr()
+        row_pr.append(OxmlElement("w:cantSplit"))
         for index, value in enumerate(values):
             cell = cells[index]
             cell.width = Inches(widths[index])
@@ -220,6 +286,7 @@ def add_table(doc: Document, headers: list[str], rows: list[list[str]], widths: 
             p.alignment = WD_ALIGN_PARAGRAPH.LEFT
             p.paragraph_format.space_after = Pt(0)
             p.paragraph_format.line_spacing = 0.9
+            p.paragraph_format.keep_with_next = row_index < len(rows) - 1
             r = p.add_run(value)
             set_font(r, 7.2)
     p = doc.add_paragraph()
@@ -253,10 +320,11 @@ def add_reference(doc: Document, text: str) -> None:
 
 
 def build() -> None:
+    p3_result = load_verified_p3_result()
     doc = Document()
     configure_document(doc)
     add_title(doc)
-    add_abstract(doc)
+    add_abstract(doc, p3_result)
 
     body_section = doc.add_section(WD_SECTION.CONTINUOUS)
     body_section.page_width = Inches(8.5)
@@ -277,7 +345,10 @@ def build() -> None:
         "A local authority model in which language model output is advisory, while deterministic gates control construction, execution, repair, evidence, and surrogate release.",
         "A frozen evaluation structure that separates project authored development evidence from a sealed external, family disjoint experiment with repeated language model runs."
     ])
-    add_paragraph(doc, "The current measured comparison uses 24 project authored development tasks and two post freeze COMSOL EDA scenarios. It supports debugging and controlled comparison, not an independent generalization claim. The external evaluation protocol is frozen before data acquisition; its result table remains absent until the required tasks and repetitions are complete.")
+    if p3_result:
+        add_paragraph(doc, "The measured comparison uses 24 project authored development tasks, two post freeze COMSOL EDA scenarios, and a sealed prospective evaluation of 24 external tasks from eight disjoint families. The external table is generated only from the hash verified report after all 192 required observations are present.")
+    else:
+        add_paragraph(doc, "The current measured comparison uses 24 project authored development tasks and two post freeze COMSOL EDA scenarios. It supports debugging and controlled comparison, not an independent generalization claim. The external evaluation protocol is frozen before data acquisition; its result table remains absent until the required tasks and repetitions are complete.")
 
     add_heading(doc, "II. CONTRACT GUIDED COMPILATION")
     add_heading(doc, "A. Typed requirement contract", 2)
@@ -351,15 +422,38 @@ def build() -> None:
     add_heading(doc, "A. Prospective P3 protocol", 2)
     add_paragraph(doc, "The independent evaluation protocol was frozen before external acquisition. It requires 24 requests from eight new device families. For each family, a project external author supplies one complete, one missing, and one conflict request; a different person adjudicates physics interfaces, couplings, study, and block decision without method outputs. The family labels must not overlap any declared development, validation, or P2 family. The accepted task file and protocol are sealed by SHA 256 before any method run.")
     add_paragraph(doc, "Direct and retrieval language model methods each run three independent sessions per task. The two deterministic methods each run once, producing 192 expected observations. The frozen evaluator reports task consensus, per family exact physics and study accuracy, gate accuracy, false safe and false block counts, Wilson intervals, exact McNemar tests, paired bootstrap completion time intervals, repeat agreement, and a failure taxonomy. Partial runs, synthetic rows, project authored replacements, and post unseal method changes do not pass the main result gate.")
-    add_caption(doc, "TABLE IV. FROZEN INDEPENDENT EVALUATION CONTRACT")
-    add_table(doc, ["Item", "Requirement", "Current"], [
-        ["Tasks", "24 external", "0"],
-        ["Families", "8 disjoint", "0"],
-        ["Task types", "8 complete, 8 missing, 8 conflict", "Pending"],
-        ["LLM repeats", "3 + 3 per task", "0"],
-        ["Total observations", "192", "0"]
-    ], [0.83, 1.52, 0.87])
-    add_paragraph(doc, "At manuscript generation time the infrastructure gate passes, but accepted external tasks are 0/24, new families 0/8, and observations 0/192. No independent P3 result is reported. This explicit absence prevents a development table from being presented as generalization evidence. The final submission gate remains open until the sealed result exists.")
+    if p3_result:
+        add_caption(doc, "TABLE IV. SEALED PROSPECTIVE EXTERNAL RESULTS")
+        result_rows = []
+        for method in ("direct_llm", "retrieval_llm", "existing_selector", "contract_dependency_v11"):
+            values = p3_result.get("methods", {}).get(method, {})
+            total = int(values.get("task_count", 24) or 24)
+            result_rows.append([
+                method_label(method),
+                f"{int(values.get('physics_and_coupling_exact_count', 0))}/{total}; {int(values.get('study_exact_count', 0))}/{total}",
+                f"{int(values.get('gate_correct_count', 0))}/{total}",
+                f"{int(values.get('false_safe_count', 0))} / {int(values.get('false_block_count', 0))}",
+            ])
+        add_table(doc, ["Method", "Physics / study", "Gate", "False safe / block"], result_rows, [0.90, 0.82, 0.60, 0.90])
+        comparisons = p3_result.get("paired_comparisons_against_full_method", {})
+        p_values = []
+        for method in ("direct_llm", "retrieval_llm", "existing_selector"):
+            comparison = comparisons.get(method, {})
+            p_value = comparison.get("gate_mcnemar", {}).get("p_value")
+            if p_value is not None:
+                p_values.append(f"{method_label(method)} p={float(p_value):.6g}")
+        paired_text = "; ".join(p_values) if p_values else "paired p-values unavailable"
+        add_paragraph(doc, f"The sealed report contains 24 externally authored tasks from eight disjoint families and all 192 required observations. Table IV is generated directly from that hash verified report. Exact paired McNemar gate comparisons against the complete method are: {paired_text}. Per-family results, Wilson intervals, repeat stability, timing, and the failure taxonomy remain in the artifact.")
+    else:
+        add_caption(doc, "TABLE IV. FROZEN INDEPENDENT EVALUATION CONTRACT")
+        add_table(doc, ["Item", "Requirement", "Current"], [
+            ["Tasks", "24 external", "0"],
+            ["Families", "8 disjoint", "0"],
+            ["Task types", "8 complete, 8 missing, 8 conflict", "Pending"],
+            ["LLM repeats", "3 + 3 per task", "0"],
+            ["Total observations", "192", "0"]
+        ], [0.83, 1.52, 0.87])
+        add_paragraph(doc, "At manuscript generation time the infrastructure gate passes, but accepted external tasks are 0/24, new families 0/8, and observations 0/192. No independent P3 result is reported. This explicit absence prevents a development table from being presented as generalization evidence. The final submission gate remains open until the sealed result exists.")
     add_heading(doc, "B. Related EDA agents", 2)
     add_paragraph(doc, "ChatEDA orchestrates RTL to GDSII scripts from natural language [1]. LayoutCopilot maps analog layout intent to commands and suggestions [2]. EDAid uses multiple agents for long EDA tool chains [3], AutoEDA standardizes microservice interactions [4], and FlowFixer EDA accepts repairs only after tool reruns and quality checks [5]. These systems establish the relevance of tool grounded agents in EDA. Our scope differs in the compiled object: observable dependencies, multiphysics couplings, critical engineering evidence, and physical acceptance rather than digital flow scripts or layout commands.")
     add_heading(doc, "C. Simulation agents", 2)
@@ -372,7 +466,10 @@ def build() -> None:
     add_paragraph(doc, "The measured results show that exact interface selection and safe progression are distinct objectives. The language model baselines obtain high interface accuracy while blocking every complete request. The existing selector is less conservative but permits two blocked requests. The contract dependency method removes both observed gate error types on the development set, although the finite sample leaves a wide confidence interval and two interface label errors remain. The ablation localizes the gate improvement to the negative evidence and safety layers.")
     add_paragraph(doc, "The two EDA scenarios demonstrate the downstream meaning of the contract. Their frozen variables, constraints, outputs, selection rules, fresh solves, and physical reports support concrete nominal choices. They do not establish arbitrary COMSOL model generation, full manufacturing robustness, or physical agreement with fabricated devices. The six template executions establish traceability across representative mature builders and two scripting paths, not industrial coverage.")
     add_heading(doc, "B. Limitations and submission gate", 2)
-    add_paragraph(doc, "The main limitation is the absence of independently authored results. P2 tasks were written inside the project. P3 acquisition and method runs remain at zero, so the current manuscript is a format complete evidence bounded draft rather than a finished DAC result. Submission requires the frozen 24 task and 192 observation experiment, human verification of external identity and adjudication separation, and replacement of this paragraph with the generated independent table and failure analysis. If those records are not complete, the research manuscript should not be submitted as finished work.")
+    if p3_result:
+        add_paragraph(doc, "The prospective experiment is limited to 24 independently authored tasks from eight case families and one frozen protocol. It supports a bounded comparison under those task definitions, not unrestricted COMSOL generation or industrial generalization. Human authors must still verify external identity, adjudication separation, every generated number and citation, conflicts, authorship, and the AI content statement before submission.")
+    else:
+        add_paragraph(doc, "The main limitation is the absence of independently authored results. P2 tasks were written inside the project. P3 acquisition and method runs remain at zero, so the current manuscript is a format complete evidence bounded draft rather than a finished DAC result. Submission requires the frozen 24 task and 192 observation experiment, human verification of external identity and adjudication separation, and replacement of this paragraph with the generated independent table and failure analysis. If those records are not complete, the research manuscript should not be submitted as finished work.")
     add_paragraph(doc, "The compiler uses a bounded lexicon and rule graph. New physics interfaces, geometry semantics, material models, contact, nonlinearities, bidirectional temperature dependence, and manufacturing constraints require explicit extensions and tests. COMSOL licensing and installation also limit reproduction. Another workstation must repeat a live template solve; copied MPH files cannot prove environment compatibility. No real temperature measurement currently supports claims about a fabricated physical system.")
     add_heading(doc, "C. Threats to validity", 2)
     add_paragraph(doc, "Internal validity is limited by project authored P2 tasks and adjudication choices. The frozen inputs and raw responses reduce selective reporting but do not remove author bias. Construct validity depends on exact interface and coupling labels, which can penalize alternative valid decompositions; the final protocol therefore preserves explanations and failure categories for manual review. External validity is limited by a bounded COMSOL catalog, eight planned external families, one workstation, and two detailed EDA scenarios. Statistical conclusions remain task level and should not be extrapolated to industrial model complexity or unrestricted language.")
@@ -386,7 +483,10 @@ def build() -> None:
     add_heading(doc, "F. Content Generated by AI", 2)
     add_paragraph(doc, "OpenAI Codex was used to help draft and edit the Abstract, Introduction, Related Work, Limitations, and Conclusion; to generate supporting Python and document formatting code; and to organize the reproducibility checklist. The system did not originate measured COMSOL outputs or external evaluation records. Human authors remain responsible for verifying every claim, citation, calculation, disclosure, and final sentence, and must revise this statement to match the actual submission process. No AI system is an author.")
     add_heading(doc, "G. Conclusion", 2)
-    add_paragraph(doc, "A traceable requirement to multiphysics workflow must decide both what to model and when not to proceed. The proposed compiler links observables to COMSOL dependencies, exposes missing and conflicting evidence, and preserves deterministic authority over construction, execution, repair, and validation. Controlled development results and two post freeze EDA scenarios support the mechanism and its downstream use. The frozen external protocol defines the remaining test. Independent performance claims will be added only after the sealed acquisition and all required runs are complete.")
+    if p3_result:
+        add_paragraph(doc, "A traceable requirement to multiphysics workflow must decide both what to model and when not to proceed. The proposed compiler links observables to COMSOL dependencies, exposes missing and conflicting evidence, and preserves deterministic authority over construction, execution, repair, and validation. Controlled development results, two post freeze EDA scenarios, and the sealed prospective experiment provide bounded evidence for the mechanism and its downstream use. Broader device families, workstations, and fabricated measurements remain future validation targets.")
+    else:
+        add_paragraph(doc, "A traceable requirement to multiphysics workflow must decide both what to model and when not to proceed. The proposed compiler links observables to COMSOL dependencies, exposes missing and conflicting evidence, and preserves deterministic authority over construction, execution, repair, and validation. Controlled development results and two post freeze EDA scenarios support the mechanism and its downstream use. The frozen external protocol defines the remaining test. Independent performance claims will be added only after the sealed acquisition and all required runs are complete.")
     add_heading(doc, "H. Reproducibility", 2)
     add_paragraph(doc, "The anonymous artifact package contains protocol JSON files, task and response schemas, evaluation code, tests, compact P1 and P2 reports, P3 readiness state, manuscript source, and SHA 256 hashes. It excludes credentials, personal paths, external identities, large MPH files, and unreviewed logs. The package records which claims are development, local execution, or pending external evidence.")
 

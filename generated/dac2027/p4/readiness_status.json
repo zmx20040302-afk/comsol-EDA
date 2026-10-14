@@ -1,13 +1,44 @@
 {
   "schema": "dac2027-p4-readiness",
   "schemaVersion": "1.0.0",
-  "generated_at": "2026-10-14T14:45:58.005041+08:00",
+  "generated_at": "2026-10-14T15:42:46.849457+08:00",
   "phase": "DAC2027-P4",
   "title": "双盲稿件、相关工作与匿名复现包",
   "status": "awaiting_external_results_and_human_approval",
   "p4_infrastructure_gate_passed": true,
   "p4_final_submission_gate_passed": false,
   "human_author_approval_recorded": false,
+  "human_author_approval": {
+    "passed": false,
+    "fields": {
+      "approved": false,
+      "approved_by": false,
+      "approved_at": false,
+      "manuscript_pdf_sha256": false,
+      "p3_report_sha256": false
+    },
+    "checks": {
+      "claims_verified": false,
+      "citations_verified": false,
+      "double_blind_verified": false,
+      "conflicts_verified": false,
+      "ai_statement_verified": false,
+      "authorship_verified": false
+    },
+    "errors": [
+      "approved",
+      "approved_by",
+      "approved_at",
+      "manuscript_pdf_sha256",
+      "p3_report_sha256",
+      "claims_verified",
+      "citations_verified",
+      "double_blind_verified",
+      "conflicts_verified",
+      "ai_statement_verified",
+      "authorship_verified"
+    ]
+  },
   "format_and_page_gate_passed": true,
   "double_blind_gate_passed": true,
   "related_work_matrix_completed": true,
@@ -23,7 +54,7 @@
   "paper": {
     "passed": true,
     "pdf_path": "paper_draft/dac2027_contract_guided_comsol_submission.pdf",
-    "pdf_sha256": "df2ab4ee35f6f43c5428586504eb9cedfaf23f16f9d940355e8cdd0f00beece3",
+    "pdf_sha256": "b067123cccd800b357f9286da213bcf29b007ed4531280ced0c6046e0949c9c7",
     "total_page_count": 6,
     "body_page_count": 5,
     "reference_page_count": 1,
@@ -83,11 +114,11 @@
   },
   "reproducibility": {
     "passed": true,
-    "checked_file_count": 25,
+    "checked_file_count": 28,
     "anonymous_scan_passed": true,
     "anonymous_scan_hits": [],
     "archive_path": "generated/dac2027/p4/reproducibility/dac2027_p4_anonymous_reproducibility.zip",
-    "archive_sha256": "09e755706eb96d75cea138f4d22d94dc5f2d08e66c78e89da34e89a6d796a577",
+    "archive_sha256": "74bef0743ce3fa5b2e7c331fdc21961c332261a24c290e6a3c3d39f0051c96f2",
     "errors": []
   },
   "next_action": "P4 本机稿件与匿名复现包已经通过；完成 P3 的 24 条外部任务和 192 条实测，由作者逐条核对主结果、引用、双盲信息和 AI 声明后，才可记录人工投稿批准。",

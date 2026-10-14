@@ -19,6 +19,7 @@ def load_script(name: str, relative: str):
 
 
 prepare = load_script("prepare_dac2027_p4", "scripts/prepare_dac2027_p4.py")
+finalize = load_script("finalize_dac2027_p4", "scripts/finalize_dac2027_p4.py")
 
 
 class Dac2027P4Tests(unittest.TestCase):
@@ -45,6 +46,31 @@ class Dac2027P4Tests(unittest.TestCase):
         self.assertEqual(status["p3_external_main_result_gate_passed"], bool(p3.get("p3_main_result_gate_passed")))
         self.assertFalse(status["p4_final_submission_gate_passed"])
         self.assertFalse(status["human_author_approval_recorded"])
+
+    def test_approval_requires_hashes_and_every_human_check(self) -> None:
+        approval = finalize.approval_template("a" * 64, "b" * 64)
+        approval.update({"approved": True, "approved_by": "Author", "approved_at": "2026-10-14T12:00:00+08:00"})
+        incomplete = prepare.validate_human_approval(approval, "a" * 64, "b" * 64)
+        self.assertFalse(incomplete["passed"])
+        self.assertIn("claims_verified", incomplete["errors"])
+        approval["checks"] = {name: True for name in prepare.REQUIRED_APPROVAL_CHECKS}
+        complete = prepare.validate_human_approval(approval, "a" * 64, "b" * 64)
+        self.assertTrue(complete["passed"], complete["errors"])
+        self.assertFalse(prepare.validate_human_approval(approval, "c" * 64, "b" * 64)["passed"])
+
+    def test_finalization_is_explicitly_blocked_without_external_evidence(self) -> None:
+        status = finalize.build_finalization_status()
+        self.assertEqual(status["status"], "blocked_by_external_evidence")
+        self.assertFalse(status["finalization_ready"])
+        self.assertEqual(status["p3_task_count"], 0)
+        self.assertEqual(status["p3_observation_count"], 0)
+        self.assertFalse(status["approval_template_generated"])
+
+    def test_finalizer_rejects_unverified_p3_result(self) -> None:
+        readiness = json.loads((ROOT / "generated" / "dac2027" / "p3" / "readiness_status.json").read_text(encoding="utf-8"))
+        report_path, error = finalize.verified_p3_report(ROOT, readiness)
+        self.assertIsNone(report_path)
+        self.assertIn("closed", error)
 
 
 if __name__ == "__main__":

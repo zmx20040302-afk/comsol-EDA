@@ -17,6 +17,15 @@ CONFIG_PATH = ROOT / "configs" / "dac2027_p4_submission.json"
 PDF_PATH = ROOT / "paper_draft" / "dac2027_contract_guided_comsol_submission.pdf"
 PACKAGE_MANIFEST_PATH = ROOT / "generated" / "dac2027" / "p4" / "reproducibility" / "manifest.json"
 STATUS_PATH = ROOT / "generated" / "dac2027" / "p4" / "readiness_status.json"
+APPROVAL_PATH = ROOT / "generated" / "dac2027" / "p4" / "human_author_approval.json"
+REQUIRED_APPROVAL_CHECKS = (
+    "claims_verified",
+    "citations_verified",
+    "double_blind_verified",
+    "conflicts_verified",
+    "ai_statement_verified",
+    "authorship_verified",
+)
 
 
 def sha256(path: Path) -> str:
@@ -35,6 +44,20 @@ def load_json(path: Path) -> dict:
     except (OSError, json.JSONDecodeError):
         return {}
     return value if isinstance(value, dict) else {}
+
+
+def validate_human_approval(approval: dict, pdf_sha256: str, p3_report_sha256: str) -> dict[str, object]:
+    checks = approval.get("checks", {}) if isinstance(approval.get("checks"), dict) else {}
+    check_state = {name: checks.get(name) is True for name in REQUIRED_APPROVAL_CHECKS}
+    fields = {
+        "approved": approval.get("approved") is True,
+        "approved_by": bool(str(approval.get("approved_by") or "").strip()),
+        "approved_at": bool(str(approval.get("approved_at") or "").strip()),
+        "manuscript_pdf_sha256": bool(pdf_sha256) and approval.get("manuscript_pdf_sha256") == pdf_sha256,
+        "p3_report_sha256": bool(p3_report_sha256) and approval.get("p3_report_sha256") == p3_report_sha256,
+    }
+    errors = [name for name, passed in {**fields, **check_state}.items() if not passed]
+    return {"passed": not errors, "fields": fields, "checks": check_state, "errors": errors}
 
 
 def verify_reproducibility_package(manifest_path: Path = PACKAGE_MANIFEST_PATH) -> dict[str, object]:
@@ -170,14 +193,13 @@ def build_status() -> dict[str, object]:
     p2_gate = bool(p2.get("p2_development_gate_passed"))
     p3_gate = bool(p3.get("p3_main_result_gate_passed"))
     infrastructure = bool(pdf.get("passed") and package.get("passed") and related_work and checklist and ai_disclosure and p1_gate and p2_gate)
-    approval = load_json(ROOT / "generated" / "dac2027" / "p4" / "human_author_approval.json")
-    human_approval = bool(
-        approval.get("approved")
-        and approval.get("approved_by")
-        and approval.get("approved_at")
-        and approval.get("manuscript_pdf_sha256") == pdf.get("pdf_sha256")
-        and approval.get("p3_report_sha256") == p3.get("report_sha256")
+    approval = load_json(APPROVAL_PATH)
+    approval_validation = validate_human_approval(
+        approval,
+        str(pdf.get("pdf_sha256") or ""),
+        str(p3.get("report_sha256") or ""),
     )
+    human_approval = bool(approval_validation["passed"])
     final_gate = bool(infrastructure and p3_gate and human_approval)
     status = {
         "schema": "dac2027-p4-readiness",
@@ -185,10 +207,16 @@ def build_status() -> dict[str, object]:
         "generated_at": datetime.now().astimezone().isoformat(),
         "phase": "DAC2027-P4",
         "title": "双盲稿件、相关工作与匿名复现包",
-        "status": "awaiting_external_results_and_human_approval" if infrastructure else "infrastructure_incomplete",
+        "status": (
+            "ready_for_submission" if final_gate else
+            "awaiting_human_author_approval" if infrastructure and p3_gate else
+            "awaiting_external_results_and_human_approval" if infrastructure else
+            "infrastructure_incomplete"
+        ),
         "p4_infrastructure_gate_passed": infrastructure,
         "p4_final_submission_gate_passed": final_gate,
         "human_author_approval_recorded": human_approval,
+        "human_author_approval": approval_validation,
         "format_and_page_gate_passed": bool(pdf.get("passed")),
         "double_blind_gate_passed": bool(pdf.get("checks", {}).get("anonymous_title") and pdf.get("checks", {}).get("anonymous_metadata") and pdf.get("checks", {}).get("no_personal_path_or_email")),
         "related_work_matrix_completed": related_work,
@@ -204,9 +232,9 @@ def build_status() -> dict[str, object]:
         "paper": pdf,
         "reproducibility": package,
         "next_action": (
-            "P4 本机稿件与匿名复现包已经通过；完成 P3 的 24 条外部任务和 192 条实测，"
-            "由作者逐条核对主结果、引用、双盲信息和 AI 声明后，才可记录人工投稿批准。"
-            if infrastructure else
+            "P4 最终投稿门已通过；上传前仍应在投稿系统中打开并复核最终 PDF。" if final_gate else
+            "P3 主结果已通过；由作者逐条核对主结果、引用、双盲、冲突、作者记录和 AI 声明，并保存与当前 PDF/P3 哈希匹配的批准记录。" if infrastructure and p3_gate else
+            "P4 本机稿件与匿名复现包已经通过；完成 P3 的 24 条外部任务和 192 条实测，由作者逐条核对主结果、引用、双盲信息和 AI 声明后，才可记录人工投稿批准。" if infrastructure else
             "修复稿件格式、双盲或复现包检查中的失败项。"
         ),
         "evidence_boundary": config.get("evidence_boundary", ""),

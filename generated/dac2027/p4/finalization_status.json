@@ -1,0 +1,17 @@
+{
+  "schema": "dac2027-p4-finalization-status",
+  "schemaVersion": "1.0.0",
+  "generated_at": "2026-10-14T15:42:08.057794+08:00",
+  "phase": "DAC2027-P4",
+  "p3_task_count": 0,
+  "p3_required_task_count": 24,
+  "p3_observation_count": 0,
+  "p3_required_observation_count": 192,
+  "p4_infrastructure_gate_passed": true,
+  "p4_final_submission_gate_passed": false,
+  "status": "blocked_by_external_evidence",
+  "finalization_ready": false,
+  "approval_template_generated": false,
+  "reason": "P3 main-result gate is closed",
+  "next_action": "完成并密封 P3 的 24 条外部任务、8 个隔离案例族和 192 条真实观测。当前流程不会生成或代填作者批准。"
+}

@@ -51,5 +51,7 @@
 - Select up to two topic areas and up to three keywords.
 - Upload the final anonymous PDF and open it from the submission system.
 - Obtain explicit approval from every human author before the manuscript deadline.
+- Generate `human_author_approval.template.json` only after the sealed P3 report passes all count and hash checks.
+- Require all six human checks and exact manuscript/P3 SHA-256 matches before accepting `human_author_approval.json`.
 
 Official source: https://dac.com/2027/program/research-manuscript-submissions

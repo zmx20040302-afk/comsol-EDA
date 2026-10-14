@@ -80,6 +80,8 @@ DAC P4 已生成 5 页正文加 1 页参考文献的 Letter 双栏匿名稿件�
 
 P4 本机基础设施门已经通过。最终投稿门仍保持关闭，因为 P3 外部评测为 0/24 条任务和 0/192 条观测，且作者尚未核对最终主结果、引用、冲突、作者记录和 AI 声明。稿件位于 `paper_draft/dac2027_contract_guided_comsol_submission.pdf`，状态见 `DAC2027_P4_STATUS.md`，匿名复现包位于 `generated/dac2027/p4/reproducibility/dac2027_p4_anonymous_reproducibility.zip`。
 
+P4 稿件生成器会验证 P3 报告的发布标志、24 条任务、8 个案例族、192 条观测及 SHA-256，全部通过后才自动写入外部结果表。网页中的“检查最终化条件”会运行 `scripts/finalize_dac2027_p4.py`；当前证据不足时明确阻塞，证据齐全后生成绑定最终 PDF 与 P3 报告哈希的作者批准模板。只有六项人工核对全部完成，最终投稿门才会通过。
+
 ## P3 固定电流母排设计优化
 
 P3 把母排案例改为 160 A 固定端电流比较，定义长度、宽度、厚度、孔半径、电流、换热系数和环境温度七个变量，并完成 80 个初始设计、5 个候选复核、60 个封存域内测试和 20 个封存域外测试的真实 COMSOL 求解。3 个复核方案形成真实 Pareto 集；结果位于 `generated/p3/pareto_verification/verified_pareto.csv`。
