@@ -3,12 +3,14 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import socket
 import subprocess
 import sys
 import time
 import webbrowser
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 from urllib.request import urlopen
 
 
@@ -181,10 +183,28 @@ def _browser_url(host: str, port: int) -> str:
     return f"http://{browser_host}:{port}"
 
 
+def _network_urls(port: int, token_file: Path) -> list[str]:
+    token = token_file.read_text(encoding="utf-8").strip()
+    if len(token) < 16:
+        raise ValueError(f"局域网访问令牌无效：{token_file}")
+    addresses: set[str] = set()
+    try:
+        for item in socket.getaddrinfo(socket.gethostname(), None, family=socket.AF_INET):
+            address = item[4][0]
+            if address and not address.startswith("127."):
+                addresses.add(address)
+    except OSError:
+        pass
+    encoded = quote(token, safe="")
+    return [f"http://{address}:{port}/?token={encoded}" for address in sorted(addresses)]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Start the COMSOL small model web service detached on Windows")
     parser.add_argument("--port", type=int, default=8880)
     parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--lan", action="store_true", help="Authenticated LAN mode with a persistent token.")
+    parser.add_argument("--token-file", default=None, help="Persistent LAN token file.")
     parser.add_argument("--wait-seconds", type=float, default=90.0)
     parser.add_argument("--open", action="store_true", help="Open the ready local service in the default browser.")
     parser.add_argument("--with-worker", action="store_true", help="Start the single-instance local execution worker.")
@@ -197,6 +217,8 @@ def main() -> None:
         help="Explicitly check and start COMSOL mphserver before launching.",
     )
     args = parser.parse_args()
+    if args.lan:
+        args.host = "0.0.0.0"
     root = ROOT
     web_app = root / "web_app.py"
     run_worker = bool(args.with_worker or args.worker_only)
@@ -227,7 +249,7 @@ def main() -> None:
     if args.worker_only:
         return
     existing_port = _healthy_port(args.port, span=1)
-    if existing_port is not None:
+    if existing_port is not None and args.host in {"127.0.0.1", "localhost", "::1"}:
         print(f"reused=true port={existing_port} ready=true")
         if args.open:
             webbrowser.open(_browser_url(args.host, existing_port))
@@ -260,8 +282,14 @@ def main() -> None:
             web_kwargs["startupinfo"] = web_startupinfo
         else:
             web_kwargs["start_new_session"] = True
+        web_command = [sys.executable, "-u", str(web_app), "--host", args.host, "--port", str(args.port)]
+        token_file = Path(args.token_file) if args.token_file else root / "generated" / "local_secrets" / "lan_access_token.txt"
+        if not token_file.is_absolute():
+            token_file = root / token_file
+        if args.host not in {"127.0.0.1", "localhost", "::1"}:
+            web_command.extend(["--token-file", str(token_file)])
         process = subprocess.Popen(
-            [sys.executable, "-u", str(web_app), "--host", args.host, "--port", str(args.port)],
+            web_command,
             **web_kwargs,
         )
     deadline = time.monotonic() + args.wait_seconds
@@ -283,6 +311,9 @@ def main() -> None:
         active_port = _healthy_port(candidate_port, span=1, timeout=5.0)
         if active_port is not None:
             print(f"started_pid={process.pid} port={active_port} ready=true")
+            if args.host not in {"127.0.0.1", "localhost", "::1"}:
+                for network_url in _network_urls(active_port, token_file):
+                    print(f"network_url={network_url}")
             if args.open:
                 webbrowser.open(_browser_url(args.host, active_port))
             return

@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import ipaddress
 import json
 import re
+import secrets
 import socket
 import subprocess
 import sys
@@ -17,6 +19,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
 ROOT = Path(__file__).resolve().parent
+ACCESS_TOKEN: str | None = None
 SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
@@ -610,8 +613,38 @@ def _finalize_dac2027_p4_payload() -> dict[str, object]:
 class AppHandler(BaseHTTPRequestHandler):
     server_version = "ComsolSmallModelWeb/0.1"
 
+    def log_message(self, format: str, *args: object) -> None:
+        """避免把带 ?token= 的完整访问地址写入默认 HTTP 日志。"""
+        return
+
+    def _client_is_loopback(self) -> bool:
+        try:
+            return ipaddress.ip_address(self.client_address[0]).is_loopback
+        except ValueError:
+            return False
+
+    def _token_ok(self, parsed) -> bool:
+        if self._client_is_loopback() or not ACCESS_TOKEN:
+            return True
+        authorization = self.headers.get("Authorization") or ""
+        supplied = authorization[7:].strip() if authorization.startswith("Bearer ") else ""
+        if not supplied:
+            supplied = (parse_qs(parsed.query).get("token") or [""])[0]
+        return bool(supplied) and secrets.compare_digest(supplied, ACCESS_TOKEN)
+
+    def _require_access(self, parsed) -> bool:
+        if self._token_ok(parsed):
+            return True
+        self._send_json(
+            {"ok": False, "message": "需要工作站访问令牌，请使用启动器打印的完整网址。"},
+            status=401,
+        )
+        return False
+
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
+        if not self._require_access(parsed):
+            return
         if parsed.path == "/":
             self._send_html(CONVERSATIONAL_INDEX)
         elif parsed.path == "/api/health":
@@ -704,6 +737,8 @@ class AppHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
+        if not self._require_access(parsed):
+            return
         self._active_endpoint = parsed.path
         self._active_request_payload = {}
         try:
@@ -3371,7 +3406,49 @@ def _registered_surrogate_registry_paths() -> list[Path]:
     return [path for path in candidates if path.is_file()]
 
 
-def run(host: str = "127.0.0.1", port: int = 8765, open_browser: bool = False) -> None:
+def _is_loopback_host(host: str) -> bool:
+    return host in {"127.0.0.1", "localhost", "::1"}
+
+
+def check_bind(host: str, token: str | None) -> str | None:
+    if _is_loopback_host(host):
+        return None
+    if not token:
+        return "非回环地址必须启用访问令牌，避免把文件和任务接口裸露给网络。"
+    if len(token) < 16:
+        return "访问令牌至少需要 16 个字符。"
+    return None
+
+
+def _read_or_create_access_token(path: Path) -> str:
+    path = path.resolve()
+    if path.is_file():
+        token = path.read_text(encoding="utf-8").strip()
+        if len(token) < 16:
+            raise ValueError(f"访问令牌文件内容过短：{path}")
+        return token
+    path.parent.mkdir(parents=True, exist_ok=True)
+    token = secrets.token_urlsafe(24)
+    path.write_text(token + "\n", encoding="utf-8")
+    try:
+        path.chmod(0o600)
+    except OSError:
+        pass
+    return token
+
+
+def run(
+    host: str = "127.0.0.1",
+    port: int = 8765,
+    open_browser: bool = False,
+    access_token: str | None = None,
+    token_path: Path | None = None,
+) -> None:
+    global ACCESS_TOKEN
+    guard = check_bind(host, access_token)
+    if guard:
+        raise ValueError(guard)
+    ACCESS_TOKEN = access_token
     server = None
     selected_port = port
     for candidate in range(port, port + 20):
@@ -3390,10 +3467,14 @@ def run(host: str = "127.0.0.1", port: int = 8765, open_browser: bool = False) -
         webbrowser.open(url)
     print(f"COMSOL small model web app: {url}")
     if host == "0.0.0.0":
-        print("LAN access URLs:")
+        print("LAN access URLs (copy one complete URL to the other computer):")
+        encoded_token = quote(access_token or "", safe="")
         for address in _local_ipv4_addresses():
-            print(f"  http://{address}:{selected_port}")
-        print("Warning: LAN mode exposes file-reading and model-generation APIs to your local network.")
+            if address != "127.0.0.1":
+                print(f"  http://{address}:{selected_port}/?token={encoded_token}")
+        if token_path is not None:
+            print(f"Access token file: {token_path.resolve()}")
+        print("LAN mode is authenticated. Keep the complete URL private and allow Python on Private networks only.")
     server.serve_forever()
 
 
@@ -3413,6 +3494,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--host", default="127.0.0.1", help="Bind host. Use 0.0.0.0 for LAN access.")
     parser.add_argument("--port", type=int, default=8765, help="Starting port. The app tries the next 19 ports if busy.")
     parser.add_argument("--open", action="store_true", help="Open the local URL in the default browser.")
+    parser.add_argument("--lan", action="store_true", help="Bind to the LAN with a generated persistent access token.")
+    parser.add_argument("--token", default=None, help="Explicit access token for non-loopback binding (at least 16 characters).")
+    parser.add_argument("--token-file", default=None, help="Persistent token file (default: generated/local_secrets/lan_access_token.txt).")
     return parser.parse_args(argv)
 
 
@@ -3603,6 +3687,25 @@ INDEX_HTML = r"""<!doctype html>
     </div>
   </main>
   <script>
+    const ACCESS_TOKEN = (() => {
+      const queryToken = new URLSearchParams(window.location.search).get("token") || "";
+      if (queryToken) {
+        window.sessionStorage.setItem("comsol_eda_lan_token", queryToken);
+        return queryToken;
+      }
+      return window.sessionStorage.getItem("comsol_eda_lan_token") || "";
+    })();
+    const nativeFetch = window.fetch.bind(window);
+    window.fetch = (input, init = {}) => {
+      const next = {...init, headers: new Headers(init.headers || {})};
+      if (ACCESS_TOKEN) next.headers.set("Authorization", `Bearer ${ACCESS_TOKEN}`);
+      return nativeFetch(input, next);
+    };
+    function authenticatedUrl(input) {
+      const url = new URL(input, window.location.href);
+      if (ACCESS_TOKEN) url.searchParams.set("token", ACCESS_TOKEN);
+      return url.origin === window.location.origin ? `${url.pathname}${url.search}${url.hash}` : url.toString();
+    }
     const output = document.getElementById("output");
     const statusBox = document.getElementById("status");
     const constraints = document.getElementById("constraints");
@@ -4890,6 +4993,25 @@ configs/thermal_constraints.json</textarea>
   </div>
 
   <script>
+    const ACCESS_TOKEN = (() => {
+      const queryToken = new URLSearchParams(window.location.search).get("token") || "";
+      if (queryToken) {
+        window.sessionStorage.setItem("comsol_eda_lan_token", queryToken);
+        return queryToken;
+      }
+      return window.sessionStorage.getItem("comsol_eda_lan_token") || "";
+    })();
+    const nativeFetch = window.fetch.bind(window);
+    window.fetch = (input, init = {}) => {
+      const next = {...init, headers: new Headers(init.headers || {})};
+      if (ACCESS_TOKEN) next.headers.set("Authorization", `Bearer ${ACCESS_TOKEN}`);
+      return nativeFetch(input, next);
+    };
+    function authenticatedUrl(input) {
+      const url = new URL(input, window.location.href);
+      if (ACCESS_TOKEN) url.searchParams.set("token", ACCESS_TOKEN);
+      return url.origin === window.location.origin ? `${url.pathname}${url.search}${url.hash}` : url.toString();
+    }
     const messages = document.getElementById("messages");
     const raw = document.getElementById("raw");
     const statusBox = document.getElementById("status");
@@ -5006,7 +5128,7 @@ configs/thermal_constraints.json</textarea>
         addMessage("assistant", "<h3>没有可下载的任务</h3><p>请先创建或恢复一个自动建模任务。</p>");
         return;
       }
-      window.location.href = `/api/staged-workflow/download?path=${encodeURIComponent(path)}`;
+      window.location.href = authenticatedUrl(`/api/staged-workflow/download?path=${encodeURIComponent(path)}`);
     }
 
     if (activeStagedWorkflowPath) {
@@ -5448,7 +5570,7 @@ configs/thermal_constraints.json</textarea>
           image.style.display = "none"; empty.style.display = "block";
           empty.innerHTML = "<strong>结果图加载失败</strong>请点击刷新模型重试。";
         };
-        image.src = `${artifact.preview_url}&v=${encodeURIComponent(artifact.updated_at || Date.now())}`;
+        image.src = authenticatedUrl(`${artifact.preview_url}&v=${encodeURIComponent(artifact.updated_at || Date.now())}`);
       } else {
         image.removeAttribute("src");
       }
@@ -7847,4 +7969,17 @@ configs/thermal_constraints.json</textarea>
 
 if __name__ == "__main__":
     args = parse_args(sys.argv[1:])
-    run(host=args.host, port=args.port, open_browser=args.open)
+    selected_host = "0.0.0.0" if args.lan else args.host
+    selected_token = args.token
+    selected_token_path = Path(args.token_file) if args.token_file else ROOT / "generated/local_secrets/lan_access_token.txt"
+    if not selected_token and not _is_loopback_host(selected_host):
+        if not selected_token_path.is_absolute():
+            selected_token_path = ROOT / selected_token_path
+        selected_token = _read_or_create_access_token(selected_token_path)
+    run(
+        host=selected_host,
+        port=args.port,
+        open_browser=args.open,
+        access_token=selected_token,
+        token_path=selected_token_path if selected_token else None,
+    )

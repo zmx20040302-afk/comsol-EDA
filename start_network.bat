@@ -15,5 +15,5 @@ if not exist "%PYTHON_EXE%" (
     pause
     exit /b 1
 )
-"%PYTHON_EXE%" scripts\start_local_service.py --host 0.0.0.0 --port 8765 --wait-seconds 30
+"%PYTHON_EXE%" scripts\start_local_service.py --lan --port 8765 --wait-seconds 30
 pause

@@ -223,18 +223,20 @@ start_network.bat
 
 ```powershell
 # 在 comsol_training_small_model 目录中运行
-.\.venv\Scripts\python.exe web_app.py --host 0.0.0.0 --port 8765
+.\.venv\Scripts\python.exe web_app.py --lan --port 8765
 ```
 
 启动后终端会打印可访问地址，例如：
 
 ```text
-http://192.168.x.x:8765
+http://192.168.x.x:8765/?token=自动生成的访问令牌
 ```
 
-其他设备需要和本机处于同一局域网，并在浏览器中访问这个地址。如果 Windows 防火墙提示，请只允许 Python 在“专用网络/Private network”中通信。
+其他设备需要和本机处于同一局域网，并在浏览器中访问启动器打印的**完整地址**。访问令牌会保存在
+`generated/local_secrets/lan_access_token.txt` 并自动复用，不需要每次重新配置；该目录已被 Git 忽略。
+如果 Windows 防火墙提示，请只允许 Python 在“专用网络/Private network”中通信。
 
-安全提醒：联网模式会把文件读取、脚本生成、模型训练接口暴露给局域网，请只在可信网络中使用。公网访问需要额外认证、反向代理和防火墙配置，不建议直接暴露。
+安全提醒：局域网模式已启用令牌鉴权，但仍应只在可信网络中使用，并妥善保管完整访问地址。公网访问还需要 HTTPS 反向代理或受管隧道，不能直接做路由器端口映射。
 
 网页中可以完成：
 
